@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
-"""
-ALLOCCULT Instagram Automation v2 — carousel edition
-- 3 of 4 posts: designed lore carousels (black/gold slides) on esoteric topics,
-  driving readers to alloccult.com
-- every 4th post: product carousel from alloccult.store
-Secrets: IG_USER_ID, IG_ACCESS_TOKEN, ANTHROPIC_API_KEY
-"""
+"""ALLOCCULT Instagram Automation v3 — bold minimal carousels."""
 
 import json, os, sys, time, subprocess, urllib.request, urllib.parse
 
@@ -69,8 +63,6 @@ TOPICS = [
     "The Papyri Graecae Magicae: spells of Greco-Roman Egypt",
 ]
 
-# ---------------- helpers ----------------
-
 def http_json(url, data=None, headers=None):
     headers = headers or {}
     body = None
@@ -111,13 +103,11 @@ def claude(prompt, system, max_tokens=1500):
               "system": system, "messages": [{"role": "user", "content": prompt}]},
         headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"],
                  "anthropic-version": "2023-06-01"})
-    txt = "".join(b["text"] for b in resp["content"] if b["type"] == "text")
-    return txt.strip()
+    return "".join(b["text"] for b in resp["content"] if b["type"] == "text").strip()
 
 def claude_json(prompt, system):
     raw = claude(prompt, system).replace("```json", "").replace("```", "").strip()
-    start, end = raw.find("{"), raw.rfind("}")
-    return json.loads(raw[start:end + 1])
+    return json.loads(raw[raw.find("{"):raw.rfind("}") + 1])
 
 BRAND = ("You write for ALLOCCULT (alloccult.com, 'The Forbidden Library of "
          "Esoteric Knowledge' — an archive of 10,000+ esoteric texts, symbols, "
@@ -125,10 +115,8 @@ BRAND = ("You write for ALLOCCULT (alloccult.com, 'The Forbidden Library of "
          "atmospheric, historically accurate, never campy. No emojis except "
          "rarely \u2609 \u263D. Hashtags: niche and relevant.")
 
-# ---------------- slide rendering ----------------
-
-def render_slides(hook, slides, outdir):
-    from PIL import Image, ImageDraw, ImageFont
+def render_slides(hook, slides, outdir, symbol="\u2726"):
+    from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
     def font(path, size, bold=False):
         f = ImageFont.truetype(path, size)
@@ -139,71 +127,108 @@ def render_slides(hook, slides, outdir):
         return f
 
     HEAD, BODY = "fonts/Cinzel.ttf", "fonts/EBGaramond.ttf"
-    GOLD, BONE, BG = (201, 168, 106), (232, 226, 214), (11, 10, 8)
+    SYM = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+    GOLD, DIM, BONE, BG = (208, 175, 110), (99, 82, 50), (236, 230, 218), (9, 8, 6)
 
-    def wrap(draw, text, fnt, maxw):
+    def wrap(d, text, fnt, maxw):
         words, lines, cur = text.split(), [], ""
         for w_ in words:
             t = (cur + " " + w_).strip()
-            if draw.textlength(t, font=fnt) <= maxw:
+            if d.textlength(t, font=fnt) <= maxw:
                 cur = t
             else:
                 lines.append(cur); cur = w_
-        if cur: lines.append(cur)
+        if cur:
+            lines.append(cur)
         return lines
 
     def base():
         img = Image.new("RGB", (W, H), BG)
+        wm = Image.new("L", (W, H), 0)
+        wd = ImageDraw.Draw(wm)
+        try:
+            wd.text((W / 2, H / 2), symbol,
+                    font=ImageFont.truetype(SYM, 900), fill=26, anchor="mm")
+        except Exception:
+            pass
+        wm = wm.filter(ImageFilter.GaussianBlur(2))
+        img.paste(Image.new("RGB", (W, H), GOLD), (0, 0), wm)
         d = ImageDraw.Draw(img)
-        d.rectangle([40, 40, W - 40, H - 40], outline=GOLD, width=3)
-        d.rectangle([52, 52, W - 52, H - 52], outline=GOLD, width=1)
-        d.text((W / 2, 95), "A L L O C C U L T", font=font(HEAD, 34, True),
-               fill=GOLD, anchor="mm")
-        d.text((W / 2, H - 95), "The Forbidden Library",
-               font=font(BODY, 30), fill=GOLD, anchor="mm")
+        d.rectangle([44, 44, W - 44, H - 44], outline=GOLD, width=3)
+        d.rectangle([58, 58, W - 58, H - 58], outline=DIM, width=1)
+        for x, y in [(58, 58), (W - 58, 58), (58, H - 58), (W - 58, H - 58)]:
+            d.line([x - 22, y, x + 22, y], fill=GOLD, width=3)
+            d.line([x, y - 22, x, y + 22], fill=GOLD, width=3)
+        d.text((W / 2, 108), "A L L O C C U L T",
+               font=font(HEAD, 32, True), fill=GOLD, anchor="mm")
+        d.text((W / 2, H - 108), "The Forbidden Library",
+               font=font(BODY, 28), fill=DIM, anchor="mm")
         return img, d
+
+    def divider(d, y):
+        d.line([W / 2 - 130, y, W / 2 - 30, y], fill=GOLD, width=2)
+        d.line([W / 2 + 30, y, W / 2 + 130, y], fill=GOLD, width=2)
+        try:
+            d.text((W / 2, y), symbol,
+                   font=ImageFont.truetype(SYM, 40), fill=GOLD, anchor="mm")
+        except Exception:
+            d.ellipse([W / 2 - 6, y - 6, W / 2 + 6, y + 6], outline=GOLD, width=2)
 
     paths = []
 
     def save(img, i):
         p = os.path.join(outdir, f"{i:02d}.jpg")
-        img.save(p, "JPEG", quality=90)
+        img.save(p, "JPEG", quality=92)
         paths.append(p)
 
-    # slide 1 — hook
     img, d = base()
-    f = font(HEAD, 74, True)
-    lines = wrap(d, hook.upper(), f, W - 220)
-    y = H / 2 - (len(lines) - 1) * 48
+    f = font(HEAD, 92, True)
+    lines = wrap(d, hook.upper(), f, W - 200)
+    if len(lines) > 3:
+        f = font(HEAD, 76, True)
+        lines = wrap(d, hook.upper(), f, W - 200)
+    lh = 118 if len(lines) < 4 else 98
+    y = H / 2 - (len(lines) - 1) * lh / 2
     for ln in lines:
-        d.text((W / 2, y), ln, font=f, fill=BONE, anchor="mm"); y += 96
-    d.text((W / 2, H - 200), "\u2192 swipe", font=font(BODY, 34), fill=GOLD, anchor="mm")
+        d.text((W / 2, y), ln, font=f, fill=BONE, anchor="mm")
+        y += lh
+    divider(d, y + 30)
+    d.text((W / 2, H - 210), "swipe  \u2192",
+           font=font(BODY, 36), fill=GOLD, anchor="mm")
     save(img, 1)
 
-    # content slides
     for i, s in enumerate(slides, start=2):
         img, d = base()
-        hf = font(HEAD, 46, True)
+        d.text((W / 2, 230), f"{i - 1} / {len(slides)}",
+               font=font(BODY, 30), fill=DIM, anchor="mm")
+        hf = font(HEAD, 54, True)
         hl = wrap(d, s["heading"].upper(), hf, W - 220)
-        y = 250
+        bf = font(BODY, 52)
+        bl = wrap(d, s["body"], bf, W - 250)
+        block = len(hl) * 72 + 60 + len(bl) * 72
+        y = (H - block) / 2 + 20
         for ln in hl:
-            d.text((W / 2, y), ln, font=hf, fill=GOLD, anchor="mm"); y += 62
-        bf = font(BODY, 40)
-        y += 40
-        for ln in wrap(d, s["body"], bf, W - 240):
-            d.text((W / 2, y), ln, font=bf, fill=BONE, anchor="mm"); y += 56
+            d.text((W / 2, y), ln, font=hf, fill=GOLD, anchor="mm")
+            y += 72
+        divider(d, y + 8)
+        y += 60
+        for ln in bl:
+            d.text((W / 2, y), ln, font=bf, fill=BONE, anchor="mm")
+            y += 72
         save(img, i)
 
-    # CTA slide
     img, d = base()
-    d.text((W / 2, H / 2 - 120), "THE ARCHIVE IS OPEN",
-           font=font(HEAD, 56, True), fill=BONE, anchor="mm")
-    d.text((W / 2, H / 2 + 10), "10,000+ forbidden texts, symbols & rituals",
-           font=font(BODY, 38), fill=BONE, anchor="mm")
-    d.text((W / 2, H / 2 + 130), SITE_URL, font=font(HEAD, 48, True),
-           fill=GOLD, anchor="mm")
-    d.text((W / 2, H / 2 + 220), "link in bio", font=font(BODY, 34),
-           fill=GOLD, anchor="mm")
+    d.text((W / 2, H / 2 - 170), "THE ARCHIVE IS OPEN",
+           font=font(HEAD, 58, True), fill=BONE, anchor="mm")
+    divider(d, H / 2 - 90)
+    d.text((W / 2, H / 2 + 5), "10,000+ forbidden texts,",
+           font=font(BODY, 44), fill=BONE, anchor="mm")
+    d.text((W / 2, H / 2 + 65), "symbols & rituals",
+           font=font(BODY, 44), fill=BONE, anchor="mm")
+    d.text((W / 2, H / 2 + 185), SITE_URL,
+           font=font(HEAD, 54, True), fill=GOLD, anchor="mm")
+    d.text((W / 2, H / 2 + 265), "link in bio",
+           font=font(BODY, 34), fill=DIM, anchor="mm")
     save(img, len(slides) + 2)
     return paths
 
@@ -213,8 +238,6 @@ def git_push(paths, msg):
                     "-c", "user.email=bot@alloccult.com",
                     "commit", "-m", msg], check=True)
     subprocess.run(["git", "push"], check=True)
-
-# ---------------- instagram ----------------
 
 def wait_ready(cid):
     for _ in range(30):
@@ -235,12 +258,10 @@ def publish_carousel(image_urls, caption):
     for cid in children:
         wait_ready(cid)
     parent = graph_post(f"{ig}/media", {"media_type": "CAROUSEL",
-        "children": ",".join(children), "caption": caption})
+                        "children": ",".join(children), "caption": caption})
     wait_ready(parent["id"])
     res = graph_post(f"{ig}/media_publish", {"creation_id": parent["id"]})
     print("Published:", res.get("id"))
-
-# ---------------- content ----------------
 
 def fetch_products():
     data = http_json(f"{STORE_URL}/products.json?limit=250")
@@ -256,29 +277,32 @@ def fetch_products():
 def pick(items, posted, keyfn):
     fresh = [i for i in items if keyfn(i) not in posted]
     if not fresh:
-        posted.clear(); fresh = items
+        posted.clear()
+        fresh = items
     return fresh[int(time.time()) % len(fresh)]
 
 def lore_post(state):
     topic = pick(TOPICS, state["posted_lore"], lambda t: t)
-    data = claude_json(
+    prompt = (
         f"Create an Instagram carousel about: {topic}\n"
-        "Return ONLY JSON, no markdown fences:\n"
-        '{"hook": "<arresting title, max 8 words, no clickbait-lies>",\n'
-        ' "slides": [{"heading": "<max 5 words>", "body": "<40-55 words, one '
-        "vivid, historically accurate idea; specific names, dates, details>\"}, "
-        "... exactly 4 slides],\n"
-        ' "caption": "<80-120 words, atmospheric summary that adds one detail '
-        "not in the slides, ending: Full entry in the archive \u2014 "
-        "alloccult.com, link in bio.>\",\n"
-        ' "hashtags": "<10-12 niche hashtags space-separated>"}', BRAND)
+        "Return ONLY JSON, no markdown fences, with these keys:\n"
+        "hook: arresting title, max 7 words, intriguing but true\n"
+        "symbol: exactly one character chosen from \u2609 \u263D \u263F \u2640 "
+        "\u2642 \u2643 \u2644 \u2726\n"
+        "slides: list of exactly 4 objects, each with heading (max 4 words) and "
+        "body (18-28 words, ONE striking historically accurate fact, a specific "
+        "name, date or detail, short punchy sentences)\n"
+        "caption: 80-120 words, atmospheric, adds one detail not in the slides, "
+        "ending with: Full entry in the archive \u2014 alloccult.com, link in bio.\n"
+        "hashtags: 10-12 niche hashtags space-separated")
+    data = claude_json(prompt, BRAND)
     outdir = f"slides/{int(time.time())}"
     os.makedirs(outdir, exist_ok=True)
-    paths = render_slides(data["hook"], data["slides"][:4], outdir)
+    paths = render_slides(data["hook"], data["slides"][:4], outdir,
+                          data.get("symbol", "\u2726"))
     git_push(paths, f"Slides: {topic[:50]}")
     urls = [f"{REPO_RAW}/{p}" for p in paths]
-    caption = data["caption"] + "\n.\n.\n" + data["hashtags"]
-    publish_carousel(urls, caption)
+    publish_carousel(urls, data["caption"] + "\n.\n.\n" + data["hashtags"])
     state["posted_lore"].append(topic)
     print("Lore post:", topic)
 
@@ -293,7 +317,7 @@ def product_post(state):
         "One line of true esoteric context on the symbol, one quiet line on the "
         "piece itself, then: Available at alloccult.store \u2014 link in bio. "
         "Max 90 words, then 10 niche hashtags.", BRAND, 700)
-    urls = p["images"] if len(p["images"]) > 1 else p["images"]
+    urls = p["images"]
     if len(urls) == 1:
         ig = os.environ["IG_USER_ID"]
         c = graph_post(f"{ig}/media", {"image_url": urls[0], "caption": caption})
