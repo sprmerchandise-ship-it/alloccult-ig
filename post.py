@@ -12,56 +12,10 @@ CLAUDE_MODEL = "claude-sonnet-4-6"
 GRAPH = "https://graph.facebook.com/v21.0"
 W, H = 1080, 1350
 
-TOPICS = [
-    "The Key of Solomon and its planetary pentacles",
-    "Enochian: the angelic language of John Dee and Edward Kelley",
-    "The Emerald Tablet and 'as above, so below'",
-    "Agrippa's Three Books of Occult Philosophy",
-    "The Picatrix: astrological magic of medieval Arabia",
-    "Sigil creation: from Austin Osman Spare to chaos magic",
-    "The Lesser Banishing Ritual of the Pentagram",
-    "Goetia: the 72 spirits of the Ars Goetia",
-    "The Tree of Life in Hermetic Kabbalah",
-    "Alchemy's stages: nigredo, albedo, citrinitas, rubedo",
-    "The Rosicrucian manifestos and the invisible college",
-    "Tarot's Major Arcana as an initiatory journey",
-    "The Book of Abramelin and the Holy Guardian Angel",
-    "Angel numbers: history behind the modern practice",
-    "The Sworn Book of Honorius, oldest surviving grimoire",
-    "Planetary hours and timing in ritual magic",
-    "The Hermetic Order of the Golden Dawn's founding cipher",
-    "Scrying: crystal, mirror and water divination",
-    "The Sator Square: the oldest magic word puzzle",
-    "Abracadabra: the healing amulet of Serenus Sammonicus",
-    "The four classical elements and their elementals",
-    "Necronomicon: the grimoire that never existed",
-    "The Black Books of Norwegian folk magic",
-    "Hekate: goddess of crossroads and keys",
-    "The Corpus Hermeticum's journey to Renaissance Florence",
-    "Grimorium Verum and the tools of the art",
-    "Astral projection in Theosophy and beyond",
-    "The Seal of Solomon: hexagram in magical tradition",
-    "Kabbalistic gematria and hidden numbers in words",
-    "The witch's familiar in early modern trial records",
-    "John Dee's obsidian mirror and shew-stones",
-    "The Long Lost Friend: Pennsylvania Dutch braucherei",
-    "Eliphas Levi and the Baphomet of Mendes",
-    "The Sixth and Seventh Books of Moses",
-    "Runes: from Elder Futhark to divination",
-    "The evil eye and apotropaic charms across cultures",
-    "Palmistry's map: mounts, lines and meaning",
-    "The Chymical Wedding of Christian Rosenkreutz",
-    "Solomon's brazen vessel and the sealed spirits",
-    "Thelema: Crowley's Book of the Law",
-    "The Hand of Glory in European folk magic",
-    "Mercurius: the trickster spirit of alchemy",
-    "Votive tablets and curse tablets of antiquity",
-    "The Zohar and the radiance of hidden meaning",
-    "Geomancy: divination by earth and sixteen figures",
-    "The magic circle: why magicians stand inside",
-    "Talismans versus amulets: the crucial difference",
-    "The Papyri Graecae Magicae: spells of Greco-Roman Egypt",
-]
+def load_archive():
+    with open("archive_index.json", encoding="utf-8") as f:
+        return json.load(f)
+
 
 def http_json(url, data=None, headers=None):
     headers = headers or {}
@@ -115,7 +69,7 @@ BRAND = ("You write for ALLOCCULT (alloccult.com, 'The Forbidden Library of "
          "atmospheric, historically accurate, never campy. No emojis except "
          "rarely \u2609 \u263D. Hashtags: niche and relevant.")
 
-def render_slides(hook, slides, outdir, symbol="\u2726"):
+def render_slides(hook, slides, outdir, symbol="\u2726", entry_title=""):
     from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
     def font(path, size, bold=False):
@@ -218,17 +172,21 @@ def render_slides(hook, slides, outdir, symbol="\u2726"):
         save(img, i)
 
     img, d = base()
-    d.text((W / 2, H / 2 - 170), "THE ARCHIVE IS OPEN",
-           font=font(HEAD, 58, True), fill=BONE, anchor="mm")
-    divider(d, H / 2 - 90)
-    d.text((W / 2, H / 2 + 5), "10,000+ forbidden texts,",
-           font=font(BODY, 44), fill=BONE, anchor="mm")
-    d.text((W / 2, H / 2 + 65), "symbols & rituals",
-           font=font(BODY, 44), fill=BONE, anchor="mm")
-    d.text((W / 2, H / 2 + 185), SITE_URL,
-           font=font(HEAD, 54, True), fill=GOLD, anchor="mm")
-    d.text((W / 2, H / 2 + 265), "link in bio",
-           font=font(BODY, 34), fill=DIM, anchor="mm")
+    d.text((W / 2, H / 2 - 230), "READ THE FULL ENTRY",
+           font=font(HEAD, 50, True), fill=GOLD, anchor="mm")
+    divider(d, H / 2 - 150)
+    if entry_title:
+        tf = font(HEAD, 58, True)
+        tl = wrap(d, entry_title.upper(), tf, W - 240)
+        y = H / 2 - 60 - (len(tl) - 1) * 36
+        for ln in tl:
+            d.text((W / 2, y), ln, font=tf, fill=BONE, anchor="mm"); y += 72
+    d.text((W / 2, H / 2 + 150), "in the ALLOCCULT archive",
+           font=font(BODY, 40), fill=BONE, anchor="mm")
+    d.text((W / 2, H / 2 + 235), SITE_URL,
+           font=font(HEAD, 50, True), fill=GOLD, anchor="mm")
+    d.text((W / 2, H / 2 + 310), "link in bio",
+           font=font(BODY, 32), fill=DIM, anchor="mm")
     save(img, len(slides) + 2)
     return paths
 
@@ -282,29 +240,36 @@ def pick(items, posted, keyfn):
     return fresh[int(time.time()) % len(fresh)]
 
 def lore_post(state):
-    topic = pick(TOPICS, state["posted_lore"], lambda t: t)
+    archive = load_archive()
+    entry = pick(archive, state["posted_lore"], lambda e: e["route"])
+    url = SITE_URL + entry["route"]
     prompt = (
-        f"Create an Instagram carousel about: {topic}\n"
+        "You are creating an Instagram carousel that teases a specific entry in "
+        "the ALLOCCULT archive. Base it ONLY on this real entry:\n"
+        f"Title: {entry['title']}\n"
+        f"Section: {entry['section']}\n"
+        f"Description: {entry['description']}\n"
+        f"Keywords: {', '.join(entry['keywords'])}\n\n"
         "Return ONLY JSON, no markdown fences, with these keys:\n"
         "hook: arresting title, max 7 words, intriguing but true\n"
-        "symbol: exactly one character chosen from \u2609 \u263D \u263F \u2640 "
-        "\u2642 \u2643 \u2644 \u2726\n"
+        "symbol: exactly one character chosen from \u2609 \u263D \u263F "
+        "\u2640 \u2642 \u2643 \u2644 \u2726\n"
         "slides: list of exactly 4 objects, each with heading (max 4 words) and "
-        "body (18-28 words, ONE striking historically accurate fact, a specific "
-        "name, date or detail, short punchy sentences)\n"
-        "caption: 80-120 words, atmospheric, adds one detail not in the slides, "
-        "ending with: Full entry in the archive \u2014 alloccult.com, link in bio.\n"
+        "body (18-28 words, ONE striking historically accurate fact drawn from "
+        "this topic, a specific name, date or detail, short punchy sentences)\n"
+        "caption: 80-120 words, atmospheric, ending exactly with: "
+        f"Read the full entry \u2014 {url}, link in bio.\n"
         "hashtags: 10-12 niche hashtags space-separated")
     data = claude_json(prompt, BRAND)
     outdir = f"slides/{int(time.time())}"
     os.makedirs(outdir, exist_ok=True)
     paths = render_slides(data["hook"], data["slides"][:4], outdir,
-                          data.get("symbol", "\u2726"))
-    git_push(paths, f"Slides: {topic[:50]}")
+                          data.get("symbol", "\u2726"), entry["title"])
+    git_push(paths, f"Slides: {entry['title'][:50]}")
     urls = [f"{REPO_RAW}/{p}" for p in paths]
     publish_carousel(urls, data["caption"] + "\n.\n.\n" + data["hashtags"])
-    state["posted_lore"].append(topic)
-    print("Lore post:", topic)
+    state["posted_lore"].append(entry["route"])
+    print("Lore post:", entry["title"], "->", url)
 
 def product_post(state):
     products = fetch_products()
