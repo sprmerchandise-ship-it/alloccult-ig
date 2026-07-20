@@ -225,6 +225,7 @@ def publish_carousel(image_urls, caption):
     wait_ready(parent["id"])
     res = graph_post(f"{ig}/media_publish", {"creation_id": parent["id"]})
     print("Published:", res.get("id"))
+    return res.get("id")
 
 def fetch_products():
     data = http_json(f"{STORE_URL}/products.json?limit=250")
@@ -244,6 +245,27 @@ def pick(items, posted, keyfn):
         fresh = items
     return fresh[int(time.time()) % len(fresh)]
 
+def record_published(post_id, kind, ref, section=""):
+    recs = []
+    if os.path.exists("published.json"):
+        try:
+            recs = json.load(open("published.json"))
+        except Exception:
+            recs = []
+    recs.append({"id": post_id, "kind": kind, "ref": ref,
+                 "section": section, "ts": int(time.time())})
+    json.dump(recs, open("published.json", "w"), indent=2, ensure_ascii=False)
+
+
+def load_learnings():
+    if os.path.exists("learnings.json"):
+        try:
+            return json.load(open("learnings.json")).get("top_sections", [])
+        except Exception:
+            return []
+    return []
+
+
 def lore_post(state):
     archive = load_archive()
     recent_sections = state.get("recent_sections", [])[-5:]
@@ -252,6 +274,10 @@ def lore_post(state):
         state["posted_lore"].clear(); unposted = archive
     varied = [e for e in unposted if e.get("section") not in recent_sections]
     pool = varied or unposted
+    top = load_learnings()
+    if top:
+        preferred = [e for e in pool if e.get("section") in top]
+        pool = preferred or pool
     entry = pool[int(time.time()) % len(pool)]
     url = SITE_URL + entry["route"]
     prompt = (
@@ -279,7 +305,8 @@ def lore_post(state):
                           data.get("symbol", "\u2726"), entry["title"])
     git_push(paths, f"Slides: {entry['title'][:50]}")
     urls = [f"{REPO_RAW}/{p}" for p in paths]
-    publish_carousel(urls, data["caption"] + "\n.\n.\n" + data["hashtags"])
+    pid = publish_carousel(urls, data["caption"] + "\n.\n.\n" + data["hashtags"])
+    record_published(pid, "lore", entry["route"], entry.get("section", ""))
     state["posted_lore"].append(entry["route"])
     state.setdefault("recent_sections", []).append(entry.get("section", ""))
     state["recent_sections"] = state["recent_sections"][-8:]
@@ -301,9 +328,11 @@ def product_post(state):
         ig = os.environ["IG_USER_ID"]
         c = graph_post(f"{ig}/media", {"image_url": urls[0], "caption": caption})
         wait_ready(c["id"])
-        graph_post(f"{ig}/media_publish", {"creation_id": c["id"]})
+        r = graph_post(f"{ig}/media_publish", {"creation_id": c["id"]})
+        pid = r.get("id")
     else:
-        publish_carousel(urls, caption)
+        pid = publish_carousel(urls, caption)
+    record_published(pid, "product", p["title"], "Product")
     state["posted_products"].append(p["id"])
     print("Product post:", p["title"])
 
