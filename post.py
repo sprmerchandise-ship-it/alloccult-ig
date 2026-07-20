@@ -63,11 +63,16 @@ def claude_json(prompt, system):
     raw = claude(prompt, system).replace("```json", "").replace("```", "").strip()
     return json.loads(raw[raw.find("{"):raw.rfind("}") + 1])
 
-BRAND = ("You write for ALLOCCULT (alloccult.com, 'The Forbidden Library of "
-         "Esoteric Knowledge' — an archive of 10,000+ esoteric texts, symbols, "
-         "rituals and traditions; shop: alloccult.store). Voice: erudite, "
-         "atmospheric, historically accurate, never campy. No emojis except "
-         "rarely \u2609 \u263D. Hashtags: niche and relevant.")
+BRAND = (
+    "You are the content brain for ALLOCCULT — a dark occult brand and "
+    "forbidden-knowledge library (alloccult.com, 'The Forbidden Library'; shop: "
+    "alloccult.store). Voice: dark, mysterious, esoteric; slightly forbidden, as "
+    "if the reader wasn't meant to find this; authoritative but cryptic; short "
+    "punchy sentences, never more than about 12 words a line. Every fact must be "
+    "historically accurate — real names, dates, texts. Never cheesy or comedic. "
+    "Never use the phrase 'ancient secrets'. No emojis except rarely \u2609 "
+    "\u263D. Hashtags: exactly 12, lowercase, no # in the array, mixing niche "
+    "(#solomonicmagic #grimoire #enochian) with broad (#occult #esoteric).")
 
 def render_slides(hook, slides, outdir, symbol="\u2726", entry_title=""):
     from PIL import Image, ImageDraw, ImageFont, ImageFilter
@@ -241,7 +246,13 @@ def pick(items, posted, keyfn):
 
 def lore_post(state):
     archive = load_archive()
-    entry = pick(archive, state["posted_lore"], lambda e: e["route"])
+    recent_sections = state.get("recent_sections", [])[-5:]
+    unposted = [e for e in archive if e["route"] not in state["posted_lore"]]
+    if not unposted:
+        state["posted_lore"].clear(); unposted = archive
+    varied = [e for e in unposted if e.get("section") not in recent_sections]
+    pool = varied or unposted
+    entry = pool[int(time.time()) % len(pool)]
     url = SITE_URL + entry["route"]
     prompt = (
         "You are creating an Instagram carousel that teases a specific entry in "
@@ -259,7 +270,8 @@ def lore_post(state):
         "this topic, a specific name, date or detail, short punchy sentences)\n"
         "caption: 80-120 words, atmospheric, ending exactly with: "
         f"Read the full entry \u2014 {url}, link in bio.\n"
-        "hashtags: 10-12 niche hashtags space-separated")
+        "hashtags: exactly 12 hashtags, space-separated, lowercase with #, mixing "
+        "niche and broad occult tags")
     data = claude_json(prompt, BRAND)
     outdir = f"slides/{int(time.time())}"
     os.makedirs(outdir, exist_ok=True)
@@ -269,6 +281,8 @@ def lore_post(state):
     urls = [f"{REPO_RAW}/{p}" for p in paths]
     publish_carousel(urls, data["caption"] + "\n.\n.\n" + data["hashtags"])
     state["posted_lore"].append(entry["route"])
+    state.setdefault("recent_sections", []).append(entry.get("section", ""))
+    state["recent_sections"] = state["recent_sections"][-8:]
     print("Lore post:", entry["title"], "->", url)
 
 def product_post(state):
