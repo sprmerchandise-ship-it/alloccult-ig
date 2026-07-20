@@ -1,0 +1,26 @@
+name: Refresh Instagram Token
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"   # every Monday 06:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exchange for a fresh 60-day token
+        env:
+          APP_ID: ${{ secrets.APP_ID }}
+          APP_SECRET: ${{ secrets.APP_SECRET }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          NEW=$(curl -s "https://graph.facebook.com/v21.0/oauth/access_token?grant_type=fb_exchange_token&client_id=$APP_ID&client_secret=$APP_SECRET&fb_exchange_token=$IG_ACCESS_TOKEN" | python3 -c "import sys,json; print(json.load(sys.stdin).get('access_token',''))")
+          if [ -z "$NEW" ]; then
+            echo "Token exchange failed — leaving existing token untouched."
+            exit 1
+          fi
+          echo "Got refreshed token. Updating secret..."
+          echo "$NEW" | gh secret set IG_ACCESS_TOKEN --repo sprmerchandise-ship-it/alloccult-ig
+          echo "IG_ACCESS_TOKEN refreshed successfully."
