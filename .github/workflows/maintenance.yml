@@ -1,0 +1,36 @@
+name: Weekly Maintenance
+
+on:
+  schedule:
+    - cron: "0 7 * * 1"   # every Monday 07:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild archive from live site
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: python build_archive.py
+
+      - name: Update learnings from Instagram insights
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python analytics.py || echo "Analytics step skipped."
+
+      - name: Commit any changes
+        run: |
+          git config user.name "alloccult-bot"
+          git config user.email "bot@alloccult.com"
+          git add archive_index.json learnings.json insights.json 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "Weekly maintenance: refresh archive + learnings"
+          git push || true
