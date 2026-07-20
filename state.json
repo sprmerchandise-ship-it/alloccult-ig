@@ -1,11 +1,15 @@
 {
-  "counter": 4,
+  "counter": 5,
   "posted_products": [
     15404881543543
   ],
   "posted_lore": [
     15396268081527,
     "The Corpus Hermeticum's journey to Renaissance Florence",
-    "Planetary hours and timing in ritual magic"
+    "Planetary hours and timing in ritual magic",
+    "/left-hand-path/qliphoth-shadow-work"
+  ],
+  "recent_sections": [
+    "Section 13"
   ]
 }
