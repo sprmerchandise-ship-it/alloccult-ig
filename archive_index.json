@@ -1,0 +1,1290 @@
+[
+  {
+    "title": "Astral Projection",
+    "route": "/consciousness/astral-projection",
+    "section": "Section 9",
+    "description": "Techniques and history of out-of-body travel, the astral body, silver cord, and astral planes.",
+    "keywords": [
+      "astral projection",
+      "OBE",
+      "out of body",
+      "astral body",
+      "silver cord",
+      "astral plane",
+      "soul travel"
+    ]
+  },
+  {
+    "title": "Lucid Dreaming",
+    "route": "/consciousness/lucid-dreaming",
+    "section": "Section 9",
+    "description": "The art of conscious dreaming, wake-induced lucid dreams, reality checks, and dreamwork traditions.",
+    "keywords": [
+      "lucid dreaming",
+      "WILD",
+      "MILD",
+      "conscious dream",
+      "reality check",
+      "dreamwork",
+      "REM"
+    ]
+  },
+  {
+    "title": "Remote Viewing",
+    "route": "/consciousness/remote-viewing",
+    "section": "Section 9",
+    "description": "CIA Stargate program, controlled remote viewing protocols, and psychic espionage research.",
+    "keywords": [
+      "remote viewing",
+      "stargate",
+      "CIA",
+      "psychic espionage",
+      "CRV",
+      "Ingo Swann",
+      "SRI"
+    ]
+  },
+  {
+    "title": "Meditation & Altered States",
+    "route": "/consciousness/altered-states",
+    "section": "Section 9",
+    "description": "Meditation traditions, trance states, breathwork, shamanic journeying, and non-ordinary consciousness.",
+    "keywords": [
+      "meditation",
+      "altered states",
+      "trance",
+      "breathwork",
+      "samadhi",
+      "zazen",
+      "holotropic"
+    ]
+  },
+  {
+    "title": "Psychic Abilities & ESP",
+    "route": "/consciousness/psychic-abilities",
+    "section": "Section 9",
+    "description": "Clairvoyance, telepathy, precognition, psychokinesis, and the science of extrasensory perception.",
+    "keywords": [
+      "psychic",
+      "ESP",
+      "clairvoyance",
+      "telepathy",
+      "precognition",
+      "psychokinesis",
+      "psi"
+    ]
+  },
+  {
+    "title": "Near-Death Experiences",
+    "route": "/consciousness/near-death-experiences",
+    "section": "Section 9",
+    "description": "NDE research, life review, tunnel of light, encounters with deceased, and consciousness beyond death.",
+    "keywords": [
+      "NDE",
+      "near death",
+      "life after death",
+      "tunnel of light",
+      "Raymond Moody",
+      "IANDS",
+      "life review"
+    ]
+  },
+  {
+    "title": "Psychedelics & Mysticism",
+    "route": "/consciousness/psychedelics",
+    "section": "Section 9",
+    "description": "Sacred plant medicines, entheogens, mystical states, ayahuasca, psilocybin, and the Eleusinian mysteries.",
+    "keywords": [
+      "psychedelics",
+      "entheogens",
+      "ayahuasca",
+      "psilocybin",
+      "DMT",
+      "LSD",
+      "mescaline",
+      "plant medicine"
+    ]
+  },
+  {
+    "title": "Eleusinian Mysteries",
+    "route": "/ancient-mystery-schools/eleusinian-mysteries",
+    "section": "Section 1",
+    "description": "The most sacred Greek mysteries at Eleusis — Demeter, Persephone, the kykeon, and rebirth rites.",
+    "keywords": [
+      "Eleusis",
+      "Demeter",
+      "Persephone",
+      "kykeon",
+      "Greek mysteries",
+      "initiation",
+      "Telesterion"
+    ]
+  },
+  {
+    "title": "Orphic Mysteries",
+    "route": "/ancient-mystery-schools/orphic-mysteries",
+    "section": "Section 1",
+    "description": "Orpheus, the Orphic hymns, Dionysian rites, metempsychosis, and the golden tablets of the dead.",
+    "keywords": [
+      "Orpheus",
+      "Orphic",
+      "metempsychosis",
+      "Dionysus",
+      "soul",
+      "gold tablets",
+      "theogony"
+    ]
+  },
+  {
+    "title": "Mithraic Mysteries",
+    "route": "/ancient-mystery-schools/mithraic-mysteries",
+    "section": "Section 1",
+    "description": "The Roman mystery cult of Mithras — tauroctony, seven grades, underground mithraea, and solar theology.",
+    "keywords": [
+      "Mithras",
+      "Mithraism",
+      "tauroctony",
+      "mithraea",
+      "Roman mystery",
+      "sol invictus",
+      "grades"
+    ]
+  },
+  {
+    "title": "Pythagorean Brotherhood",
+    "route": "/ancient-mystery-schools/pythagorean-brotherhood",
+    "section": "Section 1",
+    "description": "Pythagoras, the Pythagorean school, sacred mathematics, metempsychosis, and the music of the spheres.",
+    "keywords": [
+      "Pythagoras",
+      "Pythagorean",
+      "mathematics",
+      "sacred numbers",
+      "music of the spheres",
+      "metempsychosis",
+      "tetractys"
+    ]
+  },
+  {
+    "title": "Dionysian Mysteries",
+    "route": "/ancient-mystery-schools/dionysian-mysteries",
+    "section": "Section 1",
+    "description": "Bacchic rites, maenads, ecstatic worship, theatrical mysteries, and the cult of Dionysus-Bacchus.",
+    "keywords": [
+      "Dionysus",
+      "Bacchus",
+      "maenads",
+      "bacchic",
+      "ecstasy",
+      "theatre",
+      "thyrsos"
+    ]
+  },
+  {
+    "title": "Chaldean Oracles & Theurgy",
+    "route": "/ancient-mystery-schools/chaldean-oracles",
+    "section": "Section 1",
+    "description": "The Chaldean Oracles, late-antique theurgy, Iamblichus, and ritual ascent to the divine.",
+    "keywords": [
+      "Chaldean Oracles",
+      "theurgy",
+      "Iamblichus",
+      "Neoplatonism",
+      "divine ascent",
+      "Julian the Theurgist"
+    ]
+  },
+  {
+    "title": "Egyptian Mystery Tradition",
+    "route": "/ancient-mystery-schools/egyptian-mysteries",
+    "section": "Section 1",
+    "description": "Egyptian temple mysteries, Isis and Osiris, the Book of the Dead, and initiatic death and resurrection.",
+    "keywords": [
+      "Egypt",
+      "Isis",
+      "Osiris",
+      "Book of the Dead",
+      "pharaoh",
+      "temple",
+      "initiation",
+      "resurrection",
+      "Thoth",
+      "Horus"
+    ]
+  },
+  {
+    "title": "Persian Mysteries & Zoroastrianism",
+    "route": "/ancient-mystery-schools/persian-zoroastrian",
+    "section": "Section 1",
+    "description": "Zoroaster, Ahura Mazda, Ahriman, cosmic dualism, fire temples, and Mazdean mysticism.",
+    "keywords": [
+      "Zoroastrianism",
+      "Zoroaster",
+      "Ahura Mazda",
+      "Ahriman",
+      "fire temple",
+      "Avesta",
+      "dualism",
+      "Persia"
+    ]
+  },
+  {
+    "title": "Druidry & Celtic Traditions",
+    "route": "/ancient-mystery-schools/druidry-celtic",
+    "section": "Section 1",
+    "description": "The druids, Celtic cosmology, sacred groves, Samhain, Beltane, bards, ovates, and the Otherworld.",
+    "keywords": [
+      "druids",
+      "druidry",
+      "Celtic",
+      "Samhain",
+      "Beltane",
+      "Otherworld",
+      "bards",
+      "ovates",
+      "ogham"
+    ]
+  },
+  {
+    "title": "Norse & Germanic Paganism",
+    "route": "/ancient-mystery-schools/norse-germanic",
+    "section": "Section 1",
+    "description": "Odin, runes, Yggdrasil, the Eddas, Norse cosmology, Valhalla, seiðr magic, and Germanic paganism.",
+    "keywords": [
+      "Norse",
+      "Odin",
+      "runes",
+      "Yggdrasil",
+      "Eddas",
+      "Valhalla",
+      "seiðr",
+      "Vikings",
+      "Germanic",
+      "Asgard"
+    ]
+  },
+  {
+    "title": "Slavic & Eastern European Magic",
+    "route": "/ancient-mystery-schools/slavic-eastern-european",
+    "section": "Section 1",
+    "description": "Slavic folklore, Baba Yaga, Domovoi, Leshy, Perun, Veles, and Eastern European magical traditions.",
+    "keywords": [
+      "Slavic",
+      "Baba Yaga",
+      "Domovoi",
+      "Leshy",
+      "Perun",
+      "Veles",
+      "Russian folk magic",
+      "Eastern European"
+    ]
+  },
+  {
+    "title": "Mesopotamian Religion",
+    "route": "/ancient-mystery-schools/mesopotamian",
+    "section": "Section 1",
+    "description": "Sumerian and Babylonian religion, Enuma Elish, Gilgamesh, Marduk, Ishtar, and cuneiform magic.",
+    "keywords": [
+      "Mesopotamia",
+      "Sumer",
+      "Babylon",
+      "Enuma Elish",
+      "Gilgamesh",
+      "Marduk",
+      "Ishtar",
+      "Akkadian",
+      "cuneiform"
+    ]
+  },
+  {
+    "title": "Mesoamerican & South American Traditions",
+    "route": "/ancient-mystery-schools/mesoamerican-south-american",
+    "section": "Section 1",
+    "description": "Aztec, Maya, Inca cosmology, Quetzalcoatl, Pachamama, shamanism, and sacred calendar systems.",
+    "keywords": [
+      "Aztec",
+      "Maya",
+      "Inca",
+      "Quetzalcoatl",
+      "Pachamama",
+      "tonalpohualli",
+      "Xibalba",
+      "Mesoamerican"
+    ]
+  },
+  {
+    "title": "Shamanism & Indigenous Traditions",
+    "route": "/ancient-mystery-schools/shamanism-indigenous",
+    "section": "Section 1",
+    "description": "Worldwide shamanism — soul journeying, spirit helpers, healing ceremonies, and indigenous cosmologies.",
+    "keywords": [
+      "shamanism",
+      "shaman",
+      "soul journey",
+      "spirit helper",
+      "trance",
+      "healing",
+      "indigenous",
+      "animism"
+    ]
+  },
+  {
+    "title": "Hindu Tantric & Vedic Traditions",
+    "route": "/ancient-mystery-schools/vedic-tantric",
+    "section": "Section 1",
+    "description": "The Vedas, Upanishads, Tantra, kundalini, chakras, mantra, yantra, and Hindu esoteric traditions.",
+    "keywords": [
+      "Vedic",
+      "Tantra",
+      "kundalini",
+      "chakras",
+      "mantra",
+      "yantra",
+      "Upanishads",
+      "Shiva",
+      "Shakti",
+      "Vedas"
+    ]
+  },
+  {
+    "title": "African Traditional Religions",
+    "route": "/ancient-mystery-schools/african-traditional",
+    "section": "Section 1",
+    "description": "Yoruba, Akan, San bushman, ancestral veneration, Ifa divination, and African cosmological traditions.",
+    "keywords": [
+      "Yoruba",
+      "Ifa",
+      "Akan",
+      "ancestral",
+      "Africa",
+      "Orishas",
+      "San",
+      "divination",
+      "bush medicine"
+    ]
+  },
+  {
+    "title": "Kabbalah & Jewish Mysticism",
+    "route": "/mystical-religion/kabbalah",
+    "section": "Section 2",
+    "description": "The Tree of Life, Sephiroth, Ein Sof, Zohar, Sefer Yetzirah, and the depths of Jewish mysticism.",
+    "keywords": [
+      "Kabbalah",
+      "Sephiroth",
+      "Tree of Life",
+      "Zohar",
+      "Ein Sof",
+      "Jewish mysticism",
+      "Sefer Yetzirah",
+      "gematria"
+    ]
+  },
+  {
+    "title": "Christian Mysticism",
+    "route": "/mystical-religion/christian-mysticism",
+    "section": "Section 2",
+    "description": "Meister Eckhart, Hildegard of Bingen, the Desert Fathers, apophatic theology, and Christian contemplative traditions.",
+    "keywords": [
+      "Christian mysticism",
+      "Meister Eckhart",
+      "Hildegard",
+      "Desert Fathers",
+      "contemplative",
+      "apophatic",
+      "hesychasm"
+    ]
+  },
+  {
+    "title": "Islamic Esotericism & Sufism",
+    "route": "/mystical-religion/islamic-esotericism",
+    "section": "Section 2",
+    "description": "Sufi orders, Rumi, Ibn Arabi, dhikr, the whirling dervishes, and Islamic esoteric traditions.",
+    "keywords": [
+      "Sufism",
+      "Sufi",
+      "Rumi",
+      "Ibn Arabi",
+      "dhikr",
+      "whirling dervishes",
+      "Islamic mysticism",
+      "tariqah"
+    ]
+  },
+  {
+    "title": "Hindu Mysticism & Tantra",
+    "route": "/mystical-religion/hindu-mysticism-tantra",
+    "section": "Section 2",
+    "description": "Advaita Vedanta, Kashmir Shaivism, Shakta Tantra, yoga paths, and Hindu mystical philosophy.",
+    "keywords": [
+      "Hindu mysticism",
+      "Advaita Vedanta",
+      "Kashmir Shaivism",
+      "Shakta",
+      "Tantra",
+      "yoga",
+      "Ramakrishna"
+    ]
+  },
+  {
+    "title": "Buddhist Esotericism",
+    "route": "/mystical-religion/buddhist-esotericism",
+    "section": "Section 2",
+    "description": "Vajrayana, Tibetan Buddhism, Dzogchen, mandalas, wrathful deities, and esoteric Buddhist practices.",
+    "keywords": [
+      "Vajrayana",
+      "Tibetan Buddhism",
+      "Dzogchen",
+      "mandala",
+      "thangka",
+      "Milarepa",
+      "Kalachakra",
+      "tantra"
+    ]
+  },
+  {
+    "title": "Gnosticism",
+    "route": "/mystical-religion/gnosticism",
+    "section": "Section 2",
+    "description": "Gnostic cosmology, the Demiurge, Sophia, the Pleroma, Nag Hammadi texts, and ancient Gnostic sects.",
+    "keywords": [
+      "Gnosticism",
+      "Demiurge",
+      "Sophia",
+      "Pleroma",
+      "Nag Hammadi",
+      "Valentinus",
+      "Basilides",
+      "Cathars"
+    ]
+  },
+  {
+    "title": "Theosophy & Anthroposophy",
+    "route": "/mystical-religion/theosophy-anthroposophy",
+    "section": "Section 2",
+    "description": "Helena Blavatsky, Rudolf Steiner, the Akashic Records, root races, and theosophical cosmology.",
+    "keywords": [
+      "Theosophy",
+      "Anthroposophy",
+      "Blavatsky",
+      "Rudolf Steiner",
+      "Akashic Records",
+      "root races",
+      "Theosophical Society"
+    ]
+  },
+  {
+    "title": "Rosicrucianism",
+    "route": "/mystical-religion/rosicrucianism",
+    "section": "Section 2",
+    "description": "The Rosicrucian manifestos, Christian Rosenkreutz, and the hermetic-Christian esoteric tradition.",
+    "keywords": [
+      "Rosicrucianism",
+      "Rosenkreutz",
+      "Fama Fraternitatis",
+      "Confessio",
+      "AMORC",
+      "hermetic-Christian"
+    ]
+  },
+  {
+    "title": "Hermeticism",
+    "route": "/hermeticism-alchemy/hermeticism",
+    "section": "Section 3",
+    "description": "Hermes Trismegistus, the Corpus Hermeticum, the Kybalion, seven hermetic principles, and hermetic philosophy.",
+    "keywords": [
+      "Hermes Trismegistus",
+      "Corpus Hermeticum",
+      "Kybalion",
+      "seven principles",
+      "as above so below",
+      "hermetic"
+    ]
+  },
+  {
+    "title": "Alchemy",
+    "route": "/hermeticism-alchemy/alchemy",
+    "section": "Section 3",
+    "description": "Philosophical alchemy, the Philosopher's Stone, the Great Work, transmutation, Paracelsus, and spagyrics.",
+    "keywords": [
+      "alchemy",
+      "Philosopher's Stone",
+      "Great Work",
+      "transmutation",
+      "Paracelsus",
+      "spagyrics",
+      "prima materia"
+    ]
+  },
+  {
+    "title": "Natural Magic & Astral Magic",
+    "route": "/hermeticism-alchemy/natural-magic",
+    "section": "Section 3",
+    "description": "Ficino, Agrippa, planetary magic, talismans, signatures of nature, and Renaissance natural magic.",
+    "keywords": [
+      "natural magic",
+      "Ficino",
+      "Agrippa",
+      "planetary magic",
+      "talismans",
+      "signatures",
+      "Renaissance magic"
+    ]
+  },
+  {
+    "title": "Sacred Geometry",
+    "route": "/hermeticism-alchemy/sacred-geometry",
+    "section": "Section 3",
+    "description": "The Flower of Life, Platonic solids, golden ratio, Metatron's Cube, and geometry as divine language.",
+    "keywords": [
+      "sacred geometry",
+      "Flower of Life",
+      "Platonic solids",
+      "golden ratio",
+      "Metatron's Cube",
+      "Fibonacci",
+      "vesica piscis"
+    ]
+  },
+  {
+    "title": "Thelema",
+    "route": "/ceremonial-magic/thelema",
+    "section": "Section 4",
+    "description": "Aleister Crowley, the Book of the Law, Do what thou wilt, A∴A∴, OTO, and Thelemic philosophy.",
+    "keywords": [
+      "Thelema",
+      "Aleister Crowley",
+      "Book of the Law",
+      "93",
+      "A∴A∴",
+      "OTO",
+      "Liber Al",
+      "Aiwass",
+      "True Will"
+    ]
+  },
+  {
+    "title": "Hermetic Order of the Golden Dawn",
+    "route": "/ceremonial-magic/golden-dawn",
+    "section": "Section 4",
+    "description": "The Golden Dawn system — Mathers, Westcott, Yeats, Crowley, grade system, and hermetic magic.",
+    "keywords": [
+      "Golden Dawn",
+      "Mathers",
+      "Westcott",
+      "Yeats",
+      "Crowley",
+      "grade system",
+      "LBRP",
+      "hermetic order"
+    ]
+  },
+  {
+    "title": "Enochian Magic",
+    "route": "/ceremonial-magic/enochian-magic",
+    "section": "Section 4",
+    "description": "John Dee, Edward Kelley, angelic language, the Enochian alphabet, Aethyrs, and the Watchtowers.",
+    "keywords": [
+      "Enochian",
+      "John Dee",
+      "Edward Kelley",
+      "angelic language",
+      "Aethyrs",
+      "Watchtowers",
+      "scrying"
+    ]
+  },
+  {
+    "title": "Goetia & Demonology",
+    "route": "/ceremonial-magic/goetia-demonology",
+    "section": "Section 4",
+    "description": "The Ars Goetia, 72 demons of Solomon, summoning circles, and the art of demonological ritual.",
+    "keywords": [
+      "Goetia",
+      "demonology",
+      "demons",
+      "Solomon",
+      "Ars Goetia",
+      "72 demons",
+      "Lemegeton",
+      "summoning"
+    ]
+  },
+  {
+    "title": "Angelology",
+    "route": "/ceremonial-magic/angelology",
+    "section": "Section 4",
+    "description": "Angelic hierarchies, Gabriel, Michael, Raphael, Uriel, angel magic, and celestial messenger traditions.",
+    "keywords": [
+      "angelology",
+      "angels",
+      "Gabriel",
+      "Michael",
+      "Raphael",
+      "Uriel",
+      "celestial hierarchy",
+      "seraphim",
+      "cherubim"
+    ]
+  },
+  {
+    "title": "Chaos Magick",
+    "route": "/ceremonial-magic/chaos-magick",
+    "section": "Section 4",
+    "description": "Peter Carroll, Austin Spare, sigil magic, paradigm shifting, Illuminates of Thanateros, and chaos theory.",
+    "keywords": [
+      "chaos magick",
+      "Peter Carroll",
+      "Austin Spare",
+      "sigils",
+      "paradigm shift",
+      "IOT",
+      "Liber Null",
+      "servitors"
+    ]
+  },
+  {
+    "title": "Wicca",
+    "route": "/witchcraft-folk-magic/wicca",
+    "section": "Section 5",
+    "description": "Gerald Gardner, Doreen Valiente, the Wiccan Rede, Wheel of the Year, esbats, sabbats, and modern witchcraft.",
+    "keywords": [
+      "Wicca",
+      "Gerald Gardner",
+      "Doreen Valiente",
+      "Wiccan Rede",
+      "Wheel of the Year",
+      "sabbat",
+      "esbat",
+      "coven"
+    ]
+  },
+  {
+    "title": "Traditional Witchcraft",
+    "route": "/witchcraft-folk-magic/traditional-witchcraft",
+    "section": "Section 5",
+    "description": "Cunning craft, hedge witchery, Robert Cochrane, the 1734 tradition, and pre-Gardnerian witchcraft.",
+    "keywords": [
+      "traditional witchcraft",
+      "cunning craft",
+      "hedge witch",
+      "Robert Cochrane",
+      "1734",
+      "folk witch"
+    ]
+  },
+  {
+    "title": "Hoodoo & Rootwork",
+    "route": "/witchcraft-folk-magic/hoodoo-rootwork",
+    "section": "Section 5",
+    "description": "African American folk magic, rootwork, conjure, mojo bags, crossroads, and the Hoodoo tradition.",
+    "keywords": [
+      "Hoodoo",
+      "rootwork",
+      "conjure",
+      "mojo bag",
+      "crossroads",
+      "roots",
+      "trick",
+      "folk magic"
+    ]
+  },
+  {
+    "title": "African Diaspora Religion",
+    "route": "/witchcraft-folk-magic/african-diaspora-religion",
+    "section": "Section 5",
+    "description": "Santeria, Candomblé, Vodou, Umbanda, Orishas, Lwa, and African diaspora spiritual traditions.",
+    "keywords": [
+      "Santeria",
+      "Candomblé",
+      "Vodou",
+      "Umbanda",
+      "Orishas",
+      "Lwa",
+      "African diaspora",
+      "Lucumi"
+    ]
+  },
+  {
+    "title": "Folk Magic Traditions",
+    "route": "/witchcraft-folk-magic/folk-magic-traditions",
+    "section": "Section 5",
+    "description": "European folk magic — Pennsylvania Dutch hexes, Appalachian granny magic, Slavic charms, and folk healing.",
+    "keywords": [
+      "folk magic",
+      "Pennsylvania Dutch",
+      "pow-wow",
+      "granny magic",
+      "Appalachian",
+      "Slavic charms",
+      "cunning folk"
+    ]
+  },
+  {
+    "title": "Types of Spellwork",
+    "route": "/witchcraft-folk-magic/spellwork",
+    "section": "Section 5",
+    "description": "Candle magic, sympathetic magic, binding spells, love magic, protection, banishing, and the mechanics of spellcraft.",
+    "keywords": [
+      "spellwork",
+      "candle magic",
+      "binding",
+      "love spell",
+      "protection",
+      "banishing",
+      "sympathetic magic"
+    ]
+  },
+  {
+    "title": "Tarot",
+    "route": "/divination-arts/tarot",
+    "section": "Section 6",
+    "description": "Tarot history, the Major and Minor Arcana, Rider-Waite, Thoth deck, spreads, and reading methods.",
+    "keywords": [
+      "tarot",
+      "Major Arcana",
+      "Minor Arcana",
+      "Rider-Waite",
+      "Thoth",
+      "tarot reading",
+      "cards",
+      "arcana"
+    ]
+  },
+  {
+    "title": "Astrology",
+    "route": "/divination-arts/astrology",
+    "section": "Section 6",
+    "description": "Western and Vedic astrology, natal charts, planetary aspects, zodiac signs, houses, and astral prediction.",
+    "keywords": [
+      "astrology",
+      "horoscope",
+      "zodiac",
+      "natal chart",
+      "planets",
+      "houses",
+      "aspects",
+      "Vedic astrology"
+    ]
+  },
+  {
+    "title": "Runes & Runic Divination",
+    "route": "/divination-arts/runes",
+    "section": "Section 6",
+    "description": "Elder Futhark, Younger Futhark, runic divination, galdr, bind runes, and Norse runic tradition.",
+    "keywords": [
+      "runes",
+      "Elder Futhark",
+      "runic divination",
+      "galdr",
+      "bind runes",
+      "Norse",
+      "Germanic runes"
+    ]
+  },
+  {
+    "title": "I Ching",
+    "route": "/divination-arts/i-ching",
+    "section": "Section 6",
+    "description": "The Book of Changes — 64 hexagrams, yarrow stalks, three coins method, and Chinese divination philosophy.",
+    "keywords": [
+      "I Ching",
+      "Book of Changes",
+      "hexagrams",
+      "yarrow stalks",
+      "trigrams",
+      "Chinese divination",
+      "Confucius"
+    ]
+  },
+  {
+    "title": "Scrying",
+    "route": "/divination-arts/scrying",
+    "section": "Section 6",
+    "description": "Crystal ball gazing, black mirror scrying, water scrying, fire scrying, and the art of prophetic vision.",
+    "keywords": [
+      "scrying",
+      "crystal ball",
+      "black mirror",
+      "water scrying",
+      "fire scrying",
+      "prophetic vision",
+      "John Dee"
+    ]
+  },
+  {
+    "title": "Other Divination Systems",
+    "route": "/divination-arts/other-divination",
+    "section": "Section 6",
+    "description": "Numerology, palmistry, tasseomancy, geomancy, dowsing, pendulum, and the full spectrum of divinatory arts.",
+    "keywords": [
+      "numerology",
+      "palmistry",
+      "tasseomancy",
+      "geomancy",
+      "dowsing",
+      "pendulum",
+      "bibliomancy",
+      "augury"
+    ]
+  },
+  {
+    "title": "Necromancy",
+    "route": "/death-afterlife/necromancy",
+    "section": "Section 7",
+    "description": "Divination through the dead, ancestor communication, spirit evocation, and necromantic grimoire traditions.",
+    "keywords": [
+      "necromancy",
+      "the dead",
+      "ancestor",
+      "spirit evocation",
+      "ghost",
+      "séance",
+      "necromancer"
+    ]
+  },
+  {
+    "title": "Afterlife Cosmologies",
+    "route": "/death-afterlife/afterlife-cosmologies",
+    "section": "Section 7",
+    "description": "Comparative afterlife beliefs — Elysium, Valhalla, Duat, Bardo, Heaven, Hell, and reincarnation doctrines.",
+    "keywords": [
+      "afterlife",
+      "Elysium",
+      "Valhalla",
+      "Duat",
+      "Bardo",
+      "reincarnation",
+      "heaven",
+      "hell",
+      "Sheol"
+    ]
+  },
+  {
+    "title": "Death Cults & Psychopomps",
+    "route": "/death-afterlife/death-cults-psychopomps",
+    "section": "Section 7",
+    "description": "Anubis, Hermes, Charon, Santa Muerte, psychopomps, death goddesses, and mortuary cults worldwide.",
+    "keywords": [
+      "psychopomp",
+      "Anubis",
+      "Hermes",
+      "Charon",
+      "Santa Muerte",
+      "death cult",
+      "mortuary",
+      "Osiris"
+    ]
+  },
+  {
+    "title": "Vampirology",
+    "route": "/death-afterlife/vampirology",
+    "section": "Section 7",
+    "description": "Vampire folklore, the undead, Slavic vampires, energy vampirism, Dracula mythology, and blood magic.",
+    "keywords": [
+      "vampires",
+      "vampirology",
+      "undead",
+      "Dracula",
+      "blood magic",
+      "Slavic vampire",
+      "energy vampire",
+      "revenant"
+    ]
+  },
+  {
+    "title": "Freemasonry",
+    "route": "/secret-societies/freemasonry",
+    "section": "Section 8",
+    "description": "Masonic lodges, degrees, symbolism, the Great Architect, and the history of Freemasonry worldwide.",
+    "keywords": [
+      "Freemasonry",
+      "Masonic",
+      "lodge",
+      "degrees",
+      "Grand Lodge",
+      "compass and square",
+      "Great Architect"
+    ]
+  },
+  {
+    "title": "Rosicrucian Orders",
+    "route": "/secret-societies/rosicrucians",
+    "section": "Section 8",
+    "description": "AMORC, Fraternitas Rosae Crucis, the Fama Fraternitatis, and the esoteric Rosicrucian brotherhood.",
+    "keywords": [
+      "Rosicrucian",
+      "AMORC",
+      "Fama Fraternitatis",
+      "Rosenkreutz",
+      "rose cross",
+      "Fraternitas Rosae Crucis"
+    ]
+  },
+  {
+    "title": "Illuminati (Historical)",
+    "route": "/secret-societies/illuminati-historical",
+    "section": "Section 8",
+    "description": "Adam Weishaupt, the Bavarian Illuminati, anti-clerical Enlightenment conspiracy, and historical reality.",
+    "keywords": [
+      "Illuminati",
+      "Adam Weishaupt",
+      "Bavarian Illuminati",
+      "Enlightenment",
+      "conspiracy",
+      "secret society"
+    ]
+  },
+  {
+    "title": "Knights Templar (Esoteric)",
+    "route": "/secret-societies/knights-templar",
+    "section": "Section 8",
+    "description": "The Templar order, Baphomet, Friday the 13th, Templar legends, and esoteric survivals.",
+    "keywords": [
+      "Knights Templar",
+      "Baphomet",
+      "Templar",
+      "Crusades",
+      "Friday the 13th",
+      "Templar treasure"
+    ]
+  },
+  {
+    "title": "Other Notable Orders",
+    "route": "/secret-societies/other-orders",
+    "section": "Section 8",
+    "description": "The OTO, A∴A∴, Order of the Eastern Star, Skull & Bones, and other significant esoteric orders.",
+    "keywords": [
+      "OTO",
+      "Ordo Templi Orientis",
+      "Skull and Bones",
+      "Order of the Eastern Star",
+      "esoteric orders"
+    ]
+  },
+  {
+    "title": "Classical Grimoires",
+    "route": "/grimoires-sacred-texts/classical-grimoires",
+    "section": "Section 10",
+    "description": "Key of Solomon, Lesser Key, Picatrix, Book of Abramelin, Grand Grimoire, and the classical magical manuscript tradition.",
+    "keywords": [
+      "Key of Solomon",
+      "Lesser Key",
+      "Lemegeton",
+      "Picatrix",
+      "Book of Abramelin",
+      "Grand Grimoire",
+      "grimoire"
+    ]
+  },
+  {
+    "title": "Hermetic & Alchemical Texts",
+    "route": "/grimoires-sacred-texts/hermetic-alchemical-texts",
+    "section": "Section 10",
+    "description": "Corpus Hermeticum, Emerald Tablet, Kybalion, Rosarium Philosophorum, and the hermetic-alchemical literary tradition.",
+    "keywords": [
+      "Corpus Hermeticum",
+      "Emerald Tablet",
+      "Kybalion",
+      "Rosarium",
+      "Tabula Smaragdina",
+      "hermetic texts"
+    ]
+  },
+  {
+    "title": "Modern Occult Classics",
+    "route": "/grimoires-sacred-texts/modern-occult-classics",
+    "section": "Section 10",
+    "description": "Book of the Law, Liber Null, Secret Doctrine, Magick in Theory and Practice, and modern esoteric literature.",
+    "keywords": [
+      "Book of the Law",
+      "Liber Null",
+      "Secret Doctrine",
+      "Magick in Theory",
+      "Crowley",
+      "modern occult"
+    ]
+  },
+  {
+    "title": "Religious Esoteric Texts",
+    "route": "/grimoires-sacred-texts/religious-esoteric-texts",
+    "section": "Section 10",
+    "description": "Zohar, Sefer Yetzirah, Nag Hammadi Library, Tibetan Book of the Dead, and esoteric religious scriptures.",
+    "keywords": [
+      "Zohar",
+      "Sefer Yetzirah",
+      "Nag Hammadi",
+      "Tibetan Book of the Dead",
+      "Bardo Thodol",
+      "esoteric texts"
+    ]
+  },
+  {
+    "title": "Occult Symbols Encyclopedia",
+    "route": "/symbols-sigils/occult-symbols",
+    "section": "Section 11",
+    "description": "Pentagram, hexagram, Eye of Providence, Ankh, Ouroboros, Caduceus — the complete occult symbol dictionary.",
+    "keywords": [
+      "pentagram",
+      "hexagram",
+      "Eye of Providence",
+      "Ankh",
+      "Ouroboros",
+      "Caduceus",
+      "occult symbols"
+    ]
+  },
+  {
+    "title": "Alchemical Symbols",
+    "route": "/symbols-sigils/alchemical-symbols",
+    "section": "Section 11",
+    "description": "Planetary glyphs, elemental symbols, alchemical operations, sulphur, mercury, salt, and the alchemical sign system.",
+    "keywords": [
+      "alchemical symbols",
+      "planetary glyphs",
+      "elemental symbols",
+      "sulphur",
+      "mercury",
+      "salt",
+      "alchemy signs"
+    ]
+  },
+  {
+    "title": "Sigil Magic",
+    "route": "/symbols-sigils/sigil-magic",
+    "section": "Section 11",
+    "description": "Austin Spare's sigil method, chaos sigils, servitors, intent-based sigil creation, and activation techniques.",
+    "keywords": [
+      "sigil magic",
+      "Austin Spare",
+      "chaos sigils",
+      "servitors",
+      "intent",
+      "sigil creation",
+      "activation"
+    ]
+  },
+  {
+    "title": "Sacred Languages",
+    "route": "/symbols-sigils/sacred-languages",
+    "section": "Section 11",
+    "description": "Hebrew, Enochian, Theban, Celestial script, Sanskrit, and the magical power of sacred alphabets.",
+    "keywords": [
+      "sacred languages",
+      "Hebrew",
+      "Enochian",
+      "Theban script",
+      "Celestial alphabet",
+      "Sanskrit",
+      "magical alphabets"
+    ]
+  },
+  {
+    "title": "Occult Herbalism",
+    "route": "/plant-magic-herbalism/occult-herbalism",
+    "section": "Section 12",
+    "description": "Doctrine of Signatures, planetary herbalism, Culpeper, magical harvesting, and grimoire plant lore.",
+    "keywords": [
+      "occult herbalism",
+      "Doctrine of Signatures",
+      "planetary herbs",
+      "Culpeper",
+      "magical plants",
+      "venefica"
+    ]
+  },
+  {
+    "title": "Potions, Incense & Oils",
+    "route": "/plant-magic-herbalism/potions-incense-oils",
+    "section": "Section 12",
+    "description": "Flying ointments, spagyrics, sacred incense, ritual oils, ancient fumigation, and alchemical potions.",
+    "keywords": [
+      "potions",
+      "incense",
+      "oils",
+      "flying ointments",
+      "spagyrics",
+      "fumigation",
+      "suffumigation",
+      "ritual oils"
+    ]
+  },
+  {
+    "title": "Plant Spirits & Animism",
+    "route": "/plant-magic-herbalism/plant-spirits-animism",
+    "section": "Section 12",
+    "description": "Plant teacher spirits, mandrake lore, devas, nature spirits, sacred trees, and Amazonian plant traditions.",
+    "keywords": [
+      "plant spirits",
+      "animism",
+      "mandrake",
+      "devas",
+      "nature spirits",
+      "ayahuasca",
+      "plant teachers",
+      "sacred trees"
+    ]
+  },
+  {
+    "title": "Philosophical Satanism",
+    "route": "/left-hand-path/philosophical-satanism",
+    "section": "Section 13",
+    "description": "Anton LaVey, the Church of Satan, Nine Satanic Statements, Temple of Set, and the Satanic Temple.",
+    "keywords": [
+      "Satanism",
+      "Anton LaVey",
+      "Church of Satan",
+      "Nine Satanic Statements",
+      "Temple of Set",
+      "Satanic Temple"
+    ]
+  },
+  {
+    "title": "Luciferianism",
+    "route": "/left-hand-path/luciferianism",
+    "section": "Section 13",
+    "description": "The Luciferian philosophy — light-bearer mythology, Michael W. Ford, Dragon Rouge, and Promethean individualism.",
+    "keywords": [
+      "Luciferianism",
+      "Lucifer",
+      "light-bearer",
+      "Michael Ford",
+      "Dragon Rouge",
+      "Phosphorus",
+      "Promethean"
+    ]
+  },
+  {
+    "title": "Draconian Tradition",
+    "route": "/left-hand-path/draconian-tradition",
+    "section": "Section 13",
+    "description": "The Dragon Current — Typhonian tradition, Draconian initiatory magic, Qliphoth, and anti-cosmic philosophy.",
+    "keywords": [
+      "Draconian",
+      "Dragon Current",
+      "Typhonian",
+      "anti-cosmic",
+      "Qliphoth",
+      "Dragon Rouge",
+      "Typhon"
+    ]
+  },
+  {
+    "title": "Qliphoth & Shadow Work",
+    "route": "/left-hand-path/qliphoth-shadow-work",
+    "section": "Section 13",
+    "description": "The Qliphothic tree, Tunnels of Set, Da'ath, shadow integration, Jungian parallels, and nightside Kabbalah.",
+    "keywords": [
+      "Qliphoth",
+      "shadow work",
+      "Tunnels of Set",
+      "Da'ath",
+      "Sitra Ahra",
+      "Choronzon",
+      "Jungian",
+      "nightside"
+    ]
+  },
+  {
+    "title": "Suppressed History",
+    "route": "/hidden-history/suppressed-history",
+    "section": "Section 14",
+    "description": "Anomalous archaeology, lost civilisations, colonial erasure of knowledge, and heterodox chronology.",
+    "keywords": [
+      "suppressed history",
+      "lost civilisations",
+      "Atlantis",
+      "anomalous archaeology",
+      "forbidden archaeology",
+      "Göbekli Tepe"
+    ]
+  },
+  {
+    "title": "Occult Conspiracies",
+    "route": "/hidden-history/occult-conspiracies",
+    "section": "Section 14",
+    "description": "Real and mythologised conspiracies, Masonic symbolism, the Illuminati question, and the occult dollar.",
+    "keywords": [
+      "occult conspiracies",
+      "conspiracy",
+      "Illuminati",
+      "Masonic symbolism",
+      "dollar bill",
+      "New World Order"
+    ]
+  },
+  {
+    "title": "Cryptids & Paranormal Entities",
+    "route": "/hidden-history/cryptids-paranormal",
+    "section": "Section 14",
+    "description": "Bigfoot, Nessie, shadow beings, ghosts, apparitions, and global cryptozoology and paranormal investigation.",
+    "keywords": [
+      "cryptids",
+      "Bigfoot",
+      "Loch Ness",
+      "shadow beings",
+      "ghosts",
+      "paranormal",
+      "cryptozoology",
+      "apparitions"
+    ]
+  },
+  {
+    "title": "UFOs & Interdimensional Beings",
+    "route": "/hidden-history/ufos-interdimensional",
+    "section": "Section 14",
+    "description": "UAP phenomena, the interdimensional hypothesis, Ra Material, contactee traditions, and government disclosure.",
+    "keywords": [
+      "UFOs",
+      "UAP",
+      "interdimensional",
+      "Ra Material",
+      "Law of One",
+      "contactees",
+      "disclosure",
+      "aliens"
+    ]
+  },
+  {
+    "title": "Numerology Systems",
+    "route": "/numerology-cosmic-order/numerology-systems",
+    "section": "Section 15",
+    "description": "Pythagorean and Chaldean numerology, life path numbers, name numbers, master numbers, and cosmic cycles.",
+    "keywords": [
+      "numerology",
+      "life path",
+      "Pythagorean numerology",
+      "Chaldean numerology",
+      "master numbers",
+      "name numbers"
+    ]
+  },
+  {
+    "title": "Gematria",
+    "route": "/numerology-cosmic-order/gematria",
+    "section": "Section 15",
+    "description": "Hebrew gematria, Greek isopsephy, Arabic abjad, and the art of finding divine meaning in numerical values of letters.",
+    "keywords": [
+      "gematria",
+      "Hebrew gematria",
+      "isopsephy",
+      "abjad",
+      "numerical value",
+      "Kabbalah",
+      "Crowley gematria"
+    ]
+  },
+  {
+    "title": "Sacred Cosmology",
+    "route": "/numerology-cosmic-order/sacred-cosmology",
+    "section": "Section 15",
+    "description": "Emanationist cosmology, planes of existence, Kabbalistic worlds, Platonic hierarchy, and theosophical cosmology.",
+    "keywords": [
+      "sacred cosmology",
+      "planes of existence",
+      "Kabbalistic worlds",
+      "emanation",
+      "Platonic cosmology",
+      "seven planes"
+    ]
+  }
+]
