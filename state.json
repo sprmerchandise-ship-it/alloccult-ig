@@ -1,5 +1,5 @@
 {
-  "counter": 12,
+  "counter": 13,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -14,7 +14,8 @@
     "/ancient-mystery-schools/persian-zoroastrian",
     "/hidden-history/cryptids-paranormal",
     "/ceremonial-magic/enochian-magic",
-    "/mystical-religion/hindu-mysticism-tantra"
+    "/mystical-religion/hindu-mysticism-tantra",
+    "/plant-magic-herbalism/occult-herbalism"
   ],
   "recent_sections": [
     "Section 13",
@@ -22,6 +23,7 @@
     "Section 1",
     "Section 14",
     "Section 4",
-    "Section 2"
+    "Section 2",
+    "Section 12"
   ]
 }
