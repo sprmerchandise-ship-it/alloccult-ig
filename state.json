@@ -1,5 +1,5 @@
 {
-  "counter": 17,
+  "counter": 18,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -19,16 +19,17 @@
     "/plant-magic-herbalism/occult-herbalism",
     "/left-hand-path/philosophical-satanism",
     "/consciousness/lucid-dreaming",
-    "/secret-societies/freemasonry"
+    "/secret-societies/freemasonry",
+    "/grimoires-sacred-texts/hermetic-alchemical-texts"
   ],
   "recent_sections": [
-    "Section 1",
     "Section 14",
     "Section 4",
     "Section 2",
     "Section 12",
     "Section 13",
     "Section 9",
-    "Section 8"
+    "Section 8",
+    "Section 10"
   ]
 }
