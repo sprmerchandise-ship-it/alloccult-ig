@@ -1,5 +1,5 @@
 {
-  "counter": 20,
+  "counter": 21,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -22,16 +22,17 @@
     "/consciousness/lucid-dreaming",
     "/secret-societies/freemasonry",
     "/grimoires-sacred-texts/hermetic-alchemical-texts",
-    "/ancient-mystery-schools/mesoamerican-south-american"
+    "/ancient-mystery-schools/mesoamerican-south-american",
+    "/divination-arts/i-ching"
   ],
   "recent_sections": [
-    "Section 4",
     "Section 2",
     "Section 12",
     "Section 13",
     "Section 9",
     "Section 8",
     "Section 10",
-    "Section 1"
+    "Section 1",
+    "Section 6"
   ]
 }
