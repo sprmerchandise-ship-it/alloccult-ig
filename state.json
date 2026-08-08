@@ -1,5 +1,5 @@
 {
-  "counter": 22,
+  "counter": 23,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -24,16 +24,17 @@
     "/grimoires-sacred-texts/hermetic-alchemical-texts",
     "/ancient-mystery-schools/mesoamerican-south-american",
     "/divination-arts/i-ching",
-    "/mystical-religion/christian-mysticism"
+    "/mystical-religion/christian-mysticism",
+    "/consciousness/psychedelics"
   ],
   "recent_sections": [
-    "Section 12",
     "Section 13",
     "Section 9",
     "Section 8",
     "Section 10",
     "Section 1",
     "Section 6",
-    "Section 2"
+    "Section 2",
+    "Section 9"
   ]
 }
