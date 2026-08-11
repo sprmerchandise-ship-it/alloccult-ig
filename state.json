@@ -1,5 +1,5 @@
 {
-  "counter": 25,
+  "counter": 26,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -27,16 +27,17 @@
     "/divination-arts/i-ching",
     "/mystical-religion/christian-mysticism",
     "/consciousness/psychedelics",
-    "/secret-societies/other-orders"
+    "/secret-societies/other-orders",
+    "/ceremonial-magic/golden-dawn"
   ],
   "recent_sections": [
-    "Section 9",
     "Section 8",
     "Section 10",
     "Section 1",
     "Section 6",
     "Section 2",
     "Section 9",
-    "Section 8"
+    "Section 8",
+    "Section 4"
   ]
 }
