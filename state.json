@@ -1,5 +1,5 @@
 {
-  "counter": 26,
+  "counter": 27,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -28,16 +28,17 @@
     "/mystical-religion/christian-mysticism",
     "/consciousness/psychedelics",
     "/secret-societies/other-orders",
-    "/ceremonial-magic/golden-dawn"
+    "/ceremonial-magic/golden-dawn",
+    "/ancient-mystery-schools/egyptian-mysteries"
   ],
   "recent_sections": [
-    "Section 8",
     "Section 10",
     "Section 1",
     "Section 6",
     "Section 2",
     "Section 9",
     "Section 8",
-    "Section 4"
+    "Section 4",
+    "Section 1"
   ]
 }
