@@ -1,5 +1,5 @@
 {
-  "counter": 28,
+  "counter": 29,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -30,16 +30,17 @@
     "/consciousness/psychedelics",
     "/secret-societies/other-orders",
     "/ceremonial-magic/golden-dawn",
-    "/ancient-mystery-schools/egyptian-mysteries"
+    "/ancient-mystery-schools/egyptian-mysteries",
+    "/divination-arts/tarot"
   ],
   "recent_sections": [
-    "Section 10",
     "Section 1",
     "Section 6",
     "Section 2",
     "Section 9",
     "Section 8",
     "Section 4",
-    "Section 1"
+    "Section 1",
+    "Section 6"
   ]
 }
