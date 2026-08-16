@@ -1,5 +1,5 @@
 {
-  "counter": 29,
+  "counter": 30,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -31,16 +31,17 @@
     "/secret-societies/other-orders",
     "/ceremonial-magic/golden-dawn",
     "/ancient-mystery-schools/egyptian-mysteries",
-    "/divination-arts/tarot"
+    "/divination-arts/tarot",
+    "/numerology-cosmic-order/numerology-systems"
   ],
   "recent_sections": [
-    "Section 1",
     "Section 6",
     "Section 2",
     "Section 9",
     "Section 8",
     "Section 4",
     "Section 1",
-    "Section 6"
+    "Section 6",
+    "Section 15"
   ]
 }
