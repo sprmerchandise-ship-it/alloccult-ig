@@ -1,5 +1,5 @@
 {
-  "counter": 32,
+  "counter": 33,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -34,16 +34,17 @@
     "/ancient-mystery-schools/egyptian-mysteries",
     "/divination-arts/tarot",
     "/numerology-cosmic-order/numerology-systems",
-    "/plant-magic-herbalism/plant-spirits-animism"
+    "/plant-magic-herbalism/plant-spirits-animism",
+    "/left-hand-path/draconian-tradition"
   ],
   "recent_sections": [
-    "Section 2",
     "Section 9",
     "Section 8",
     "Section 4",
     "Section 1",
     "Section 6",
     "Section 15",
-    "Section 12"
+    "Section 12",
+    "Section 13"
   ]
 }
