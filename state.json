@@ -1,5 +1,5 @@
 {
-  "counter": 34,
+  "counter": 35,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -36,16 +36,17 @@
     "/numerology-cosmic-order/numerology-systems",
     "/plant-magic-herbalism/plant-spirits-animism",
     "/left-hand-path/draconian-tradition",
-    "/witchcraft-folk-magic/wicca"
+    "/witchcraft-folk-magic/wicca",
+    "/mystical-religion/rosicrucianism"
   ],
   "recent_sections": [
-    "Section 8",
     "Section 4",
     "Section 1",
     "Section 6",
     "Section 15",
     "Section 12",
     "Section 13",
-    "Section 5"
+    "Section 5",
+    "Section 2"
   ]
 }
