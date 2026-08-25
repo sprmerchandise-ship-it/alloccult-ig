@@ -1,5 +1,5 @@
 {
-  "counter": 36,
+  "counter": 37,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -38,16 +38,17 @@
     "/plant-magic-herbalism/plant-spirits-animism",
     "/left-hand-path/draconian-tradition",
     "/witchcraft-folk-magic/wicca",
-    "/mystical-religion/rosicrucianism"
+    "/mystical-religion/rosicrucianism",
+    "/hidden-history/occult-conspiracies"
   ],
   "recent_sections": [
-    "Section 4",
     "Section 1",
     "Section 6",
     "Section 15",
     "Section 12",
     "Section 13",
     "Section 5",
-    "Section 2"
+    "Section 2",
+    "Section 14"
   ]
 }
