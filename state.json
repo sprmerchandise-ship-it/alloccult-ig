@@ -1,5 +1,5 @@
 {
-  "counter": 37,
+  "counter": 38,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -39,16 +39,17 @@
     "/left-hand-path/draconian-tradition",
     "/witchcraft-folk-magic/wicca",
     "/mystical-religion/rosicrucianism",
-    "/hidden-history/occult-conspiracies"
+    "/hidden-history/occult-conspiracies",
+    "/secret-societies/knights-templar"
   ],
   "recent_sections": [
-    "Section 1",
     "Section 6",
     "Section 15",
     "Section 12",
     "Section 13",
     "Section 5",
     "Section 2",
-    "Section 14"
+    "Section 14",
+    "Section 8"
   ]
 }
