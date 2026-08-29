@@ -1,5 +1,5 @@
 {
-  "counter": 40,
+  "counter": 41,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -42,16 +42,17 @@
     "/mystical-religion/rosicrucianism",
     "/hidden-history/occult-conspiracies",
     "/secret-societies/knights-templar",
-    "/ancient-mystery-schools/mesopotamian"
+    "/ancient-mystery-schools/mesopotamian",
+    "/hermeticism-alchemy/alchemy"
   ],
   "recent_sections": [
-    "Section 15",
     "Section 12",
     "Section 13",
     "Section 5",
     "Section 2",
     "Section 14",
     "Section 8",
-    "Section 1"
+    "Section 1",
+    "Section 3"
   ]
 }
