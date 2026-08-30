@@ -1,5 +1,5 @@
 {
-  "counter": 41,
+  "counter": 42,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -43,16 +43,17 @@
     "/hidden-history/occult-conspiracies",
     "/secret-societies/knights-templar",
     "/ancient-mystery-schools/mesopotamian",
-    "/hermeticism-alchemy/alchemy"
+    "/hermeticism-alchemy/alchemy",
+    "/witchcraft-folk-magic/traditional-witchcraft"
   ],
   "recent_sections": [
-    "Section 12",
     "Section 13",
     "Section 5",
     "Section 2",
     "Section 14",
     "Section 8",
     "Section 1",
-    "Section 3"
+    "Section 3",
+    "Section 5"
   ]
 }
