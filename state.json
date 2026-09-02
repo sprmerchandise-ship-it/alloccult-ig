@@ -1,5 +1,5 @@
 {
-  "counter": 44,
+  "counter": 45,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -46,16 +46,17 @@
     "/ancient-mystery-schools/mesopotamian",
     "/hermeticism-alchemy/alchemy",
     "/witchcraft-folk-magic/traditional-witchcraft",
-    "/ceremonial-magic/thelema"
+    "/ceremonial-magic/thelema",
+    "/divination-arts/runes"
   ],
   "recent_sections": [
-    "Section 5",
     "Section 2",
     "Section 14",
     "Section 8",
     "Section 1",
     "Section 3",
     "Section 5",
-    "Section 4"
+    "Section 4",
+    "Section 6"
   ]
 }
