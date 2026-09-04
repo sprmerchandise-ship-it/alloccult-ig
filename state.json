@@ -1,5 +1,5 @@
 {
-  "counter": 46,
+  "counter": 47,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -48,16 +48,17 @@
     "/witchcraft-folk-magic/traditional-witchcraft",
     "/ceremonial-magic/thelema",
     "/divination-arts/runes",
-    "/mystical-religion/theosophy-anthroposophy"
+    "/mystical-religion/theosophy-anthroposophy",
+    "/ancient-mystery-schools/eleusinian-mysteries"
   ],
   "recent_sections": [
-    "Section 14",
     "Section 8",
     "Section 1",
     "Section 3",
     "Section 5",
     "Section 4",
     "Section 6",
-    "Section 2"
+    "Section 2",
+    "Section 1"
   ]
 }
