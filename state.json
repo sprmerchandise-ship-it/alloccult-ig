@@ -1,5 +1,5 @@
 {
-  "counter": 48,
+  "counter": 49,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -50,16 +50,17 @@
     "/ceremonial-magic/thelema",
     "/divination-arts/runes",
     "/mystical-religion/theosophy-anthroposophy",
-    "/ancient-mystery-schools/eleusinian-mysteries"
+    "/ancient-mystery-schools/eleusinian-mysteries",
+    "/grimoires-sacred-texts/modern-occult-classics"
   ],
   "recent_sections": [
-    "Section 8",
     "Section 1",
     "Section 3",
     "Section 5",
     "Section 4",
     "Section 6",
     "Section 2",
-    "Section 1"
+    "Section 1",
+    "Section 10"
   ]
 }
