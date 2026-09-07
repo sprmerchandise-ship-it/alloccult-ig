@@ -1,5 +1,5 @@
 {
-  "counter": 49,
+  "counter": 50,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -51,16 +51,17 @@
     "/divination-arts/runes",
     "/mystical-religion/theosophy-anthroposophy",
     "/ancient-mystery-schools/eleusinian-mysteries",
-    "/grimoires-sacred-texts/modern-occult-classics"
+    "/grimoires-sacred-texts/modern-occult-classics",
+    "/death-afterlife/necromancy"
   ],
   "recent_sections": [
-    "Section 1",
     "Section 3",
     "Section 5",
     "Section 4",
     "Section 6",
     "Section 2",
     "Section 1",
-    "Section 10"
+    "Section 10",
+    "Section 7"
   ]
 }
