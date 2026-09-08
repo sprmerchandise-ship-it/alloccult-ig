@@ -1,5 +1,5 @@
 {
-  "counter": 50,
+  "counter": 51,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -52,16 +52,17 @@
     "/mystical-religion/theosophy-anthroposophy",
     "/ancient-mystery-schools/eleusinian-mysteries",
     "/grimoires-sacred-texts/modern-occult-classics",
-    "/death-afterlife/necromancy"
+    "/death-afterlife/necromancy",
+    "/numerology-cosmic-order/sacred-cosmology"
   ],
   "recent_sections": [
-    "Section 3",
     "Section 5",
     "Section 4",
     "Section 6",
     "Section 2",
     "Section 1",
     "Section 10",
-    "Section 7"
+    "Section 7",
+    "Section 15"
   ]
 }
