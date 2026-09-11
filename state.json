@@ -1,5 +1,5 @@
 {
-  "counter": 53,
+  "counter": 54,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -55,16 +55,17 @@
     "/grimoires-sacred-texts/modern-occult-classics",
     "/death-afterlife/necromancy",
     "/numerology-cosmic-order/sacred-cosmology",
-    "/plant-magic-herbalism/potions-incense-oils"
+    "/plant-magic-herbalism/potions-incense-oils",
+    "/divination-arts/other-divination"
   ],
   "recent_sections": [
-    "Section 4",
     "Section 6",
     "Section 2",
     "Section 1",
     "Section 10",
     "Section 7",
     "Section 15",
-    "Section 12"
+    "Section 12",
+    "Section 6"
   ]
 }
