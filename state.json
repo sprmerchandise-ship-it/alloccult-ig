@@ -1,5 +1,5 @@
 {
-  "counter": 56,
+  "counter": 57,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -58,16 +58,17 @@
     "/numerology-cosmic-order/sacred-cosmology",
     "/plant-magic-herbalism/potions-incense-oils",
     "/divination-arts/other-divination",
-    "/hermeticism-alchemy/hermeticism"
+    "/hermeticism-alchemy/hermeticism",
+    "/ancient-mystery-schools/mithraic-mysteries"
   ],
   "recent_sections": [
-    "Section 2",
     "Section 1",
     "Section 10",
     "Section 7",
     "Section 15",
     "Section 12",
     "Section 6",
-    "Section 3"
+    "Section 3",
+    "Section 1"
   ]
 }
