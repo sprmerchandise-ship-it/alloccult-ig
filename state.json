@@ -1,5 +1,5 @@
 {
-  "counter": 57,
+  "counter": 58,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -59,16 +59,17 @@
     "/plant-magic-herbalism/potions-incense-oils",
     "/divination-arts/other-divination",
     "/hermeticism-alchemy/hermeticism",
-    "/ancient-mystery-schools/mithraic-mysteries"
+    "/ancient-mystery-schools/mithraic-mysteries",
+    "/mystical-religion/islamic-esotericism"
   ],
   "recent_sections": [
-    "Section 1",
     "Section 10",
     "Section 7",
     "Section 15",
     "Section 12",
     "Section 6",
     "Section 3",
-    "Section 1"
+    "Section 1",
+    "Section 2"
   ]
 }
