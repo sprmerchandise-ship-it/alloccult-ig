@@ -1,5 +1,5 @@
 {
-  "counter": 58,
+  "counter": 59,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -60,16 +60,17 @@
     "/divination-arts/other-divination",
     "/hermeticism-alchemy/hermeticism",
     "/ancient-mystery-schools/mithraic-mysteries",
-    "/mystical-religion/islamic-esotericism"
+    "/mystical-religion/islamic-esotericism",
+    "/witchcraft-folk-magic/folk-magic-traditions"
   ],
   "recent_sections": [
-    "Section 10",
     "Section 7",
     "Section 15",
     "Section 12",
     "Section 6",
     "Section 3",
     "Section 1",
-    "Section 2"
+    "Section 2",
+    "Section 5"
   ]
 }
