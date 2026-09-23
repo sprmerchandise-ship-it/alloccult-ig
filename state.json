@@ -1,5 +1,5 @@
 {
-  "counter": 64,
+  "counter": 65,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -66,16 +66,17 @@
     "/witchcraft-folk-magic/folk-magic-traditions",
     "/symbols-sigils/sigil-magic",
     "/ceremonial-magic/chaos-magick",
-    "/secret-societies/illuminati-historical"
+    "/secret-societies/illuminati-historical",
+    "/hermeticism-alchemy/natural-magic"
   ],
   "recent_sections": [
-    "Section 6",
     "Section 3",
     "Section 1",
     "Section 2",
     "Section 5",
     "Section 11",
     "Section 4",
-    "Section 8"
+    "Section 8",
+    "Section 3"
   ]
 }
