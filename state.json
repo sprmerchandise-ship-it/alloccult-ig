@@ -1,5 +1,5 @@
 {
-  "counter": 65,
+  "counter": 66,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -67,16 +67,17 @@
     "/symbols-sigils/sigil-magic",
     "/ceremonial-magic/chaos-magick",
     "/secret-societies/illuminati-historical",
-    "/hermeticism-alchemy/natural-magic"
+    "/hermeticism-alchemy/natural-magic",
+    "/ancient-mystery-schools/norse-germanic"
   ],
   "recent_sections": [
-    "Section 3",
     "Section 1",
     "Section 2",
     "Section 5",
     "Section 11",
     "Section 4",
     "Section 8",
-    "Section 3"
+    "Section 3",
+    "Section 1"
   ]
 }
