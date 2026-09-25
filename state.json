@@ -1,5 +1,5 @@
 {
-  "counter": 66,
+  "counter": 67,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -68,16 +68,17 @@
     "/ceremonial-magic/chaos-magick",
     "/secret-societies/illuminati-historical",
     "/hermeticism-alchemy/natural-magic",
-    "/ancient-mystery-schools/norse-germanic"
+    "/ancient-mystery-schools/norse-germanic",
+    "/death-afterlife/death-cults-psychopomps"
   ],
   "recent_sections": [
-    "Section 1",
     "Section 2",
     "Section 5",
     "Section 11",
     "Section 4",
     "Section 8",
     "Section 3",
-    "Section 1"
+    "Section 1",
+    "Section 7"
   ]
 }
