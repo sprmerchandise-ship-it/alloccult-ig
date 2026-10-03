@@ -1,5 +1,5 @@
 {
-  "counter": 74,
+  "counter": 75,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -76,16 +76,17 @@
     "/divination-arts/scrying",
     "/witchcraft-folk-magic/african-diaspora-religion",
     "/mystical-religion/kabbalah",
-    "/hermeticism-alchemy/sacred-geometry"
+    "/hermeticism-alchemy/sacred-geometry",
+    "/ancient-mystery-schools/slavic-eastern-european"
   ],
   "recent_sections": [
-    "Section 3",
     "Section 1",
     "Section 7",
     "Section 9",
     "Section 6",
     "Section 5",
     "Section 2",
-    "Section 3"
+    "Section 3",
+    "Section 1"
   ]
 }
