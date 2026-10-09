@@ -199,9 +199,12 @@ def render_slides(hook, slides, outdir, symbol="\u2726", entry_title=""):
 
 def git_push(paths, msg):
     subprocess.run(["git", "add"] + paths, check=True)
-    subprocess.run(["git", "-c", "user.name=alloccult-bot",
-                    "-c", "user.email=bot@alloccult.com",
-                    "commit", "-m", msg], check=True)
+    staged = subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode != 0
+    if staged:
+        subprocess.run(["git", "-c", "user.name=alloccult-bot",
+                        "-c", "user.email=bot@alloccult.com",
+                        "commit", "-m", msg], check=True)
+    subprocess.run(["git", "pull", "--rebase", "-q"], check=True)
     subprocess.run(["git", "push"], check=True)
 
 def wait_ready(cid):
@@ -321,7 +324,8 @@ def load_learnings():
     return []
 
 
-def lore_post(state):
+def choose_entry(state):
+    """Next archive entry to feature: unposted, varied by section, biased to what performs."""
     archive = load_archive()
     recent_sections = state.get("recent_sections", [])[-5:]
     unposted = [e for e in archive if e["route"] not in state["posted_lore"]]
@@ -333,7 +337,11 @@ def lore_post(state):
     if top:
         preferred = [e for e in pool if e.get("section") in top]
         pool = preferred or pool
-    entry = pool[int(time.time()) % len(pool)]
+    return pool[int(time.time()) % len(pool)]
+
+
+def lore_post(state):
+    entry = choose_entry(state)
     url = SITE_URL + entry["route"]
     prompt = (
         "You are creating an Instagram carousel that teases a specific entry in "
@@ -400,38 +408,122 @@ def posting_switches():
         return defaults
 
 
-def post_approved_draft():
-    """Publish the oldest carousel draft a person has approved. Returns True if one posted."""
+DRAFTS = "drafts"
+REVIEW_ROUNDS = 3
+
+
+def _drafts():
     import glob
-    from carousel import caption_for
-    for path in sorted(glob.glob("drafts/*/draft.json")):
+    return [(p, json.load(open(p))) for p in sorted(glob.glob(f"{DRAFTS}/*/draft.json"))]
+
+
+def _save(path, draft):
+    json.dump(draft, open(path, "w"), indent=2, ensure_ascii=False)
+
+
+def new_draft(state):
+    """Claude writes a carousel for the next archive entry → drafts/NNN-slug/draft.json."""
+    import re
+    from carousel_ai import write_draft
+    from site_source import page_text
+    entry = choose_entry(state)
+    recent = [d["title"] for _, d in _drafts()][-10:]
+    print(f"Writing a carousel for: {entry['title']} ({entry['route']})")
+    draft = write_draft(entry, page_text(entry["route"]), recent)
+    n = len(_drafts()) + 1
+    slug = re.sub(r"[^a-z0-9]+", "-", entry["title"].lower()).strip("-")[:40]
+    draft = {"id": f"{n:03d}-{slug}", "status": "draft", **draft}
+    path = f"{DRAFTS}/{draft['id']}/draft.json"
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    _save(path, draft)
+    return path, draft
+
+
+def review_draft(path, draft):
+    """Render → Claude review → fix → repeat. Marks the draft approved or rejected."""
+    from carousel import render
+    from carousel_ai import apply_fixes, review
+    from site_source import page_text
+    source = page_text(draft["route"])
+    folder = os.path.dirname(path)
+    log = draft.setdefault("review_log", [])
+    for rnd in range(1, REVIEW_ROUNDS + 1):
+        render(folder)
         draft = json.load(open(path))
+        log = draft.setdefault("review_log", log)
+        slides = [os.path.join(folder, f) for f in draft["slide_files"]]
+        verdict = review(draft, slides, source)
+        print(f"Review round {rnd}: {'APPROVED' if verdict['approved'] else 'changes needed'} — {verdict['summary']}")
+        if verdict["approved"]:
+            draft["status"] = "approved"
+            log.append({"round": rnd, "approved": True, "summary": verdict["summary"]})
+            _save(path, draft)
+            return True
+        changes = apply_fixes(draft, verdict)
+        for c in changes:
+            print("  fix:", c)
+        log.append({"round": rnd, "approved": False, "summary": verdict["summary"], "fixes": changes})
+        _save(path, draft)
+        if not changes:
+            break                                  # nothing actionable — don't loop
+    draft["status"] = "rejected"
+    _save(path, draft)
+    print(f"{draft['id']} did not pass review — it will not be posted.")
+    return False
+
+
+def prepare_carousel(state):
+    """Make sure an approved draft is ready: review a pending one, or write and review a new one."""
+    drafts = _drafts()
+    if any(d.get("status") == "approved" for _, d in drafts):
+        return True
+    pending = [(p, d) for p, d in drafts if d.get("status") == "draft"]
+    path, draft = pending[0] if pending else new_draft(state)
+    return review_draft(path, draft)
+
+
+def post_approved_draft(state):
+    """Publish the oldest approved draft. Returns True if one posted."""
+    from carousel import caption_for
+    for path, draft in _drafts():
         if draft.get("status") != "approved":
             continue
         folder = os.path.dirname(path)
-        files = draft.get("slide_files") or []
-        if not files or not all(os.path.exists(os.path.join(folder, f)) for f in files):
+        files = [os.path.join(folder, f) for f in draft.get("slide_files") or []]
+        if not files or not all(os.path.exists(f) for f in files):
             print(f"{draft['id']} is approved but not rendered — skipping.")
             continue
-        urls = [f"{REPO_RAW}/{folder}/{f}" for f in files]
-        pid = publish_carousel(urls, caption_for(draft))
+        git_push(files + [path], f"Carousel slides: {draft['id']}")   # images must be public first
+        pid = publish_carousel([f"{REPO_RAW}/{f}" for f in files], caption_for(draft))
         record_published(pid, "lore", draft["route"], draft.get("section", ""))
-        draft["status"], draft["media_id"] = "posted", pid
-        draft["posted_at"] = int(time.time())
-        json.dump(draft, open(path, "w"), indent=2, ensure_ascii=False)
-        print(f"Posted approved draft {draft['id']}: {draft['title']}")
+        draft.update(status="posted", media_id=pid, posted_at=int(time.time()))
+        _save(path, draft)
+        state["posted_lore"].append(draft["route"])
+        state.setdefault("recent_sections", []).append(draft.get("section", ""))
+        state["recent_sections"] = state["recent_sections"][-8:]
+        print(f"Posted {draft['id']}: {draft['title']}")
         return True
     return False
 
 
 def main():
+    prepare_only = "--prepare" in sys.argv
     switches = posting_switches()
-    if not switches["carousels"]:
+    if not switches["carousels"] and not prepare_only:
         print("Carousel posting is paused (posting.json: carousels=false).")
         return
-    # Every carousel is reviewed first: only drafts marked "approved" post.
-    if not post_approved_draft():
-        print("No approved carousel draft — nothing posted today.")
+    state = load_state()
+    # Every carousel is reviewed by Claude (facts, images, legibility) before it
+    # can post; one that fails review is never published.
+    if not prepare_carousel(state):
+        print("No carousel passed review today — nothing posted.")
+        return
+    if prepare_only:
+        print("Prepared and approved; not posting (--prepare).")
+        return
+    if post_approved_draft(state):
+        state["counter"] += 1
+        save_state(state)
 
 if __name__ == "__main__":
     main()

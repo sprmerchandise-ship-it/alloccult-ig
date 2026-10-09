@@ -3,7 +3,12 @@ name: ALLOCCULT Instagram Post
 on:
   schedule:
     - cron: "0 18 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      prepare_only:
+        description: "Write + review the next carousel, but don't post it"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -20,7 +25,7 @@ jobs:
 
       - name: Install dependencies & fonts
         run: |
-          pip install pillow numpy fonttools -q
+          pip install pillow numpy fonttools anthropic -q
           mkdir -p fonts
           curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
           curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
@@ -31,15 +36,17 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ETSY_API_KEY: ${{ secrets.ETSY_API_KEY }}   # optional: keystring:shared_secret
-        run: python post.py
+          GH_PAT: ${{ secrets.GH_PAT }}               # reads archive page text for fact-checking
+        run: python post.py ${{ inputs.prepare_only && '--prepare' || '' }}
 
-      - name: Save posting history
+      - name: Save posting history and drafts
+        if: always()      # keep review logs even if a step failed
         run: |
           git config user.name "alloccult-bot"
           git config user.email "bot@alloccult.com"
-          git pull --rebase || true
           git add state.json
           [ -e published.json ] && git add published.json
           git add drafts
           git diff --cached --quiet || git commit -m "Update posting state"
+          git pull --rebase
           git push
