@@ -44,7 +44,13 @@
       "kicker": "The Ferryman",
       "text": "At the river, Charon waits. The Greeks buried their dead with a coin to pay him: the obol.",
       "image_query": "Charon",
-      "image": null,
+      "image": {
+        "key": "wellcome:z8ra5ybn",
+        "url": "https://iiif.wellcomecollection.org/image/V0035986ER/full/1600,/0/default.jpg",
+        "title": "Scenes in the underworld; spirits of the dead disembarking from the boat of Charon; Charon receiving a ghost into his boat. Etching by L.P. Boitard.",
+        "credit": "Scenes in the underworld; spirits of the dead disembarking from the bo — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      },
       "reject": [
         "wellcome:xtqwp7vn",
         "wellcome:spvemhv2"
