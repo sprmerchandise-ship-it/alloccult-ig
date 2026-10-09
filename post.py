@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """ALLOCCULT Instagram Automation v3 — bold minimal carousels."""
 
-import json, os, sys, time, subprocess, urllib.request, urllib.parse
+import html, json, os, re, sys, time, subprocess, urllib.request, urllib.parse
+import xml.etree.ElementTree as ET
 
-STORE_URL = "https://alloccult.store"
+ETSY_SHOP = "alloccult"
+STORE_URL = f"https://{ETSY_SHOP}.etsy.com"
 SITE_URL = "alloccult.com"
 REPO_RAW = "https://raw.githubusercontent.com/sprmerchandise-ship-it/alloccult-ig/main"
 PRODUCT_EVERY_N = 4
@@ -66,7 +68,7 @@ def claude_json(prompt, system):
 BRAND = (
     "You are the content brain for ALLOCCULT — a dark occult brand and "
     "forbidden-knowledge library (alloccult.com, 'The Forbidden Library'; shop: "
-    "alloccult.store). Voice: dark, mysterious, esoteric; slightly forbidden, as "
+    "alloccult.etsy.com). Voice: dark, mysterious, esoteric; slightly forbidden, as "
     "if the reader wasn't meant to find this; authoritative but cryptic; short "
     "punchy sentences, never more than about 12 words a line. Every fact must be "
     "historically accurate — real names, dates, texts. Never cheesy or comedic. "
@@ -227,23 +229,69 @@ def publish_carousel(image_urls, caption):
     print("Published:", res.get("id"))
     return res.get("id")
 
-def fetch_products():
-    try:
-        data = http_json(f"{STORE_URL}/products.json?limit=250")
-    except (urllib.error.URLError, TimeoutError, ValueError) as e:
-        # Store unreachable (e.g. TLS/domain problem): post lore instead of
-        # failing — otherwise the counter never advances and posting stalls.
-        print(f"WARNING: could not load products from {STORE_URL} ({e}); "
-              "posting lore instead.")
-        return []
+def etsy_api_products(key):
+    """Etsy Open API v3. key = "keystring:shared_secret" (ETSY_API_KEY secret)."""
+    base = "https://openapi.etsy.com/v3/application"
+    h = {"x-api-key": key}
+    shop = http_json(f"{base}/shops?shop_name={ETSY_SHOP}", headers=h)["results"][0]
+    listings = http_json(f"{base}/shops/{shop['shop_id']}/listings/active?limit=100",
+                         headers=h)["results"]
     out = []
-    for p in data.get("products", []):
-        if p.get("images"):
-            out.append({"id": p["id"], "title": p["title"],
-                        "images": [i["src"] for i in p["images"]][:5],
-                        "price": p["variants"][0]["price"] if p.get("variants") else None,
-                        "body": (p.get("body_html") or "")[:500]})
+    for i in range(0, len(listings), 100):
+        ids = ",".join(str(l["listing_id"]) for l in listings[i:i + 100])
+        for l in http_json(f"{base}/listings/batch?listing_ids={ids}&includes=Images",
+                           headers=h)["results"]:
+            imgs = [im["url_fullxfull"] for im in l.get("images") or []]
+            if not imgs:
+                continue
+            price = l.get("price") or {}
+            out.append({"id": l["listing_id"], "title": html.unescape(l["title"]),
+                        "images": imgs[:5],
+                        "price": f"{price['amount'] / price['divisor']:.2f} {price.get('currency_code', '')}"
+                                 if price.get("divisor") else None,
+                        "body": html.unescape(l.get("description") or "")[:500]})
     return out
+
+
+def etsy_rss_products():
+    """Fallback without an API key: the public shop RSS feed (one image per item)."""
+    req = urllib.request.Request(f"https://www.etsy.com/shop/{ETSY_SHOP}/rss",
+                                 headers={"User-Agent": "Mozilla/5.0 (alloccult-bot)"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        root = ET.fromstring(r.read())
+    out = []
+    for item in root.iter("item"):
+        desc = item.findtext("description") or ""
+        img = re.search(r'<img[^>]+src="([^"]+)"', desc)
+        m = re.search(r"/listing/(\d+)", item.findtext("link") or "")
+        if not img or not m:
+            continue
+        price = re.search(r"([\d.,]+\s*[A-Z]{3})", desc)
+        out.append({"id": int(m.group(1)),
+                    "title": html.unescape(item.findtext("title") or "").split(" by ")[0],
+                    "images": [re.sub(r"il_\w+?\.", "il_fullxfull.", img.group(1), count=1)],
+                    "price": price.group(1) if price else None,
+                    "body": re.sub(r"<[^>]+>", " ", html.unescape(desc))[:500]})
+    return out
+
+
+def fetch_products():
+    """Active Etsy listings. Any failure returns [] so the day's post falls back
+    to lore instead of failing — otherwise the counter never advances."""
+    key = os.environ.get("ETSY_API_KEY", "")
+    sources = ([("Etsy API", lambda: etsy_api_products(key))] if key else []) + \
+              [("Etsy RSS", etsy_rss_products)]
+    for name, fn in sources:
+        try:
+            products = fn()
+            print(f"{name}: {len(products)} products")
+            if products:
+                return products
+        except (urllib.error.URLError, TimeoutError, ValueError, KeyError,
+                IndexError, ET.ParseError) as e:
+            print(f"WARNING: {name} failed ({e})")
+    print("WARNING: no products available; posting lore instead.")
+    return []
 
 def pick(items, posted, keyfn):
     fresh = [i for i in items if keyfn(i) not in posted]
@@ -328,7 +376,7 @@ def product_post(state):
         f"Instagram caption for a product carousel.\nProduct: {p['title']} "
         f"(from {p['price']}). Description: {p['body']}\n"
         "One line of true esoteric context on the symbol, one quiet line on the "
-        "piece itself, then: Available at alloccult.store \u2014 link in bio. "
+        "piece itself, then: Available in our Etsy shop \u2014 link in bio. "
         "Max 90 words, then 10 niche hashtags.", BRAND, 700)
     urls = p["images"]
     if len(urls) == 1:
