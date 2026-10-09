@@ -400,18 +400,38 @@ def posting_switches():
         return defaults
 
 
+def post_approved_draft():
+    """Publish the oldest carousel draft a person has approved. Returns True if one posted."""
+    import glob
+    from carousel import caption_for
+    for path in sorted(glob.glob("drafts/*/draft.json")):
+        draft = json.load(open(path))
+        if draft.get("status") != "approved":
+            continue
+        folder = os.path.dirname(path)
+        files = draft.get("slide_files") or []
+        if not files or not all(os.path.exists(os.path.join(folder, f)) for f in files):
+            print(f"{draft['id']} is approved but not rendered — skipping.")
+            continue
+        urls = [f"{REPO_RAW}/{folder}/{f}" for f in files]
+        pid = publish_carousel(urls, caption_for(draft))
+        record_published(pid, "lore", draft["route"], draft.get("section", ""))
+        draft["status"], draft["media_id"] = "posted", pid
+        draft["posted_at"] = int(time.time())
+        json.dump(draft, open(path, "w"), indent=2, ensure_ascii=False)
+        print(f"Posted approved draft {draft['id']}: {draft['title']}")
+        return True
+    return False
+
+
 def main():
     switches = posting_switches()
     if not switches["carousels"]:
         print("Carousel posting is paused (posting.json: carousels=false).")
         return
-    state = load_state()
-    if switches["products"] and state["counter"] % PRODUCT_EVERY_N == PRODUCT_EVERY_N - 1:
-        product_post(state)
-    else:
-        lore_post(state)
-    state["counter"] += 1
-    save_state(state)
+    # Every carousel is reviewed first: only drafts marked "approved" post.
+    if not post_approved_draft():
+        print("No approved carousel draft — nothing posted today.")
 
 if __name__ == "__main__":
     main()

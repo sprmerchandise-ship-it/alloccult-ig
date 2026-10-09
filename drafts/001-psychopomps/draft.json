@@ -1,0 +1,20 @@
+{
+  "id": "001-psychopomps",
+  "status": "draft",
+  "title": "Death Cults & Psychopomps",
+  "route": "/death-afterlife/death-cults-psychopomps",
+  "section": "Section 7",
+  "slides": [
+    {"text": "Who comes for you when you die?", "image_query": "Charon boat"},
+    {"kicker": "Egypt · Anubis", "text": "The jackal-headed god weighs your heart against the feather of Ma'at. Too heavy, and Ammit devours it.", "image_query": "Anubis"},
+    {"kicker": "Greece · Hermes", "text": "Hermes Psychopompos, guide of souls, leads the dead down to Hades. Homer sings it in Odyssey 24.", "image_query": "Hermes"},
+    {"kicker": "The Ferryman", "text": "At the river, Charon waits. The Greeks buried their dead with a coin to pay him: the obol.", "image_query": "Charon"},
+    {"kicker": "Aztec · Mictlan", "text": "A dog carries the dead across the river of the underworld. The descent through nine levels takes four years.", "image_query": "Aztec"},
+    {"kicker": "Norse · Valkyries", "text": "Odin's Valkyries choose who falls in battle, and carry the chosen to Valhalla.", "image_query": "Valkyrie"},
+    {"kicker": "India & Tibet · Yama", "text": "Yama found the path of the dead first. Now he rules them, and judges them.", "image_query": "Yama"},
+    {"kicker": "Islam · The Angel of Death", "text": "Malak al-Mawt, named Azrael in tradition, draws the soul from the body at the appointed hour.", "image_query": "angel of death"},
+    {"kicker": "Your turn", "text": "Which of them would you want waiting for you? Answer below.", "image_query": "memento mori"}
+  ],
+  "caption": "Every culture that buried its dead sent someone to collect them.\n\nIn Egypt, Anubis weighed the heart against the feather of Ma'at.\nIn Greece, Hermes led the shades down, and Charon took the obol at the river.\nThe Aztecs buried a dog with the dead, to carry them across.\nOdin's Valkyries chose the fallen. Yama judged. Azrael waited for the hour.\n\nThe Greeks called them psychopomps: guides of souls.\n\nWhich one would you want at your door? Answer below.\n\nThe full entry waits in the Forbidden Library: alloccult.com/death-afterlife/death-cults-psychopomps",
+  "hashtags": ["psychopomp", "anubis", "charon", "hermes", "valkyrie", "yama", "azrael", "deathandafterlife", "mythology", "occulthistory", "esoteric", "occult"]
+}
