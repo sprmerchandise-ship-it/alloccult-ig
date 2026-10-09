@@ -48,6 +48,7 @@ jobs:
 
       - name: Download posts bundle
         if: env.RUN_ID != ''
+        continue-on-error: true      # weeks that keep the previous queue have no bundle
         uses: actions/download-artifact@v4
         with:
           pattern: posts-*
@@ -68,7 +69,12 @@ jobs:
           git pull --rebase
           git push
 
+      - name: Check for videos
+        id: check
+        run: ls bundle/*.mp4 >/dev/null 2>&1 && echo "found=true" >> "$GITHUB_OUTPUT" || echo "No new Reels to publish."
+
       - name: Contact sheets
+        if: steps.check.outputs.found == 'true'
         run: |
           cd bundle
           for f in *.mp4; do
@@ -78,6 +84,7 @@ jobs:
           ls -la
 
       - name: Push to previews branch
+        if: steps.check.outputs.found == 'true'
         run: |
           cd bundle
           git init -q -b previews

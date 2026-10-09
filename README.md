@@ -91,11 +91,15 @@ preview), uploads it straight to Instagram (resumable upload — no hosting
 needed), and publishes it. It is recorded in `published.json`, so
 `analytics.py` scores Reels alongside carousels.
 
-**Scheduled Reels are off until you turn them on.** After you have watched a
-preview bundle you are happy with, set the repo variable `REELS_ENABLED` to
-`true` (Settings → Secrets and variables → Actions → Variables). Manual runs
-(Actions → ALLOCCULT Daily Reel → Run workflow, with an optional "dry run")
-always work.
+**Scheduled Reels are on.** To pause them, set the repo variable
+`REELS_ENABLED` to `false` (Settings → Secrets and variables → Actions →
+Variables). Manual runs (Actions → ALLOCCULT Daily Reel → Run workflow, with an
+optional "dry run") always work. If the newest queue still has 2+ unposted
+Reels on Monday, the weekly run keeps it rather than composing a new one.
+
+**Watch the week's Reels** on the `previews` branch (open an `.mp4` → View
+raw), refreshed after every weekly run. After editing a `queue/*.json` by
+hand, run Actions → Publish Reel Previews with no run ID to re-render it.
 
 ### How the videos are made
 

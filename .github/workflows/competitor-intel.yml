@@ -56,7 +56,12 @@ jobs:
         run: python compose_posts.py
 
       - name: Render the week's Reels (preview bundle)
-        run: python render_reel.py "queue/$DATE.json" all "out/posts-$DATE"
+        run: |
+          if [ -f "queue/$DATE.json" ]; then
+            python render_reel.py "queue/$DATE.json" all "out/posts-$DATE"
+          else
+            echo "No new queue this week (previous one still posting)."
+          fi
 
       - name: Upload posts bundle
         uses: actions/upload-artifact@v4
@@ -64,6 +69,7 @@ jobs:
           name: posts-${{ env.DATE }}
           path: out/posts-${{ env.DATE }}
           retention-days: 30
+          if-no-files-found: ignore
 
       - name: Commit scan, report + queue
         if: always()   # keep the report even if composing/rendering failed

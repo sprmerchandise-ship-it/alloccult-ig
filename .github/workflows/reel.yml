@@ -15,9 +15,10 @@ permissions:
 
 jobs:
   reel:
-    # Scheduled runs only post once you set the repo variable REELS_ENABLED=true
-    # (Settings → Secrets and variables → Actions → Variables). Manual runs always work.
-    if: github.event_name == 'workflow_dispatch' || vars.REELS_ENABLED == 'true'
+    # Scheduled Reels are ON. To pause them, set the repo variable
+    # REELS_ENABLED=false (Settings → Secrets and variables → Actions → Variables).
+    # Manual runs always work.
+    if: github.event_name == 'workflow_dispatch' || vars.REELS_ENABLED != 'false'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
