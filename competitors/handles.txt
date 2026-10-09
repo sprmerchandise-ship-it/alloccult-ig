@@ -11,7 +11,6 @@
 curio_esoterica              # ~109K, esoteric explorations, mythopoetic
 amsterdamhermetica           # ~24K, Univ. of Amsterdam history of Hermetic philosophy
 grimoiremagic                # ~128K, survey of grimoires from a private collection
-kodex_hermetica              # ~74K, hermetic/esoteric posts + ebook
 etherealuniversityy          # ~103K, occult learning platform
 theesotericwitch             # ~6.3K, witchcraft, tarot and art history
 theoccultarchive             # ~1.5K, mysterious & paranormal (small, same niche name)
@@ -26,7 +25,6 @@ darkstarmagick               # ~11K, Portland esoteric bookstore
 grimoiresontape              # ~9.4K, Alexander Cummins, diviner & grimoire scholar
 
 # --- Dark occult / demonology aesthetics ---
-demonology638                # ~93K, demonology
 mysticbarbarism              # ~55K, occult & demonic themes
 
 # --- Witchcraft (large audiences) ---
