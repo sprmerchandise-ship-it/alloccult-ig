@@ -111,6 +111,23 @@ def closing_slide(title, route):
     return img
 
 
+def _choose(slide, draft, used):
+    """Claude picks among museum candidates when it can; otherwise the first match."""
+    query = slide.get("image_query") or draft["title"]
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        return museum.find_image(query, used)
+    from carousel_ai import pick_image
+    cands = museum.candidates(query, used)
+    i = pick_image(slide.get("kicker", ""), slide["text"], cands)
+    if i < 0:
+        print(f"  no fitting image for '{query}' among {len(cands)} candidates")
+        for c in cands:                       # don't offer the same misfits again
+            slide.setdefault("reject", []).append(c["key"])
+            used.add(c["key"])
+        return None
+    return cands[i]
+
+
 def resolve_images(draft, tmp):
     """Make sure each slide has a downloadable image; returns local paths."""
     used = {s["image"]["key"] for s in draft["slides"] if s.get("image")}
@@ -121,7 +138,7 @@ def resolve_images(draft, tmp):
         p = os.path.join(tmp, f"art{n}.jpg")
         for _ in range(6):
             if not s.get("image"):
-                s["image"] = museum.find_image(s.get("image_query") or draft["title"], used)
+                s["image"] = _choose(s, draft, used)
                 if not s["image"]:
                     break
             used.add(s["image"]["key"])

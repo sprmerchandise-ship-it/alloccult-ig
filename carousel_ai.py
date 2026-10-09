@@ -106,6 +106,31 @@ PAGE TEXT:
             "hashtags": [h.lower().lstrip("#").replace(" ", "") for h in data["hashtags"]][:12]}
 
 
+PICK_SCHEMA = _obj({"choice": {"type": "integer"}, "reason": STR})
+
+
+def pick_image(kicker, text, cands):
+    """Index of the museum image that best fits the slide, or -1 if none truly fits.
+    Museum titles are descriptive, so this catches title-word puns (an "angelfish"
+    for the Angel of Death) before anything is rendered."""
+    if not cands:
+        return -1
+    listing = "\n".join(f"{i}: {c['title']}" for i, c in enumerate(cands))
+    prompt = f"""Pick the museum image for this Instagram slide.
+
+SLIDE: {kicker or '(cover)'} — {text}
+
+CANDIDATES (museum catalogue titles):
+{listing}
+
+Choose the one that most directly depicts the slide's subject. Reject any that
+only share a word with it (a pun or coincidence), unrelated portraits or
+landscapes, and sectarian or hateful propaganda. If none truly fits, answer -1.
+"choice" is the number; "reason" is one short sentence."""
+    data = _ask(VOICE, prompt, PICK_SCHEMA, effort="medium")
+    return data["choice"] if -1 <= data["choice"] < len(cands) else -1
+
+
 REVIEW_SCHEMA = _obj({
     "approved": {"type": "boolean"},
     "summary": STR,
@@ -118,6 +143,7 @@ REVIEW_SCHEMA = _obj({
         "text_problem": STR,
         "new_kicker": STR,
         "new_text": STR,
+        "drop_slide": {"type": "boolean"},
     })},
     "caption_ok": {"type": "boolean"},
     "caption_problem": STR,
@@ -159,6 +185,9 @@ spelling, and that the hook would stop a scroll.
 For each problem give a fix: a better "new_image_query" (1–3 words naming the
 subject, for the Wellcome Collection) or "new_kicker"/"new_text". Leave fix
 fields "" when that part is fine. List every slide, including fine ones.
+Set "drop_slide" true for a content slide that should go — e.g. when no fitting
+public-domain image is likely to exist for it — but keep the cover and at
+least 4 content slides.
 "approved" is true only if nothing needs fixing. "new_hashtags" is [] unless
 the hashtags need changing (then exactly 12, lowercase, no #).
 
@@ -179,6 +208,14 @@ def apply_fixes(draft, verdict):
     """Edit the draft per the review. Returns a list of what changed."""
     changes = []
     slides = draft["slides"]
+    drops = sorted({v["slide"] - 1 for v in verdict["slides"]
+                    if v["drop_slide"] and 0 < v["slide"] - 1 < len(slides)}, reverse=True)
+    if len(slides) - len(drops) >= 5:                 # cover + at least 4 content slides
+        for i in drops:
+            changes.append(f"slide {i + 1} dropped")
+        verdict = {**verdict, "slides": [v for v in verdict["slides"] if v["slide"] - 1 not in drops]}
+    else:
+        drops = []
     for v in verdict["slides"]:
         i = v["slide"] - 1
         if not 0 <= i < len(slides):
@@ -197,6 +234,8 @@ def apply_fixes(draft, verdict):
             if v["new_kicker"] and i > 0:
                 s["kicker"] = v["new_kicker"]
             changes.append(f"slide {i + 1} text: {v['text_problem']}")
+    for i in drops:
+        del slides[i]
     if not verdict["caption_ok"] and verdict["new_caption"]:
         draft["caption"] = verdict["new_caption"]
         changes.append(f"caption: {verdict['caption_problem']}")
