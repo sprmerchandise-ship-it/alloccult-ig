@@ -391,9 +391,22 @@ def product_post(state):
     state["posted_products"].append(p["id"])
     print("Product post:", p["title"])
 
+def posting_switches():
+    """posting.json — on/off switches committed in the repo (see its _help)."""
+    defaults = {"carousels": True, "reels": True, "products": True}
+    try:
+        return {**defaults, **json.load(open("posting.json"))}
+    except (OSError, ValueError):
+        return defaults
+
+
 def main():
+    switches = posting_switches()
+    if not switches["carousels"]:
+        print("Carousel posting is paused (posting.json: carousels=false).")
+        return
     state = load_state()
-    if state["counter"] % PRODUCT_EVERY_N == PRODUCT_EVERY_N - 1:
+    if switches["products"] and state["counter"] % PRODUCT_EVERY_N == PRODUCT_EVERY_N - 1:
         product_post(state)
     else:
         lore_post(state)
