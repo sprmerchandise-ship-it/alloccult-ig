@@ -62,3 +62,40 @@ then check @all.occult. If it worked, you're done — it now posts daily at
   currently accepts via `image_url`, but if a post ever fails with an image
   format error, append `&format=pjpg` to the image URL in `post.py`
   (Shopify CDN converts on the fly).
+
+## Weekly competitor intel
+
+Every Monday at 08:00 UTC, `.github/workflows/competitor-intel.yml` scans
+competitor accounts through the Graph API, ranks their last 30 days of posts by
+engagement rate ((likes + comments) / followers), and has Claude Code write
+`reports/YYYY-MM-DD.md`. The report covers what's working and includes 7 Reel
+scripts for the coming week, each built on an alloccult.com archive entry.
+
+**Setup**
+
+1. Fill in `competitors/handles.txt` with 30–50 occult/witchcraft accounts (one
+   per line, no @). Only Business and Creator accounts can be read; others are
+   skipped and listed under `skipped` in `competitors/scan.json`.
+2. Optional: edit `competitors/hashtags.txt`. The hashtag scan needs the
+   **Instagram Public Content Access** feature on your Meta app. Without it the
+   hashtag part is skipped and the account scan still runs. Instagram allows 30
+   unique hashtags per rolling 7 days.
+3. Secrets: uses the existing `IG_USER_ID`, `IG_ACCESS_TOKEN` and
+   `ANTHROPIC_API_KEY`.
+
+**Run it locally once**
+
+```bash
+export IG_USER_ID=... IG_ACCESS_TOKEN=... ANTHROPIC_API_KEY=...
+python competitor_scan.py                    # writes competitors/scan.json
+npm install -g @anthropic-ai/claude-code
+DATE=$(date -u +%F)
+claude -p "$(sed "s/{{DATE}}/$DATE/g" intel/analysis_prompt.md)" \
+  --allowedTools "Read,Glob,Grep,Write" --permission-mode acceptEdits
+```
+
+Then trigger it from Actions → "Weekly Competitor Intel" → **Run workflow**.
+The report also appears in the run's summary page. To change the report's
+structure or the number of scripts, edit `intel/analysis_prompt.md`; for the
+lookback window and post counts, edit the constants at the top of
+`competitor_scan.py`.

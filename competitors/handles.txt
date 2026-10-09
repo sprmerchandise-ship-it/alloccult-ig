@@ -1,0 +1,4 @@
+# Competitor Instagram handles, one per line, without the @.
+# Aim for 30–50 occult / witchcraft / esoteric accounts.
+# Only Business and Creator accounts can be scanned; personal accounts are
+# skipped with a notice. Lines starting with # are ignored.

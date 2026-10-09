@@ -1,0 +1,52 @@
+name: Weekly Competitor Intel
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"   # every Monday 08:00 UTC (after maintenance refreshes insights)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  intel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Scan competitor accounts
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python competitor_scan.py
+
+      - name: Write report with Claude Code
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          DATE=$(date -u +%F)
+          echo "REPORT=reports/$DATE.md" >> "$GITHUB_ENV"
+          claude -p "$(sed "s/{{DATE}}/$DATE/g" intel/analysis_prompt.md)" \
+            --allowedTools "Read,Glob,Grep,Write" \
+            --permission-mode acceptEdits
+          test -s "reports/$DATE.md" || { echo "Claude did not write reports/$DATE.md"; exit 1; }
+          cat "reports/$DATE.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit scan + report
+        run: |
+          git config user.name "alloccult-bot"
+          git config user.email "bot@alloccult.com"
+          git add competitors/scan.json "$REPORT"
+          git diff --cached --quiet || git commit -m "Weekly competitor intel: $REPORT"
+          git pull --rebase
+          git push
