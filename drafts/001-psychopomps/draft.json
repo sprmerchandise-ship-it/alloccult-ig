@@ -1,6 +1,6 @@
 {
   "id": "001-psychopomps",
-  "status": "draft",
+  "status": "rejected",
   "title": "Death Cults & Psychopomps",
   "route": "/death-afterlife/death-cults-psychopomps",
   "section": "Section 7",
@@ -8,13 +8,25 @@
     {
       "text": "Who comes for you when you die?",
       "image_query": "Charon boat",
-      "image": null
+      "image": {
+        "key": "wellcome:xu99mt82",
+        "url": "https://iiif.wellcomecollection.org/image/V0035991/full/1600,/0/default.jpg",
+        "title": "Ghosts landing from the boat of Charon; Charon receiving a ghost into his boat. Engraving by C. Grignion, 1790.",
+        "credit": "Ghosts landing from the boat of Charon; Charon receiving a ghost into his boat. Engraving by C. Grignion, 1790. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
     },
     {
       "kicker": "Egypt · Anubis",
       "text": "The jackal-headed god tends the scales. Your heart against the feather of Ma'at. Too heavy, and Ammit devours it.",
       "image_query": "Anubis",
-      "image": null,
+      "image": {
+        "key": "aic:64349",
+        "url": "https://www.artic.edu/iiif/2/248905ef-d485-73a2-d29b-49c3a76c36bb/full/843,/0/default.jpg",
+        "title": "Statuette of the God Anubis",
+        "credit": "Statuette of the God Anubis, Ancient Egyptian — Art Institute of Chicago (public domain)",
+        "source": "aic"
+      },
       "reject": [
         "wellcome:uv56mpbu",
         "wellcome:seg4hak8",
@@ -25,16 +37,42 @@
       "kicker": "Greece · Hermes",
       "text": "Hermes Psychopompos, guide of souls. In Odyssey 24 he drives the suitors' shades down to Hades. They follow, gibbering like bats.",
       "image_query": "Hermes",
-      "image": null
+      "image": {
+        "key": "wellcome:bkz2zkfr",
+        "url": "https://iiif.wellcomecollection.org/image/B20455823_0001.JP2/full/1600,/0/default.jpg",
+        "title": "Hermes. Photograpic postcard, 190-.",
+        "credit": "Hermes. Photograpic postcard, 190-. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
     },
     {
-      "kicker": "The Ferryman",
-      "text": "At the river, Charon waits. The Greeks buried their dead with a coin to pay him: the obol.",
-      "image_query": "Charon",
-      "image": null,
+      "kicker": "Greece · Charon",
+      "text": "At the river, Charon waits. Many Greeks went to the grave with a coin in the mouth to pay his fare: the obol.",
+      "image_query": "Charon ferryman",
+      "image": {
+        "key": "aic:158192",
+        "url": "https://www.artic.edu/iiif/2/bc07d40c-c9e8-3bf0-1de5-c82ac5ba9469/full/843,/0/default.jpg",
+        "title": "Psyche Embarks in Charon's Boat",
+        "credit": "Psyche Embarks in Charon's Boat, Master of the Die — Art Institute of Chicago (public domain)",
+        "source": "aic"
+      },
       "reject": [
         "wellcome:xtqwp7vn",
-        "wellcome:spvemhv2"
+        "wellcome:spvemhv2",
+        "wellcome:z8ra5ybn",
+        "aic:89889",
+        "wellcome:ycrwbnfk",
+        "wellcome:sp9fqz5k",
+        "wellcome:y993kem4",
+        "wellcome:rs6asfqy",
+        "wellcome:pednzkrm",
+        "wellcome:qqr34cwn",
+        "wellcome:vuxqjncp",
+        "wellcome:vygtcstq",
+        "wellcome:amt5afve",
+        "wellcome:vhefax2q",
+        "wellcome:pvecxqz2",
+        "wellcome:gvyjvdk4"
       ]
     },
     {
@@ -46,37 +84,89 @@
         "wellcome:jbtkrwtz",
         "aic:11",
         "aic:27",
-        "aic:27992"
+        "aic:27992",
+        "aic:4",
+        "aic:65",
+        "aic:9",
+        "aic:16",
+        "aic:20",
+        "aic:28",
+        "aic:24",
+        "aic:19",
+        "aic:2068",
+        "aic:20684",
+        "aic:93",
+        "wellcome:cc9hs3hu",
+        "wellcome:vscwfntu",
+        "wellcome:bkqbu63p",
+        "wellcome:x8sk6tm6",
+        "wellcome:va8y63j3",
+        "wellcome:q767jck8",
+        "wellcome:rgtez82r",
+        "wellcome:e293dfz2",
+        "wellcome:y32cdjyx",
+        "wellcome:pjfk8dvz",
+        "wellcome:sk2379s3",
+        "wellcome:cbgajxbu"
       ]
     },
     {
       "kicker": "Norse · Valkyries",
       "text": "Odin's Valkyries choose who falls in battle, and carry the chosen to Valhalla.",
-      "image_query": "Valkyrie",
-      "image": null
+      "image_query": "Valkyries",
+      "image": null,
+      "reject": [
+        "aic:44032",
+        "aic:44029"
+      ]
     },
     {
-      "kicker": "India & Tibet · Yama",
-      "text": "Yama found the path of the dead first. Now he rules them, and judges them.",
+      "kicker": "India · Yama",
+      "text": "In the Rig Veda, Yama is the first to find the path of the dead, and king of all who follow. Later texts make him their judge.",
       "image_query": "Yama",
-      "image": null
+      "image": {
+        "key": "wellcome:pcw8rexe",
+        "url": "https://iiif.wellcomecollection.org/image/V0044981/full/1600,/0/default.jpg",
+        "title": "Court of Yama, God of Death. Coloured transfer lithograph.",
+        "credit": "Court of Yama, God of Death. Coloured transfer lithograph. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
     },
     {
       "kicker": "Islam · The Angel of Death",
       "text": "Malak al-Mawt, named Azrael in tradition, draws the soul from the body at the appointed hour.",
-      "image_query": "angel of death",
+      "image_query": "Azrael",
       "image": null,
       "reject": [
         "wellcome:nm2huk66",
         "aic:111",
-        "wellcome:u4af83nm"
+        "wellcome:u4af83nm",
+        "wellcome:nfcpk576",
+        "wellcome:pu6f95v8",
+        "wellcome:fqe9jqvv",
+        "wellcome:qrwu43u7",
+        "wellcome:msr8wzdk",
+        "wellcome:c5gp4k5q",
+        "wellcome:s42cwgtc",
+        "wellcome:kk97k8et",
+        "wellcome:c76fvd22",
+        "wellcome:b42gyf68",
+        "wellcome:gs9bnwpc",
+        "wellcome:gdh2hkz6",
+        "wellcome:au5v8kbs"
       ]
     },
     {
       "kicker": "Your turn",
       "text": "Which of them would you want waiting for you? Answer below.",
       "image_query": "memento mori",
-      "image": null
+      "image": {
+        "key": "wellcome:jfp8myhu",
+        "url": "https://iiif.wellcomecollection.org/image/V0042140/full/1600,/0/default.jpg",
+        "title": "Death accompanies an old man. Etching.",
+        "credit": "Death accompanies an old man. Etching. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
     }
   ],
   "caption": "Few cultures let the dead walk alone.\n\nIn Egypt, Anubis tended the scales where the heart was weighed against the feather of Ma'at.\nIn Greece, Hermes led the shades down, and Charon took the obol at the river.\nThe Aztecs buried a dog with the dead, to carry them across.\nOdin's Valkyries chose the fallen. Yama judged. Azrael waited for the hour.\n\nThe Greeks gave Hermes the title: psychopompos, guide of souls.\n\nWhich one would you want at your door? Answer below.\n\nThe full entry waits in the Forbidden Library: alloccult.com/death-afterlife/death-cults-psychopomps",
@@ -138,6 +228,53 @@
         "slide 2 text: Overclaims. Anubis tends and adjusts the scales, but he does not personally judge the weighing. Thoth records the result, before Osiris. Reword to match the caption's 'tended the scales'.",
         "slide 5 image: Corot's 'Remembrance of Italy' is a European tree landscape. It has nothing to do with Aztec belief or Mictlan.",
         "slide 8 image: Image shows angelfish, a pun on 'angel'. It would undercut the brand's seriousness on a slide about Islam."
+      ]
+    },
+    {
+      "round": 1,
+      "approved": false,
+      "summary": "Strong hook and solid Greek and Egyptian slides, but the carousel is not ready. Slide 4 repeats the cover engraving. Slides 5 and 6 show only the placeholder sigil, not their subjects. Slide 8 pairs an Islamic kicker with a Western Christian plague scene after Delaunay. Slide 4 overclaims that Greeks universally buried a coin. Slide 7's kicker names Tibet, but the text and image are Indian. The caption and hashtags are fine.",
+      "fixes": [
+        "slide 4 image: The Boitard etching contains the same two Charon scenes as the cover engraving. It reads as a repeat two swipes in.",
+        "slide 4 text: Overclaims. Charon's obol was common, not universal, and the page specifies a coin placed in the mouth or on the eyes.",
+        "slide 5 image: Shows only the placeholder sigil, not Mictlan or its death lord. Two blank sigil slides in a row stall the carousel.",
+        "slide 6 image: Shows only the placeholder sigil, not the Valkyries.",
+        "slide 7 text: The kicker claims Tibet, but the text describes the Vedic Yama and the image is an Indian Punjabi print. The text also needs a source anchor for the claim that he found the path first.",
+        "slide 8 image: The image is a Western Christian plague scene after Delaunay, set in Rome. It does not depict the Islamic Angel of Death and misrepresents the tradition named in the kicker."
+      ]
+    },
+    {
+      "round": 2,
+      "approved": false,
+      "summary": "Strong hook, sound structure and mostly accurate copy, but four fixes are needed before posting. Slide 4's image is a Gillray political satire of the 'All the Talents' ministry, which is comedic, off-brand and full of caricature nudity. Slide 7 attributes Yama's role as judge to the Rig Veda, but that role comes from later texts. Slides 5 and 6 reuse the same generic sigil, and with slide 8 that makes three identical frames. A relevant image should be tried for each, keeping the sigil on the Islam slide, where aniconic restraint suits the subject. The caption and hashtags are fine.",
+      "fixes": [
+        "slide 4 image: Gillray's 'Charon's Boat, or the Ghosts of All the Talents' (1807) is a political caricature of Grenville's ministry. It is comedic satire rather than an image of the myth, it is crowded with lampooned naked politicians, and it clashes with the brand's voice.",
+        "slide 4 text: The facts are accurate. The kicker 'The Ferryman' breaks the 'Culture · Figure' pattern used on every other slide.",
+        "slide 5 image: The generic heptagram sigil does not show Mictlan or its dog, and it is repeated on three slides, which makes the carousel feel empty.",
+        "slide 6 image: This is the same generic sigil as slides 5 and 8. A Valkyrie engraving or illustration would carry the slide.",
+        "slide 7 text: The text overclaims. In Rig Veda 10.14 Yama is the first mortal to die, the finder of the path and king of the dead. His role as judge of the dead comes from later epic and Puranic texts, not the Rig Veda."
+      ]
+    },
+    {
+      "round": 3,
+      "approved": false,
+      "summary": "Strong hook, cover and caption. Slide 7 has a factual error: the Rig Veda already calls Yama king (RV 10.14), so only the judge role is later. Four content slides (4, 5, 6, 8) use the generic sigil instead of their subject, which makes the middle of the carousel visually flat. Each gets an image query. Slides 1, 2, 3 and 9 are fine, and the closing card is legible.",
+      "fixes": [
+        "slide 4 image: Generic sigil placeholder; does not show Charon, the ferry or the obol.",
+        "slide 5 image: Generic sigil placeholder; nothing of Mictlan, its death lord or the dog.",
+        "slide 6 image: Generic sigil placeholder; does not show Valkyries.",
+        "slide 7 text: Inaccurate. Rig Veda 10.14 already names Yama king ('King Yama') of the dead; only his role as judge comes in later texts. Also, the explicit 'first of mortals to die' wording is Atharva Veda 18.3.13; the Rig Veda says he found the path for many.",
+        "slide 8 image: Generic sigil placeholder; does not show the Angel of Death."
+      ]
+    },
+    {
+      "round": 4,
+      "approved": false,
+      "summary": "The text is accurate, tight and on-voice throughout. The Odyssey 24 bats, the Rig Veda Yama, the hedged obol claim and the Mictlan nine levels over four years all check out. Images on slides 1-4, 7 and 9 are relevant, public domain and legible. The weakness is visual: three content slides (5, 6, 8) carry only the generic heptagram fallback, and none shows its subject. Replace them with real archive images before posting. The caption and hashtags are fine.",
+      "fixes": [
+        "slide 5 image: Generic heptagram placeholder; shows nothing of Mictlan, its lord or the Xolo dog. It is also one of three sigil slides, which makes the carousel feel empty.",
+        "slide 6 image: Generic heptagram placeholder; does not show Valkyries or Valhalla.",
+        "slide 8 image: Generic heptagram placeholder; does not show the Angel of Death."
       ]
     }
   ]
