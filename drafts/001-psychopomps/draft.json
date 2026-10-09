@@ -1,6 +1,6 @@
 {
   "id": "001-psychopomps",
-  "status": "draft",
+  "status": "approved",
   "title": "Death Cults & Psychopomps",
   "route": "/death-afterlife/death-cults-psychopomps",
   "section": "Section 7",
@@ -76,45 +76,16 @@
       ]
     },
     {
-      "kicker": "Aztec · Mictlan",
-      "text": "A dog carries the dead across the river of the underworld. The descent through nine levels takes four years.",
-      "image_query": "Mictlantecuhtli",
-      "image": null,
-      "reject": [
-        "wellcome:jbtkrwtz",
-        "aic:11",
-        "aic:27",
-        "aic:27992",
-        "aic:4",
-        "aic:65",
-        "aic:9",
-        "aic:16",
-        "aic:20",
-        "aic:28",
-        "aic:24",
-        "aic:19",
-        "aic:2068",
-        "aic:20684",
-        "aic:93",
-        "wellcome:cc9hs3hu",
-        "wellcome:vscwfntu",
-        "wellcome:bkqbu63p",
-        "wellcome:x8sk6tm6",
-        "wellcome:va8y63j3",
-        "wellcome:q767jck8",
-        "wellcome:rgtez82r",
-        "wellcome:e293dfz2",
-        "wellcome:y32cdjyx",
-        "wellcome:pjfk8dvz",
-        "wellcome:sk2379s3",
-        "wellcome:cbgajxbu"
-      ]
-    },
-    {
       "kicker": "Norse · Valkyries",
       "text": "Odin's Valkyries choose who falls in battle, and carry the chosen to Valhalla.",
       "image_query": "Valkyrie",
-      "image": null,
+      "image": {
+        "key": "aic:44032",
+        "url": "https://www.artic.edu/iiif/2/6a76a6b0-0fec-d46c-bada-ffdeec6fc000/full/843,/0/default.jpg",
+        "title": "End of The Valkyrie",
+        "credit": "End of The Valkyrie, Henri Fantin-Latour — Art Institute of Chicago (public domain)",
+        "source": "aic"
+      },
       "reject": []
     },
     {
@@ -128,30 +99,6 @@
         "credit": "Court of Yama, God of Death. Coloured transfer lithograph. — Wellcome Collection (public domain)",
         "source": "wellcome"
       }
-    },
-    {
-      "kicker": "Islam · The Angel of Death",
-      "text": "Malak al-Mawt, named Azrael in tradition, draws the soul from the body at the appointed hour.",
-      "image_query": "Azrael",
-      "image": null,
-      "reject": [
-        "wellcome:nm2huk66",
-        "aic:111",
-        "wellcome:u4af83nm",
-        "wellcome:nfcpk576",
-        "wellcome:pu6f95v8",
-        "wellcome:fqe9jqvv",
-        "wellcome:qrwu43u7",
-        "wellcome:msr8wzdk",
-        "wellcome:c5gp4k5q",
-        "wellcome:s42cwgtc",
-        "wellcome:kk97k8et",
-        "wellcome:c76fvd22",
-        "wellcome:b42gyf68",
-        "wellcome:gs9bnwpc",
-        "wellcome:gdh2hkz6",
-        "wellcome:au5v8kbs"
-      ]
     },
     {
       "kicker": "Your turn",
@@ -189,9 +136,7 @@
     "05.jpg",
     "06.jpg",
     "07.jpg",
-    "08.jpg",
-    "09.jpg",
-    "10.jpg"
+    "08.jpg"
   ],
   "review_log": [
     {
@@ -273,6 +218,11 @@
         "slide 6 image: Generic heptagram placeholder; does not show Valkyries or Valhalla.",
         "slide 8 image: Generic heptagram placeholder; does not show the Angel of Death."
       ]
+    },
+    {
+      "round": 1,
+      "approved": true,
+      "summary": "Strong, accurate carousel. The cover hook stops the scroll and the cover image is on-subject. Every content slide pairs a relevant public-domain image with historically sound text: Anubis at the weighing of the heart with Ammit; Hermes driving the suitors' shades like bats in Odyssey 24; the obol for Charon, hedged with 'many'; Valkyries and Valhalla; and Yama in Rig Veda 10.14 as the first to find the path of the dead, later the judge. The voice is dark and concise, and nothing is cheesy, banned or misdated. The caption is accurate and on-brand. The closing card is legible."
     }
   ]
 }
