@@ -56,7 +56,51 @@
         "alloccult"
       ],
       "id": "2026-10-09-1",
-      "section": "Section 1"
+      "section": "Section 1",
+      "images": [
+        {
+          "key": "wellcome:dtwe4d5w",
+          "url": "https://iiif.wellcomecollection.org/image/L0072206/full/1600,/0/default.jpg",
+          "title": "Archaeological burial objects from the Anglo-Saxon period",
+          "credit": "Archaeological burial objects from the Anglo-Saxon period — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:aaudsvnk",
+          "url": "https://iiif.wellcomecollection.org/image/V0002629/full/1600,/0/default.jpg",
+          "title": "William Hawes: memorial tablet. Line engraving by J. Basire.",
+          "credit": "William Hawes: memorial tablet. Line engraving by J. Basire. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:fwp8wy9g",
+          "url": "https://iiif.wellcomecollection.org/image/B2864444X.JP2/full/1600,/0/default.jpg",
+          "title": "Henricus dei ...",
+          "credit": "Henricus dei ... — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:zcubc9kp",
+          "url": "https://iiif.wellcomecollection.org/image/V0047459/full/1600,/0/default.jpg",
+          "title": "A Japanese landscape. Wash drawing, 18--.",
+          "credit": "A Japanese landscape. Wash drawing, 18--. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:febh4sz7",
+          "url": "https://iiif.wellcomecollection.org/image/V0025810/full/1600,/0/default.jpg",
+          "title": "Double picture: a person hanging from the gallows; a witch burning a sleeping couple while a demon figure carries off a child. Woodcut, 1790.",
+          "credit": "Double picture: a person hanging from the gallows; a witch burning a s — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:a47v6p4k",
+          "url": "https://iiif.wellcomecollection.org/image/V0009581/full/1600,/0/default.jpg",
+          "title": "Three calculi: a bladder stone, a gall stone and a kidney stone. Etching, c. 1702.",
+          "credit": "Three calculi: a bladder stone, a gall stone and a kidney stone. Etchi — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
     },
     {
       "day": "Tuesday",
@@ -112,7 +156,51 @@
         "alloccult"
       ],
       "id": "2026-10-09-2",
-      "section": "Section 2"
+      "section": "Section 2",
+      "images": [
+        {
+          "key": "wellcome:pkjq7m98",
+          "url": "https://iiif.wellcomecollection.org/image/L0034926/full/1600,/0/default.jpg",
+          "title": "The temptation of Saint Antony. Pastel drawing by W.S.",
+          "credit": "The temptation of Saint Antony. Pastel drawing by W.S. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:f9ath8zn",
+          "url": "https://iiif.wellcomecollection.org/image/V0007329EL/full/1600,/0/default.jpg",
+          "title": "Robert Scarlet, sexton of Peterborough cathedral. Etching by W. Williams, 1779.",
+          "credit": "Robert Scarlet, sexton of Peterborough cathedral. Etching by W. Willia — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:u3u2pzuq",
+          "url": "https://iiif.wellcomecollection.org/image/L0021661/full/1600,/0/default.jpg",
+          "title": "A vase (neck-amphora) painted with a man riding on a galloping horse with a hound. Engraving, 17--.",
+          "credit": "A vase (neck-amphora) painted with a man riding on a galloping horse w — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:prqpkzja",
+          "url": "https://iiif.wellcomecollection.org/image/L0012136/full/1600,/0/default.jpg",
+          "title": "Leonardo da Vinci manuscript notebooks",
+          "credit": "Leonardo da Vinci manuscript notebooks — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:vgt2uk4w",
+          "url": "https://iiif.wellcomecollection.org/image/L0040157/full/1600,/0/default.jpg",
+          "title": "Casebook record 1945 for a Frances Arundell Coode",
+          "credit": "Casebook record 1945 for a Frances Arundell Coode — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:dcm8cuzw",
+          "url": "https://iiif.wellcomecollection.org/image/V0023723/full/1600,/0/default.jpg",
+          "title": "Manufacture of sealing wax. Etching by B.L. Prévvost after L.J. Goussier.",
+          "credit": "Manufacture of sealing wax. Etching by B.L. Prévvost after L.J. Goussi — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
     },
     {
       "day": "Wednesday",
@@ -168,7 +256,51 @@
         "alloccult"
       ],
       "id": "2026-10-09-3",
-      "section": "Section 15"
+      "section": "Section 15",
+      "images": [
+        {
+          "key": "wellcome:s3rdhkgd",
+          "url": "https://iiif.wellcomecollection.org/image/V0032418/full/1600,/0/default.jpg",
+          "title": "Saint John the Evangelist: twelve episodes in the Book of Revelation. Engraving after J. Snellinck, 1585.",
+          "credit": "Saint John the Evangelist: twelve episodes in the Book of Revelation.  — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:g6nfqyar",
+          "url": "https://iiif.wellcomecollection.org/image/V0025818EL/full/1600,/0/default.jpg",
+          "title": "Two circular charts showing the configuration of the stars with the Hebrew alphabet. Engraving.",
+          "credit": "Two circular charts showing the configuration of the stars with the He — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:eb3mhpxe",
+          "url": "https://iiif.wellcomecollection.org/image/V0042428/full/1600,/0/default.jpg",
+          "title": "Zenobia, ruler of the Palmyrene empire, is besieged in Antioch by the Roman emperor Aurelian, and gives orders for the moving of her treasure: a man carrying a large vessel filled with coins carries it past the tomb of Odenathus. Line engraving by Charles Etienne Gaucher, 1789, after J. Werner.",
+          "credit": "Zenobia, ruler of the Palmyrene empire, is besieged in Antioch by the  — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:dx6jpzms",
+          "url": "https://iiif.wellcomecollection.org/image/L0001519/full/1600,/0/default.jpg",
+          "title": "Philosophia Moysaica. In qua sapientia et scientia creationis et creaturarum sacra veréque Christiana (vt pote cujus basis sive fundamentum est unicus ille Lapis Angularis Iesus Christus) ad amussim et enucleaté explicatur / Authore Rob. Flud, alias De Fluctibus.",
+          "credit": "Philosophia Moysaica. In qua sapientia et scientia creationis et creat — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:ytbvhcqe",
+          "url": "https://iiif.wellcomecollection.org/image/B0002926/full/1600,/0/default.jpg",
+          "title": "Immunoglobulin Fc fragment, molecular model",
+          "credit": "Immunoglobulin Fc fragment, molecular model — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:bnd8jc7x",
+          "url": "https://iiif.wellcomecollection.org/image/V0040549EBC/full/1600,/0/default.jpg",
+          "title": "A man cutting gems using a treadle at his bench before a large window. Woodcut by J. Amman.",
+          "credit": "A man cutting gems using a treadle at his bench before a large window. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
     },
     {
       "day": "Thursday",
@@ -224,7 +356,51 @@
         "alloccult"
       ],
       "id": "2026-10-09-4",
-      "section": "Section 7"
+      "section": "Section 7",
+      "images": [
+        {
+          "key": "wellcome:esg36um8",
+          "url": "https://iiif.wellcomecollection.org/image/V0025658/full/1600,/0/default.jpg",
+          "title": "Scales specially adapted for weighing livestock. Engraving, late eighteenth century.",
+          "credit": "Scales specially adapted for weighing livestock. Engraving, late eight — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:bjg3gyjx",
+          "url": "https://iiif.wellcomecollection.org/image/V0042384/full/1600,/0/default.jpg",
+          "title": "Two young ladies contemplating a tombstone in a graveyard. Mezzotint with engraving, 1803.",
+          "credit": "Two young ladies contemplating a tombstone in a graveyard. Mezzotint w — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:mkk86jyp",
+          "url": "https://iiif.wellcomecollection.org/image/V0042123/full/1600,/0/default.jpg",
+          "title": "Men and women inspect the open grave of Venus. Etching.",
+          "credit": "Men and women inspect the open grave of Venus. Etching. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:gcve8gj4",
+          "url": "https://iiif.wellcomecollection.org/image/V0042325/full/1600,/0/default.jpg",
+          "title": "A funeral procession carrying the corpse of an unmarried girl layed out on a bier through a village. Coloured lithograph by Gatti and G. Dura after G. Dura, 1851.",
+          "credit": "A funeral procession carrying the corpse of an unmarried girl layed ou — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:aub747y5",
+          "url": "https://iiif.wellcomecollection.org/image/V0042415/full/1600,/0/default.jpg",
+          "title": "The exhumed corpse of the French King Henry IV standing bandaged and upright in a coffin in the vaults of the Basilica of Saint-Denis. Line engraving with etching by E. Bovinet, A. Chataigner and T.B. de Jolimont after E.H. Langlois.",
+          "credit": "The exhumed corpse of the French King Henry IV standing bandaged and u — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:pwrpnnky",
+          "url": "https://iiif.wellcomecollection.org/image/V0042550/full/1600,/0/default.jpg",
+          "title": "A man in Egypt tied to a stake receives a beating with wooden bats. Lithograph by Edouard after J.J. Rifaud.",
+          "credit": "A man in Egypt tied to a stake receives a beating with wooden bats. Li — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
     },
     {
       "day": "Friday",
@@ -280,7 +456,51 @@
         "alloccult"
       ],
       "id": "2026-10-09-5",
-      "section": "Section 4"
+      "section": "Section 4",
+      "images": [
+        {
+          "key": "wellcome:fahfp47b",
+          "url": "https://iiif.wellcomecollection.org/image/V0009244EL/full/1600,/0/default.jpg",
+          "title": "Oppyck: portrait. Drawing, c. 1794.",
+          "credit": "Oppyck: portrait. Drawing, c. 1794. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:ahm6y56n",
+          "url": "https://iiif.wellcomecollection.org/image/V0010434/full/1600,/0/default.jpg",
+          "title": "Eleven decorated initials from the Basel 1555 edition of Andreas Vesalius's De humani corporis fabrica. Woodcuts, 1555.",
+          "credit": "Eleven decorated initials from the Basel 1555 edition of Andreas Vesal — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:qz587s2a",
+          "url": "https://iiif.wellcomecollection.org/image/V0019015/full/1600,/0/default.jpg",
+          "title": "Julian Cox of Taunton and a man sit smoking by the hearth; a toad is by the feet of the man. Woodcut.",
+          "credit": "Julian Cox of Taunton and a man sit smoking by the hearth; a toad is b — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:prqpkzja",
+          "url": "https://iiif.wellcomecollection.org/image/L0012136/full/1600,/0/default.jpg",
+          "title": "Leonardo da Vinci manuscript notebooks",
+          "credit": "Leonardo da Vinci manuscript notebooks — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:n43jmj6f",
+          "url": "https://iiif.wellcomecollection.org/image/V0023751/full/1600,/0/default.jpg",
+          "title": "A printer's workshop: on the left a printing press, on the right and centre workmen engaged in various tasks, the scene numbered for a key. Engraving after L.J. Goussier.",
+          "credit": "A printer's workshop: on the left a printing press, on the right and c — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:agfw5sra",
+          "url": "https://iiif.wellcomecollection.org/image/V0043629EL/full/1600,/0/default.jpg",
+          "title": "Solomon's seal (Polygonatum multiflorum): rootstock. Watercolour.",
+          "credit": "Solomon's seal (Polygonatum multiflorum): rootstock. Watercolour. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
     },
     {
       "day": "Saturday",
@@ -331,7 +551,44 @@
         "alloccult"
       ],
       "id": "2026-10-09-6",
-      "section": "Section 11"
+      "section": "Section 11",
+      "images": [
+        {
+          "key": "wellcome:crd5n9gv",
+          "url": "https://iiif.wellcomecollection.org/image/L0071607/full/1600,/0/default.jpg",
+          "title": "Introductory page",
+          "credit": "Introductory page — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:q9d598fe",
+          "url": "https://iiif.wellcomecollection.org/image/L0056695/full/1600,/0/default.jpg",
+          "title": "Taiping kung, near Kiukiang, Kiangsi province: a ruined religious building, China. Photograph by John Thomson, 1872.",
+          "credit": "Taiping kung, near Kiukiang, Kiangsi province: a ruined religious buil — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:b62x3dhe",
+          "url": "https://iiif.wellcomecollection.org/image/L0048844/full/1600,/0/default.jpg",
+          "title": "Three books of occult philosophy / Written by Henry Cornelius Agrippa of Nettesheim. Translated out of the Latin into the English by J.F[reake].",
+          "credit": "Three books of occult philosophy / Written by Henry Cornelius Agrippa  — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:wgfqvspg",
+          "url": "https://iiif.wellcomecollection.org/image/V0005293/full/1600,/0/default.jpg",
+          "title": "Johann Christoph Friedrich von Schiller, with a sample of his handwriting above. Process print.",
+          "credit": "Johann Christoph Friedrich von Schiller, with a sample of his handwrit — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:y7hhn3gf",
+          "url": "https://iiif.wellcomecollection.org/image/L0047926/full/1600,/0/default.jpg",
+          "title": "Persian magical chart, framed",
+          "credit": "Persian magical chart, framed — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
     },
     {
       "day": "Sunday",
@@ -382,7 +639,44 @@
         "alloccult"
       ],
       "id": "2026-10-09-7",
-      "section": "Section 9"
+      "section": "Section 9",
+      "images": [
+        {
+          "key": "wellcome:sb5x9t4k",
+          "url": "https://iiif.wellcomecollection.org/image/V0050636/full/1600,/0/default.jpg",
+          "title": "Three Jewish women, seated, reading the scriptures; one of them breastfeeding. Coloured lithograph by J. Nash, 1843, after D. Wilkie, 1841.",
+          "credit": "Three Jewish women, seated, reading the scriptures; one of them breast — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:bxkv97jn",
+          "url": "https://iiif.wellcomecollection.org/image/V0015176/full/1600,/0/default.jpg",
+          "title": "Fathime's astral body leaving her as she dies while Euphrosyne sits and watches. Line engraving by S. Davenport after H. Corbould.",
+          "credit": "Fathime's astral body leaving her as she dies while Euphrosyne sits an — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:g9dg38nt",
+          "url": "https://iiif.wellcomecollection.org/image/L0001182/full/1600,/0/default.jpg",
+          "title": "Dissection illustration.",
+          "credit": "Dissection illustration. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:dvsxna3w",
+          "url": "https://iiif.wellcomecollection.org/image/V0047952/full/1600,/0/default.jpg",
+          "title": "A sleeping woman is disturbed in her dreams by a winged figure pointing to five people in the clouds above; representing the interpretation of dreams. Coloured etching, 1811.",
+          "credit": "A sleeping woman is disturbed in her dreams by a winged figure pointin — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:gdbqghjk",
+          "url": "https://iiif.wellcomecollection.org/image/V0007785EL/full/1600,/0/default.jpg",
+          "title": "The liver (figure 1) and gallbladder (figure 4). Engraving, 1686.",
+          "credit": "The liver (figure 1) and gallbladder (figure 4). Engraving, 1686. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
     }
   ]
 }
