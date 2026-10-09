@@ -1,0 +1,6 @@
+{
+  "_help": "Switches for automated posting. Edit and commit to change. carousels/reels: false pauses that daily post. products: false makes every carousel a lore post (audience-building phase).",
+  "carousels": false,
+  "reels": false,
+  "products": false
+}
