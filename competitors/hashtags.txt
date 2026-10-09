@@ -1,0 +1,10 @@
+# Hashtags to sample top posts from, one per line, without the #.
+# Needs the "Instagram Public Content Access" feature on the Meta app;
+# without it this list is skipped and the account scan still runs.
+# Instagram allows 30 unique hashtag lookups per rolling 7 days — keep it short.
+occult
+witchcraft
+esoteric
+hermeticism
+tarot
+alchemy

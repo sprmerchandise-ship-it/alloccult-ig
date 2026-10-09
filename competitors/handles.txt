@@ -1,0 +1,58 @@
+# Competitor Instagram handles, one per line, without the @.
+# Only Business and Creator accounts can be scanned; personal accounts are
+# skipped with a notice (see "skipped" in competitors/scan.json — prune those).
+# Lines starting with # are ignored; text after # on a line is a note.
+#
+# Researched Oct 2026 from public Instagram profile listings. Follower counts
+# are search-index snapshots and will drift. Every handle was seen on a real
+# profile page; none are guessed.
+
+# --- Esoteric history & scholarship (closest to alloccult.com) ---
+curio_esoterica              # ~109K, esoteric explorations, mythopoetic
+amsterdamhermetica           # ~24K, Univ. of Amsterdam history of Hermetic philosophy
+grimoiremagic                # ~128K, survey of grimoires from a private collection
+kodex_hermetica              # ~74K, hermetic/esoteric posts + ebook
+etherealuniversityy          # ~103K, occult learning platform
+hermetic.alchemy             # ~9.8K, alchemy / hermetic practice
+theesotericwitch             # ~6.3K, witchcraft, tarot and art history
+projectdevadasi              # occult & identity in South Asia, research captions
+theoccultarchive             # ~1.5K, mysterious & paranormal (small, same niche name)
+
+# --- Museums & institutions ---
+museum_of_witchcraft_and_magic   # ~116K, Boscastle, Cornwall
+museumofmagicfortunewitchcraft   # ~18K, Edinburgh
+eawitchmuseum                    # ~1.8K, East Anglia witch-hunt history
+
+# --- Occult publishers & bookshops ---
+theionpublishing             # ~7K, grimoires, paganism, esotericism
+darkstarmagick               # ~11K, Portland esoteric bookstore
+grimoiresontape              # ~9.4K, Alexander Cummins, diviner & grimoire scholar
+
+# --- Dark occult / demonology aesthetics ---
+demonology638                # ~93K, demonology
+mysticbarbarism              # ~55K, occult & demonic themes
+thelemamagick                # ~42K, Thelema / tarot (Portuguese)
+
+# --- Witchcraft (large audiences) ---
+thehoodwitch                 # Bri Luna, one of the original IG witchcraft accounts
+wiccantips                   # ~394K, witchcraft & Wicca guidance, spells
+craftingwitch                # ~391K, witchcraft
+witchcraftspellsmagick       # ~37K, spells, rituals
+thegingerwitchhaus           # ~65K, spell candles
+thewitchyaesthetic           # ~16K, magical & mystical
+darklydivinecrystals         # ~96K, mythology, witchcraft + deity work (shop)
+
+# --- Tarot & divination ---
+tarotntia1111                # ~243K, occult & Wiccan practitioner, tarot
+sacredknowledgetarot         # ~15K
+occultgurukul                # ~49K, occult sciences institute
+
+# --- Mythology & folklore ---
+mythology_of_vikings         # ~135K, Norse mythology
+folklorehouse                # ~4.5K, history & mythos of magical botany
+
+# --- Occult merch brands (compare product-post performance) ---
+offcultclothing              # ~31K
+occultus_official            # ~18K, "odd things for odd people"
+oc.cult.co                   # ~28K, handmade occult goods
+occult.afflecks              # ~26K, occult patches, jewellery, homeware

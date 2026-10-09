@@ -62,3 +62,85 @@ then check @all.occult. If it worked, you're done — it now posts daily at
   currently accepts via `image_url`, but if a post ever fails with an image
   format error, append `&format=pjpg` to the image URL in `post.py`
   (Shopify CDN converts on the fly).
+
+## Weekly competitor intel + Reels with music
+
+**Every Monday 08:00 UTC** — `.github/workflows/competitor-intel.yml`:
+
+1. `competitor_scan.py` reads the last 30 days of posts from every account in
+   `competitors/handles.txt` (Graph API Business Discovery), ranks them by
+   engagement rate ((likes + comments) / followers), flags "breakout" posts that
+   beat their own account's median, and samples top posts for
+   `competitors/hashtags.txt`. → `competitors/scan.json`
+2. Claude Code reads the scan, our own insights and the archive, and writes
+   `reports/YYYY-MM-DD.md`: what's working, formats, accounts to watch,
+   hashtags, and **7 Reel scripts** for the week (`intel/analysis_prompt.md`).
+3. `compose_posts.py` turns those scripts into structured specs (hook, 4–6
+   beats, image search terms, music mood, caption, 12 hashtags), each tied to
+   an alloccult.com archive route. → `queue/YYYY-MM-DD.json`
+4. `render_reel.py` renders all 7 as 1080×1920 MP4s and uploads them as the
+   **posts-YYYY-MM-DD** artifact (Actions → the run → Artifacts), with
+   `captions.md` listing captions, hashtags and image credits. Review them here.
+
+**Every day 15:00 UTC** — `.github/workflows/reel.yml` runs `post_reel.py`:
+renders the next unposted Reel from this week's queue (same artwork as the
+preview), uploads it straight to Instagram (resumable upload — no hosting
+needed), and publishes it. It is recorded in `published.json`, so
+`analytics.py` scores Reels alongside carousels.
+
+**Scheduled Reels are off until you turn them on.** After you have watched a
+preview bundle you are happy with, set the repo variable `REELS_ENABLED` to
+`true` (Settings → Secrets and variables → Actions → Variables). Manual runs
+(Actions → ALLOCCULT Daily Reel → Run workflow, with an optional "dry run")
+always work.
+
+### How the videos are made
+
+- **Artwork:** public-domain / CC0 images only, searched in this order:
+  Wellcome Collection (alchemy, magic and astrology manuscripts), The Met Open
+  Access, and the Art Institute of Chicago (`museum.py`). Each beat gets a slow
+  Ken Burns move inside a thin gold frame, with the credit on screen. If no image
+  is found, the beat falls back to a drawn gold heptagram card.
+- **Text:** hook in Cinzel (gold), beats in EB Garamond, and a closing
+  alloccult.com card. Cuts fade through black.
+- **Music:** `music.py` generates an original dark-ambient track per Reel
+  (moods: `drone`, `ritual` heartbeat drum, `bells`, `choir`), so there are
+  never copyright claims. To use your own tracks instead, drop them in
+  `music/` named `<mood>_anything.mp3` (e.g. `music/ritual_01.mp3`). Only use
+  tracks you have the rights to.
+  Instagram's API **cannot** attach songs from Instagram's in-app music
+  library, so API-posted Reels show "Original audio". If you want a trending
+  song on a specific Reel, download it from the bundle and post it from the app.
+- **Carousels with music:** the API can't add music to image or carousel
+  posts either. To turn a carousel into a music Reel instead, run:
+  `python render_reel.py --slides slides/<id> out/reel.mp4 --mood bells`
+
+### Setup
+
+1. `competitors/handles.txt` is pre-filled with 34 researched accounts
+   (October 2026). After the first run, look at `skipped` in
+   `competitors/scan.json`: those are personal accounts or renamed handles.
+   Remove or replace them.
+2. Hashtag sampling needs the **Instagram Public Content Access** feature on
+   the Meta app. Without it, that part is skipped and the account scan still
+   runs. Instagram allows 30 unique hashtags per rolling 7 days.
+3. Secrets are the existing ones: `IG_USER_ID`, `IG_ACCESS_TOKEN`,
+   `ANTHROPIC_API_KEY`. If the scan fails with a permission error, add
+   `pages_read_engagement` and `instagram_manage_insights` to the token in
+   Graph API Explorer.
+
+### Run locally
+
+```bash
+sudo apt install ffmpeg && pip install pillow numpy
+mkdir -p fonts   # then download Cinzel.ttf + EBGaramond.ttf as in post.yml
+export IG_USER_ID=... IG_ACCESS_TOKEN=... ANTHROPIC_API_KEY=...
+python competitor_scan.py
+npm install -g @anthropic-ai/claude-code
+DATE=$(date -u +%F)
+claude -p "$(sed "s/{{DATE}}/$DATE/g" intel/analysis_prompt.md)" \
+  --allowedTools "Read,Glob,Grep,Write" --permission-mode acceptEdits
+python compose_posts.py
+python render_reel.py "queue/$DATE.json" all "out/posts-$DATE"   # preview bundle
+python post_reel.py --dry-run                                     # render next, don't post
+```
