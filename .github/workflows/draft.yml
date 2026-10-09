@@ -1,16 +1,26 @@
-name: ALLOCCULT Instagram Post
+name: Render Carousel Drafts
+
+# Renders every carousel draft that hasn't posted (drafts/<id>/draft.json →
+# drafts/<id>/NN.jpg) and commits the slides, so they can be reviewed on
+# GitHub before anyone sets "status": "approved". Nothing is published here.
 
 on:
-  schedule:
-    - cron: "0 18 * * *"
+  push:
+    branches: [main]
+    paths: ["drafts/**/draft.json"]
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
+concurrency:
+  group: draft-render
+  cancel-in-progress: false
+
 jobs:
-  post:
+  render:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -25,21 +35,14 @@ jobs:
           curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
           curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
 
-      - name: Publish post
-        env:
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ETSY_API_KEY: ${{ secrets.ETSY_API_KEY }}   # optional: keystring:shared_secret
-        run: python post.py
+      - name: Render drafts
+        run: python carousel.py render-pending
 
-      - name: Save posting history
+      - name: Commit slides
         run: |
           git config user.name "alloccult-bot"
           git config user.email "bot@alloccult.com"
-          git pull --rebase || true
-          git add state.json
-          [ -e published.json ] && git add published.json
           git add drafts
-          git diff --cached --quiet || git commit -m "Update posting state"
+          git diff --cached --quiet || git commit -m "Render carousel drafts"
+          git pull --rebase
           git push
