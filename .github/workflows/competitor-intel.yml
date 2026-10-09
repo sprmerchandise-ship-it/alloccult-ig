@@ -11,7 +11,7 @@ permissions:
 jobs:
   intel:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -55,10 +55,14 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python compose_posts.py
 
-      - name: Render the week's Reels (preview bundle)
+      - name: Render + Claude-review the week's Reels (preview bundle)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
+          pip install anthropic -q
           if [ -f "queue/$DATE.json" ]; then
-            python render_reel.py "queue/$DATE.json" all "out/posts-$DATE"
+            python reel_review.py "queue/$DATE.json" "out/posts-$DATE"
           else
             echo "No new queue this week (previous one still posting)."
           fi

@@ -111,6 +111,12 @@ Manual run: Actions → ALLOCCULT Instagram Post → Run workflow with
    **posts-YYYY-MM-DD** artifact (Actions → the run → Artifacts), with
    `captions.md` listing captions, hashtags and image credits. Review them here.
 
+**Claude reviews every Reel** (`reel_review.py`) right after rendering: stills
+from each segment are checked like carousels (facts, image fit, legibility,
+hook, caption), fixed, re-rendered and re-checked (up to 3 rounds). Only Reels
+marked `"status": "approved"` are ever posted. "Reel Review Check" (Actions) is
+a manual live test that changes nothing.
+
 **Every day 15:00 UTC** — `.github/workflows/reel.yml` runs `post_reel.py`:
 renders the next unposted Reel from this week's queue (same artwork as the
 preview), uploads it straight to Instagram (resumable upload — no hosting

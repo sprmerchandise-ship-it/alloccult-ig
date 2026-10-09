@@ -131,6 +131,33 @@ landscapes, and sectarian or hateful propaganda. If none truly fits, answer -1.
     return data["choice"] if -1 <= data["choice"] < len(cands) else -1
 
 
+def choose_image(kicker, text, query, used, rejects):
+    """Claude picks a museum image for a slide/beat, or None. Candidates come
+    from the query, the subject in the kicker ("Norse · Valkyries" →
+    "Valkyries") and singular forms. Misfits are added to `rejects`/`used`."""
+    import museum
+    subject = (kicker or "").split("·")[-1].strip()
+    queries = []
+    for q in (query, subject):
+        for v in (q, " ".join(w[:-1] if len(w) > 4 and w.endswith("s") else w for w in (q or "").split())):
+            if v and v not in queries:
+                queries.append(v)
+    cands, seen = [], set(used)
+    for q in queries:
+        for c in museum.candidates(q, seen, limit=8):
+            seen.add(c["key"])
+            cands.append(c)
+    cands = cands[:16]
+    i = pick_image(kicker, text, cands)
+    if i < 0:
+        print(f"  no fitting image for '{query}' among {len(cands)} candidates")
+        for c in cands:
+            rejects.append(c["key"])
+            used.add(c["key"])
+        return None
+    return cands[i]
+
+
 REVIEW_SCHEMA = _obj({
     "approved": {"type": "boolean"},
     "summary": STR,

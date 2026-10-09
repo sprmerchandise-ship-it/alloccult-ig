@@ -59,6 +59,25 @@ def drawable(text, fnt):
     return re.sub(r"\s+([.!?,;:])", r"\1", t).lstrip(".,;:!? ")
 
 
+def _fit(d, text, fnt, maxw):
+    """Shorten text at a word boundary (with …) so it fits maxw pixels."""
+    if d.textlength(text, font=fnt) <= maxw:
+        return text
+    words = text.split()
+    while words and d.textlength(" ".join(words) + "…", font=fnt) > maxw:
+        words.pop()
+    return " ".join(words).rstrip(",;:—-– ") + "…"
+
+
+def _credit(d, credit, fnt, maxw):
+    """'Title … — Source (public domain)': trim the title, never the source."""
+    title, sep, source = credit.rpartition(" — ")
+    if not sep:
+        return _fit(d, credit, fnt, maxw)
+    room = maxw - d.textlength(" — " + source, font=fnt)
+    return _fit(d, title, fnt, room) + " — " + source
+
+
 def wrap(draw, text, fnt, width):
     lines, line = [], ""
     for word in text.split():
@@ -132,7 +151,8 @@ def text_layer(text, kind, credit=""):
         d.text((W / 2, y), line, font=fnt, fill=colour, anchor="mm")
         y += gap
     if credit:
-        d.text((W / 2, H - 120), credit[:95], font=font("EBGaramond", 24), fill=DUST, anchor="mm")
+        cf = font("EBGaramond", 24)
+        d.text((W / 2, H - 120), _credit(d, credit, cf, W - 120), font=cf, fill=DUST, anchor="mm")
     return layer
 
 
@@ -180,7 +200,8 @@ def render_spec(spec, out):
     tmp = tempfile.mkdtemp(prefix="reel_")
     beats = spec["beats"]
     images = spec.get("images") or [None] * len(beats)
-    used = {i["key"] for i in images if i}
+    rejects = spec.setdefault("reject_images", [])      # reviewer/picker turned these down
+    used = {i["key"] for i in images if i} | set(rejects)
     paths = []
     for n, beat in enumerate(beats):
         # Try the stored image first, then fresh search results, until one
@@ -189,7 +210,12 @@ def render_spec(spec, out):
         for _ in range(5):
             if not images[n]:
                 print(f"  beat {n + 1}: searching '{beat['image_query']}'")
-                images[n] = museum.find_image(beat["image_query"], used)
+                if os.environ.get("ANTHROPIC_API_KEY"):
+                    from carousel_ai import choose_image
+                    images[n] = choose_image(beat.get("kicker", ""), beat["text"],
+                                             beat["image_query"], used, rejects)
+                else:
+                    images[n] = museum.find_image(beat["image_query"], used)
                 if not images[n]:
                     break
             used.add(images[n]["key"])
