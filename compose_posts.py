@@ -100,7 +100,22 @@ def validate(reels, routes):
     return problems
 
 
+def unposted_in_newest_queue():
+    queues = sorted(glob.glob(f"{QUEUE_DIR}/????-??-??.json"))
+    if not queues:
+        return None, 0
+    posted = set(json.load(open("reel_state.json"))["posted"]) if os.path.exists("reel_state.json") else set()
+    reels = json.load(open(queues[-1]))["reels"]
+    return queues[-1], sum(r["id"] not in posted for r in reels)
+
+
 def main():
+    # Don't throw away a reviewed queue that hasn't finished posting (e.g. one
+    # made mid-week): keep posting it and compose next week instead.
+    current, left = unposted_in_newest_queue()
+    if left >= 2:
+        print(f"{current} still has {left} unposted reels — keeping it, not composing a new queue.")
+        return
     path = latest_report()
     week = re.search(r"(\d{4}-\d{2}-\d{2})", path).group(1)
     archive = json.load(open("archive_index.json", encoding="utf-8"))
