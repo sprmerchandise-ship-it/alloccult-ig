@@ -358,7 +358,13 @@
       "id": "2026-10-09-4",
       "section": "Section 7",
       "images": [
-        null,
+        {
+          "key": "wellcome:d7vtnwd2",
+          "url": "https://iiif.wellcomecollection.org/image/L0005336/full/1600,/0/default.jpg",
+          "title": "A Lamia",
+          "credit": "A Lamia — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
         {
           "key": "wellcome:bjg3gyjx",
           "url": "https://iiif.wellcomecollection.org/image/V0042384/full/1600,/0/default.jpg",
@@ -547,7 +553,13 @@
       "id": "2026-10-09-6",
       "section": "Section 11",
       "images": [
-        null,
+        {
+          "key": "wellcome:z4dbmrew",
+          "url": "https://iiif.wellcomecollection.org/image/V0005905/full/1600,/0/default.jpg",
+          "title": "Johannes Trithemius [Heidenburg]. Line engraving, 1666.",
+          "credit": "Johannes Trithemius [Heidenburg]. Line engraving, 1666. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
         {
           "key": "wellcome:q9d598fe",
           "url": "https://iiif.wellcomecollection.org/image/L0056695/full/1600,/0/default.jpg",
