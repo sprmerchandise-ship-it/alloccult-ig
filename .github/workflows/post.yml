@@ -30,6 +30,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ETSY_API_KEY: ${{ secrets.ETSY_API_KEY }}   # optional: keystring:shared_secret
         run: python post.py
 
       - name: Save posting history
