@@ -22,7 +22,7 @@ from carousel_ai import STR, VOICE, _ask, _jpeg_b64, _obj
 from render_reel import HOOK_SECONDS, OUTRO_SECONDS, render_spec
 from site_source import page_text
 
-ROUNDS = 3
+ROUNDS = 4
 
 REVIEW_SCHEMA = _obj({
     "approved": {"type": "boolean"},
