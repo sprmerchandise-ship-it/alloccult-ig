@@ -185,9 +185,11 @@ spelling, and that the hook would stop a scroll.
 For each problem give a fix: a better "new_image_query" (1–3 words naming the
 subject, for the Wellcome Collection) or "new_kicker"/"new_text". Leave fix
 fields "" when that part is fine. List every slide, including fine ones.
-Set "drop_slide" true for a content slide that should go — e.g. when no fitting
-public-domain image is likely to exist for it — but keep the cover and at
-least 4 content slides.
+Set "drop_slide" true for a content slide that should go — especially when no
+fitting public-domain image is likely to exist for its subject (prefer dropping
+over asking for yet another search) — but keep the cover and at least 4 content
+slides. Slides showing the drawn sigil had no fitting image; one is acceptable,
+more should usually be dropped.
 "approved" is true only if nothing needs fixing. "new_hashtags" is [] unless
 the hashtags need changing (then exactly 12, lowercase, no #).
 

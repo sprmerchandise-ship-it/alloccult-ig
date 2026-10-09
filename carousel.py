@@ -138,7 +138,20 @@ def _choose(slide, draft, used):
     if not os.environ.get("ANTHROPIC_API_KEY"):
         return museum.find_image(query, used)
     from carousel_ai import pick_image
-    cands = museum.candidates(query, used)
+    # Search the image query, the slide's subject ("Norse · Valkyries" →
+    # "Valkyries") and singular forms, so one odd wording can't starve the pick.
+    subject = slide.get("kicker", "").split("·")[-1].strip()
+    queries = []
+    for q in (query, subject):
+        for v in (q, " ".join(w[:-1] if len(w) > 4 and w.endswith("s") else w for w in q.split())):
+            if v and v not in queries:
+                queries.append(v)
+    cands, seen = [], set(used)
+    for q in queries:
+        for c in museum.candidates(q, seen, limit=8):
+            seen.add(c["key"])
+            cands.append(c)
+    cands = cands[:16]
     i = pick_image(slide.get("kicker", ""), slide["text"], cands)
     if i < 0:
         print(f"  no fitting image for '{query}' among {len(cands)} candidates")
@@ -184,6 +197,13 @@ def render(draft_dir):
         os.remove(old)
     tmp = tempfile.mkdtemp(prefix="carousel_")
     arts = resolve_images(draft, tmp)
+    # A content slide with no fitting image is dropped rather than shown as a
+    # bare sigil — as long as the cover and 4 content slides remain.
+    missing = [i for i, a in enumerate(arts) if i > 0 and a is None]
+    if missing and len(draft["slides"]) - len(missing) >= 5:
+        for i in reversed(missing):
+            print(f"  dropping slide {i + 1} ({draft['slides'][i].get('kicker', '')}): no fitting image")
+            del draft["slides"][i], arts[i]
     slides = draft["slides"]
     total = len(slides) + 1
     out = []

@@ -1,6 +1,6 @@
 {
   "id": "001-psychopomps",
-  "status": "rejected",
+  "status": "draft",
   "title": "Death Cults & Psychopomps",
   "route": "/death-afterlife/death-cults-psychopomps",
   "section": "Section 7",
@@ -113,12 +113,9 @@
     {
       "kicker": "Norse · Valkyries",
       "text": "Odin's Valkyries choose who falls in battle, and carry the chosen to Valhalla.",
-      "image_query": "Valkyries",
+      "image_query": "Valkyrie",
       "image": null,
-      "reject": [
-        "aic:44032",
-        "aic:44029"
-      ]
+      "reject": []
     },
     {
       "kicker": "India · Yama",
