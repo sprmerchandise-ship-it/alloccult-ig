@@ -1,6 +1,6 @@
 {
   "id": "001-psychopomps",
-  "status": "draft",
+  "status": "rejected",
   "title": "Death Cults & Psychopomps",
   "route": "/death-afterlife/death-cults-psychopomps",
   "section": "Section 7",
@@ -18,19 +18,18 @@
     },
     {
       "kicker": "Egypt · Anubis",
-      "text": "The jackal-headed god weighs your heart against the feather of Ma'at. Too heavy, and Ammit devours it.",
+      "text": "The jackal-headed god tends the scales. Your heart against the feather of Ma'at. Too heavy, and Ammit devours it.",
       "image_query": "Anubis",
-      "image": {
-        "key": "wellcome:uv56mpbu",
-        "url": "https://iiif.wellcomecollection.org/image/V0038947/full/1600,/0/default.jpg",
-        "title": "Various depictions based on the Egyptian god Anubis. Lithograph.",
-        "credit": "Various depictions based on the Egyptian god Anubis. Lithograph. — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image": null,
+      "reject": [
+        "wellcome:uv56mpbu",
+        "wellcome:seg4hak8",
+        "wellcome:cg7xrk4j"
+      ]
     },
     {
       "kicker": "Greece · Hermes",
-      "text": "Hermes Psychopompos, guide of souls, leads the dead down to Hades. Homer sings it in Odyssey 24.",
+      "text": "Hermes Psychopompos, guide of souls. In Odyssey 24 he drives the suitors' shades down to Hades. They follow, gibbering like bats.",
       "image_query": "Hermes",
       "image": {
         "key": "wellcome:bp5hn86x",
@@ -59,14 +58,13 @@
     {
       "kicker": "Aztec · Mictlan",
       "text": "A dog carries the dead across the river of the underworld. The descent through nine levels takes four years.",
-      "image_query": "Aztec dog",
-      "image": {
-        "key": "wellcome:jbtkrwtz",
-        "url": "https://iiif.wellcomecollection.org/image/L0022116/full/1600,/0/default.jpg",
-        "title": "Mexico: (above) a bust of an Aztec priestess or divinity, belonging to Mr. Dupé in Mexico; (below) an Aztec statuette of basalt deposited by Humboldt in Berlin. Coloured aquatint by G. Gallina ca. 1820.",
-        "credit": "Mexico: (above) a bust of an Aztec priestess or divinity, belonging to — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image_query": "Mictlantecuhtli",
+      "image": null,
+      "reject": [
+        "wellcome:jbtkrwtz",
+        "aic:11",
+        "aic:27"
+      ]
     },
     {
       "kicker": "Norse · Valkyries",
@@ -96,13 +94,12 @@
       "kicker": "Islam · The Angel of Death",
       "text": "Malak al-Mawt, named Azrael in tradition, draws the soul from the body at the appointed hour.",
       "image_query": "angel of death",
-      "image": {
-        "key": "wellcome:nm2huk66",
-        "url": "https://iiif.wellcomecollection.org/image/V0010664/full/1600,/0/default.jpg",
-        "title": "The angel of death striking a door during the plague of Rome. Engraving by J.G. Levasseur after J. Delaunay.",
-        "credit": "The angel of death striking a door during the plague of Rome. Engravin — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image": null,
+      "reject": [
+        "wellcome:nm2huk66",
+        "aic:111",
+        "wellcome:u4af83nm"
+      ]
     },
     {
       "kicker": "Your turn",
@@ -117,7 +114,7 @@
       }
     }
   ],
-  "caption": "Every culture that buried its dead sent someone to collect them.\n\nIn Egypt, Anubis weighed the heart against the feather of Ma'at.\nIn Greece, Hermes led the shades down, and Charon took the obol at the river.\nThe Aztecs buried a dog with the dead, to carry them across.\nOdin's Valkyries chose the fallen. Yama judged. Azrael waited for the hour.\n\nThe Greeks called them psychopomps: guides of souls.\n\nWhich one would you want at your door? Answer below.\n\nThe full entry waits in the Forbidden Library: alloccult.com/death-afterlife/death-cults-psychopomps",
+  "caption": "Few cultures let the dead walk alone.\n\nIn Egypt, Anubis tended the scales where the heart was weighed against the feather of Ma'at.\nIn Greece, Hermes led the shades down, and Charon took the obol at the river.\nThe Aztecs buried a dog with the dead, to carry them across.\nOdin's Valkyries chose the fallen. Yama judged. Azrael waited for the hour.\n\nThe Greeks gave Hermes the title: psychopompos, guide of souls.\n\nWhich one would you want at your door? Answer below.\n\nThe full entry waits in the Forbidden Library: alloccult.com/death-afterlife/death-cults-psychopomps",
   "hashtags": [
     "psychopomp",
     "anubis",
@@ -143,5 +140,40 @@
     "08.jpg",
     "09.jpg",
     "10.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": false,
+      "summary": "Strong hook, accurate core facts and a good Valkyrie and Yama pairing. Not ready to post. Three images miss their subjects. Slide 2 shows Seth and Taweret figures, not a clear Anubis. Slide 5 shows generic Aztec busts with no Mictlan, dog or death imagery. Slide 8 puts a Roman plague scene from Christian legend under an Islam kicker. Slide 3 leaves '24.' orphaned on its own line. The caption overclaims with 'every culture' and 'the Greeks called them psychopomps'.",
+      "fixes": [
+        "slide 2 image: The plate's labelled figures are Seth, Taweret ('Te-oer'), 'Las-an-ho?' and a pantheic bronze. None reads as the jackal-headed Anubis the text describes, and there is no weighing scene.",
+        "slide 3 text: 'Homer sings it in Odyssey 24.' is flat and leaves '24.' orphaned on its own line. Odyssey 24 has a far darker, accurate detail to use instead.",
+        "slide 5 image: The image is a bust of an Aztec priestess or divinity and a basalt statuette. There is nothing of Mictlan, the dog or death, so it is unrelated to the slide's subject.",
+        "slide 8 image: This is Delaunay's Plague in Rome, from Christian Golden Legend imagery: a good angel directs a demon to strike doors. It is a European Christian scene, not Islamic, so it mismatches the Islam / Malak al-Mawt slide.",
+        "caption: 'Every culture that buried its dead sent someone to collect them' is a universal claim the archive does not support. 'The Greeks called them psychopomps' misstates the history: psychopompos was a Greek epithet, chiefly of Hermes, and the cross-cultural category is modern scholarly usage. The Anubis line also smooths over his role, since he tends the scales."
+      ]
+    },
+    {
+      "round": 2,
+      "approved": false,
+      "summary": "The text is accurate and on-voice throughout, and the caption is clean. Three images fail. Slide 2 is a pun: an etching of Daniel Lambert 'weighing 51 stone' sits under the weighing of the heart. Slides 5 and 8 use unrelated portraits, a Walter Shirlaw self-portrait and the sculptor Desjardins. Replace those three images before posting.",
+      "fixes": [
+        "slide 2 image: Pun and coincidence. The image is an etching of Daniel Lambert 'weighing 51 stone', a famously obese man, placed under the weighing of the heart. It has nothing to do with Anubis and reads as an unintended joke.",
+        "slide 5 image: Unrelated image. It is a 19th-century self-portrait of the painter Walter Shirlaw, with no connection to Mictlan, the Aztecs or the Xolo dog.",
+        "slide 8 image: Unrelated image. It is a formal portrait engraving of the sculptor Martin Desjardins and has nothing to do with Malak al-Mawt or Azrael."
+      ]
+    },
+    {
+      "round": 3,
+      "approved": false,
+      "summary": "Not ready to post. Three images are title-word coincidences rather than the subject: slide 2 shows Daniel Lambert ('weighing'), rendered as an empty frame; slide 5 is a Corot Italian landscape unrelated to Mictlan; slide 8 shows angelfish for the Angel of Death. Slide 2 text overclaims Anubis's role. Anubis tends the scales, while the heart is weighed in Osiris's hall. The rest is accurate, legible and on-voice. The hook is strong and the caption is clean.",
+      "fixes": [
+        "slide 2 image: Image is 'Daniel Lambert, weighing almost forty stone', a pun on 'weighing' with no connection to Egypt. It also renders as an empty picture frame.",
+        "slide 2 text: Overclaims. Anubis tends and adjusts the scales, but he does not personally judge the weighing. Thoth records the result, before Osiris. Reword to match the caption's 'tended the scales'.",
+        "slide 5 image: Corot's 'Remembrance of Italy' is a European tree landscape. It has nothing to do with Aztec belief or Mictlan.",
+        "slide 8 image: Image shows angelfish, a pun on 'angel'. It would undercut the brand's seriousness on a slide about Islam."
+      ]
+    }
   ]
 }
