@@ -45,14 +45,18 @@ def _text_block(d, lines, fnt, y, gap, fill):
 def cover_slide(art, hook, credit):
     img = Image.new("RGB", (W, H), BG)
     if art:
-        img = Image.blend(img, cover(art, W, H), 0.85)
+        # Pale engravings fight the gold text: dim the art, then add a dark
+        # band at the top for the wordmark and a deep gradient for the hook.
+        img = Image.blend(img, cover(art, W, H), 0.62)
     shade = Image.new("L", (W, H), 0)
     sd = ImageDraw.Draw(shade)
-    for y in range(H):                       # darken the lower half for the hook
-        sd.line([(0, y), (W, y)], fill=int(235 * max(0, (y - H * 0.35) / (H * 0.65)) ** 1.2))
+    for y in range(H):
+        bottom = max(0, (y - H * 0.30) / (H * 0.70)) ** 0.9
+        top = max(0, (140 - y) / 140)
+        sd.line([(0, y), (W, y)], fill=int(250 * min(1, max(bottom, top))))
     img.paste(Image.new("RGB", (W, H), BG), (0, 0), shade)
     d = ImageDraw.Draw(img)
-    d.text((W / 2, 86), "A L L O C C U L T", font=font("Cinzel", 30, 700), fill=GOLD, anchor="mm")
+    d.text((W / 2, 70), "A L L O C C U L T", font=font("Cinzel", 30, 700), fill=GOLD, anchor="mm")
     f = font("Cinzel", 84, 700)
     lines = wrap(d, drawable(hook.upper(), f), f, W - 150)
     if len(lines) > 4:
