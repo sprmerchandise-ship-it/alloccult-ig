@@ -113,7 +113,7 @@ Manual run: Actions → ALLOCCULT Instagram Post → Run workflow with
 
 **Claude reviews every Reel** (`reel_review.py`) right after rendering: stills
 from each segment are checked like carousels (facts, image fit, legibility,
-hook, caption), fixed, re-rendered and re-checked (up to 3 rounds). Only Reels
+hook, caption), fixed, re-rendered and re-checked (up to 4 rounds). Only Reels
 marked `"status": "approved"` are ever posted. "Reel Review Check" (Actions) is
 a manual live test that changes nothing.
 
