@@ -228,7 +228,14 @@ def publish_carousel(image_urls, caption):
     return res.get("id")
 
 def fetch_products():
-    data = http_json(f"{STORE_URL}/products.json?limit=250")
+    try:
+        data = http_json(f"{STORE_URL}/products.json?limit=250")
+    except (urllib.error.URLError, TimeoutError, ValueError) as e:
+        # Store unreachable (e.g. TLS/domain problem): post lore instead of
+        # failing — otherwise the counter never advances and posting stalls.
+        print(f"WARNING: could not load products from {STORE_URL} ({e}); "
+              "posting lore instead.")
+        return []
     out = []
     for p in data.get("products", []):
         if p.get("images"):
