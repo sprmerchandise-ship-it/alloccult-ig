@@ -1,8 +1,13 @@
 name: Publish Reel Previews
 
-# Copies the weekly posts bundle to the `previews` branch so the Reels can be
-# watched straight from GitHub (open a .mp4 → "View raw"), with a contact sheet
-# per Reel. The branch is replaced every time, so it never grows the repo.
+# Puts the week's Reels on the `previews` branch so they can be watched straight
+# from GitHub (open a .mp4 → "View raw"), with a contact sheet per Reel. The
+# branch is replaced every time, so it never grows the repo.
+#
+# - After each successful Weekly Competitor Intel run: copies its posts bundle.
+# - Manual run with a run ID: copies that run's bundle.
+# - Manual run without a run ID: re-renders the newest queue/*.json (use this
+#   after editing a queue file) and commits the chosen images back to it.
 
 on:
   workflow_run:
@@ -11,8 +16,9 @@ on:
   workflow_dispatch:
     inputs:
       run_id:
-        description: "Weekly Competitor Intel run ID to publish"
-        required: true
+        description: "Weekly Competitor Intel run ID to copy (leave empty to re-render the newest queue)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -22,19 +28,48 @@ jobs:
   preview:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      RUN_ID: ${{ inputs.run_id || github.event.workflow_run.id }}
     steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies & fonts
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install pillow numpy fonttools -q
+          mkdir -p fonts
+          curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
+          curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
+
       - name: Download posts bundle
+        if: env.RUN_ID != ''
         uses: actions/download-artifact@v4
         with:
           pattern: posts-*
           path: bundle
           merge-multiple: true
-          run-id: ${{ inputs.run_id || github.event.workflow_run.id }}
+          run-id: ${{ env.RUN_ID }}
           github-token: ${{ github.token }}
+
+      - name: Re-render newest queue
+        if: env.RUN_ID == ''
+        run: |
+          Q=$(ls queue/????-??-??.json | sort | tail -1)
+          python render_reel.py "$Q" all bundle
+          git config user.name "alloccult-bot"
+          git config user.email "bot@alloccult.com"
+          git add "$Q"
+          git diff --cached --quiet || git commit -m "Re-render previews: $Q"
+          git pull --rebase
+          git push
 
       - name: Contact sheets
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
           cd bundle
           for f in *.mp4; do
             ffmpeg -loglevel error -y -i "$f" \
@@ -49,5 +84,5 @@ jobs:
           git config user.name "alloccult-bot"
           git config user.email "bot@alloccult.com"
           git add -A
-          git commit -qm "Reel previews from run ${{ inputs.run_id || github.event.workflow_run.id }}"
+          git commit -qm "Reel previews (${RUN_ID:-re-render})"
           git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" previews

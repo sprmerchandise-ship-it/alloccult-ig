@@ -23,13 +23,19 @@ spec our video renderer needs. Keep the report's ideas; tighten the wording.
 
 Rules:
 - "route" must be one of the archive routes listed below (pick the closest).
+- Keep every date, name, number and quotation exactly as the report has them.
+- On-screen text ("hook", beat "text") uses the Latin alphabet only —
+  transliterate Hebrew, Greek or Coptic words (e.g. "NRWN QSR", "Abraxas").
 - "hook": on-screen opener, max 8 words, no trailing full stop.
 - "beats": 4–6 items. "text" max 14 words — one punchy line on screen.
   "seconds" 3.5–6. Total of all beats 18–32 seconds.
 - "image_query": 1–3 plain words a museum catalogue would match, for a
   public-domain artwork that fits that beat — e.g. "alchemy", "astrolabe",
   "Saturn", "dance of death", "witches sabbath", "Hermes", "zodiac man",
-  "memento mori", "Kabbalah", "Mithras". No modern or abstract phrases.
+  "memento mori", "Kabbalah", "Mithras", "skeleton", "vampire", "witch".
+  The first search is the Wellcome Collection (old prints, woodcuts and
+  manuscripts on magic, medicine, death and religion), so name the thing
+  itself, not a scene or a mood. No modern or abstract phrases.
   Use a different query for every beat.
 - "mood": one of {moods} — the soundtrack feel.
 - "caption": max 90 words, ends by pointing to alloccult.com.
