@@ -44,13 +44,25 @@
       "kicker": "The Ferryman",
       "text": "At the river, Charon waits. The Greeks buried their dead with a coin to pay him: the obol.",
       "image_query": "Charon Styx",
-      "image": null
+      "image": {
+        "key": "wellcome:xtqwp7vn",
+        "url": "https://iiif.wellcomecollection.org/image/V0041855/full/1600,/0/default.jpg",
+        "title": "The torture of Roman Catholics by monsters in hell, with Charon ferrying more departed souls over the river Styx. Engraving with etching.",
+        "credit": "The torture of Roman Catholics by monsters in hell, with Charon ferryi — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
     },
     {
       "kicker": "Aztec · Mictlan",
       "text": "A dog carries the dead across the river of the underworld. The descent through nine levels takes four years.",
       "image_query": "Aztec dog",
-      "image": null
+      "image": {
+        "key": "wellcome:jbtkrwtz",
+        "url": "https://iiif.wellcomecollection.org/image/L0022116/full/1600,/0/default.jpg",
+        "title": "Mexico: (above) a bust of an Aztec priestess or divinity, belonging to Mr. Dupé in Mexico; (below) an Aztec statuette of basalt deposited by Humboldt in Berlin. Coloured aquatint by G. Gallina ca. 1820.",
+        "credit": "Mexico: (above) a bust of an Aztec priestess or divinity, belonging to — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
     },
     {
       "kicker": "Norse · Valkyries",
