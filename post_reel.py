@@ -39,7 +39,8 @@ def next_spec(posted):
         return None, None, None
     queue = json.load(open(queues[-1]))
     for i, spec in enumerate(queue["reels"]):
-        if spec["id"] not in posted:
+        # Only Reels that passed review (reel_review.py) are ever posted.
+        if spec["id"] not in posted and spec.get("status") == "approved":
             return queues[-1], queue, i
     return queues[-1], queue, None
 
@@ -89,7 +90,7 @@ def main():
     state = json.load(open(STATE)) if os.path.exists(STATE) else {"posted": []}
     qpath, queue, idx = next_spec(set(state["posted"]))
     if idx is None:
-        print("Nothing to post: no queue yet, or this week's reels are all published.")
+        print("Nothing to post: no queue yet, or no approved Reel left this week.")
         return
     spec = queue["reels"][idx]
     print(f"Reel {spec['id']} ({spec['day']}): {spec['title']}")

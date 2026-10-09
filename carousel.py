@@ -25,30 +25,11 @@ import glob, json, os, sys
 from PIL import Image, ImageDraw, ImageFilter
 
 import museum
-from render_reel import GOLD, PARCHMENT, DUST, contain, cover, drawable, font, sigil, wrap
+from render_reel import GOLD, PARCHMENT, DUST, _credit, contain, cover, drawable, font, sigil, wrap
 
 W, H = 1080, 1350
 BG = (9, 8, 6)
 SITE = "alloccult.com"
-
-
-def _fit(d, text, fnt, maxw):
-    """Shorten text at a word boundary (with …) so it fits maxw pixels."""
-    if d.textlength(text, font=fnt) <= maxw:
-        return text
-    words = text.split()
-    while words and d.textlength(" ".join(words) + "…", font=fnt) > maxw:
-        words.pop()
-    return " ".join(words).rstrip(",;:—-– ") + "…"
-
-
-def _credit(d, credit, fnt, maxw):
-    """'Title … — Source (public domain)': trim the title, never the source."""
-    title, sep, source = credit.rpartition(" — ")
-    if not sep:
-        return _fit(d, credit, fnt, maxw)
-    room = maxw - d.textlength(" — " + source, font=fnt)
-    return _fit(d, title, fnt, room) + " — " + source
 
 
 def _art(path):
@@ -137,29 +118,9 @@ def _choose(slide, draft, used):
     query = slide.get("image_query") or draft["title"]
     if not os.environ.get("ANTHROPIC_API_KEY"):
         return museum.find_image(query, used)
-    from carousel_ai import pick_image
-    # Search the image query, the slide's subject ("Norse · Valkyries" →
-    # "Valkyries") and singular forms, so one odd wording can't starve the pick.
-    subject = slide.get("kicker", "").split("·")[-1].strip()
-    queries = []
-    for q in (query, subject):
-        for v in (q, " ".join(w[:-1] if len(w) > 4 and w.endswith("s") else w for w in q.split())):
-            if v and v not in queries:
-                queries.append(v)
-    cands, seen = [], set(used)
-    for q in queries:
-        for c in museum.candidates(q, seen, limit=8):
-            seen.add(c["key"])
-            cands.append(c)
-    cands = cands[:16]
-    i = pick_image(slide.get("kicker", ""), slide["text"], cands)
-    if i < 0:
-        print(f"  no fitting image for '{query}' among {len(cands)} candidates")
-        for c in cands:                       # don't offer the same misfits again
-            slide.setdefault("reject", []).append(c["key"])
-            used.add(c["key"])
-        return None
-    return cands[i]
+    from carousel_ai import choose_image
+    return choose_image(slide.get("kicker", ""), slide["text"], query, used,
+                        slide.setdefault("reject", []))
 
 
 def resolve_images(draft, tmp):

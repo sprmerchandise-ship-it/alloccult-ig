@@ -112,7 +112,7 @@ def unposted_in_newest_queue():
 def main():
     # Don't throw away a reviewed queue that hasn't finished posting (e.g. one
     # made mid-week): keep posting it and compose next week instead.
-    current, left = unposted_in_newest_queue()
+    current, left = unposted_in_newest_queue()     # counts only unposted Reels
     if left >= 2:
         print(f"{current} still has {left} unposted reels — keeping it, not composing a new queue.")
         return

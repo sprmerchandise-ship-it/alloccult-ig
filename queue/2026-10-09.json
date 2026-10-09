@@ -100,6 +100,14 @@
           "credit": "Three calculi: a bladder stone, a gall stone and a kidney stone. Etchi — Wellcome Collection (public domain)",
           "source": "wellcome"
         }
+      ],
+      "status": "approved",
+      "review_log": [
+        {
+          "round": 0,
+          "approved": true,
+          "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
+        }
       ]
     },
     {
@@ -199,6 +207,14 @@
           "title": "Manufacture of sealing wax. Etching by B.L. Prévvost after L.J. Goussier.",
           "credit": "Manufacture of sealing wax. Etching by B.L. Prévvost after L.J. Goussi — Wellcome Collection (public domain)",
           "source": "wellcome"
+        }
+      ],
+      "status": "approved",
+      "review_log": [
+        {
+          "round": 0,
+          "approved": true,
+          "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
         }
       ]
     },
@@ -300,6 +316,14 @@
           "credit": "A man cutting gems using a treadle at his bench before a large window. — Wellcome Collection (public domain)",
           "source": "wellcome"
         }
+      ],
+      "status": "approved",
+      "review_log": [
+        {
+          "round": 0,
+          "approved": true,
+          "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
+        }
       ]
     },
     {
@@ -399,6 +423,14 @@
           "title": "A man in Egypt tied to a stake receives a beating with wooden bats. Lithograph by Edouard after J.J. Rifaud.",
           "credit": "A man in Egypt tied to a stake receives a beating with wooden bats. Li — Wellcome Collection (public domain)",
           "source": "wellcome"
+        }
+      ],
+      "status": "approved",
+      "review_log": [
+        {
+          "round": 0,
+          "approved": true,
+          "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
         }
       ]
     },
@@ -500,6 +532,14 @@
           "credit": "Solomon's seal (Polygonatum multiflorum): rootstock. Watercolour. — Wellcome Collection (public domain)",
           "source": "wellcome"
         }
+      ],
+      "status": "approved",
+      "review_log": [
+        {
+          "round": 0,
+          "approved": true,
+          "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
+        }
       ]
     },
     {
@@ -588,6 +628,14 @@
           "credit": "Persian magical chart, framed — Wellcome Collection (public domain)",
           "source": "wellcome"
         }
+      ],
+      "status": "approved",
+      "review_log": [
+        {
+          "round": 0,
+          "approved": true,
+          "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
+        }
       ]
     },
     {
@@ -675,6 +723,14 @@
           "title": "The liver (figure 1) and gallbladder (figure 4). Engraving, 1686.",
           "credit": "The liver (figure 1) and gallbladder (figure 4). Engraving, 1686. — Wellcome Collection (public domain)",
           "source": "wellcome"
+        }
+      ],
+      "status": "approved",
+      "review_log": [
+        {
+          "round": 0,
+          "approved": true,
+          "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
         }
       ]
     }
