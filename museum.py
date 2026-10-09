@@ -90,6 +90,22 @@ def _variants(query):
     return out
 
 
+def candidates(query, exclude=(), limit=12):
+    """Up to `limit` distinct public-domain images for query and its simpler variants."""
+    out, seen = [], set(exclude)
+    for src, q in [(wellcome, q) for q in _variants(query)] + [(aic, query)]:
+        try:
+            for cand in src(q):
+                if cand["key"] not in seen:
+                    seen.add(cand["key"])
+                    out.append(cand)
+        except (urllib.error.URLError, ValueError, KeyError, TimeoutError) as e:
+            print(f"  {src.__name__}({q!r}) failed: {e}")
+        if len(out) >= limit:
+            break
+    return out[:limit]
+
+
 def find_image(query, exclude=()):
     """First public-domain image for query whose key is not in exclude."""
     attempts = [(wellcome, q) for q in _variants(query)] + [(aic, query)]

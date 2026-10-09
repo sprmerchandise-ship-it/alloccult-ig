@@ -409,7 +409,7 @@ def posting_switches():
 
 
 DRAFTS = "drafts"
-REVIEW_ROUNDS = 3
+REVIEW_ROUNDS = 4
 
 
 def _drafts():
