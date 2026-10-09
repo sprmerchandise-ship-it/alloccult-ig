@@ -12,7 +12,8 @@ A carousel is a draft in drafts/<id>/draft.json:
 slides[0] is the cover: its "text" is the hook. A closing "read the full
 entry" slide is added automatically. Each slide gets public-domain artwork
 (museum.py; resolved choices are saved back as slide["image"] so re-renders
-are stable — set "image": null to pick again).
+are stable — set "image": null to pick again, and add its key to the
+slide's "reject" list so it is never picked again).
 
   python carousel.py render drafts/<id>     # render one draft → drafts/<id>/NN.jpg
   python carousel.py render-pending         # render every draft not yet posted
@@ -113,6 +114,8 @@ def closing_slide(title, route):
 def resolve_images(draft, tmp):
     """Make sure each slide has a downloadable image; returns local paths."""
     used = {s["image"]["key"] for s in draft["slides"] if s.get("image")}
+    # Images a reviewer turned down stay out for good ("reject": [keys]).
+    used |= {k for s in draft["slides"] for k in s.get("reject", [])}
     paths = []
     for n, s in enumerate(draft["slides"]):
         p = os.path.join(tmp, f"art{n}.jpg")

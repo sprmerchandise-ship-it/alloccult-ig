@@ -43,14 +43,12 @@
     {
       "kicker": "The Ferryman",
       "text": "At the river, Charon waits. The Greeks buried their dead with a coin to pay him: the obol.",
-      "image_query": "Charon Styx",
-      "image": {
-        "key": "wellcome:xtqwp7vn",
-        "url": "https://iiif.wellcomecollection.org/image/V0041855/full/1600,/0/default.jpg",
-        "title": "The torture of Roman Catholics by monsters in hell, with Charon ferrying more departed souls over the river Styx. Engraving with etching.",
-        "credit": "The torture of Roman Catholics by monsters in hell, with Charon ferryi — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image_query": "Charon",
+      "image": null,
+      "reject": [
+        "wellcome:xtqwp7vn",
+        "wellcome:spvemhv2"
+      ]
     },
     {
       "kicker": "Aztec · Mictlan",
