@@ -8,25 +8,13 @@
     {
       "text": "Who comes for you when you die?",
       "image_query": "Charon boat",
-      "image": {
-        "key": "wellcome:xu99mt82",
-        "url": "https://iiif.wellcomecollection.org/image/V0035991/full/1600,/0/default.jpg",
-        "title": "Ghosts landing from the boat of Charon; Charon receiving a ghost into his boat. Engraving by C. Grignion, 1790.",
-        "credit": "Ghosts landing from the boat of Charon; Charon receiving a ghost into  — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image": null
     },
     {
       "kicker": "Egypt · Anubis",
       "text": "The jackal-headed god tends the scales. Your heart against the feather of Ma'at. Too heavy, and Ammit devours it.",
       "image_query": "Anubis",
-      "image": {
-        "key": "aic:136025",
-        "url": "https://www.artic.edu/iiif/2/ff8e8a69-a6e4-566e-e67c-8a1f2ce9a16b/full/843,/0/default.jpg",
-        "title": "Amulet of the God Anubis",
-        "credit": "Amulet of the God Anubis, Ancient Egyptian — Art Institute of Chicago (public domain)",
-        "source": "aic"
-      },
+      "image": null,
       "reject": [
         "wellcome:uv56mpbu",
         "wellcome:seg4hak8",
@@ -37,25 +25,13 @@
       "kicker": "Greece · Hermes",
       "text": "Hermes Psychopompos, guide of souls. In Odyssey 24 he drives the suitors' shades down to Hades. They follow, gibbering like bats.",
       "image_query": "Hermes",
-      "image": {
-        "key": "wellcome:bp5hn86x",
-        "url": "https://iiif.wellcomecollection.org/image/V0035816/full/1600,/0/default.jpg",
-        "title": "Mercury [Hermes]. Engraving.",
-        "credit": "Mercury [Hermes]. Engraving. — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image": null
     },
     {
       "kicker": "The Ferryman",
       "text": "At the river, Charon waits. The Greeks buried their dead with a coin to pay him: the obol.",
       "image_query": "Charon",
-      "image": {
-        "key": "wellcome:z8ra5ybn",
-        "url": "https://iiif.wellcomecollection.org/image/V0035986ER/full/1600,/0/default.jpg",
-        "title": "Scenes in the underworld; spirits of the dead disembarking from the boat of Charon; Charon receiving a ghost into his boat. Etching by L.P. Boitard.",
-        "credit": "Scenes in the underworld; spirits of the dead disembarking from the bo — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      },
+      "image": null,
       "reject": [
         "wellcome:xtqwp7vn",
         "wellcome:spvemhv2"
@@ -65,54 +41,31 @@
       "kicker": "Aztec · Mictlan",
       "text": "A dog carries the dead across the river of the underworld. The descent through nine levels takes four years.",
       "image_query": "Mictlantecuhtli",
-      "image": {
-        "key": "aic:27992",
-        "url": "https://www.artic.edu/iiif/2/2d484387-2509-5e8e-2c43-22f9981972eb/full/843,/0/default.jpg",
-        "title": "A Sunday on La Grande Jatte — 1884",
-        "credit": "A Sunday on La Grande Jatte — 1884, Georges Seurat — Art Institute of Chicago (public domain)",
-        "source": "aic"
-      },
+      "image": null,
       "reject": [
         "wellcome:jbtkrwtz",
         "aic:11",
-        "aic:27"
+        "aic:27",
+        "aic:27992"
       ]
     },
     {
       "kicker": "Norse · Valkyries",
       "text": "Odin's Valkyries choose who falls in battle, and carry the chosen to Valhalla.",
       "image_query": "Valkyrie",
-      "image": {
-        "key": "aic:44032",
-        "url": "https://www.artic.edu/iiif/2/6a76a6b0-0fec-d46c-bada-ffdeec6fc000/full/843,/0/default.jpg",
-        "title": "End of The Valkyrie",
-        "credit": "End of The Valkyrie, Henri Fantin-Latour — Art Institute of Chicago (public domain)",
-        "source": "aic"
-      }
+      "image": null
     },
     {
       "kicker": "India & Tibet · Yama",
       "text": "Yama found the path of the dead first. Now he rules them, and judges them.",
       "image_query": "Yama",
-      "image": {
-        "key": "wellcome:afn7zpng",
-        "url": "https://iiif.wellcomecollection.org/image/L0069369/full/1600,/0/default.jpg",
-        "title": "Yama holding the wheel of life. Distemper painting.",
-        "credit": "Yama holding the wheel of life. Distemper painting. — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image": null
     },
     {
       "kicker": "Islam · The Angel of Death",
       "text": "Malak al-Mawt, named Azrael in tradition, draws the soul from the body at the appointed hour.",
       "image_query": "angel of death",
-      "image": {
-        "key": "wellcome:nfcpk576",
-        "url": "https://iiif.wellcomecollection.org/image/L0004061/full/1600,/0/default.jpg",
-        "title": "The angel of death striking a door during the plague of Rome. Reproduction of a wood engraving by P. Noël after J. Delaunay.",
-        "credit": "The angel of death striking a door during the plague of Rome. Reproduc — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      },
+      "image": null,
       "reject": [
         "wellcome:nm2huk66",
         "aic:111",
@@ -123,13 +76,7 @@
       "kicker": "Your turn",
       "text": "Which of them would you want waiting for you? Answer below.",
       "image_query": "memento mori",
-      "image": {
-        "key": "wellcome:gmh9mhjh",
-        "url": "https://iiif.wellcomecollection.org/image/L0007435/full/1600,/0/default.jpg",
-        "title": "Scheuchzer, 1731-33: memento mori",
-        "credit": "Scheuchzer, 1731-33: memento mori — Wellcome Collection (public domain)",
-        "source": "wellcome"
-      }
+      "image": null
     }
   ],
   "caption": "Few cultures let the dead walk alone.\n\nIn Egypt, Anubis tended the scales where the heart was weighed against the feather of Ma'at.\nIn Greece, Hermes led the shades down, and Charon took the obol at the river.\nThe Aztecs buried a dog with the dead, to carry them across.\nOdin's Valkyries chose the fallen. Yama judged. Azrael waited for the hour.\n\nThe Greeks gave Hermes the title: psychopompos, guide of souls.\n\nWhich one would you want at your door? Answer below.\n\nThe full entry waits in the Forbidden Library: alloccult.com/death-afterlife/death-cults-psychopomps",

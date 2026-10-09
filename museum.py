@@ -44,7 +44,7 @@ def wellcome(query, limit=15):
             "key": f"wellcome:{r['id']}",
             "url": loc["url"].replace("/info.json", "/full/1600,/0/default.jpg"),
             "title": title,
-            "credit": f"{title[:70]} — Wellcome Collection (public domain)",
+            "credit": f"{title} — Wellcome Collection (public domain)",
             "source": "wellcome"})
     return out
 
@@ -65,7 +65,7 @@ def aic(query, limit=15):
             # 843px wide is the size AIC guarantees for every public-domain image.
             "url": f"https://www.artic.edu/iiif/2/{a['image_id']}/full/843,/0/default.jpg",
             "title": title,
-            "credit": f"{title[:60]}{', ' + who if who else ''} — Art Institute of Chicago (public domain)",
+            "credit": f"{title}{', ' + who if who else ''} — Art Institute of Chicago (public domain)",
             "source": "aic"})
     return out
 

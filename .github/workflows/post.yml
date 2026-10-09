@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:          # never two jobs editing drafts/ at once
+  group: drafts
+  cancel-in-progress: false
+
 jobs:
   post:
     runs-on: ubuntu-latest

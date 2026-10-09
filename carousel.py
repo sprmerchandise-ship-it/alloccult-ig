@@ -32,6 +32,25 @@ BG = (9, 8, 6)
 SITE = "alloccult.com"
 
 
+def _fit(d, text, fnt, maxw):
+    """Shorten text at a word boundary (with …) so it fits maxw pixels."""
+    if d.textlength(text, font=fnt) <= maxw:
+        return text
+    words = text.split()
+    while words and d.textlength(" ".join(words) + "…", font=fnt) > maxw:
+        words.pop()
+    return " ".join(words).rstrip(",;:—-– ") + "…"
+
+
+def _credit(d, credit, fnt, maxw):
+    """'Title … — Source (public domain)': trim the title, never the source."""
+    title, sep, source = credit.rpartition(" — ")
+    if not sep:
+        return _fit(d, credit, fnt, maxw)
+    room = maxw - d.textlength(" — " + source, font=fnt)
+    return _fit(d, title, fnt, room) + " — " + source
+
+
 def _art(path):
     return Image.open(path).convert("RGB") if path else None
 
@@ -68,7 +87,8 @@ def cover_slide(art, hook, credit):
     _text_block(d, lines, f, y, gap, GOLD)
     d.text((W / 2, H - 170), "swipe  →", font=font("EBGaramond", 36, 500), fill=PARCHMENT, anchor="mm")
     if credit:
-        d.text((W / 2, H - 60), credit[:110], font=font("EBGaramond", 22), fill=DUST, anchor="mm")
+        cf = font("EBGaramond", 22)
+        d.text((W / 2, H - 60), _credit(d, credit, cf, W - 120), font=cf, fill=DUST, anchor="mm")
     return img
 
 
@@ -94,7 +114,8 @@ def content_slide(art, kicker, text, credit, n, total):
     _text_block(d, wrap(d, drawable(text, bf), bf, W - 170)[:5], bf, y, 60, PARCHMENT)
     d.text((W - 70, H - 50), f"{n} / {total}", font=font("EBGaramond", 24), fill=DUST, anchor="rm")
     if credit:
-        d.text((70, H - 50), credit[:80], font=font("EBGaramond", 20), fill=DUST, anchor="lm")
+        cf = font("EBGaramond", 20)
+        d.text((70, H - 50), _credit(d, credit, cf, W - 230), font=cf, fill=DUST, anchor="lm")
     return img
 
 
