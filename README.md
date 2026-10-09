@@ -66,6 +66,32 @@ then check @all.occult. If it worked, you're done — it now posts daily at
   shop RSS feed (1 photo per listing). If neither works, that day's product post
   becomes a lore post instead of failing.
 
+## Carousels: written and reviewed by Claude before they post
+
+Every day at 18:00 UTC, `post.py`:
+
+1. **Posts an approved draft** if one is waiting (`drafts/<id>/draft.json` with
+   `"status": "approved"`).
+2. Otherwise it **reviews the next pending draft**, or Claude writes a new one
+   for the next archive entry (`carousel_ai.write_draft`). The draft is grounded
+   in that page's text on alloccult.com (`site_source.py`).
+3. **Renders it** (`carousel.py`): public-domain art on every slide, the hook on
+   the cover, and a closing "read the full entry" card.
+4. **Claude reviews the rendered slides** (`carousel_ai.review`, with vision).
+   It checks facts against the page and established history, checks that each
+   image shows the subject and suits the brand (no puns or coincidences, no
+   propaganda, no gore), and checks legibility and the hook. Problems are fixed:
+   new text, or the image is rejected and searched again. It then re-renders and
+   re-reviews, up to 3 rounds.
+5. **Posts it only if it passes.** A draft that still fails is marked
+   `"rejected"` and never published. Every round is kept in the draft's
+   `review_log`.
+
+Manual run: Actions → ALLOCCULT Instagram Post → Run workflow with
+"prepare_only" to write and review the next carousel without posting it.
+`posting.json` turns carousels, Reels and product posts on or off. Needs the
+`GH_PAT` secret (to read the archive page text) and `ANTHROPIC_API_KEY`.
+
 ## Weekly competitor intel + Reels with music
 
 **Every Monday 08:00 UTC** — `.github/workflows/competitor-intel.yml`:
