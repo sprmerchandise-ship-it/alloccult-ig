@@ -13,15 +13,12 @@ amsterdamhermetica           # ~24K, Univ. of Amsterdam history of Hermetic phil
 grimoiremagic                # ~128K, survey of grimoires from a private collection
 kodex_hermetica              # ~74K, hermetic/esoteric posts + ebook
 etherealuniversityy          # ~103K, occult learning platform
-hermetic.alchemy             # ~9.8K, alchemy / hermetic practice
 theesotericwitch             # ~6.3K, witchcraft, tarot and art history
-projectdevadasi              # occult & identity in South Asia, research captions
 theoccultarchive             # ~1.5K, mysterious & paranormal (small, same niche name)
 
 # --- Museums & institutions ---
 museum_of_witchcraft_and_magic   # ~116K, Boscastle, Cornwall
 museumofmagicfortunewitchcraft   # ~18K, Edinburgh
-eawitchmuseum                    # ~1.8K, East Anglia witch-hunt history
 
 # --- Occult publishers & bookshops ---
 theionpublishing             # ~7K, grimoires, paganism, esotericism
@@ -31,7 +28,6 @@ grimoiresontape              # ~9.4K, Alexander Cummins, diviner & grimoire scho
 # --- Dark occult / demonology aesthetics ---
 demonology638                # ~93K, demonology
 mysticbarbarism              # ~55K, occult & demonic themes
-thelemamagick                # ~42K, Thelema / tarot (Portuguese)
 
 # --- Witchcraft (large audiences) ---
 thehoodwitch                 # Bri Luna, one of the original IG witchcraft accounts
