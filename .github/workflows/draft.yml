@@ -1,20 +1,17 @@
 name: Render Carousel Drafts
 
-# Renders every carousel draft that hasn't posted (drafts/<id>/draft.json →
-# drafts/<id>/NN.jpg) and commits the slides, so they can be reviewed on
-# GitHub before anyone sets "status": "approved". Nothing is published here.
+# Manual only: re-render every carousel draft that hasn't posted, without
+# Claude (first image match). The daily post.yml renders and reviews drafts
+# itself — this is just for previewing a hand-edited draft. Nothing publishes.
 
 on:
-  push:
-    branches: [main]
-    paths: ["drafts/**/draft.json"]
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 concurrency:
-  group: draft-render
+  group: drafts
   cancel-in-progress: false
 
 jobs:
