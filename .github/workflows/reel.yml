@@ -1,0 +1,61 @@
+name: ALLOCCULT Daily Reel
+
+on:
+  schedule:
+    - cron: "0 15 * * *"   # daily 15:00 UTC (carousel posts at 18:00)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Render only, don't publish"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  reel:
+    # Scheduled runs only post once you set the repo variable REELS_ENABLED=true
+    # (Settings → Secrets and variables → Actions → Variables). Manual runs always work.
+    if: github.event_name == 'workflow_dispatch' || vars.REELS_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies & fonts
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install pillow numpy -q
+          mkdir -p fonts
+          curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
+          curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
+
+      - name: Render & publish next reel
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: python post_reel.py ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Keep the rendered video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reel-${{ github.run_id }}
+          path: out/*.mp4
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Save reel history
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "alloccult-bot"
+          git config user.email "bot@alloccult.com"
+          for f in reel_state.json published.json queue; do [ -e "$f" ] && git add "$f"; done
+          git diff --cached --quiet || git commit -m "Update reel state"
+          git pull --rebase
+          git push

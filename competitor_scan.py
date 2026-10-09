@@ -80,10 +80,20 @@ def post_record(m, handle=None, followers=None):
 
 
 def scan_account(handle, me, cutoff):
-    fields = (f"business_discovery.username({handle})"
-              f"{{username,followers_count,media_count,"
-              f"media.limit({POSTS_PER_ACCOUNT}){{{MEDIA_FIELDS}}}}}")
-    bd = get(me, {"fields": fields})["business_discovery"]
+    global MEDIA_FIELDS
+    fields = lambda: (f"business_discovery.username({handle})"
+                      f"{{username,followers_count,media_count,"
+                      f"media.limit({POSTS_PER_ACCOUNT}){{{MEDIA_FIELDS}}}}}")
+    try:
+        bd = get(me, {"fields": fields()})["business_discovery"]
+    except GraphError as e:
+        # Untested live: if Business Discovery rejects media_product_type, drop
+        # it for the rest of the run (Reels then show up as VIDEO).
+        if "media_product_type" not in MEDIA_FIELDS or "media_product_type" not in str(e):
+            raise
+        MEDIA_FIELDS = MEDIA_FIELDS.replace("media_product_type,", "")
+        print("  (media_product_type not available — continuing without it)")
+        bd = get(me, {"fields": fields()})["business_discovery"]
     followers = bd.get("followers_count") or 0
     posts = [post_record(m, handle, followers)
              for m in bd.get("media", {}).get("data", [])
