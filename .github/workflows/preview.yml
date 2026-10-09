@@ -1,0 +1,53 @@
+name: Publish Reel Previews
+
+# Copies the weekly posts bundle to the `previews` branch so the Reels can be
+# watched straight from GitHub (open a .mp4 → "View raw"), with a contact sheet
+# per Reel. The branch is replaced every time, so it never grows the repo.
+
+on:
+  workflow_run:
+    workflows: ["Weekly Competitor Intel"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Weekly Competitor Intel run ID to publish"
+        required: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  preview:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download posts bundle
+        uses: actions/download-artifact@v4
+        with:
+          pattern: posts-*
+          path: bundle
+          merge-multiple: true
+          run-id: ${{ inputs.run_id || github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Contact sheets
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          cd bundle
+          for f in *.mp4; do
+            ffmpeg -loglevel error -y -i "$f" \
+              -vf "fps=1/4,scale=270:480,tile=6x1" -frames:v 1 "${f%.mp4}_sheet.jpg"
+          done
+          ls -la
+
+      - name: Push to previews branch
+        run: |
+          cd bundle
+          git init -q -b previews
+          git config user.name "alloccult-bot"
+          git config user.email "bot@alloccult.com"
+          git add -A
+          git commit -qm "Reel previews from run ${{ inputs.run_id || github.event.workflow_run.id }}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" previews
