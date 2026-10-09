@@ -70,12 +70,22 @@ def aic(query, limit=15):
     return out
 
 
+# Words that say what kind of picture, not what's in it. Searching on them
+# alone returns random prints (e.g. "page" -> a medical title page).
+GENERIC = {"page", "title", "document", "illustration", "engraving", "woodcut",
+           "etching", "manuscript", "print", "figure", "portrait", "landscape",
+           "chart", "scene", "image", "drawing", "painting", "illumination",
+           "century", "medieval", "ancient", "renaissance", "eighteenth",
+           "seventeenth", "sixteenth", "nineteenth", "old"}
+
+
 def _variants(query):
-    """The query, then simpler versions: first two words, last word, first word."""
+    """The query, then simpler versions built from its meaningful words."""
     words = query.split()
+    core = [w for w in words if w.lower() not in GENERIC]
     out = [query]
-    for v in (" ".join(words[:2]), words[-1] if words else "", words[0] if words else ""):
-        if v and v not in out:
+    for v in (" ".join(core[:2]), " ".join(words[:2]), *core):
+        if v and v not in out and any(w.lower() not in GENERIC for w in v.split()):
             out.append(v)
     return out
 

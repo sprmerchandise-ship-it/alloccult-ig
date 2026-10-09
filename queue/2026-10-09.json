@@ -311,7 +311,7 @@
         {
           "text": "Medveđa, Serbia. Former soldier Arnold Paole dies from a fall.",
           "seconds": 5.0,
-          "image_query": "eighteenth century military document"
+          "image_query": "vampire"
         },
         {
           "text": "He had claimed a vampire tormented him in life.",
@@ -358,13 +358,7 @@
       "id": "2026-10-09-4",
       "section": "Section 7",
       "images": [
-        {
-          "key": "wellcome:esg36um8",
-          "url": "https://iiif.wellcomecollection.org/image/V0025658/full/1600,/0/default.jpg",
-          "title": "Scales specially adapted for weighing livestock. Engraving, late eighteenth century.",
-          "credit": "Scales specially adapted for weighing livestock. Engraving, late eight — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
+        null,
         {
           "key": "wellcome:bjg3gyjx",
           "url": "https://iiif.wellcomecollection.org/image/V0042384/full/1600,/0/default.jpg",
@@ -511,7 +505,7 @@
         {
           "text": "The Theban script. First printed in 1518 by Johannes Trithemius.",
           "seconds": 5.0,
-          "image_query": "Trithemius Polygraphia title page"
+          "image_query": "Trithemius"
         },
         {
           "text": "He credited Honorius of Thebes. Through Pietro d'Abano. Proof: none.",
@@ -553,13 +547,7 @@
       "id": "2026-10-09-6",
       "section": "Section 11",
       "images": [
-        {
-          "key": "wellcome:crd5n9gv",
-          "url": "https://iiif.wellcomecollection.org/image/L0071607/full/1600,/0/default.jpg",
-          "title": "Introductory page",
-          "credit": "Introductory page — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
+        null,
         {
           "key": "wellcome:q9d598fe",
           "url": "https://iiif.wellcomecollection.org/image/L0056695/full/1600,/0/default.jpg",
