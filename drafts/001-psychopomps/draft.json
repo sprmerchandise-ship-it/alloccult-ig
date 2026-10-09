@@ -20,7 +20,13 @@
       "kicker": "Egypt · Anubis",
       "text": "The jackal-headed god tends the scales. Your heart against the feather of Ma'at. Too heavy, and Ammit devours it.",
       "image_query": "Anubis",
-      "image": null,
+      "image": {
+        "key": "aic:136025",
+        "url": "https://www.artic.edu/iiif/2/ff8e8a69-a6e4-566e-e67c-8a1f2ce9a16b/full/843,/0/default.jpg",
+        "title": "Amulet of the God Anubis",
+        "credit": "Amulet of the God Anubis, Ancient Egyptian — Art Institute of Chicago (public domain)",
+        "source": "aic"
+      },
       "reject": [
         "wellcome:uv56mpbu",
         "wellcome:seg4hak8",
@@ -59,7 +65,13 @@
       "kicker": "Aztec · Mictlan",
       "text": "A dog carries the dead across the river of the underworld. The descent through nine levels takes four years.",
       "image_query": "Mictlantecuhtli",
-      "image": null,
+      "image": {
+        "key": "aic:27992",
+        "url": "https://www.artic.edu/iiif/2/2d484387-2509-5e8e-2c43-22f9981972eb/full/843,/0/default.jpg",
+        "title": "A Sunday on La Grande Jatte — 1884",
+        "credit": "A Sunday on La Grande Jatte — 1884, Georges Seurat — Art Institute of Chicago (public domain)",
+        "source": "aic"
+      },
       "reject": [
         "wellcome:jbtkrwtz",
         "aic:11",
@@ -94,7 +106,13 @@
       "kicker": "Islam · The Angel of Death",
       "text": "Malak al-Mawt, named Azrael in tradition, draws the soul from the body at the appointed hour.",
       "image_query": "angel of death",
-      "image": null,
+      "image": {
+        "key": "wellcome:nfcpk576",
+        "url": "https://iiif.wellcomecollection.org/image/L0004061/full/1600,/0/default.jpg",
+        "title": "The angel of death striking a door during the plague of Rome. Reproduction of a wood engraving by P. Noël after J. Delaunay.",
+        "credit": "The angel of death striking a door during the plague of Rome. Reproduc — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      },
       "reject": [
         "wellcome:nm2huk66",
         "aic:111",
