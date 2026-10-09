@@ -135,7 +135,7 @@ always work.
 ### Run locally
 
 ```bash
-sudo apt install ffmpeg && pip install pillow numpy
+sudo apt install ffmpeg && pip install pillow numpy fonttools
 mkdir -p fonts   # then download Cinzel.ttf + EBGaramond.ttf as in post.yml
 export IG_USER_ID=... IG_ACCESS_TOKEN=... ANTHROPIC_API_KEY=...
 python competitor_scan.py

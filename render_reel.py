@@ -12,10 +12,10 @@ move, gold-on-black text, fade-through-black cuts, and a soundtrack (music.py).
 Resolved images are written back into spec["images"] so a re-render (e.g. the
 daily post after the Monday preview) uses exactly the same artwork.
 
-Needs ffmpeg, pillow, numpy, and fonts/Cinzel.ttf + fonts/EBGaramond.ttf
+Needs ffmpeg, pillow, numpy, fonttools, and fonts/Cinzel.ttf + fonts/EBGaramond.ttf
 (the workflows download them; falls back to PIL's default font without them).
 """
-import argparse, json, math, os, shutil, subprocess, sys, tempfile
+import argparse, json, math, os, re, shutil, subprocess, sys, tempfile
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 import museum, music
@@ -39,6 +39,24 @@ def font(name, size, weight=None):
         return f
     print(f"  (missing {path}, using default font)")
     return ImageFont.load_default(size)
+
+
+_CMAPS = {}
+
+
+def drawable(text, fnt):
+    """Remove characters the font has no glyph for (e.g. Hebrew) — they would
+    render as empty boxes — and tidy the punctuation left behind."""
+    path = getattr(fnt, "path", None)
+    if not path:
+        return text
+    if path not in _CMAPS:
+        from fontTools.ttLib import TTFont
+        _CMAPS[path] = set(TTFont(path).getBestCmap())
+    t = "".join(c for c in text if c.isspace() or ord(c) in _CMAPS[path])
+    t = " ".join(t.split())
+    t = re.sub(r"([.!?,;:])(\s*[.!?,;:])+", r"\1", t)     # "letters. . Count" -> "letters. Count"
+    return re.sub(r"\s+([.!?,;:])", r"\1", t).lstrip(".,;:!? ")
 
 
 def wrap(draw, text, fnt, width):
@@ -108,7 +126,7 @@ def text_layer(text, kind, credit=""):
         return layer
     else:
         fnt, colour, y0, gap = font("EBGaramond", 60, 500), PARCHMENT, 1390, 76
-    lines = wrap(d, text, fnt, 920)[:4]
+    lines = wrap(d, drawable(text, fnt), fnt, 920)[:4]
     y = y0                      # grow downward so long text never covers the art
     for line in lines:
         d.text((W / 2, y), line, font=fnt, fill=colour, anchor="mm")
@@ -163,25 +181,27 @@ def render_spec(spec, out):
     beats = spec["beats"]
     images = spec.get("images") or [None] * len(beats)
     used = {i["key"] for i in images if i}
-    for n, beat in enumerate(beats):
-        if not images[n]:
-            print(f"  beat {n + 1}: searching '{beat['image_query']}'")
-            images[n] = museum.find_image(beat["image_query"], used)
-            if images[n]:
-                used.add(images[n]["key"])
-    spec["images"] = images
-
     paths = []
-    for n, img in enumerate(images):
-        p = None
-        if img:
-            p = os.path.join(tmp, f"img{n}.jpg")
+    for n, beat in enumerate(beats):
+        # Try the stored image first, then fresh search results, until one
+        # actually downloads (some museum image servers block CI runners).
+        p = os.path.join(tmp, f"img{n}.jpg")
+        for _ in range(5):
+            if not images[n]:
+                print(f"  beat {n + 1}: searching '{beat['image_query']}'")
+                images[n] = museum.find_image(beat["image_query"], used)
+                if not images[n]:
+                    break
+            used.add(images[n]["key"])
             try:
-                museum.download(img["url"], p)
-            except Exception as e:                       # noqa: BLE001 — any fetch failure
-                print(f"  image download failed ({e}); using plain card")
-                p = None
-        paths.append(p)
+                museum.download(images[n]["url"], p)
+                Image.open(p).verify()
+                break
+            except Exception as e:                       # noqa: BLE001 — any fetch/decode failure
+                print(f"  download failed for {images[n]['key']} ({e}); trying another")
+                images[n] = None
+        paths.append(p if images[n] else None)
+    spec["images"] = images
 
     segments = [(paths[0], spec["hook"], "hook", HOOK_SECONDS, "")]
     for n, beat in enumerate(beats):

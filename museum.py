@@ -2,18 +2,24 @@
 """
 Find public-domain artwork for Reels from museum open-access APIs.
 
-Sources (no API keys needed), tried in order:
-  - Wellcome Collection: alchemy, magic, astrology manuscripts (PDM / CC0 only)
-  - The Met: Open Access, isPublicDomain objects
-  - Art Institute of Chicago: is_public_domain artworks
+Sources (no API keys needed):
+  - Wellcome Collection: alchemy, magic, astrology, death and medicine prints
+    and manuscripts (PDM / CC0 only). Tried first, with progressively simpler
+    wordings of the query, because it fits the archive best and its image
+    server works from GitHub Actions.
+  - Art Institute of Chicago: last resort. Its search works, but its IIIF image
+    server returned 403 to GitHub runners on the first live run, so a failed
+    download just moves on to the next candidate.
+  (The Met's search API returned 410 Gone in Oct 2026, so it was removed.)
 
-find_image(query) returns {"url", "title", "credit", "source", "key"} or None.
+find_image(query, exclude) returns {"url", "title", "credit", "source", "key"} or None.
 Every result is public domain / CC0, so Reels can use it freely; the credit line
 is still shown on screen as good practice.
 """
 import json, urllib.error, urllib.parse, urllib.request
 
-UA = {"User-Agent": "alloccult-reels/1.0 (+https://alloccult.com)"}
+UA = {"User-Agent": "alloccult-reels/1.0 (+https://alloccult.com)",
+      "AIC-User-Agent": "alloccult-reels (+https://alloccult.com)"}
 TIMEOUT = 30
 
 
@@ -43,31 +49,6 @@ def wellcome(query, limit=15):
     return out
 
 
-def met(query, limit=15):
-    url = ("https://collectionapi.metmuseum.org/public/collection/v1/search?"
-           + urllib.parse.urlencode({"q": query, "hasImages": "true"}))
-    ids = (get_json(url).get("objectIDs") or [])[:limit]
-    out = []
-    for oid in ids:
-        try:
-            o = get_json(f"https://collectionapi.metmuseum.org/public/collection/v1/objects/{oid}")
-        except (urllib.error.URLError, ValueError):
-            continue
-        if not o.get("isPublicDomain") or not o.get("primaryImage"):
-            continue
-        who = o.get("artistDisplayName") or o.get("culture") or ""
-        title = o.get("title") or "Untitled"
-        out.append({
-            "key": f"met:{oid}",
-            "url": o["primaryImage"],
-            "title": title,
-            "credit": f"{title[:60]}{', ' + who if who else ''} — The Met (public domain)",
-            "source": "met"})
-        if len(out) >= 5:
-            break
-    return out
-
-
 def aic(query, limit=15):
     url = ("https://api.artic.edu/api/v1/artworks/search?"
            + urllib.parse.urlencode({"q": query, "limit": limit,
@@ -89,21 +70,26 @@ def aic(query, limit=15):
     return out
 
 
-SOURCES = [wellcome, met, aic]
+def _variants(query):
+    """The query, then simpler versions: first two words, last word, first word."""
+    words = query.split()
+    out = [query]
+    for v in (" ".join(words[:2]), words[-1] if words else "", words[0] if words else ""):
+        if v and v not in out:
+            out.append(v)
+    return out
 
 
 def find_image(query, exclude=()):
-    """First unused public-domain image for query; retries with a shorter query."""
-    words = query.split()
-    attempts = [query] + ([" ".join(words[:2])] if len(words) > 2 else [])
-    for q in attempts:
-        for src in SOURCES:
-            try:
-                for cand in src(q):
-                    if cand["key"] not in exclude:
-                        return cand
-            except (urllib.error.URLError, ValueError, KeyError, TimeoutError) as e:
-                print(f"  {src.__name__}({q!r}) failed: {e}")
+    """First public-domain image for query whose key is not in exclude."""
+    attempts = [(wellcome, q) for q in _variants(query)] + [(aic, query)]
+    for src, q in attempts:
+        try:
+            for cand in src(q):
+                if cand["key"] not in exclude:
+                    return cand
+        except (urllib.error.URLError, ValueError, KeyError, TimeoutError) as e:
+            print(f"  {src.__name__}({q!r}) failed: {e}")
     return None
 
 
