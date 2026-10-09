@@ -1,0 +1,682 @@
+{
+  "week": "2026-10-09",
+  "report": "reports/2026-10-09.md",
+  "reels": [
+    {
+      "day": "Monday",
+      "title": "The Night the Mounds Open",
+      "route": "/ancient-mystery-schools/druidry-celtic",
+      "hook": "On this night, the hills stood open",
+      "beats": [
+        {
+          "text": "Samhain. Old Irish Samain. The death of summer.",
+          "seconds": 5.0,
+          "image_query": "Celtic burial mound"
+        },
+        {
+          "text": "The Coligny calendar, Gaul, second century AD. First month: Samonios.",
+          "seconds": 5.5,
+          "image_query": "bronze inscription tablet"
+        },
+        {
+          "text": "Irish scribes recorded what that night permitted.",
+          "seconds": 4.0,
+          "image_query": "medieval manuscript illumination"
+        },
+        {
+          "text": "The sídhe opened. The fairy mounds received the living.",
+          "seconds": 4.5,
+          "image_query": "fairy mound landscape"
+        },
+        {
+          "text": "In Echtra Nerai, a hanged corpse begs water from a living man.",
+          "seconds": 5.0,
+          "image_query": "gallows woodcut"
+        },
+        {
+          "text": "Three weeks remain. The mound is already listening.",
+          "seconds": 4.0,
+          "image_query": "ogham stone"
+        }
+      ],
+      "mood": "drone",
+      "caption": "Samain marked the end of summer in Gaelic Ireland. The Gaulish Coligny calendar, inscribed in the second century AD, opens its year with the month Samonios. Irish literature fixed its terrors on this night — gates between worlds unlocked, the dead permitted passage. In Echtra Nerai, Nera carries a hanged man to drink, then follows a spectral host into the hill. Few return from that tale unchanged. Three weeks remain before the thirty-first. The full entry is in the Forbidden Library: alloccult.com",
+      "hashtags": [
+        "samhain",
+        "samain",
+        "celticmythology",
+        "druidry",
+        "irishmythology",
+        "otherworld",
+        "sidhe",
+        "celticpaganism",
+        "folklore",
+        "wheeloftheyear",
+        "occulthistory",
+        "alloccult"
+      ],
+      "id": "2026-10-09-1",
+      "section": "Section 1",
+      "images": [
+        {
+          "key": "aic:36076",
+          "url": "https://www.artic.edu/iiif/2/f373c915-0bc9-2034-f094-efdd29520911/full/843,/0/default.jpg",
+          "title": "Mourning Sampler",
+          "credit": "Mourning Sampler, Mary Balch's School — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:97927",
+          "url": "https://www.artic.edu/iiif/2/ae93b54f-91a5-c83a-9561-badbb16695e9/full/843,/0/default.jpg",
+          "title": "The Old Dragoons of 1850",
+          "credit": "The Old Dragoons of 1850, Frederic Remington — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:fwp8wy9g",
+          "url": "https://iiif.wellcomecollection.org/image/B2864444X.JP2/full/1600,/0/default.jpg",
+          "title": "Henricus dei ...",
+          "credit": "Henricus dei ... — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:23119",
+          "url": "https://www.artic.edu/iiif/2/1e452e34-3a2b-0dca-35c3-c7236c612985/full/843,/0/default.jpg",
+          "title": "Village Among the Trees",
+          "credit": "Village Among the Trees, Master of the Small Landscapes — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:febh4sz7",
+          "url": "https://iiif.wellcomecollection.org/image/V0025810/full/1600,/0/default.jpg",
+          "title": "Double picture: a person hanging from the gallows; a witch burning a sleeping couple while a demon figure carries off a child. Woodcut, 1790.",
+          "credit": "Double picture: a person hanging from the gallows; a witch burning a s — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:21023",
+          "url": "https://www.artic.edu/iiif/2/0675f9a9-1a7b-c90a-3bb6-7f7be2afb678/full/843,/0/default.jpg",
+          "title": "Buddha Shakyamuni Seated in Meditation (Dhyanamudra)",
+          "credit": "Buddha Shakyamuni Seated in Meditation (Dhyanamudra) — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        }
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "title": "The Jar at Nag Hammadi",
+      "route": "/mystical-religion/gnosticism",
+      "hook": "He feared a jinn was inside",
+      "beats": [
+        {
+          "text": "Upper Egypt, December 1945. Muhammad Ali al-Samman digs for fertiliser.",
+          "seconds": 5.5,
+          "image_query": "Egyptian desert excavation"
+        },
+        {
+          "text": "His mattock strikes a sealed clay jar.",
+          "seconds": 3.5,
+          "image_query": "ancient clay vessel"
+        },
+        {
+          "text": "He hesitates. He fears what is inside.",
+          "seconds": 4.0,
+          "image_query": "sealed amphora"
+        },
+        {
+          "text": "No jinn. No gold. Leather-bound Coptic codices.",
+          "seconds": 4.5,
+          "image_query": "Coptic manuscript"
+        },
+        {
+          "text": "Fourth-century texts the Church had condemned. Buried sixteen centuries.",
+          "seconds": 5.0,
+          "image_query": "papyrus codex"
+        },
+        {
+          "text": "One opens: \"These are the secret sayings…\" Would you break the seal?",
+          "seconds": 5.0,
+          "image_query": "wax seal document"
+        }
+      ],
+      "mood": "drone",
+      "caption": "December 1945. A farmer near Nag Hammadi strikes a sealed jar. By his own account he feared a jinn. Inside: twelve codices and leaves of a thirteenth — Gnostic gospels buried for sixteen centuries. The Gospel of Thomas opens with secret sayings attributed to a living Jesus. The Church had condemned these words. The earth had kept them. Would you have broken the seal? Answer below. Read what was inside: alloccult.com",
+      "hashtags": [
+        "gnosticism",
+        "naghammadi",
+        "gospelofthomas",
+        "gnostic",
+        "sophia",
+        "demiurge",
+        "earlychristianity",
+        "forbiddentexts",
+        "coptic",
+        "esoteric",
+        "hiddenhistory",
+        "alloccult"
+      ],
+      "id": "2026-10-09-2",
+      "section": "Section 2",
+      "images": [
+        {
+          "key": "aic:594",
+          "url": "https://www.artic.edu/iiif/2/d9067d6e-e133-705c-cf53-528c035a5201/full/843,/0/default.jpg",
+          "title": "Ring with a Scarab Bezel",
+          "credit": "Ring with a Scarab Bezel, Ancient Egyptian — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:191",
+          "url": "https://www.artic.edu/iiif/2/e47ce711-82da-5bfa-21e6-37b65b7170df/full/843,/0/default.jpg",
+          "title": "Mug",
+          "credit": "Mug, Ancient Greek — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:52198",
+          "url": "https://www.artic.edu/iiif/2/890944df-3646-9db0-f1ce-b8321fd40e89/full/843,/0/default.jpg",
+          "title": "Belly-Amphora (Storage Jar)",
+          "credit": "Belly-Amphora (Storage Jar), Painter of Tarquinia RC 3984 — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:10927",
+          "url": "https://www.artic.edu/iiif/2/54f0b704-7108-5b91-1d0f-585758267fb4/full/843,/0/default.jpg",
+          "title": "Saint Benedict Presenting his Rule to Benedictine and Cistercian Monks in a Historiated Initial \"O\" from a Choirbook",
+          "credit": "Saint Benedict Presenting his Rule to Benedictine and Cister, Martino di Bartolomeo di Biagio — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:805",
+          "url": "https://www.artic.edu/iiif/2/6cb56687-a433-ae6b-ab07-af71dd755ec9/full/843,/0/default.jpg",
+          "title": "Funerary Papyrus of Tayuhenutmut",
+          "credit": "Funerary Papyrus of Tayuhenutmut, Ancient Egyptian — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:5932",
+          "url": "https://www.artic.edu/iiif/2/ecbf053a-4a9c-11cb-b1a1-e937d2139cc8/full/843,/0/default.jpg",
+          "title": "Stamp Depicting a Plant-like Motf",
+          "credit": "Stamp Depicting a Plant-like Motf, Zapotec — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        }
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "title": "The Beast Had a Name",
+      "route": "/numerology-cosmic-order/gematria",
+      "hook": "The Beast's number was a man's name",
+      "beats": [
+        {
+          "text": "Revelation 13:18: \"Let him that hath understanding count the number.\"",
+          "seconds": 5.0,
+          "image_query": "Book of Revelation manuscript"
+        },
+        {
+          "text": "In Hebrew, every letter carries a number. Aleph: one. Tav: four hundred.",
+          "seconds": 5.5,
+          "image_query": "Hebrew alphabet"
+        },
+        {
+          "text": "Spell Nero Caesar in Hebrew letters. נרון קסר. Count them.",
+          "seconds": 5.0,
+          "image_query": "Roman emperor coin"
+        },
+        {
+          "text": "Six hundred and sixty-six.",
+          "seconds": 4.0,
+          "image_query": "Roman numeral inscription"
+        },
+        {
+          "text": "Some manuscripts read 616. Drop the final nun. The Latin spelling.",
+          "seconds": 5.0,
+          "image_query": "Greek papyrus fragment"
+        },
+        {
+          "text": "Abraxas in Greek totals 365. A god measured by the year.",
+          "seconds": 4.5,
+          "image_query": "Abraxas gem"
+        }
+      ],
+      "mood": "ritual",
+      "caption": "Revelation hides its Beast inside arithmetic. Hebrew and Greek letters each carry numerical values. Nero Caesar, written in Hebrew as נרון קסר, totals 666. Drop one letter — the Latin spelling — and you reach 616. Some early manuscripts read exactly that. Abraxas, in Greek isopsephy, totals 365: a deity measured by the solar year. Save this. Comment any word and we will count it. The full table is at alloccult.com",
+      "hashtags": [
+        "gematria",
+        "666",
+        "numberofthebeast",
+        "bookofrevelation",
+        "kabbalah",
+        "isopsephy",
+        "abraxas",
+        "hebrewletters",
+        "numerology",
+        "biblicalhistory",
+        "esoteric",
+        "alloccult"
+      ],
+      "id": "2026-10-09-3",
+      "section": "Section 15",
+      "images": [
+        {
+          "key": "wellcome:s3rdhkgd",
+          "url": "https://iiif.wellcomecollection.org/image/V0032418/full/1600,/0/default.jpg",
+          "title": "Saint John the Evangelist: twelve episodes in the Book of Revelation. Engraving after J. Snellinck, 1585.",
+          "credit": "Saint John the Evangelist: twelve episodes in the Book of Revelation.  — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:g6nfqyar",
+          "url": "https://iiif.wellcomecollection.org/image/V0025818EL/full/1600,/0/default.jpg",
+          "title": "Two circular charts showing the configuration of the stars with the Hebrew alphabet. Engraving.",
+          "credit": "Two circular charts showing the configuration of the stars with the He — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:eb3mhpxe",
+          "url": "https://iiif.wellcomecollection.org/image/V0042428/full/1600,/0/default.jpg",
+          "title": "Zenobia, ruler of the Palmyrene empire, is besieged in Antioch by the Roman emperor Aurelian, and gives orders for the moving of her treasure: a man carrying a large vessel filled with coins carries it past the tomb of Odenathus. Line engraving by Charles Etienne Gaucher, 1789, after J. Werner.",
+          "credit": "Zenobia, ruler of the Palmyrene empire, is besieged in Antioch by the  — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:61600",
+          "url": "https://www.artic.edu/iiif/2/aee665f2-bb63-2a25-832e-260b73c278a8/full/843,/0/default.jpg",
+          "title": "Statue of the Aphrodite of Knidos",
+          "credit": "Statue of the Aphrodite of Knidos, Ancient Roman — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:805",
+          "url": "https://www.artic.edu/iiif/2/6cb56687-a433-ae6b-ab07-af71dd755ec9/full/843,/0/default.jpg",
+          "title": "Funerary Papyrus of Tayuhenutmut",
+          "credit": "Funerary Papyrus of Tayuhenutmut, Ancient Egyptian — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:58540",
+          "url": "https://www.artic.edu/iiif/2/3f5efc6f-52b0-d374-308b-34ca095d8624/full/843,/0/default.jpg",
+          "title": "Tiered Offering Mandala of the Goddess of Wealth (Vasudhara)",
+          "credit": "Tiered Offering Mandala of the Goddess of Wealth (Vasudhara) — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        }
+      ]
+    },
+    {
+      "day": "Thursday",
+      "title": "Case File I: Arnold Paole",
+      "route": "/death-afterlife/vampirology",
+      "hook": "Serbia, 1732. The army filed a vampire report",
+      "beats": [
+        {
+          "text": "Medveđa, Serbia. Former soldier Arnold Paole dies from a fall.",
+          "seconds": 5.0,
+          "image_query": "eighteenth century military document"
+        },
+        {
+          "text": "He had claimed a vampire tormented him in life.",
+          "seconds": 4.0,
+          "image_query": "graveyard engraving"
+        },
+        {
+          "text": "He ate earth from its grave. He smeared himself with its blood.",
+          "seconds": 5.0,
+          "image_query": "open grave woodcut"
+        },
+        {
+          "text": "Weeks after burial, four villagers die. They name Paole.",
+          "seconds": 4.5,
+          "image_query": "village funeral"
+        },
+        {
+          "text": "Exhumed after forty days: no decay. Fresh blood at the mouth.",
+          "seconds": 5.0,
+          "image_query": "exhumation illustration"
+        },
+        {
+          "text": "Staked, he was said to groan. Case File II: next week.",
+          "seconds": 4.0,
+          "image_query": "wooden stake"
+        }
+      ],
+      "mood": "drone",
+      "caption": "Case File I. In 1732, Austrian army surgeon Johann Flückinger signed Visum et Repertum — a witnessed and reported account of the case of Arnold Paole of Medveđa. Paole had claimed a vampire attacked him in his Ottoman service years. He died from a fall. Four villagers died weeks later and named him. The exhumation found no decay and fresh blood at the mouth. Europe's newspapers carried the word vampire that year. Case File II covers Petar Blagojević. Save the series: alloccult.com",
+      "hashtags": [
+        "vampire",
+        "vampirefolklore",
+        "arnoldpaole",
+        "serbianhistory",
+        "undead",
+        "vampirology",
+        "revenant",
+        "darkhistory",
+        "folklore",
+        "18thcentury",
+        "spookyseason",
+        "alloccult"
+      ],
+      "id": "2026-10-09-4",
+      "section": "Section 7",
+      "images": [
+        {
+          "key": "aic:42539",
+          "url": "https://www.artic.edu/iiif/2/00814dab-1414-69ba-94a5-6733711a62e1/full/843,/0/default.jpg",
+          "title": "Man in Eighteenth-Century Dress, Seated at Table and Reading",
+          "credit": "Man in Eighteenth-Century Dress, Seated at Table and Reading, Charles Bargue — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:bjg3gyjx",
+          "url": "https://iiif.wellcomecollection.org/image/V0042384/full/1600,/0/default.jpg",
+          "title": "Two young ladies contemplating a tombstone in a graveyard. Mezzotint with engraving, 1803.",
+          "credit": "Two young ladies contemplating a tombstone in a graveyard. Mezzotint w — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:8390",
+          "url": "https://www.artic.edu/iiif/2/0c3c40e4-0be1-33a0-791c-17d57df56090/full/843,/0/default.jpg",
+          "title": "Altarpiece with the Beautiful Virgin of Regensburg and Saints Christopher, Mary Magdalen, Florian and Catherine Standing in Niches, with God the Father Above",
+          "credit": "Altarpiece with the Beautiful Virgin of Regensburg and Saint, Albrecht Altdorfer — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:gcve8gj4",
+          "url": "https://iiif.wellcomecollection.org/image/V0042325/full/1600,/0/default.jpg",
+          "title": "A funeral procession carrying the corpse of an unmarried girl layed out on a bier through a village. Coloured lithograph by Gatti and G. Dura after G. Dura, 1851.",
+          "credit": "A funeral procession carrying the corpse of an unmarried girl layed ou — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:aub747y5",
+          "url": "https://iiif.wellcomecollection.org/image/V0042415/full/1600,/0/default.jpg",
+          "title": "The exhumed corpse of the French King Henry IV standing bandaged and upright in a coffin in the vaults of the Basilica of Saint-Denis. Line engraving with etching by E. Bovinet, A. Chataigner and T.B. de Jolimont after E.H. Langlois.",
+          "credit": "The exhumed corpse of the French King Henry IV standing bandaged and u — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:pwrpnnky",
+          "url": "https://iiif.wellcomecollection.org/image/V0042550/full/1600,/0/default.jpg",
+          "title": "A man in Egypt tied to a stake receives a beating with wooden bats. Lithograph by Edouard after J.J. Rifaud.",
+          "credit": "A man in Egypt tied to a stake receives a beating with wooden bats. Li — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ]
+    },
+    {
+      "day": "Friday",
+      "title": "The Demon Catalogue",
+      "route": "/ceremonial-magic/goetia-demonology",
+      "hook": "He listed demons to save accused witches",
+      "beats": [
+        {
+          "text": "Johann Weyer. Court physician to Wilhelm, Duke of Cleves.",
+          "seconds": 4.5,
+          "image_query": "Renaissance physician portrait"
+        },
+        {
+          "text": "1563: De praestigiis daemonum. Most accused witches were sick, not guilty.",
+          "seconds": 5.5,
+          "image_query": "Renaissance title page"
+        },
+        {
+          "text": "Jean Bodin answered in 1580. He demanded the fire.",
+          "seconds": 4.0,
+          "image_query": "witch trial woodcut"
+        },
+        {
+          "text": "1577: Weyer appended a catalogue. Sixty-nine demons, ranked by legions.",
+          "seconds": 5.0,
+          "image_query": "demon ledger manuscript"
+        },
+        {
+          "text": "He printed it to expose the conjurers' folly.",
+          "seconds": 3.5,
+          "image_query": "printing press workshop"
+        },
+        {
+          "text": "The conjurers kept it. The Goetia lists seventy-two.",
+          "seconds": 4.0,
+          "image_query": "Solomon seal pentacle"
+        }
+      ],
+      "mood": "bells",
+      "caption": "Johann Weyer defended accused witches in 1563. Many, he wrote in De praestigiis daemonum, were ill or deceived — not guilty of congress with devils. Jean Bodin answered him in 1580, demanding execution for Weyer himself. Weyer's 1577 edition carried an appendix: Pseudomonarchia Daemonum. Sixty-nine spirits, catalogued to expose the folly of conjurers. Instead, it became a primary source for the Goetia of Solomon, which lists seventy-two. The full lineage is at alloccult.com",
+      "hashtags": [
+        "goetia",
+        "demonology",
+        "johannweyer",
+        "pseudomonarchiadaemonum",
+        "grimoire",
+        "lesserkeyofsolomon",
+        "witchtrials",
+        "occulthistory",
+        "ceremonialmagic",
+        "renaissancemagic",
+        "forbiddenknowledge",
+        "alloccult"
+      ],
+      "id": "2026-10-09-5",
+      "section": "Section 4",
+      "images": [
+        {
+          "key": "aic:14690",
+          "url": "https://www.artic.edu/iiif/2/b4ccdf0f-8b1b-2969-e447-5402cbe56985/full/843,/0/default.jpg",
+          "title": "Fragment",
+          "credit": "Fragment — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:ahm6y56n",
+          "url": "https://iiif.wellcomecollection.org/image/V0010434/full/1600,/0/default.jpg",
+          "title": "Eleven decorated initials from the Basel 1555 edition of Andreas Vesalius's De humani corporis fabrica. Woodcuts, 1555.",
+          "credit": "Eleven decorated initials from the Basel 1555 edition of Andreas Vesal — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:qz587s2a",
+          "url": "https://iiif.wellcomecollection.org/image/V0019015/full/1600,/0/default.jpg",
+          "title": "Julian Cox of Taunton and a man sit smoking by the hearth; a toad is by the feet of the man. Woodcut.",
+          "credit": "Julian Cox of Taunton and a man sit smoking by the hearth; a toad is b — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:10927",
+          "url": "https://www.artic.edu/iiif/2/54f0b704-7108-5b91-1d0f-585758267fb4/full/843,/0/default.jpg",
+          "title": "Saint Benedict Presenting his Rule to Benedictine and Cistercian Monks in a Historiated Initial \"O\" from a Choirbook",
+          "credit": "Saint Benedict Presenting his Rule to Benedictine and Cister, Martino di Bartolomeo di Biagio — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:n43jmj6f",
+          "url": "https://iiif.wellcomecollection.org/image/V0023751/full/1600,/0/default.jpg",
+          "title": "A printer's workshop: on the left a printing press, on the right and centre workmen engaged in various tasks, the scene numbered for a key. Engraving after L.J. Goussier.",
+          "credit": "A printer's workshop: on the left a printing press, on the right and c — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:93347",
+          "url": "https://www.artic.edu/iiif/2/6242ca61-a2f4-d787-6e31-f8488249dab5/full/843,/0/default.jpg",
+          "title": "Self-Portrait",
+          "credit": "Self-Portrait, Simeon Solomon — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        }
+      ]
+    },
+    {
+      "day": "Saturday",
+      "title": "The Alphabet of Honorius",
+      "route": "/symbols-sigils/sacred-languages",
+      "hook": "No one knows who invented this alphabet",
+      "beats": [
+        {
+          "text": "The Theban script. First printed in 1518 by Johannes Trithemius.",
+          "seconds": 5.0,
+          "image_query": "Trithemius Polygraphia title page"
+        },
+        {
+          "text": "He credited Honorius of Thebes. Through Pietro d'Abano. Proof: none.",
+          "seconds": 5.0,
+          "image_query": "medieval scholar manuscript"
+        },
+        {
+          "text": "Agrippa reprinted it in 1531. De Occulta Philosophia, Book III.",
+          "seconds": 4.5,
+          "image_query": "Agrippa occult philosophy woodcut"
+        },
+        {
+          "text": "Twentieth-century witchcraft adopted it as its own sacred cipher.",
+          "seconds": 4.0,
+          "image_query": "witch grimoire handwriting"
+        },
+        {
+          "text": "One word is hidden in the final frame. Decode it.",
+          "seconds": 4.0,
+          "image_query": "cipher alphabet chart"
+        }
+      ],
+      "mood": "ritual",
+      "caption": "The Theban alphabet appeared in print in 1518, in Trithemius's Polygraphia. He attributed it to one Honorius of Thebes, transmitted through Pietro d'Abano. No manuscript evidence confirms Honorius wrote a word of it. Heinrich Cornelius Agrippa carried it into De Occulta Philosophia in 1531. Modern witchcraft adopted it as a sacred cipher. The final frame of this Reel holds one word written only in Theban. Decode it. First correct answer gets pinned. Every magical alphabet: alloccult.com",
+      "hashtags": [
+        "thebanalphabet",
+        "witchesalphabet",
+        "honorius",
+        "trithemius",
+        "agrippa",
+        "magicalalphabets",
+        "sacredlanguages",
+        "cipher",
+        "grimoire",
+        "occultsymbols",
+        "renaissancemagic",
+        "alloccult"
+      ],
+      "id": "2026-10-09-6",
+      "section": "Section 11",
+      "images": [
+        {
+          "key": "aic:106474",
+          "url": "https://www.artic.edu/iiif/2/4f3b79c3-a9b6-2d74-dea4-164b91f3fda6/full/843,/0/default.jpg",
+          "title": "Cased Pair of Percussion Pistols with Accessories",
+          "credit": "Cased Pair of Percussion Pistols with Accessories, Jean Le Page — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:10927",
+          "url": "https://www.artic.edu/iiif/2/54f0b704-7108-5b91-1d0f-585758267fb4/full/843,/0/default.jpg",
+          "title": "Saint Benedict Presenting his Rule to Benedictine and Cistercian Monks in a Historiated Initial \"O\" from a Choirbook",
+          "credit": "Saint Benedict Presenting his Rule to Benedictine and Cister, Martino di Bartolomeo di Biagio — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:b62x3dhe",
+          "url": "https://iiif.wellcomecollection.org/image/L0048844/full/1600,/0/default.jpg",
+          "title": "Three books of occult philosophy / Written by Henry Cornelius Agrippa of Nettesheim. Translated out of the Latin into the English by J.F[reake].",
+          "credit": "Three books of occult philosophy / Written by Henry Cornelius Agrippa  — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:53495",
+          "url": "https://www.artic.edu/iiif/2/8cd4328f-da34-dec3-00f5-5810a747c8e8/full/843,/0/default.jpg",
+          "title": "A Witches' Sabbath",
+          "credit": "A Witches' Sabbath, Cornelis Saftleven — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "aic:31892",
+          "url": "https://www.artic.edu/iiif/2/bbce6294-5b62-1fa1-2be1-31f4ad5831d5/full/843,/0/default.jpg",
+          "title": "Alphabet",
+          "credit": "Alphabet, Lucas Kilian — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        }
+      ]
+    },
+    {
+      "day": "Sunday",
+      "title": "The Silver Cord",
+      "route": "/consciousness/astral-projection",
+      "hook": "Would you leave your body tonight",
+      "beats": [
+        {
+          "text": "Ecclesiastes 12:6: \"Or ever the silver cord be loosed…\"",
+          "seconds": 5.0,
+          "image_query": "Hebrew scripture manuscript"
+        },
+        {
+          "text": "Occultists read that line as a tether. Body to soul.",
+          "seconds": 4.0,
+          "image_query": "soul leaving body engraving"
+        },
+        {
+          "text": "1929. Muldoon and Carrington publish The Projection of the Astral Body.",
+          "seconds": 5.0,
+          "image_query": "Spiritualist séance illustration"
+        },
+        {
+          "text": "Muldoon claimed his first exit at twelve, in a Spiritualist camp.",
+          "seconds": 5.0,
+          "image_query": "sleeping figure etching"
+        },
+        {
+          "text": "If the cord held, would you go? Answer below. ☽",
+          "seconds": 4.5,
+          "image_query": "astral double figure"
+        }
+      ],
+      "mood": "choir",
+      "caption": "\"Or ever the silver cord be loosed…\" — Ecclesiastes 12:6. Occultists read a tether between the body and the soul. In 1929, Sylvan Muldoon and Hereward Carrington mapped the mechanics of exit in The Projection of the Astral Body. Muldoon claimed his first projection at twelve, waking in a Spiritualist camp unable to control his phantom limbs. He spent a decade refining the method. If the cord held — if the return was guaranteed — would you go? Yes or no, below. The full entry: alloccult.com ☽",
+      "hashtags": [
+        "astralprojection",
+        "outofbodyexperience",
+        "silvercord",
+        "astraltravel",
+        "astralbody",
+        "consciousness",
+        "ecclesiastes",
+        "spiritualism",
+        "occulthistory",
+        "mysticism",
+        "esoteric",
+        "alloccult"
+      ],
+      "id": "2026-10-09-7",
+      "section": "Section 9",
+      "images": [
+        {
+          "key": "aic:10927",
+          "url": "https://www.artic.edu/iiif/2/54f0b704-7108-5b91-1d0f-585758267fb4/full/843,/0/default.jpg",
+          "title": "Saint Benedict Presenting his Rule to Benedictine and Cistercian Monks in a Historiated Initial \"O\" from a Choirbook",
+          "credit": "Saint Benedict Presenting his Rule to Benedictine and Cister, Martino di Bartolomeo di Biagio — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:bxkv97jn",
+          "url": "https://iiif.wellcomecollection.org/image/V0015176/full/1600,/0/default.jpg",
+          "title": "Fathime's astral body leaving her as she dies while Euphrosyne sits and watches. Line engraving by S. Davenport after H. Corbould.",
+          "credit": "Fathime's astral body leaving her as she dies while Euphrosyne sits an — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:129318",
+          "url": "https://www.artic.edu/iiif/2/a124af14-3efe-312d-390e-39e4e26253d3/full/843,/0/default.jpg",
+          "title": "Martyrdom of Saint Cipriano from Heiligenleben (Lives of the Saints), Plate 18 from Woodcuts from Books of the 15th Century",
+          "credit": "Martyrdom of Saint Cipriano from Heiligenleben (Lives of the, Master of the Boccaccio Illustrations — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:dvsxna3w",
+          "url": "https://iiif.wellcomecollection.org/image/V0047952/full/1600,/0/default.jpg",
+          "title": "A sleeping woman is disturbed in her dreams by a winged figure pointing to five people in the clouds above; representing the interpretation of dreams. Coloured etching, 1811.",
+          "credit": "A sleeping woman is disturbed in her dreams by a winged figure pointin — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:15135",
+          "url": "https://www.artic.edu/iiif/2/e1d733db-43bd-f8d7-8c15-b12b00d2db48/full/843,/0/default.jpg",
+          "title": "Coverlet",
+          "credit": "Coverlet — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        }
+      ]
+    }
+  ]
+}
