@@ -108,7 +108,8 @@
           "approved": true,
           "summary": "Reviewed by hand before automatic review existed; approved by the account owner."
         }
-      ]
+      ],
+      "reject_images": []
     },
     {
       "day": "Tuesday",
