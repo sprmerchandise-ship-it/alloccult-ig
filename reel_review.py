@@ -18,7 +18,7 @@ preview bundle). Needs ANTHROPIC_API_KEY and GH_PAT.
 """
 import json, os, subprocess, sys
 
-from carousel_ai import STR, VOICE, _ask, _jpeg_b64, _obj
+from carousel_ai import SEVERITY, STR, VOICE, _ask, _jpeg_b64, _obj, history_note
 from render_reel import HOOK_SECONDS, OUTRO_SECONDS, render_spec
 from site_source import page_text
 
@@ -36,8 +36,10 @@ REVIEW_SCHEMA = _obj({
         "text_problem": STR,
         "new_text": STR,
         "drop_beat": {"type": "boolean"},
+        "blocking": {"type": "boolean"},
     })},
     "caption_ok": {"type": "boolean"},
+    "caption_blocking": {"type": "boolean"},
     "caption_problem": STR,
     "new_caption": STR,
     "new_hashtags": {"type": "array", "items": STR},
@@ -86,9 +88,11 @@ scroll.
 Fixes: "new_image_query" (1–3 words naming the subject, for the Wellcome
 Collection), "new_text", or "drop_beat" for a weak beat or one with no fitting
 image (keep at least 3 beats). Leave fix fields "" when fine. List every
-segment. "approved" is true only if nothing needs fixing. "new_hashtags" is []
+segment. "approved" is true if nothing blocking remains. "new_hashtags" is []
 unless they need changing (then exactly 12, lowercase, no #).
 
+{SEVERITY}
+{history_note(spec.get("review_log"))}
 SEGMENTS (with each image's museum title):
 {json.dumps(segs, ensure_ascii=False, indent=1)}
 
@@ -102,7 +106,15 @@ ARCHIVE PAGE TEXT (alloccult.com{spec['route']}):
     return _ask(VOICE, content, REVIEW_SCHEMA)
 
 
+def has_blockers(verdict):
+    return (any(v["blocking"] and (not v["image_ok"] or not v["text_ok"] or v["drop_beat"])
+                for v in verdict["segments"])
+            or (verdict["caption_blocking"] and not verdict["caption_ok"]))
+
+
 def apply_fixes(spec, verdict):
+    # Only blocking problems are acted on (see carousel_ai.SEVERITY).
+    verdict = {**verdict, "segments": [v for v in verdict["segments"] if v["blocking"]]}
     beats, images = spec["beats"], spec.setdefault("images", [None] * len(spec["beats"]))
     rejects = spec.setdefault("reject_images", [])
     changes = []
@@ -135,7 +147,7 @@ def apply_fixes(spec, verdict):
             if i < len(images):
                 del images[i]
             changes.append(f"beat {i + 1} dropped")
-    if not verdict["caption_ok"] and verdict["new_caption"]:
+    if not verdict["caption_ok"] and verdict["caption_blocking"] and verdict["new_caption"]:
         spec["caption"] = verdict["new_caption"]
         changes.append(f"caption: {verdict['caption_problem']}")
     if len(verdict["new_hashtags"]) == 12:
@@ -150,8 +162,9 @@ def review_spec(spec, outdir, source):
     for rnd in range(1, ROUNDS + 1):
         render_spec(spec, mp4)
         verdict = review(spec, stills(spec, mp4, outdir), source)
-        print(f"  review round {rnd}: {'APPROVED' if verdict['approved'] else 'changes needed'} — {verdict['summary']}")
-        if verdict["approved"]:
+        ok = not has_blockers(verdict)            # polish-only notes don't hold a post
+        print(f"  review round {rnd}: {'APPROVED' if ok else 'changes needed'} — {verdict['summary']}")
+        if ok:
             spec["status"] = "approved"
             log.append({"round": rnd, "approved": True, "summary": verdict["summary"]})
             return True

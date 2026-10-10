@@ -457,7 +457,7 @@ def new_draft(state):
 def review_draft(path, draft):
     """Render → Claude review → fix → repeat. Marks the draft approved or rejected."""
     from carousel import render
-    from carousel_ai import apply_fixes, review
+    from carousel_ai import apply_fixes, has_blockers, review
     from site_source import page_text
     source = page_text(draft["route"])
     folder = os.path.dirname(path)
@@ -468,8 +468,9 @@ def review_draft(path, draft):
         log = draft.setdefault("review_log", log)
         slides = [os.path.join(folder, f) for f in draft["slide_files"]]
         verdict = review(draft, slides, source)
-        print(f"Review round {rnd}: {'APPROVED' if verdict['approved'] else 'changes needed'} — {verdict['summary']}")
-        if verdict["approved"]:
+        ok = not has_blockers(verdict)            # polish-only notes don't hold a post
+        print(f"Review round {rnd}: {'APPROVED' if ok else 'changes needed'} — {verdict['summary']}")
+        if ok:
             draft["status"] = "approved"
             log.append({"round": rnd, "approved": True, "summary": verdict["summary"]})
             _save(path, draft)
