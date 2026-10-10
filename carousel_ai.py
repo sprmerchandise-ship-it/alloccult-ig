@@ -171,8 +171,10 @@ REVIEW_SCHEMA = _obj({
         "new_kicker": STR,
         "new_text": STR,
         "drop_slide": {"type": "boolean"},
+        "blocking": {"type": "boolean"},
     })},
     "caption_ok": {"type": "boolean"},
+    "caption_blocking": {"type": "boolean"},
     "caption_problem": STR,
     "new_caption": STR,
     "new_hashtags": {"type": "array", "items": STR},
@@ -185,6 +187,30 @@ def _jpeg_b64(path, width=760):
     buf = io.BytesIO()
     im.save(buf, "JPEG", quality=85)
     return base64.standard_b64encode(buf.getvalue()).decode()
+
+
+SEVERITY = """Mark each problem "blocking" only if posting it as is would be wrong or
+embarrassing: a factual error, misdate or overclaim a knowledgeable reader would
+call false; an image that doesn't show the subject, is a pun/coincidence, or is
+inappropriate; illegible or misspelled text; a broken hook. Wording you would
+merely prefer is polish: report it with "blocking": false — it will not hold up
+posting. Don't rework wording an earlier round already fixed unless it is now
+wrong. A slide/caption with no problem has "blocking": false."""
+
+
+def history_note(log):
+    """Earlier review rounds, so the reviewer stays consistent with itself."""
+    rounds = [r for r in (log or []) if r.get("fixes")]
+    if not rounds:
+        return ""
+    lines = [f"Round {r['round']}: " + "; ".join(r["fixes"]) for r in rounds[-3:]]
+    return "\nEARLIER ROUNDS (already applied):\n" + "\n".join(lines) + "\n"
+
+
+def has_blockers(verdict):
+    return (any(v["blocking"] and (not v["image_ok"] or not v["text_ok"] or v.get("drop_slide"))
+                for v in verdict["slides"])
+            or (verdict["caption_blocking"] and not verdict["caption_ok"]))
 
 
 def review(draft, slide_paths, source_text):
@@ -217,9 +243,11 @@ fitting public-domain image is likely to exist for its subject (prefer dropping
 over asking for yet another search) — but keep the cover and at least 4 content
 slides. Slides showing the drawn sigil had no fitting image; one is acceptable,
 more should usually be dropped.
-"approved" is true only if nothing needs fixing. "new_hashtags" is [] unless
+"approved" is true if nothing blocking remains. "new_hashtags" is [] unless
 the hashtags need changing (then exactly 12, lowercase, no #).
 
+{SEVERITY}
+{history_note(draft.get("review_log"))}
 SLIDE DATA (with each image's museum title):
 {json.dumps(meta, ensure_ascii=False, indent=1)}
 
@@ -237,6 +265,9 @@ def apply_fixes(draft, verdict):
     """Edit the draft per the review. Returns a list of what changed."""
     changes = []
     slides = draft["slides"]
+    # Only blocking problems are acted on — polish suggestions would otherwise
+    # keep rewording the carousel round after round.
+    verdict = {**verdict, "slides": [v for v in verdict["slides"] if v["blocking"]]}
     drops = sorted({v["slide"] - 1 for v in verdict["slides"]
                     if v["drop_slide"] and 0 < v["slide"] - 1 < len(slides)}, reverse=True)
     if len(slides) - len(drops) >= 5:                 # cover + at least 4 content slides
@@ -265,7 +296,7 @@ def apply_fixes(draft, verdict):
             changes.append(f"slide {i + 1} text: {v['text_problem']}")
     for i in drops:
         del slides[i]
-    if not verdict["caption_ok"] and verdict["new_caption"]:
+    if not verdict["caption_ok"] and verdict["caption_blocking"] and verdict["new_caption"]:
         draft["caption"] = verdict["new_caption"]
         changes.append(f"caption: {verdict['caption_problem']}")
     if len(verdict["new_hashtags"]) == 12:
