@@ -22,15 +22,23 @@ STATE = "reel_state.json"
 API_VERSION = GRAPH.rstrip("/").rsplit("/", 1)[-1]        # e.g. v21.0
 
 
-def call(method, url, params=None, headers=None, body=None):
+class UploadFailed(Exception):
+    pass
+
+
+def call(method, url, params=None, headers=None, body=None, fatal=True):
     if params:
         url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, data=body, method=method, headers=headers or {})
     try:
         with urllib.request.urlopen(req, timeout=300) as r:
             return json.loads(r.read().decode())
-    except urllib.error.HTTPError as e:
-        sys.exit(f"Instagram API error ({method} {url.split('?')[0]}): {e.read().decode()}")
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+        detail = e.read().decode() if isinstance(e, urllib.error.HTTPError) else str(e)
+        msg = f"Instagram API error ({method} {url.split('?')[0]}): {detail}"
+        if fatal:
+            sys.exit(msg)
+        raise UploadFailed(msg)
 
 
 def next_spec(posted):
@@ -49,8 +57,11 @@ def caption_for(spec):
     return spec["caption"].strip() + "\n\n" + " ".join("#" + h for h in spec["hashtags"])
 
 
-def publish(video, caption):
-    user, token = os.environ["IG_USER_ID"], os.environ["IG_ACCESS_TOKEN"]
+ATTEMPTS = 3
+
+
+def _upload_once(video, caption, user, token):
+    """One container → upload → processing cycle. Returns the container id."""
     container = call("POST", f"{GRAPH}/{user}/media", {
         "media_type": "REELS", "upload_type": "resumable", "caption": caption,
         "share_to_feed": "true", "thumb_offset": "1000", "access_token": token})
@@ -59,22 +70,36 @@ def publish(video, caption):
     size = os.path.getsize(video)
     print(f"Uploading {size / 1e6:.1f} MB to container {cid}...")
     with open(video, "rb") as f:
-        res = call("POST", upload_url, body=f.read(), headers={
+        res = call("POST", upload_url, body=f.read(), fatal=False, headers={
             "Authorization": f"OAuth {token}", "offset": "0", "file_size": str(size)})
     if not res.get("success", True):
-        sys.exit(f"Upload rejected: {res}")
-
+        raise UploadFailed(f"Upload rejected: {res}")
     for _ in range(60):                                       # up to ~10 min
-        st = call("GET", f"{GRAPH}/{cid}", {"fields": "status_code,status", "access_token": token})
+        st = call("GET", f"{GRAPH}/{cid}", {"fields": "status_code,status", "access_token": token},
+                  fatal=False)
         code = st.get("status_code")
         if code == "FINISHED":
-            break
+            return cid
         if code in ("ERROR", "EXPIRED"):
-            sys.exit(f"Instagram could not process the video: {st}")
+            raise UploadFailed(f"Instagram could not process the video: {st}")
         time.sleep(10)
-    else:
-        sys.exit("Timed out waiting for Instagram to process the video.")
+    raise UploadFailed("Timed out waiting for Instagram to process the video.")
 
+
+def publish(video, caption):
+    """Upload with retries — Instagram's upload server sometimes answers
+    'ProcessingFailedError' to a request that succeeds moments later; each
+    retry starts from a fresh container."""
+    user, token = os.environ["IG_USER_ID"], os.environ["IG_ACCESS_TOKEN"]
+    for attempt in range(1, ATTEMPTS + 1):
+        try:
+            cid = _upload_once(video, caption, user, token)
+            break
+        except UploadFailed as e:
+            print(f"Attempt {attempt}/{ATTEMPTS} failed: {e}")
+            if attempt == ATTEMPTS:
+                sys.exit("Giving up: Instagram rejected the upload every time.")
+            time.sleep(30 * attempt)
     return call("POST", f"{GRAPH}/{user}/media_publish",
                 {"creation_id": cid, "access_token": token})["id"]
 
