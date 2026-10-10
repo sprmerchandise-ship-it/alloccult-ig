@@ -399,6 +399,21 @@ def product_post(state):
     state["posted_products"].append(p["id"])
     print("Product post:", p["title"])
 
+def already_posted_today(kind):
+    """True if a scheduled run already published this kind today (UTC).
+    GitHub can start scheduled runs hours late, so two can land on one day;
+    manual runs (workflow_dispatch) are never blocked."""
+    if os.environ.get("GITHUB_EVENT_NAME") != "schedule" or not os.path.exists("published.json"):
+        return False
+    today = time.strftime("%Y-%m-%d", time.gmtime())
+    try:
+        recs = json.load(open("published.json"))
+    except ValueError:
+        return False
+    return any(r.get("kind") in kind and time.strftime("%Y-%m-%d", time.gmtime(r.get("ts", 0))) == today
+               for r in recs)
+
+
 def posting_switches():
     """posting.json — on/off switches committed in the repo (see its _help)."""
     defaults = {"carousels": True, "reels": True, "products": True}
@@ -511,6 +526,9 @@ def main():
     switches = posting_switches()
     if not switches["carousels"] and not prepare_only:
         print("Carousel posting is paused (posting.json: carousels=false).")
+        return
+    if not prepare_only and already_posted_today(("lore", "product")):
+        print("A carousel already posted today (UTC) — skipping this scheduled run.")
         return
     state = load_state()
     # Every carousel is reviewed by Claude (facts, images, legibility) before it

@@ -2,7 +2,7 @@ name: Weekly Maintenance
 
 on:
   schedule:
-    - cron: "0 7 * * 1"   # every Monday 07:00 UTC
+    - cron: "23 6 * * 1"   # Mondays ~06:23 UTC (off the hour: :00 runs start hours late)
   workflow_dispatch: {}
 
 permissions:

@@ -2,7 +2,7 @@ name: ALLOCCULT Daily Reel
 
 on:
   schedule:
-    - cron: "0 15 * * *"   # daily 15:00 UTC (carousel posts at 18:00)
+    - cron: "37 14 * * *"   # daily ~14:37 UTC (off the hour: :00 runs start hours late)
   workflow_dispatch:
     inputs:
       dry_run:

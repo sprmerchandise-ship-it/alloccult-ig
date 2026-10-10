@@ -2,7 +2,7 @@ name: Refresh Instagram Token
 
 on:
   schedule:
-    - cron: "0 6 * * 1"   # every Monday 06:00 UTC
+    - cron: "11 5 * * 1"   # Mondays ~05:11 UTC (off the hour: :00 runs start hours late)
   workflow_dispatch: {}
 
 jobs:
