@@ -1,0 +1,164 @@
+{
+  "id": "002-religious-esoteric-texts",
+  "status": "rejected",
+  "title": "Religious Esoteric Texts",
+  "route": "/grimoires-sacred-texts/religious-esoteric-texts",
+  "section": "Section 10",
+  "slides": [
+    {
+      "text": "These sacred books were never meant for you.",
+      "image_query": "Zohar",
+      "reject": [],
+      "image": {
+        "key": "wellcome:axdnst4v",
+        "url": "https://iiif.wellcomecollection.org/image/L0038198/full/1600,/0/default.jpg",
+        "title": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers.",
+        "credit": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Castile · c. 1280",
+      "text": "The Zohar speaks in the voice of Shimon bar Yochai, a second-century sage. In 1941 Gershom Scholem traced its pages to a Castilian Kabbalist: Moses de León.",
+      "image_query": "Zohar",
+      "reject": [],
+      "image": {
+        "key": "wellcome:c3s4b77z",
+        "url": "https://iiif.wellcomecollection.org/image/L0038196/full/1600,/0/default.jpg",
+        "title": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers.",
+        "credit": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Nag Hammadi · 1945",
+      "text": "The Gospel of Thomas opens: \"These are the hidden words that the living Jesus spoke.\" Whoever finds their meaning will not taste death.",
+      "image_query": "Gospel of Thomas",
+      "reject": [],
+      "image": {
+        "key": "wellcome:tjyw9js5",
+        "url": "https://iiif.wellcomecollection.org/image/V0034835/full/1600,/0/default.jpg",
+        "title": "Saint Thomas the Apostle puts his finger in the lance wound of the risen Christ. Etching by G. de Lairesse.",
+        "credit": "Saint Thomas the Apostle puts his finger in the lance wound of the risen Christ. Etching by G. de Lairesse. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "London · 1614",
+      "text": "Hermes Trismegistus was thought as old as Moses. Isaac Casaubon dated the Corpus Hermeticum to the Christian era. The spell began to break.",
+      "image_query": "Hermes Trismegistus",
+      "reject": [],
+      "image": {
+        "key": "wellcome:hxpt39d4",
+        "url": "https://iiif.wellcomecollection.org/image/V0035811/full/1600,/0/default.jpg",
+        "title": "Mercury [Hermes Trismegistus]. Etching by Cook.",
+        "credit": "Mercury [Hermes Trismegistus]. Etching by Cook. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Tibet · 14th century",
+      "text": "The Bardo Thodol, attributed to Padmasambhava, surfaced as a hidden treasure revealed by Karma Lingpa. It is read aloud to the dying.",
+      "image_query": "Padmasambhava",
+      "reject": [],
+      "image": {
+        "key": "wellcome:bqp32utr",
+        "url": "https://iiif.wellcomecollection.org/image/V0046122/full/1600,/0/default.jpg",
+        "title": "Guru Rinpoche (Padmasambhava), the main founder of Buddhism in Tibet, surrounded by other forms of himself. Gouache painting by a Tibetan artist.",
+        "credit": "Guru Rinpoche (Padmasambhava), the main founder of Buddhism in Tibet, surrounded by other forms of himself. Gouache painting by a Tibetan artist. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "London · 1749",
+      "text": "Emanuel Swedenborg, a respected scientist, claimed to report directly from the spirit world. His Arcana Coelestia decoded Genesis and Exodus verse by verse through correspondences.",
+      "image_query": "Swedenborg portrait",
+      "reject": [
+        "wellcome:gdkq76p9"
+      ],
+      "image": null
+    },
+    {
+      "kicker": "The Forbidden Library",
+      "text": "The Zohar, Thomas, the Corpus Hermeticum or the Bardo Thodol. One opens first. Which would you choose, and why?",
+      "image_query": "Kabbalah manuscript",
+      "reject": [],
+      "image": {
+        "key": "wellcome:phev3vmt",
+        "url": "https://iiif.wellcomecollection.org/image/L0038197/full/1600,/0/default.jpg",
+        "title": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers.",
+        "credit": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    }
+  ],
+  "caption": "Scripture is meant to be read aloud.\nEsoteric scripture is meant to be withheld.\n\nThe Zohar wore the name of a second-century sage.\nScholarship places it in thirteenth-century Castile.\n\nRenaissance readers believed Hermes Trismegistus as old as Moses.\nCasaubon redated his Corpus in 1614.\n\nA jar in Upper Egypt held the Gospel of Thomas for sixteen centuries.\nA Tibetan treasure text guides the dead through the bardo.\nA Swedish scientist claimed to report what he saw among the spirits.\n\nFalse antiquity was not always deception.\nIt was a way of saying: this did not come from a man.\nIt came through one.\n\nWhich of these would you open first? Answer below.\n\nThe full entry waits in the Forbidden Library: alloccult.com/grimoires-sacred-texts/religious-esoteric-texts",
+  "hashtags": [
+    "occult",
+    "esoteric",
+    "kabbalah",
+    "zohar",
+    "naghammadi",
+    "gnosticism",
+    "gospelofthomas",
+    "hermetica",
+    "hermestrismegistus",
+    "tibetanbookofthedead",
+    "swedenborg",
+    "forbiddenknowledge"
+  ],
+  "slide_files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": false,
+      "summary": "A strong, accurate carousel with good images. It needs a few text fixes before posting. Slide 3 calls the Gospel of Thomas's promise a 'warning' and lacks the place-and-date kicker the other slides use. Slide 2's opening is clumsy. Slide 4 overclaims Hermes as 'older than' Moses, which the caption itself softens to 'the age of Moses'. Slide 6's kicker breaks the place-and-date format. Slide 7's question names Sefer Yetzirah, which the carousel never covers, and leaves out the Corpus Hermeticum. The hashtags should follow that change. The caption is good.",
+      "fixes": [
+        "slide 2 text: 'The Zohar claimed a second-century sage' is clumsy: a book does not claim a sage. The authorship claim should be stated plainly.",
+        "slide 3 text: Saying 1 ('will not taste death') is a promise, not a warning, so the text mischaracterises it. The kicker also lacks the place-and-date format used on the other slides.",
+        "slide 4 text: 'Older than Moses' overclaims. Renaissance readers such as Ficino generally made Hermes a contemporary of Moses. The caption already says 'the age of Moses', so the slide should match.",
+        "slide 6 text: The kicker 'Swedenborg · 1749' breaks the place-and-date format of the other slides. Arcana Coelestia's first volume was published in London in 1749.",
+        "slide 7 text: The question lists Sefer Yetzirah, which appears on no slide, and omits the Corpus Hermeticum, which does. The choices should match the books shown.",
+        "hashtags updated"
+      ]
+    },
+    {
+      "round": 2,
+      "approved": false,
+      "summary": "Strong, accurate carousel with fitting public-domain images. Three text fixes are needed. Slide 3 never names the Gospel of Thomas, which slide 7 relies on. Slide 4 has a clumsy construction ('believed as old as'). Slide 6 never names Swedenborg and implies his visions began in 1749, when they began in the mid-1740s. Images, cover legibility, end card and caption all pass.",
+      "fixes": [
+        "slide 3 text: The slide quotes the incipit but never names the Gospel of Thomas. Slide 7 asks the reader to choose 'Thomas', so the text must be identified here.",
+        "slide 4 text: 'Was believed as old as Moses' is clumsy. 'The spell broke' slightly overclaims, since Hermetic devotion outlived Casaubon.",
+        "slide 6 text: Swedenborg is never named in the text. 'Began reporting the spirit world' paired with 1749 misdates the start of his visions, which began c. 1744–45. 1749 is when the first volume of Arcana Coelestia was published."
+      ]
+    },
+    {
+      "round": 3,
+      "approved": false,
+      "summary": "Strong, accurate carousel with fitting public-domain images. Two fixes are needed before posting. Slide 2 overclaims twice: the Zohar does not itself name an author, and Moses de León was suspected long before Scholem, so 'named another' is wrong. The caption says the Corpus Hermeticum 'claimed the age of Moses', but that antiquity was assigned by Renaissance readers, not claimed by the texts. All other slides are accurate and legible.",
+      "fixes": [
+        "slide 2 text: Overclaims on two points. The Zohar does not 'name its author'; it speaks through Shimon bar Yochai as its master teacher. Moses de León was suspected as early as the 14th century, so Scholem did not first 'name' him; his 1941 Major Trends made the decisive case.",
+        "caption: 'The Corpus Hermeticum claimed the age of Moses' is inaccurate. The texts do not claim this; Renaissance readers such as Ficino placed Hermes near the time of Moses. Swedenborg also appears in the carousel but not in the caption, so a line is added for consistency."
+      ]
+    },
+    {
+      "round": 4,
+      "approved": false,
+      "summary": "Strong, accurate carousel with a good hook, but two slides need fixing before posting. Slide 2 says Scholem 'proved' de León's authorship, which overclaims: the archive says he made a 'decisive demonstration', and later scholarship suggests a circle of authors. Slide 6's image is a cluttered Victorian advertisement for William White's biography rather than a clean portrait, and its wording is clumsy. All other slides, the end card and the caption pass.",
+      "fixes": [
+        "slide 2 text: 'Proved its true author' overclaims. The archive calls it Scholem's 'decisive demonstration' that 'attributes' the Zohar to de León, and later scholars argue for a circle of authors.",
+        "slide 6 image: The image is a Victorian publisher's advertisement for William White's biography, crowded with press reviews and prices. It reads as a book ad, not a portrait, and clashes with the brand's tone.",
+        "slide 6 text: 'Claimed to report the spirit world' is clumsy, and the sentence needs 'His' before Arcana Coelestia."
+      ]
+    }
+  ]
+}
