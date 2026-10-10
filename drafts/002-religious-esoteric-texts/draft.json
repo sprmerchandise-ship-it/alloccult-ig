@@ -1,6 +1,6 @@
 {
   "id": "002-religious-esoteric-texts",
-  "status": "draft",
+  "status": "approved",
   "title": "Religious Esoteric Texts",
   "route": "/grimoires-sacred-texts/religious-esoteric-texts",
   "section": "Section 10",
@@ -76,7 +76,13 @@
       "reject": [
         "wellcome:gdkq76p9"
       ],
-      "image": null
+      "image": {
+        "key": "wellcome:s4cbe2x2",
+        "url": "https://iiif.wellcomecollection.org/image/V0005674/full/1600,/0/default.jpg",
+        "title": "Emanuel Swedenborg. Stipple engraving by C. & A. Paas.",
+        "credit": "Emanuel Swedenborg. Stipple engraving by C. & A. Paas. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
     },
     {
       "kicker": "The Forbidden Library",
@@ -159,6 +165,11 @@
         "slide 6 image: The image is a Victorian publisher's advertisement for William White's biography, crowded with press reviews and prices. It reads as a book ad, not a portrait, and clashes with the brand's tone.",
         "slide 6 text: 'Claimed to report the spirit world' is clumsy, and the sentence needs 'His' before Arcana Coelestia."
       ]
+    },
+    {
+      "round": 1,
+      "approved": true,
+      "summary": "Clean final pass, approved. All facts are accurate and match the archive: Zohar and Moses de León (Scholem, 1941), Casaubon in London in 1614, Nag Hammadi in 1945, Karma Lingpa in the 14th century, and the first Arcana Coelestia volume in London in 1749. Images fit their subjects. The cover hook reads clearly over the diagram. Only minor polish remains: the Kabbalah Unveiled plates appear on three slides, but each is a different plate and on-topic."
     }
   ]
 }
