@@ -2,7 +2,7 @@ name: ALLOCCULT Instagram Post
 
 on:
   schedule:
-    - cron: "0 18 * * *"
+    - cron: "43 17 * * *"   # daily ~17:43 UTC (off the hour: :00 runs start hours late)
   workflow_dispatch:
     inputs:
       prepare_only:

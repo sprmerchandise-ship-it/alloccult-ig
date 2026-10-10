@@ -2,7 +2,7 @@ name: Weekly Competitor Intel
 
 on:
   schedule:
-    - cron: "0 8 * * 1"   # every Monday 08:00 UTC (after maintenance refreshes insights)
+    - cron: "47 7 * * 1"   # Mondays ~07:47 UTC, after maintenance (off the hour: :00 runs start hours late)
   workflow_dispatch: {}
 
 permissions:

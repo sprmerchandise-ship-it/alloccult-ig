@@ -15,7 +15,7 @@ Needs IG_USER_ID, IG_ACCESS_TOKEN (with instagram_content_publish).
 """
 import argparse, glob, json, os, sys, time, urllib.error, urllib.parse, urllib.request
 
-from post import GRAPH, posting_switches, record_published
+from post import GRAPH, already_posted_today, posting_switches, record_published
 from render_reel import render_spec
 
 STATE = "reel_state.json"
@@ -85,6 +85,9 @@ def main():
     a = ap.parse_args()
     if not a.dry_run and not posting_switches()["reels"]:
         print("Reel posting is paused (posting.json: reels=false).")
+        return
+    if not a.dry_run and already_posted_today(("reel",)):
+        print("A Reel already posted today (UTC) — skipping this scheduled run.")
         return
 
     state = json.load(open(STATE)) if os.path.exists(STATE) else {"posted": []}
