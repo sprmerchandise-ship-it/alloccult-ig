@@ -1,6 +1,6 @@
 {
   "id": "002-religious-esoteric-texts",
-  "status": "approved",
+  "status": "posted",
   "title": "Religious Esoteric Texts",
   "route": "/grimoires-sacred-texts/religious-esoteric-texts",
   "section": "Section 10",
@@ -171,5 +171,7 @@
       "approved": true,
       "summary": "Clean final pass, approved. All facts are accurate and match the archive: Zohar and Moses de León (Scholem, 1941), Casaubon in London in 1614, Nag Hammadi in 1945, Karma Lingpa in the 14th century, and the first Arcana Coelestia volume in London in 1749. Images fit their subjects. The cover hook reads clearly over the diagram. Only minor polish remains: the Kabbalah Unveiled plates appear on three slides, but each is a different plate and on-topic."
     }
-  ]
+  ],
+  "media_id": "18634361158037233",
+  "posted_at": 1791752661
 }
