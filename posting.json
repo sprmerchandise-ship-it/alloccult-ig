@@ -1,6 +1,7 @@
 {
-  "_help": "Switches for automated posting. Edit and commit to change. carousels/reels: false pauses that daily post. products: false makes every carousel a lore post (audience-building phase).",
+  "_help": "Switches for automated posting. Edit and commit to change. carousels/reels: false pauses that daily post. products: false makes every carousel a lore post (audience-building phase). motion: \"parallax\" brings Reel artwork to life (depth parallax, smoke, dust, candle flicker); \"kenburns\" is the old flat slow zoom.",
   "carousels": true,
   "reels": true,
-  "products": false
+  "products": false,
+  "motion": "parallax"
 }

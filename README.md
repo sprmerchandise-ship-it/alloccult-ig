@@ -137,9 +137,23 @@ hand, run Actions → Publish Reel Previews with no run ID to re-render it.
 
 - **Artwork:** public-domain / CC0 images only, searched in this order:
   Wellcome Collection (alchemy, magic and astrology manuscripts), The Met Open
-  Access, and the Art Institute of Chicago (`museum.py`). Each beat gets a slow
-  Ken Burns move inside a thin gold frame, with the credit on screen. If no image
-  is found, the beat falls back to a drawn gold heptagram card.
+  Access, and the Art Institute of Chicago (`museum.py`). Each beat sits inside
+  a thin gold frame, with the credit on screen. If no image is found, the beat
+  falls back to a drawn gold heptagram card.
+- **Motion ("living painting", `motion.py`, free):** a small open depth model
+  (Depth Anything V2, run on the runner's CPU) works out what is near and far in
+  each artwork. A virtual camera then dollies in, drifts or rises, and near
+  parts move more than far ones, so the shot travels *into* the engraving.
+  Drifting smoke, gold dust motes, candle flicker, a vignette and film grain
+  are drawn on top. Nothing is generated: the artwork's own pixels are only
+  displaced by a few percent, so faces and lettering stay intact. The model
+  (~100 MB, from GitHub) is downloaded once and cached by the workflows. If it
+  can't be loaded, a simpler built-in depth guess is used; if motion fails
+  altogether, that segment falls back to the flat Ken Burns zoom. Set
+  `"motion": "kenburns"` in `posting.json` to turn it off. Tune strength with
+  the knobs at the top of `motion.py` (`PARALLAX`, `SMOKE`, `DUST`, `FLICKER`,
+  `GRAIN`, `VIGNETTE`). Test on one image:
+  `python motion.py art.jpg out/test.mp4 5`.
 - **Text:** hook in Cinzel (gold), beats in EB Garamond, and a closing
   alloccult.com card. Cuts fade through black.
 - **Music:** `music.py` generates an original dark-ambient track per Reel
@@ -171,7 +185,7 @@ hand, run Actions → Publish Reel Previews with no run ID to re-render it.
 ### Run locally
 
 ```bash
-sudo apt install ffmpeg && pip install pillow numpy fonttools
+sudo apt install ffmpeg && pip install pillow numpy fonttools opencv-python-headless onnxruntime
 mkdir -p fonts   # then download Cinzel.ttf + EBGaramond.ttf as in post.yml
 export IG_USER_ID=... IG_ACCESS_TOKEN=... ANTHROPIC_API_KEY=...
 python competitor_scan.py

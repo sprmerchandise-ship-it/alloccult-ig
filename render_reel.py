@@ -7,15 +7,18 @@ Render a 1080x1920 Reel (H.264 + AAC) from a reel spec, or from carousel slides.
   python render_reel.py --slides slides/1789935285 out/reel.mp4 --mood bells
 
 Spec fields used: id, title, hook, beats[{text, seconds, image_query}], mood.
-Each beat gets a public-domain museum image (museum.py) with a slow Ken Burns
-move, gold-on-black text, fade-through-black cuts, and a soundtrack (music.py).
+Each beat gets a public-domain museum image (museum.py) brought to life with
+depth parallax, smoke, dust and candle flicker (motion.py; "motion": "kenburns"
+in posting.json switches back to a flat slow zoom), gold-on-black text,
+fade-through-black cuts, and a soundtrack (music.py).
 Resolved images are written back into spec["images"] so a re-render (e.g. the
 daily post after the Monday preview) uses exactly the same artwork.
 
-Needs ffmpeg, pillow, numpy, fonttools, and fonts/Cinzel.ttf + fonts/EBGaramond.ttf
+Needs ffmpeg, pillow, numpy, fonttools (+ opencv-python-headless and
+onnxruntime for parallax; without them it falls back to Ken Burns), and fonts/Cinzel.ttf + fonts/EBGaramond.ttf
 (the workflows download them; falls back to PIL's default font without them).
 """
-import argparse, json, math, os, re, shutil, subprocess, sys, tempfile
+import argparse, json, math, os, re, shutil, subprocess, sys, tempfile, zlib
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 import museum, music
@@ -111,21 +114,60 @@ def sigil(d, cx, cy, r):
     d.line([pts[(k * 3) % 7] for k in range(8)], fill=GOLD, width=2, joint="curve")
 
 
-def backdrop(img_path, box=(960, 1040), top=220):
-    """Blurred, darkened full-bleed copy behind the framed artwork."""
+def layout(img_path, box=(960, 1040), top=220):
+    """(backdrop, artwork, (x, y), gold frame rect). The backdrop is a blurred,
+    darkened full-bleed copy of the artwork; with no image it is a drawn sigil
+    card and artwork is None."""
     canvas = Image.new("RGB", (W, H), (8, 6, 6))
     if not img_path:
         sigil(ImageDraw.Draw(canvas), W / 2, top + box[1] / 2, 230)
-        return canvas
+        return canvas, None, None, None
     art = Image.open(img_path).convert("RGB")
     bg = cover(art, W, H).filter(ImageFilter.GaussianBlur(40))
     canvas = Image.blend(canvas, bg, 0.35)
     fg = contain(art, *box)
     x, y = (W - fg.width) // 2, top + (box[1] - fg.height) // 2
-    canvas.paste(fg, (x, y))
-    ImageDraw.Draw(canvas).rectangle((x - 6, y - 6, x + fg.width + 5, y + fg.height + 5),
-                                     outline=GOLD, width=2)
+    return canvas, fg, (x, y), (x - 6, y - 6, x + fg.width + 5, y + fg.height + 5)
+
+
+def backdrop(img_path, box=(960, 1040), top=220):
+    """The whole still frame: backdrop with the framed artwork pasted in."""
+    canvas, fg, pos, rect = layout(img_path, box, top)
+    if fg is not None:
+        canvas.paste(fg, pos)
+        ImageDraw.Draw(canvas).rectangle(rect, outline=GOLD, width=2)
     return canvas
+
+
+def motion_mode():
+    """'parallax' (living-painting motion, motion.py) or 'kenburns' (flat zoom).
+    Set "motion" in posting.json; the REEL_MOTION env var overrides it."""
+    mode = os.environ.get("REEL_MOTION")
+    if not mode:
+        try:
+            mode = json.load(open("posting.json")).get("motion")
+        except (OSError, ValueError):
+            pass
+    return mode if mode in ("parallax", "kenburns") else "parallax"
+
+
+def segment(img, text_layer_img, secs, out, n, seed):
+    """One segment clip: parallax motion, or Ken Burns if that is off or fails."""
+    if motion_mode() == "parallax":
+        try:
+            import motion
+            base, fg, pos, rect = layout(img)
+            motion.render_segment(base, pos, fg, text_layer_img, secs, out,
+                                  motion.MOVES[n % len(motion.MOVES)],
+                                  zlib.crc32(f"{seed}-{n}".encode()), frame_rect=rect)
+            return
+        except Exception as e:                           # noqa: BLE001 — never lose the post
+            print(f"  parallax failed ({type(e).__name__}: {e}); using Ken Burns")
+    tmp = os.path.dirname(out)
+    bg, tx = os.path.join(tmp, f"bg{n}.png"), os.path.join(tmp, f"tx{n}.png")
+    backdrop(img).save(bg)
+    text_layer_img.save(tx)
+    clip(bg, tx, secs, out, zoom_in=n % 2 == 0)
 
 
 def text_layer(text, kind, credit=""):
@@ -237,12 +279,8 @@ def render_spec(spec, out):
 
     clips, total = [], 0.0
     for n, (img, text, kind, secs, credit) in enumerate(segments):
-        bg = os.path.join(tmp, f"bg{n}.png")
-        tx = os.path.join(tmp, f"tx{n}.png")
-        backdrop(img).save(bg)
-        text_layer(text, kind, credit).save(tx)
         c = os.path.join(tmp, f"clip{n}.mp4")
-        clip(bg, tx, secs, c, zoom_in=n % 2 == 0)
+        segment(img, text_layer(text, kind, credit), secs, c, n, spec.get("id", spec["hook"]))
         clips.append(c)
         total += secs
     assemble(clips, total, spec.get("mood", "drone"), spec.get("id", spec["hook"]), out, tmp)
