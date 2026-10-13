@@ -38,10 +38,16 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Cache depth model (motion.py)
+        uses: actions/cache@v4
+        with:
+          path: models
+          key: depth-anything-v2-vits
+
       - name: Install dependencies & fonts
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install pillow numpy fonttools -q
+          pip install pillow numpy fonttools opencv-python-headless onnxruntime -q
           mkdir -p fonts
           curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
           curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
