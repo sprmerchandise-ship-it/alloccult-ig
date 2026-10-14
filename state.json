@@ -1,5 +1,5 @@
 {
-  "counter": 78,
+  "counter": 79,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -80,16 +80,17 @@
     "/hermeticism-alchemy/sacred-geometry",
     "/ancient-mystery-schools/slavic-eastern-european",
     "/death-afterlife/death-cults-psychopomps",
-    "/grimoires-sacred-texts/religious-esoteric-texts"
+    "/grimoires-sacred-texts/religious-esoteric-texts",
+    "/symbols-sigils/alchemical-symbols"
   ],
   "recent_sections": [
-    "Section 9",
     "Section 6",
     "Section 5",
     "Section 2",
     "Section 3",
     "Section 1",
     "Section 7",
-    "Section 10"
+    "Section 10",
+    "Section 11"
   ]
 }
