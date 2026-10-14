@@ -1,0 +1,156 @@
+{
+  "id": "003-alchemical-symbols",
+  "status": "approved",
+  "title": "Alchemical Symbols",
+  "route": "/symbols-sigils/alchemical-symbols",
+  "section": "Section 11",
+  "slides": [
+    {
+      "text": "Gold was the Sun. Lead was Saturn.",
+      "image_query": "planetary metals",
+      "reject": [
+        "wellcome:zrfrmd8k",
+        "wellcome:e4cj7jsy",
+        "wellcome:vhx797gz",
+        "wellcome:sgpcs66q",
+        "wellcome:fc2jcyen",
+        "wellcome:kpun43xx",
+        "wellcome:sv4wgnnp",
+        "wellcome:avwwtx4a",
+        "wellcome:gutd69r5",
+        "wellcome:ygbvrehv",
+        "wellcome:xykvb5fs",
+        "wellcome:au8jetwa",
+        "wellcome:nqdsbxzw",
+        "wellcome:jvxfdba9",
+        "wellcome:cqpqk7ra",
+        "wellcome:hpjgs9et"
+      ],
+      "image": null
+    },
+    {
+      "kicker": "Seven Planets · Seven Metals",
+      "text": "Gold: Sun. Silver: Moon. Iron: Mars. Copper: Venus. Tin: Jupiter. Lead: Saturn. Quicksilver: Mercury. One glyph served both.",
+      "image_query": "planetary metals",
+      "reject": [],
+      "image": {
+        "key": "wellcome:atrp77sb",
+        "url": "https://iiif.wellcomecollection.org/image/L0022788/full/1600,/0/default.jpg",
+        "title": "Fleta minor. The laws of art and nature in knowing, judging, assaying, fining, refining and inlarging the bodies of confin'd metals. In two parts. The first contains essays of Lazarus Erckern ... in V books: originally written by him in the Teutonick language, and now translated into English. The second contains essays on metallick words, as a dictionary to many pleasing discourses by Sir John Pettus ... Illustrated with 44 sculptures ... / [Sir John Pettus].",
+        "credit": "Fleta minor. The laws of art and nature in knowing, judging, assaying, fining, refining and inlarging the bodies of confin'd metals. In two parts. The first contains essays of Lazarus Erckern ... in V books: originally written by him in the Teutonick language, and now translated into English. The second contains essays on metallick words, as a dictionary to many pleasing discourses by Sir John Pettus ... Illustrated with 44 sculptures ... / [Sir John Pettus]. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "The Four Elements",
+      "text": "Fire rises: a triangle pointing up. Water sinks: a triangle pointing down. Bar them through, and they become air and earth.",
+      "image_query": "four elements",
+      "reject": [],
+      "image": {
+        "key": "wellcome:y76s7eqn",
+        "url": "https://iiif.wellcomecollection.org/image/V0049811/full/1600,/0/default.jpg",
+        "title": "Men digging minerals; a phoenix being reborn; a pelican feeding its chicks with its blood; symbols of the four elements; an apothecary's shop. Engraving by J. Drapentier, 1677.",
+        "credit": "Men digging minerals; a phoenix being reborn; a pelican feeding its chicks with its blood; symbols of the four elements; an apothecary's shop. Engraving by J. Drapentier, 1677. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Jabir · Paracelsus",
+      "text": "The Arabic Jabirian writings taught that metals were born of sulphur and mercury. In the 1500s, Paracelsus added a third principle: salt.",
+      "image_query": "Paracelsus",
+      "reject": [],
+      "image": {
+        "key": "wellcome:uf2v568p",
+        "url": "https://iiif.wellcomecollection.org/image/L0078809/full/1600,/0/default.jpg",
+        "title": "Aureolus Theophrastus Bombastus von Hohenheim [Paracelsus]. Woodcut by A. Hirschvogel, 1538.",
+        "credit": "Aureolus Theophrastus Bombastus von Hohenheim [Paracelsus]. Woodcut by A. Hirschvogel, 1538. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Antwerp · 1564",
+      "text": "John Dee's Monas Hieroglyphica fused Moon, Sun, cross and the sign of Aries into one glyph. He claimed it held the cosmos.",
+      "image_query": "John Dee",
+      "reject": [],
+      "image": {
+        "key": "wellcome:cnrt49rb",
+        "url": "https://iiif.wellcomecollection.org/image/L0068391/full/1600,/0/default.jpg",
+        "title": "Monas hieroglyphica / [John Dee].",
+        "credit": "Monas hieroglyphica / [John Dee]. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Zurich · 1944",
+      "text": "Carl Jung's Psychology and Alchemy read these glyphs as maps of the unconscious. Principe and Newman later restored the laboratory behind them.",
+      "image_query": "Carl Jung",
+      "reject": [],
+      "image": {
+        "key": "wellcome:k7pv7xgy",
+        "url": "https://iiif.wellcomecollection.org/image/V0027599/full/1600,/0/default.jpg",
+        "title": "Sigmund Freud, Stanley Hall, Carl Gustav Jung, Abraham Arden Brill, Ernest Jones and Sándor Ferenczi. Photograph, 1909.",
+        "credit": "Sigmund Freud, Stanley Hall, Carl Gustav Jung, Abraham Arden Brill, Ernest Jones and Sándor Ferenczi. Photograph, 1909. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Uppsala · 1751",
+      "text": "Carl Linnaeus took the glyphs of Mars and Venus, iron and copper, to mark male and female. They never left.",
+      "image_query": "Linnaeus",
+      "reject": [],
+      "image": {
+        "key": "wellcome:gxpq7sea",
+        "url": "https://iiif.wellcomecollection.org/image/V0003594ER/full/1600,/0/default.jpg",
+        "title": "Carolus Linnaeus. Line engraving after G. Lundberg, 1751.",
+        "credit": "Carolus Linnaeus. Line engraving after G. Lundberg, 1751. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "The Archive Asks",
+      "text": "Which glyph would you carve into your door: Saturn's lead, Mercury's quicksilver, or the Sun's gold? Tell us why.",
+      "image_query": "alchemical symbols",
+      "reject": [],
+      "image": {
+        "key": "wellcome:awvf2u5s",
+        "url": "https://iiif.wellcomecollection.org/image/V0025484/full/1600,/0/default.jpg",
+        "title": "Chemistry: various alchemical symbols. Engraving by A. Bell.",
+        "credit": "Chemistry: various alchemical symbols. Engraving by A. Bell. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    }
+  ],
+  "caption": "Before the periodic table, there was a cipher.\n\nSeven metals. Seven planets.\nFour triangles for the elements.\nThree principles: sulphur, mercury, salt.\n\nThe alchemists did not write plainly.\nThey wrote in sigils meant to conceal the work from the unworthy.\n\nA green lion eating the sun.\nA monad said to hold the universe.\nA notation Jung mistook for the soul and Principe proved was also chemistry.\n\nSome of these signs still sit in every biology textbook.\nMost readers never notice.\n\nSection 11 decodes the full sign system: planetary glyphs, elemental marks, the operations, and the scholars who cracked them.\n\nThe full entry waits in the Forbidden Library: alloccult.com/symbols-sigils/alchemical-symbols",
+  "hashtags": [
+    "alchemy",
+    "alchemicalsymbols",
+    "occult",
+    "esoteric",
+    "hermeticism",
+    "paracelsus",
+    "johndee",
+    "carljung",
+    "sigils",
+    "occulthistory",
+    "forbiddenknowledge",
+    "alloccult"
+  ],
+  "slide_files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": true,
+      "summary": "Accurate, on-brand carousel with nothing blocking. Facts check out: the planet-metal pairs, the elemental triangles, Jabirian sulphur-mercury theory and Paracelsus' salt, Dee's Monas (Antwerp 1564), Jung's Psychology and Alchemy (Zurich 1944) and Linnaeus' first use of the sex symbols (1751). Optional polish: slide 2's saltpetre-workshop image is only loosely related, slide 6 should give Principe and Newman's first names, and the caption overstates the Jung/Principe contrast and cites an opaque 'Section 11'."
+    }
+  ]
+}
