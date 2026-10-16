@@ -1,5 +1,5 @@
 {
-  "counter": 80,
+  "counter": 81,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -82,16 +82,17 @@
     "/death-afterlife/death-cults-psychopomps",
     "/grimoires-sacred-texts/religious-esoteric-texts",
     "/symbols-sigils/alchemical-symbols",
-    "/left-hand-path/luciferianism"
+    "/left-hand-path/luciferianism",
+    "/mystical-religion/buddhist-esotericism"
   ],
   "recent_sections": [
-    "Section 5",
     "Section 2",
     "Section 3",
     "Section 1",
     "Section 7",
     "Section 10",
     "Section 11",
-    "Section 13"
+    "Section 13",
+    "Section 2"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "id": "005-buddhist-esotericism",
-  "status": "approved",
+  "status": "posted",
   "title": "Buddhist Esotericism",
   "route": "/mystical-religion/buddhist-esotericism",
   "section": "Section 2",
@@ -135,5 +135,7 @@
       "approved": true,
       "summary": "The carousel is accurate, on-voice and legible, and it can post. The hook is strong, the images match their subjects, and the Milarepa claim (35 deaths, Tsangnyön Heruka, 1488) is correct. The 49-day bardo and the rainbow-body description are framed properly as tradition. Slide 4's kicker now renders correctly. Only minor polish remains: slide 3's credit line calls the figure a 'demon (?)' right after slide 2 says wrathful deities are not demons, and slide 7's 'One attempt' is a little loose."
     }
-  ]
+  ],
+  "media_id": "18081868622679930",
+  "posted_at": 1792181183
 }
