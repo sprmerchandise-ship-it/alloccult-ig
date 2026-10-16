@@ -1,0 +1,139 @@
+{
+  "id": "005-buddhist-esotericism",
+  "status": "approved",
+  "title": "Buddhist Esotericism",
+  "route": "/mystical-religion/buddhist-esotericism",
+  "section": "Section 2",
+  "slides": [
+    {
+      "text": "Why do Buddhist deities wear crowns of skulls?",
+      "image_query": "Mahakala",
+      "reject": [],
+      "image": {
+        "key": "wellcome:sszx34q8",
+        "url": "https://iiif.wellcomecollection.org/image/V0018298/full/1600,/0/default.jpg",
+        "title": "The four-handed Mahākāla as the protector of knowledge. Distemper painting.",
+        "credit": "The four-handed Mahākāla as the protector of knowledge. Distemper painting. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Tibet · Mahākāla",
+      "text": "Wrathful deities are not demons. Flames, fangs and five-skull crowns embody awakened compassion, destroying ignorance without mercy.",
+      "image_query": "Mahakala",
+      "reject": [],
+      "image": {
+        "key": "aic:11703",
+        "url": "https://www.artic.edu/iiif/2/f1a42a6e-ac69-a3f8-6a6b-8b118d540778/full/843,/0/default.jpg",
+        "title": "Enlightened Protector Mahakala with Six Arms (Shadbhuja)",
+        "credit": "Enlightened Protector Mahakala with Six Arms (Shadbhuja), Tibeto-Chinese — Art Institute of Chicago (public domain)",
+        "source": "aic"
+      }
+    },
+    {
+      "kicker": "Vajrayāna · The Diamond Vehicle",
+      "text": "Earlier paths abandon desire, aversion and ignorance. Vajrayāna uses them as fuel. Their energy becomes the energy of awakening.",
+      "image_query": "vajra",
+      "reject": [],
+      "image": {
+        "key": "wellcome:hwkxrn4u",
+        "url": "https://iiif.wellcomecollection.org/image/V0045812/full/1600,/0/default.jpg",
+        "title": "A green Tibetan demon (?) holding a skull cup and a vajra in its hand. Gouache painting by a Tibetan artist.",
+        "credit": "A green Tibetan demon (?) holding a skull cup and a vajra in its hand. Gouache painting by a Tibetan artist. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Mandala · Palace of the Deity",
+      "text": "Not decoration. A geometric map of the awakened universe. The initiate enters it and visualises themselves as the deity within.",
+      "image_query": "mandala",
+      "reject": [],
+      "image": {
+        "key": "wellcome:qs3pr7ty",
+        "url": "https://iiif.wellcomecollection.org/image/V0018268/full/1600,/0/default.jpg",
+        "title": "Mandala with the eight-handed Uṣṇīṣavijayā as a Buddhist deity of long life. Distemper painting by a Tibetan painter.",
+        "credit": "Mandala with the eight-handed Uṣṇīṣavijayā as a Buddhist deity of long life. Distemper painting by a Tibetan painter. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Milarepa · Black Magic",
+      "text": "Before becoming Tibet's great yogi, Milarepa killed thirty-five people through sorcery. So says his biography by Tsangnyön Heruka, 1488.",
+      "image_query": "Milarepa",
+      "reject": [],
+      "image": {
+        "key": "aic:142526",
+        "url": "https://www.artic.edu/iiif/2/4747ac8d-191c-75ac-3198-f7b551441fe4/full/843,/0/default.jpg",
+        "title": "Milarepa on Mount Kailash",
+        "credit": "Milarepa on Mount Kailash — Art Institute of Chicago (public domain)",
+        "source": "aic"
+      }
+    },
+    {
+      "kicker": "Dzogchen · Jalü",
+      "text": "The most secret Nyingma teachings describe the rainbow body: at death, a realised master's flesh dissolves into light. Only hair and nails remain.",
+      "image_query": "Padmasambhava",
+      "reject": [],
+      "image": {
+        "key": "wellcome:bqp32utr",
+        "url": "https://iiif.wellcomecollection.org/image/V0046122/full/1600,/0/default.jpg",
+        "title": "Guru Rinpoche (Padmasambhava), the main founder of Buddhism in Tibet, surrounded by other forms of himself. Gouache painting by a Tibetan artist.",
+        "credit": "Guru Rinpoche (Padmasambhava), the main founder of Buddhism in Tibet, surrounded by other forms of himself. Gouache painting by a Tibetan artist. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "The Threshold · Your Choice",
+      "text": "One practice. One attempt. Tummo's inner fire, dream yoga, or the forty-nine days of the bardo. Which do you choose?",
+      "image_query": "thangka",
+      "reject": [],
+      "image": {
+        "key": "wellcome:x2xkyejq",
+        "url": "https://iiif.wellcomecollection.org/image/V0017709/full/1600,/0/default.jpg",
+        "title": "Yama, the Lord of Death, holding the Wheel of Life which represents Samsara, or the world on a Tibetan Thangka. In the central circle is a snake chasing a pig chasing a rooster chasing the snake which represents craving, hatred and ignorance. The six sections, surrounding the central circle, show representations of the six realms - the realm of the gods, the realm of the titans, the realm of the humans, the realm of the animals, the realm of the hungry ghosts and the realm of the demons.",
+        "credit": "Yama, the Lord of Death, holding the Wheel of Life which represents Samsara, or the world on a Tibetan Thangka. In the central circle is a snake chasing a pig chasing a rooster chasing the snake which represents craving, hatred and ignorance. The six sections, surrounding the central circle, show representations of the six realms - the realm of the gods, the realm of the titans, the realm of the humans, the realm of the animals, the realm of the hungry ghosts and the realm of the demons. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    }
+  ],
+  "caption": "Skull crowns.\nCorpse-ground ornaments.\nDeities wreathed in fire.\n\nThis is not the Buddhism of quiet gardens.\n\nVajrayāna took desire, rage and delusion\nand forged them into weapons of awakening.\n\nA poet-saint who began as a murderer.\nYogis who burn from within.\nA text whispered into the ears of the dead.\nMasters said to leave nothing behind but hair, nails and light.\n\nTilopa. Nāropa. Marpa. Milarepa.\nA chain of transmission, mind to mind.\nSome of it written.\nMuch of it never spoken aloud.\n\nWe have gathered what can be gathered:\nDzogchen, Mahāmudrā, the Six Yogas,\nthe wrathful deities, the Bon substrate beneath it all.\n\nThe full entry waits in the Forbidden Library: alloccult.com/mystical-religion/buddhist-esotericism",
+  "hashtags": [
+    "alloccult",
+    "vajrayana",
+    "tibetanbuddhism",
+    "dzogchen",
+    "esotericbuddhism",
+    "wrathfuldeities",
+    "mandala",
+    "bardothodol",
+    "tibetanbookofthedead",
+    "milarepa",
+    "tummo",
+    "forbiddenknowledge"
+  ],
+  "slide_files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": false,
+      "summary": "Strong carousel: accurate facts, fitting images, and a good hook. One blocking problem: slide 4's kicker renders as 'MAALA' because the display font drops the ṇ and ḍ glyphs. Replace it with plain 'Mandala'. Everything else is polish only.",
+      "fixes": [
+        "slide 4 text: The kicker renders as 'MAALA · PALACE OF THE DEITY'. The display font drops the ṇ and ḍ characters, so the word reads as a visible misspelling."
+      ]
+    },
+    {
+      "round": 2,
+      "approved": true,
+      "summary": "The carousel is accurate, on-voice and legible, and it can post. The hook is strong, the images match their subjects, and the Milarepa claim (35 deaths, Tsangnyön Heruka, 1488) is correct. The 49-day bardo and the rainbow-body description are framed properly as tradition. Slide 4's kicker now renders correctly. Only minor polish remains: slide 3's credit line calls the figure a 'demon (?)' right after slide 2 says wrathful deities are not demons, and slide 7's 'One attempt' is a little loose."
+    }
+  ]
+}
