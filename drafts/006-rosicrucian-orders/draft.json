@@ -1,6 +1,6 @@
 {
   "id": "006-rosicrucian-orders",
-  "status": "approved",
+  "status": "posted",
   "title": "Rosicrucian Orders",
   "route": "/secret-societies/rosicrucians",
   "section": "Section 8",
@@ -228,5 +228,7 @@
       "approved": true,
       "summary": "Facts check out against the Fama and the archive page: Kassel 1614, the vault opened in 1604 after 120 years, Maier's Atalanta Fugiens (Oppenheim, 1617), Andreae's 'ludibrium', Gilly's hundreds of printed responses, and AMORC in 1915. The cover hook stops the scroll. The trumpeting Fame suits a pamphlet titled Fama and is not a mere pun. Two sigil slides remain (2 and 5), but slide 5 cannot be dropped without falling below 4 content slides, so it gets one more image attempt as non-blocking polish. Nothing blocking remains."
     }
-  ]
+  ],
+  "media_id": "18050629268812290",
+  "posted_at": 1792266499
 }
