@@ -1,0 +1,232 @@
+{
+  "id": "006-rosicrucian-orders",
+  "status": "approved",
+  "title": "Rosicrucian Orders",
+  "route": "/secret-societies/rosicrucians",
+  "section": "Section 8",
+  "slides": [
+    {
+      "text": "They announced a secret brotherhood. No address given.",
+      "image_query": "Fama Fraternitatis",
+      "reject": [],
+      "image": {
+        "key": "wellcome:c722aw96",
+        "url": "https://iiif.wellcomecollection.org/image/V0047936/full/1600,/0/default.jpg",
+        "title": "A winged woman, standing on a cloud, blowing one of her two trumpets; representing Fame. Etching by G.C. von Prenner.",
+        "credit": "A winged woman, standing on a cloud, blowing one of her two trumpets; representing Fame. Etching by G.C. von Prenner. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Kassel · 1614",
+      "text": "A pamphlet, the Fama Fraternitatis, announces a hidden fraternity healing the sick for free. It invites Europe's learned to answer.",
+      "image_query": "Fama Fraternitatis",
+      "reject": [
+        "wellcome:xbvpwyfn",
+        "wellcome:h8fetxpj",
+        "wellcome:uwqm9hmq",
+        "wellcome:nc82ctjb",
+        "wellcome:gcg8m8mj",
+        "wellcome:vucqjpzg",
+        "wellcome:muzk8kms",
+        "wellcome:smsrwmp9",
+        "wellcome:axex8uhs",
+        "wellcome:xx2sj84z",
+        "wellcome:mc9uub6t",
+        "wellcome:js8y9wfr",
+        "wellcome:r35fx8p7",
+        "wellcome:rr232y5v",
+        "aic:11",
+        "aic:111",
+        "aic:27",
+        "aic:4",
+        "aic:27992",
+        "aic:65",
+        "aic:9",
+        "aic:16",
+        "aic:20",
+        "aic:28",
+        "aic:24",
+        "aic:19",
+        "aic:2068",
+        "aic:20684",
+        "aic:93",
+        "wellcome:dv68azuh",
+        "wellcome:n8jryna2",
+        "wellcome:wat5ghuw",
+        "wellcome:c8evurgz",
+        "wellcome:a7abthyc",
+        "wellcome:zj4uznvc",
+        "wellcome:ym47jttc",
+        "wellcome:bwwkhhrs",
+        "wellcome:hnf5by6u",
+        "wellcome:qy4q5ctx",
+        "wellcome:zzec2nsa",
+        "wellcome:md869t76",
+        "wellcome:qjhtrpww",
+        "wellcome:fqq6wfxz",
+        "wellcome:s93tse25",
+        "aic:83512",
+        "aic:62042",
+        "aic:87479",
+        "aic:116"
+      ],
+      "image": null
+    },
+    {
+      "kicker": "The Vault · 1604",
+      "text": "The tomb of Christian Rosenkreutz, opened 120 years after his death. Seven sides. Lit by an artificial sun. The body uncorrupted.",
+      "image_query": "Rosicrucian vault",
+      "reject": [],
+      "image": {
+        "key": "wellcome:mfbycrch",
+        "url": "https://iiif.wellcomecollection.org/image/L0075053/full/1600,/0/default.jpg",
+        "title": "Hieroglyphische Abbildung und Gegensatz der wahren einfaltigen und falschgenandten Brüder vom RosenCreutz / [Christian Rosencreutz].",
+        "credit": "Hieroglyphische Abbildung und Gegensatz der wahren einfaltigen und falschgenandten Brüder vom RosenCreutz / [Christian Rosencreutz]. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Oppenheim · 1617",
+      "text": "Michael Maier's Atalanta Fugiens: fifty alchemical emblems, each with epigram, discourse and a musical fugue. The Great Work, sung.",
+      "image_query": "Atalanta Fugiens",
+      "reject": [],
+      "image": {
+        "key": "wellcome:utt6rndm",
+        "url": "https://iiif.wellcomecollection.org/image/L0029171/full/1600,/0/default.jpg",
+        "title": "M. Maier, Atalanta fvgiens, hoc est emblemata...",
+        "credit": "M. Maier, Atalanta fvgiens, hoc est emblemata... — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Tübingen · Andreae",
+      "text": "Johann Valentin Andreae later called it a ludibrium, a jest. Hoax, or a real hidden fraternity? Choose one below.",
+      "image_query": "Johann Valentin Andreae",
+      "reject": [
+        "wellcome:margsj8a",
+        "wellcome:uhfr8f7n",
+        "wellcome:v3ycqt9n",
+        "wellcome:q5hujy33",
+        "wellcome:fvp9dkk9",
+        "wellcome:d3p258ac",
+        "wellcome:am8ptran",
+        "wellcome:sr6p3cs3",
+        "wellcome:mxpn84j5",
+        "wellcome:ct9ckfa2",
+        "wellcome:r27e2x2v",
+        "wellcome:cnn9ps8f",
+        "wellcome:mjcd8yyv",
+        "wellcome:vzaw8evp",
+        "wellcome:w9apauyv",
+        "wellcome:m4ga4w33",
+        "wellcome:hgechr85",
+        "wellcome:uefwfet7",
+        "wellcome:hk3t5kkw",
+        "wellcome:anfs2amu",
+        "wellcome:anwu9rbh",
+        "wellcome:cbj27u7t",
+        "wellcome:cnrwnghd",
+        "wellcome:e8q3efw5",
+        "wellcome:ms568qug",
+        "wellcome:r5rcpwkd",
+        "wellcome:tzkg9esk",
+        "wellcome:zwq5wjuw",
+        "wellcome:fsxfvm3x",
+        "wellcome:qtk7e387",
+        "wellcome:bd9mmgtd",
+        "aic:4314",
+        "wellcome:fhdzgxzu",
+        "wellcome:gknqb5nd",
+        "wellcome:kpdt4rua",
+        "wellcome:mx9n3beu",
+        "wellcome:mf3z6sjm",
+        "wellcome:fbwz4xd3",
+        "wellcome:m9frfdja",
+        "wellcome:nzccb9k8",
+        "aic:4295",
+        "aic:4278",
+        "aic:4316",
+        "aic:4310",
+        "aic:15499",
+        "aic:4281",
+        "aic:22270",
+        "aic:154037",
+        "wellcome:bdzxnynz",
+        "wellcome:eu9tr2uy",
+        "wellcome:zqq7fnjb",
+        "wellcome:jy48mdz2",
+        "wellcome:yfy4qngx",
+        "wellcome:jy9jr2wa",
+        "wellcome:wqrgk96n",
+        "wellcome:xp3nut5u",
+        "aic:81887",
+        "aic:4288",
+        "aic:4216",
+        "aic:4293",
+        "aic:56701",
+        "aic:6935"
+      ],
+      "image": null
+    }
+  ],
+  "caption": "In 1614 a pamphlet left Kassel.\nIt named a brotherhood.\nIt named a founder, by initials only.\nIt gave no door to knock on.\n\nHundreds answered anyway, in print.\nNone received a reply.\n\nA tomb lit by an artificial sun.\nA body that would not decay.\nPlacards in Paris claiming men who could vanish.\n\nThe Rose Cross never needed to exist.\nIt only needed to be believed.\nFrom Michael Maier's fugues to the Golden Dawn's vault,\nfrom Randolph's Fraternitas Rosae Crucis in 1858\nto AMORC in 1915,\nthe invisible order kept finding new bodies.\n\nWas it a jest that escaped its authors?\nOr a summons that worked exactly as intended?\n\nThe full entry waits in the Forbidden Library: alloccult.com/secret-societies/rosicrucians",
+  "hashtags": [
+    "rosicrucian",
+    "rosicrucians",
+    "rosycross",
+    "christianrosenkreutz",
+    "famafraternitatis",
+    "secretsocieties",
+    "westernesotericism",
+    "hermeticism",
+    "alchemy",
+    "goldendawn",
+    "occulthistory",
+    "forbiddenknowledge"
+  ],
+  "slide_files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": false,
+      "summary": "Strong subject and hook. The cover image, the Maier emblem and the Rosicrucian broadsheet work. The deck leans on six drawn-sigil slides, so slides 3, 4, 6 and 8 are dropped. That leaves slides 2, 5, 7 and 9 as content. Slide 3 also wrongly says Rosenkreutz himself returned 'sworn to silence'; the oath binds the brothers he founded. Its kicker year also reads as the date of his travels. Dropping slide 3 means slide 5 must name him, because 'his death' would otherwise have no referent. The caption's 'thousands answered' overclaims: Gilly counts hundreds of printed responses. Slide 9 should get a real portrait of Andreae.",
+      "fixes": [
+        "slide 3 dropped",
+        "slide 5 text: With slide 3 dropped, 'his death' has no antecedent. The tomb must be named as Rosenkreutz's.",
+        "caption: 'Thousands answered anyway, in print' overclaims. Carlos Gilly's archival count is hundreds of printed responses. Polish: the Fama names its founder only as 'C.R.C.', which is more accurate and more cryptic."
+      ]
+    },
+    {
+      "round": 2,
+      "approved": false,
+      "summary": "The text is strong and mostly accurate, and the cover hook works: Fama, the personification of report or fame, fits the Fama Fraternitatis. Two things block posting. First, five content slides use the drawn sigil, where one is the limit. Second, slide 7 misdates the Golden Dawn vault rite: the Order was founded in 1888, but the Adeptus Minor ritual of the Second Order (R.R. et A.C.) and its vault were worked out by Mathers c. 1891–92. Fixes: drop slides 3 and 7, find real images for slides 2 and 8, and keep slide 5 as the one sigil slide. That leaves 5 content slides. The caption is accurate and can stand.",
+      "fixes": [
+        "slide 7 dropped",
+        "slide 3 dropped",
+        "slide 2 image: Drawn sigil, not the subject. This is one of five sigil slides; only one is acceptable. A Rosicrucian manifesto or title-page image is likely to exist."
+      ]
+    },
+    {
+      "round": 3,
+      "approved": false,
+      "summary": "Strong, accurate sequence. Three content slides still use the drawn sigil (2, 4, 6), and only one is acceptable. Drop slide 4: the Paris placards are unlikely to have a fitting public-domain image. Keep the sigil on slide 2, the core Fama slide. Give slide 6 a portrait of Johann Valentin Andreae, which the Wellcome Collection is likely to hold. That leaves four content slides (2, 3, 5, 6). The facts check out: Fama, Kassel 1614; vault opened 1604, 120 years after 1484; Atalanta Fugiens, Oppenheim 1617, 50 emblems with fugues; Andreae's 'ludibrium'. Caption and hashtags are sound.",
+      "fixes": [
+        "slide 4 dropped",
+        "slide 6 image: Drawn sigil, not the subject. Slide 2 already uses the one permitted sigil. A portrait engraving of Andreae is likely to exist in the Wellcome Collection."
+      ]
+    },
+    {
+      "round": 4,
+      "approved": true,
+      "summary": "Facts check out against the Fama and the archive page: Kassel 1614, the vault opened in 1604 after 120 years, Maier's Atalanta Fugiens (Oppenheim, 1617), Andreae's 'ludibrium', Gilly's hundreds of printed responses, and AMORC in 1915. The cover hook stops the scroll. The trumpeting Fame suits a pamphlet titled Fama and is not a mere pun. Two sigil slides remain (2 and 5), but slide 5 cannot be dropped without falling below 4 content slides, so it gets one more image attempt as non-blocking polish. Nothing blocking remains."
+    }
+  ]
+}
