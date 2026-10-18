@@ -96,5 +96,12 @@
     "ref": "/secret-societies/rosicrucians",
     "section": "Section 8",
     "ts": 1792266499
+  },
+  {
+    "id": "18114730831857750",
+    "kind": "lore",
+    "ref": "/consciousness/near-death-experiences",
+    "section": "Section 9",
+    "ts": 1792352589
   }
 ]
