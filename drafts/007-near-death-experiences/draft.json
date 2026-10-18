@@ -1,0 +1,155 @@
+{
+  "id": "007-near-death-experiences",
+  "status": "approved",
+  "title": "Near-Death Experiences",
+  "route": "/consciousness/near-death-experiences",
+  "section": "Section 9",
+  "slides": [
+    {
+      "text": "They died. They returned. Their stories match.",
+      "image_query": "Plato",
+      "reject": [],
+      "image": {
+        "key": "wellcome:cftvurbw",
+        "url": "https://iiif.wellcomecollection.org/image/V0049965ER/full/1600,/0/default.jpg",
+        "title": "Plato discussing philosophical matters with others in the garden of the Academia. Etching by Salvator Rosa.",
+        "credit": "Plato discussing philosophical matters with others in the garden of the Academia. Etching by Salvator Rosa. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Plato · Republic X",
+      "text": "The soldier Er falls in battle. Twelve days later, on his funeral pyre, he wakes and describes the judgement of souls.",
+      "image_query": "Plato",
+      "reject": [],
+      "image": {
+        "key": "wellcome:s3cqaxtd",
+        "url": "https://iiif.wellcomecollection.org/image/V0004702/full/1600,/0/default.jpg",
+        "title": "Plato. Etching by D. Cunego, 1783, after R. Mengs after Raphael.",
+        "credit": "Plato. Etching by D. Cunego, 1783, after R. Mengs after Raphael. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Swiss Alps · 1871",
+      "text": "Geologist Albert Heim falls. No pain. No fear. His whole life passes before him in calm, clear images.",
+      "image_query": "Alps",
+      "reject": [],
+      "image": {
+        "key": "wellcome:se962hqg",
+        "url": "https://iiif.wellcomecollection.org/image/V0038596/full/1600,/0/default.jpg",
+        "title": "The Swiss Alps, Switzerland: Liskamm and Breithorn mountains, taken from mount Gornergrat. Photograph by Francis Frith, ca. 1880.",
+        "credit": "The Swiss Alps, Switzerland: Liskamm and Breithorn mountains, taken from mount Gornergrat. Photograph by Francis Frith, ca. 1880. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "London · 1926",
+      "text": "Physicist Sir William Barrett's Death-Bed Visions appears after his death. The dying see relatives arrive. Some they did not know had died.",
+      "image_query": "deathbed",
+      "reject": [],
+      "image": {
+        "key": "wellcome:w4fra5w9",
+        "url": "https://iiif.wellcomecollection.org/image/L0025620/full/1600,/0/default.jpg",
+        "title": "A deathbed scene. Etching.",
+        "credit": "A deathbed scene. Etching. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "India · Chitragupta",
+      "text": "Hindu tradition: messengers of Yama escort the soul. A divine scribe reads back every deed. Indian NDE reports describe Yamadoots.",
+      "image_query": "Yama",
+      "reject": [],
+      "image": {
+        "key": "wellcome:pcw8rexe",
+        "url": "https://iiif.wellcomecollection.org/image/V0044981/full/1600,/0/default.jpg",
+        "title": "Court of Yama, God of Death. Coloured transfer lithograph.",
+        "credit": "Court of Yama, God of Death. Coloured transfer lithograph. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "The Lancet · 2001",
+      "text": "Pim van Lommel follows 344 cardiac arrest survivors across ten Dutch hospitals. 62 of them report a near-death experience.",
+      "image_query": "heart",
+      "reject": [],
+      "image": {
+        "key": "wellcome:hm3dyeqt",
+        "url": "https://iiif.wellcomecollection.org/image/V0007778EC/full/1600,/0/default.jpg",
+        "title": "The anatomy of the heart. Engraving, 1686.",
+        "credit": "The anatomy of the heart. Engraving, 1686. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "The Threshold",
+      "text": "Many say returning was the hardest part. If you stood at that border, would you choose to come back?",
+      "image_query": "dance of death",
+      "reject": [],
+      "image": {
+        "key": "wellcome:c7syk6x7",
+        "url": "https://iiif.wellcomecollection.org/image/L0004631/full/1600,/0/default.jpg",
+        "title": "The dance of death. Lithograph.",
+        "credit": "The dance of death. Lithograph. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    }
+  ],
+  "caption": "A soldier wakes on his funeral pyre.\nA geologist falls from a mountain and watches his life unfold.\nA physicist records the dying greeting the dead.\n\nPlato. Albert Heim. Sir William Barrett.\nRaymond Moody. Pim van Lommel.\n\nCenturies apart. Different words.\nThe same pattern keeps returning.\nPeace. Light. A life reviewed.\nA border. A reluctance to come back.\n\nIn 2001, The Lancet published a prospective study.\n344 hearts stopped.\n62 came back with something to report.\n\nCoincidence. A dying brain.\nOr something that does not end when the body does.\n\nThe record is older than science.\nThe question remains open.\n\nThe full entry waits in the Forbidden Library: alloccult.com/consciousness/near-death-experiences",
+  "hashtags": [
+    "neardeathexperience",
+    "nde",
+    "afterlife",
+    "consciousness",
+    "lifeafterdeath",
+    "mythofer",
+    "plato",
+    "raymondmoody",
+    "deathbedvisions",
+    "occult",
+    "forbiddenknowledge",
+    "esoteric"
+  ],
+  "slide_files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": false,
+      "summary": "Strong, accurate carousel with good images throughout. One blocking fix: slide 4. Barrett died in May 1925, so Death-Bed Visions was published posthumously in 1926, in London (Methuen), not Dublin. 'Physicist ... publishes' and 'Dublin · 1926' are therefore wrong, and the closing line is ungrammatical. Polish items: slide 6's 'crossing the threshold' overstates what the 62 patients reported, and the caption's 'The same tunnel' contradicts the archive page, which calls the tunnel culturally variable and often absent in Indian accounts.",
+      "fixes": [
+        "slide 4 text: Barrett died in May 1925. Death-Bed Visions appeared posthumously in 1926 from Methuen in London, so 'publishes' and 'Dublin' are inaccurate. 'Some whose deaths no one had told them' is ungrammatical."
+      ]
+    },
+    {
+      "round": 2,
+      "approved": false,
+      "summary": "The slides are accurate, well-illustrated and on-voice. Er's revival on the twelfth day, Heim's 1871 fall, the posthumous 1926 Death-Bed Visions and the Lancet figures of 344 patients and 62 NDEs all check out. One blocking issue: the caption claims these sources all share 'the same tunnel' and 'the same reluctance to return.' Heim, Er and Barrett's deathbed accounts report no tunnel, and the archive page itself calls the tunnel culturally variable. The caption needs a less absolute rewrite. Slide 6 has a minor wording polish.",
+      "fixes": [
+        "caption: After naming Plato, Heim and Barrett, the caption claims 'the same tunnel' and 'the same reluctance to return.' Er, Heim and Barrett's deathbed accounts contain no tunnel, and the page itself says the tunnel is culturally variable and often absent. That is an overclaim a knowledgeable reader would reject. 'The Lancet published it' is also vague."
+      ]
+    },
+    {
+      "round": 3,
+      "approved": false,
+      "summary": "Images all fit and are legible. Slides 1–5, 7 and 8 are accurate and on voice. One blocking problem remains on slide 6: van Lommel's 62 patients reported a near-death experience, not 'crossing the threshold.' In the Lancet paper only a small minority perceived a border, and none crossed one. The caption is fine after the round 2 fixes.",
+      "fixes": [
+        "slide 6 text: Overclaim. In the 2001 Lancet study, 62 of 344 patients (18%) reported a near-death experience. Only a handful reported perceiving a border, and none 'crossed' one. A knowledgeable reader would call 'crossing the threshold' false. The page also specifies ten Dutch hospitals."
+      ]
+    },
+    {
+      "round": 4,
+      "approved": true,
+      "summary": "Clean, accurate carousel. Er's twelfth-day revival on the pyre matches Republic X. Heim 1871, Barrett's posthumous 1926 Death-Bed Visions and the 2001 Lancet figures (344 patients, 62 NDEs, ten Dutch hospitals) are all correct. Every image is relevant, public domain and legible, and the earlier fixes hold. The only note is optional polish: the cover's 'Their stories match' slightly overstates the convergence the slides show. Ready to post."
+    }
+  ]
+}
