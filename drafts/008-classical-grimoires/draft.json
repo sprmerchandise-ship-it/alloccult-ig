@@ -1,6 +1,6 @@
 {
   "id": "008-classical-grimoires",
-  "status": "approved",
+  "status": "posted",
   "title": "Classical Grimoires",
   "route": "/grimoires-sacred-texts/classical-grimoires",
   "section": "Section 10",
@@ -157,5 +157,7 @@
       "approved": true,
       "summary": "Nothing blocking remains. The facts match the archive page and standard scholarship: Kieckhefer's clerical necromancy, the grimoire/grammaire etymology, 100+ Key of Solomon witnesses, Munich Clm 849 c. 1440, Alfonso X and the 1256 Ghāyat al-Ḥakīm translation, and Aquinas condemning the Ars Notoria in the Summa (II-II q.96). Every image shows its subject or something clearly related, and all text is legible and correctly spelled. There are three polish points. Slide 2 reuses the cover image. Slide 3's 'No two agree' slightly overstates 'no two identical'. The caption's 'months of silence' for Abramelin is looser than the source's eighteen months of withdrawal."
     }
-  ]
+  ],
+  "media_id": "18118429819768465",
+  "posted_at": 1792446547
 }
