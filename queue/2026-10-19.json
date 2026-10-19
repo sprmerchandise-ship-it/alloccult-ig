@@ -1,0 +1,766 @@
+{
+  "week": "2026-10-19",
+  "report": "reports/2026-10-19.md",
+  "reels": [
+    {
+      "day": "Monday",
+      "title": "Three Afterlives",
+      "route": "/death-afterlife/afterlife-cosmologies",
+      "hook": "Three afterlives. You only get one",
+      "beats": [
+        {
+          "text": "Egypt. Your heart weighed against Maat's feather. Spell 125.",
+          "seconds": 6.0,
+          "image_query": "weighing of the heart"
+        },
+        {
+          "text": "Too heavy. Ammit devours it. Crocodile, lion, hippopotamus.",
+          "seconds": 5.0,
+          "image_query": "Ammit"
+        },
+        {
+          "text": "The North. Odin takes half the slain. Freyja the rest. Grimnismal.",
+          "seconds": 5.5,
+          "image_query": "Valhalla"
+        },
+        {
+          "text": "Tibet. Forty-nine days in the bardo. Bardo Thodol read aloud.",
+          "seconds": 6.0,
+          "image_query": "Tibetan manuscript"
+        },
+        {
+          "text": "Which would you risk? Comment one, two or three.",
+          "seconds": 4.0,
+          "image_query": "memento mori"
+        }
+      ],
+      "mood": "drone",
+      "caption": "Three afterlives. Three different tests.\nIn Egypt, Spell 125 of the Book of the Dead weighs the heart against the feather of Maat.\nIn the Grimnismal, Odin and Freyja divide the battle-slain.\nIn Tibet, the Bardo Thodol is read to the dead across forty-nine days between lives.\nEach judges something different.\nChoose one. Comment 1, 2 or 3 below.\nEvery road past death: alloccult.com/death-afterlife/afterlife-cosmologies",
+      "hashtags": [
+        "afterlife",
+        "bookofthedead",
+        "weighingoftheheart",
+        "ammit",
+        "valhalla",
+        "bardothodol",
+        "tibetanbookofthedead",
+        "grimnismal",
+        "comparativereligion",
+        "spiritseason",
+        "occulthistory",
+        "alloccult"
+      ],
+      "id": "2026-10-19-1",
+      "section": "Section 7",
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "All beats are accurate. Spell 125 and the heart against Maat's feather are correct. Ammit is a crocodile, lion and hippopotamus composite. Grímnismál 14 divides the slain between Freyja and Odin. The Bardo Thödol is read over the 49-day intermediate state. The Yama painting is clearly related to Tibetan death and bardo judgement imagery, and the memento mori etching fits the closing call to action. Text is legible and short, the hook works, and the caption is accurate. Nothing blocking."
+        }
+      ],
+      "reject_images": [
+        "wellcome:svyzehqc",
+        "wellcome:by7wscw8",
+        "wellcome:hm3dyeqt",
+        "wellcome:a6mmy9zy",
+        "wellcome:hd8wrm7k",
+        "wellcome:kwehnbyz",
+        "wellcome:fyb6atur",
+        "wellcome:zqx3kwzv",
+        "wellcome:gs96hf8f",
+        "wellcome:bhhuz5q8",
+        "wellcome:k6nbfnwv",
+        "wellcome:bzhywuqe",
+        "wellcome:yz5jwnrk",
+        "aic:11",
+        "aic:111",
+        "aic:27",
+        "aic:4",
+        "aic:27992",
+        "aic:65",
+        "aic:9",
+        "aic:16",
+        "aic:20",
+        "aic:28",
+        "aic:24"
+      ],
+      "images": [
+        null,
+        null,
+        null,
+        {
+          "key": "wellcome:c9j9htk9",
+          "url": "https://iiif.wellcomecollection.org/image/L0069375/full/1600,/0/default.jpg",
+          "title": "Yama, Buddhist god of death, with the head of a buffalo bedecked with skulls and flames, stands on a bull crushing a man lying on his back. Distemper painting.",
+          "credit": "Yama, Buddhist god of death, with the head of a buffalo bedecked with skulls and flames, stands on a bull crushing a man lying on his back. Distemper painting. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:wwtufhr6",
+          "url": "https://iiif.wellcomecollection.org/image/V0042141/full/1600,/0/default.jpg",
+          "title": "A skeleton as memento mori. Etching.",
+          "credit": "A skeleton as memento mori. Etching. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "day": "Tuesday",
+      "title": "The Six-Month Operation",
+      "route": "/grimoires-sacred-texts/classical-grimoires",
+      "hook": "Six months of prayer. Then the demons",
+      "beats": [
+        {
+          "text": "The Book of Abramelin. Attributed to Abraham of Worms. Dated 1458.",
+          "seconds": 5.5,
+          "image_query": "grimoire"
+        },
+        {
+          "text": "1898: Mathers translates a French copy. Bibliotheque de l'Arsenal, Paris.",
+          "seconds": 5.5,
+          "image_query": "manuscript page"
+        },
+        {
+          "text": "His copy demands six months of withdrawal. German copies: eighteen.",
+          "seconds": 5.0,
+          "image_query": "calendar"
+        },
+        {
+          "text": "The reward: your Holy Guardian Angel. Then the spirits are bound.",
+          "seconds": 5.0,
+          "image_query": "angel"
+        },
+        {
+          "text": "1899: Crowley buys Boleskine House to begin. He leaves it unfinished.",
+          "seconds": 5.0,
+          "image_query": "Scottish loch"
+        }
+      ],
+      "mood": "ritual",
+      "caption": "The Book of Abramelin claims to date from 1458.\nS. L. MacGregor Mathers translated a French copy in 1898, from the Bibliotheque de l'Arsenal in Paris.\nIt prescribes six months of prayer and withdrawal.\nGerman manuscripts, edited later, demand eighteen.\nThen the angel. Then the spirits.\nIn 1899 Crowley bought Boleskine House to attempt it.\nBy 1900 he had left for Paris.\nThe full manuscript tradition: alloccult.com/grimoires-sacred-texts/classical-grimoires",
+      "hashtags": [
+        "abramelin",
+        "bookofabramelin",
+        "grimoire",
+        "holyguardianangel",
+        "mathers",
+        "aleistercrowley",
+        "boleskine",
+        "ceremonialmagic",
+        "occultbooks",
+        "rarebooks",
+        "forbiddenknowledge",
+        "alloccult"
+      ],
+      "id": "2026-10-19-2",
+      "section": "Section 10",
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "Facts check out. The six-month French version used by Mathers, the eighteen-month German manuscripts, the 1458 self-date, Crowley buying Boleskine in 1899 and abandoning the working in 1900 are all accurate. The reel correctly departs from the archive page, which reverses the six- and eighteen-month figures. Mathers's edition was published in 1898, so departing from the archive's 1897 is justified. Images are relevant and legible, and the hook works. Only polish remains: 'Dated 1458' could read as a scholarly date, the missing accent in Bibliothèque, and the caption's vague 'By 1900'."
+        }
+      ],
+      "reject_images": [
+        "wellcome:b69n7rk2",
+        "wellcome:hfdsu8bx",
+        "wellcome:u36vz3es",
+        "wellcome:v3nz5zpj",
+        "wellcome:v9jnufad",
+        "wellcome:shuj7mvj",
+        "wellcome:zr2wnzh6",
+        "wellcome:j5b34jdj",
+        "wellcome:mc2ufas4",
+        "wellcome:mng4t8cf",
+        "wellcome:ty2uxxa4",
+        "wellcome:awhagegy",
+        "wellcome:d9xsm35y",
+        "wellcome:v2jdrckc",
+        "wellcome:cr6mss64",
+        "wellcome:ry8xf59j",
+        "wellcome:qyjd7w6n",
+        "wellcome:xja5svbg",
+        "wellcome:erwq33ts",
+        "wellcome:ve8mpth5",
+        "wellcome:cfsn7cxv",
+        "wellcome:s5wzc8gv",
+        "wellcome:fpefu4e5",
+        "wellcome:tyksp5ea"
+      ],
+      "images": [
+        {
+          "key": "wellcome:au2my43t",
+          "url": "https://iiif.wellcomecollection.org/image/V0025898/full/1600,/0/default.jpg",
+          "title": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Mezzotint after D. Teniers the younger, 1750/1790.",
+          "credit": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Mezzotint after D. Teniers the younger, 1750/1790. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        null,
+        {
+          "key": "wellcome:s42cwgtc",
+          "url": "https://iiif.wellcomecollection.org/image/V0033250EL/full/1600,/0/default.jpg",
+          "title": "An angel appearing to a sleeping man. Woodcut.",
+          "credit": "An angel appearing to a sleeping man. Woodcut. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null
+      ],
+      "status": "approved"
+    },
+    {
+      "day": "Wednesday",
+      "title": "The Planet That Rules Your Birthday",
+      "route": "/divination-arts/astrology",
+      "hook": "The day you were born has a ruler",
+      "beats": [
+        {
+          "text": "Seven wandering lights. Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon.",
+          "seconds": 5.5,
+          "image_query": "zodiac man"
+        },
+        {
+          "text": "Each ruled one hour in turn. The first hour named the day. Cassius Dio recorded it.",
+          "seconds": 6.0,
+          "image_query": "astrolabe"
+        },
+        {
+          "text": "Saturday, Saturn. Sunday, the Sun. Monday, the Moon.",
+          "seconds": 4.0,
+          "image_query": "Saturn"
+        },
+        {
+          "text": "Tuesday, Mars: Tiw, mardi. Wednesday, Mercury: Woden, mercredi.",
+          "seconds": 5.0,
+          "image_query": "Hermes"
+        },
+        {
+          "text": "Thursday, Jupiter: Thor, jeudi. Friday, Venus: Frigg, vendredi. Comment your day.",
+          "seconds": 5.5,
+          "image_query": "heptagram"
+        }
+      ],
+      "mood": "bells",
+      "caption": "The seven-day week is a planetary clock.\nSaturn, Jupiter, Mars, Sun, Venus, Mercury, Moon: each ruled an hour, in that order.\nThe planet of the first hour named the day.\nCassius Dio set it down in the third century.\nEnglish kept the Norse gods. French kept the Roman ones.\nComment the day you were born — we'll answer with your ruler. Save this. ☉\nThe full system: alloccult.com/divination-arts/astrology",
+      "hashtags": [
+        "astrology",
+        "planetaryhours",
+        "daysoftheweek",
+        "chaldeanorder",
+        "cassiusdio",
+        "planetarymagic",
+        "norsegods",
+        "romangods",
+        "etymology",
+        "classicalastrology",
+        "esoteric",
+        "alloccult"
+      ],
+      "id": "2026-10-19-3",
+      "section": "Section 6",
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "Accurate, well-built reel. The Chaldean order, the hour-ruler mechanism, Cassius Dio (Roman History 37.18–19) and the weekday etymologies all check out. Nothing blocking. Polish only: slide 3 runs slightly long, slide 6's Gigantomachy image shows Jupiter only faintly, and the caption calls the English weekday gods 'Norse' (they are Anglo-Saxon/Germanic) and carries a ☉ symbol against the no-emoji rule."
+        }
+      ],
+      "reject_images": [
+        "wellcome:afwpbhkb",
+        "wellcome:gmjbq8ah",
+        "wellcome:jwmtt7kk",
+        "wellcome:kz4dzz78",
+        "wellcome:u89gyk2m",
+        "wellcome:t3gn5n9w",
+        "wellcome:p2wmqkv9",
+        "wellcome:qgefq4rs"
+      ],
+      "images": [
+        {
+          "key": "wellcome:krjz8nga",
+          "url": "https://iiif.wellcomecollection.org/image/L0040386/full/1600,/0/default.jpg",
+          "title": "The planets and signs of the zodiac send down their influence on to the body of a man on earth; women representing nature (?) and medicine stand on the left, while scholars watch and dispute on the right. Engraving, 16--.",
+          "credit": "The planets and signs of the zodiac send down their influence on to the body of a man on earth; women representing nature (?) and medicine stand on the left, while scholars watch and dispute on the right. Engraving, 16--. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        {
+          "key": "wellcome:g9d7nkt5",
+          "url": "https://iiif.wellcomecollection.org/image/V0024875/full/1600,/0/default.jpg",
+          "title": "Astronomy: Saturn with his scythe, riding in his chariot. Engraving by C. Lasinio after Raphael, 1516.",
+          "credit": "Astronomy: Saturn with his scythe, riding in his chariot. Engraving by C. Lasinio after Raphael, 1516. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:ja5tk24r",
+          "url": "https://iiif.wellcomecollection.org/image/b12024193_0001.jp2/full/1600,/0/default.jpg",
+          "title": "Mercury (Hermes) holding the caduceus. Oil painting after Raphael.",
+          "credit": "Mercury (Hermes) holding the caduceus. Oil painting after Raphael. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:16",
+          "url": "https://www.artic.edu/iiif/2/e82b61d4-1d5b-a15d-4d2e-ff9caca3fb51/full/843,/0/default.jpg",
+          "title": "The Fall of the Giants",
+          "credit": "The Fall of the Giants, Salvator Rosa — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "day": "Thursday",
+      "title": "Directions for the Dead",
+      "route": "/ancient-mystery-schools/orphic-mysteries",
+      "hook": "The dead were buried with directions",
+      "beats": [
+        {
+          "text": "Petelia, southern Italy. Fourth century BC. A sheet of gold, folded small.",
+          "seconds": 6.0,
+          "image_query": "gold tablet"
+        },
+        {
+          "text": "To the left of the house of Hades, a spring. A white cypress.",
+          "seconds": 5.5,
+          "image_query": "cypress tree"
+        },
+        {
+          "text": "Do not drink there. Find the cold water of Memory.",
+          "seconds": 5.0,
+          "image_query": "underworld"
+        },
+        {
+          "text": "Guardians stand before it. The tablet gives the words to say.",
+          "seconds": 5.0,
+          "image_query": "Hades"
+        },
+        {
+          "text": "\"I am a child of Earth and starry Heaven.\" The password.",
+          "seconds": 5.5,
+          "image_query": "Greek inscription"
+        }
+      ],
+      "mood": "drone",
+      "caption": "Found at Petelia, southern Italy. Fourth century BC.\nA gold tablet, folded, buried with the dead.\nIt warns of a spring beside a white cypress — do not drink there.\nSeek the cold water flowing from the Lake of Memory.\nTell its guardians: \"I am a child of Earth and starry Heaven.\"\nThe tablet is now in the British Museum.\nRead the rest of the instructions: alloccult.com/ancient-mystery-schools/orphic-mysteries",
+      "hashtags": [
+        "orphism",
+        "orphicmysteries",
+        "goldtablets",
+        "petelia",
+        "lethe",
+        "mnemosyne",
+        "underworld",
+        "hades",
+        "greekmysteries",
+        "britishmuseum",
+        "spiritseason",
+        "alloccult"
+      ],
+      "id": "2026-10-19-4",
+      "section": "Section 1",
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "Accurate, on-brand reel on the Petelia gold tablet (4th c. BC, southern Italy, now in the British Museum). The quoted lines match the tablet text and the archive page. The hook is strong and every slide is legible. The images are relevant: a Boitard underworld etching with Charon, and Grignion's 1789 Pluto/Hades with Cerberus. There are only minor polish notes, and nothing blocks posting."
+        }
+      ],
+      "reject_images": [
+        "wellcome:teesq66a",
+        "wellcome:uws66wk8",
+        "wellcome:jz9zggfa",
+        "wellcome:turasjqr",
+        "wellcome:au49v8wq",
+        "wellcome:vugv7677",
+        "wellcome:puf6f67f",
+        "wellcome:dfe6ndsc",
+        "wellcome:qv7nwjpe",
+        "wellcome:ub34rv48",
+        "wellcome:nw2ayk8r",
+        "wellcome:fxp6u2m4",
+        "wellcome:ja6d3fxg",
+        "wellcome:a6fgpqq4",
+        "wellcome:jujqktkd",
+        "wellcome:tx4yxasd",
+        "wellcome:qey3vwwh",
+        "wellcome:fvyvm97m",
+        "wellcome:wmsz42mh",
+        "wellcome:b9pxxtfd",
+        "wellcome:s5sqmftt",
+        "wellcome:bnd2fzef",
+        "wellcome:thej5fv5",
+        "wellcome:x33z52jb",
+        "wellcome:uxz6mnga",
+        "wellcome:k8emz9rx",
+        "wellcome:x9t4fcar",
+        "wellcome:mxq5z2e3",
+        "wellcome:qw8629ax",
+        "wellcome:ru4espdx",
+        "wellcome:ukfg9x99",
+        "wellcome:xusms728"
+      ],
+      "images": [
+        null,
+        null,
+        {
+          "key": "wellcome:z8ra5ybn",
+          "url": "https://iiif.wellcomecollection.org/image/V0035986ER/full/1600,/0/default.jpg",
+          "title": "Scenes in the underworld; spirits of the dead disembarking from the boat of Charon; Charon receiving a ghost into his boat. Etching by L.P. Boitard.",
+          "credit": "Scenes in the underworld; spirits of the dead disembarking from the boat of Charon; Charon receiving a ghost into his boat. Etching by L.P. Boitard. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:a2wekgwt",
+          "url": "https://iiif.wellcomecollection.org/image/V0035988ER/full/1600,/0/default.jpg",
+          "title": "Pluto [Hades]. Engraving by C. Grignion, 1789.",
+          "credit": "Pluto [Hades]. Engraving by C. Grignion, 1789. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null
+      ],
+      "status": "approved"
+    },
+    {
+      "day": "Friday",
+      "title": "The Hierarchy · I: The First Triad",
+      "route": "/ceremonial-magic/angelology",
+      "hook": "Nine choirs. You were only shown the last",
+      "beats": [
+        {
+          "text": "c. 500 AD. A writer signs as Dionysius the Areopagite, Paul's convert.",
+          "seconds": 6.0,
+          "image_query": "Byzantine manuscript"
+        },
+        {
+          "text": "The Celestial Hierarchy. Nine choirs. Three triads.",
+          "seconds": 4.0,
+          "image_query": "celestial spheres"
+        },
+        {
+          "text": "Seraphim. Six wings. Two veil the face, two the feet. Isaiah 6:2.",
+          "seconds": 5.5,
+          "image_query": "seraphim"
+        },
+        {
+          "text": "Cherubim. Four faces: man, lion, ox, eagle. Ezekiel 1:10.",
+          "seconds": 5.5,
+          "image_query": "cherubim"
+        },
+        {
+          "text": "Thrones, bound to Ezekiel's wheels. Rims full of eyes. Hierarchy II: next Friday.",
+          "seconds": 6.0,
+          "image_query": "Ezekiel vision"
+        }
+      ],
+      "mood": "choir",
+      "caption": "Hierarchy I.\nAround 500 AD, a writer took the name of Dionysius the Areopagite — the Athenian Paul converts in Acts 17:34.\nHis Celestial Hierarchy ordered heaven into nine choirs.\nFirst triad: Seraphim, Cherubim, Thrones.\nIsaiah saw six wings. Ezekiel saw four faces, and wheels with rims full of eyes.\nHierarchy II next Friday: the middle triad.\nSave the series: alloccult.com/ceremonial-magic/angelology",
+      "hashtags": [
+        "angelology",
+        "seraphim",
+        "cherubim",
+        "thrones",
+        "ophanim",
+        "celestialhierarchy",
+        "pseudodionysius",
+        "ezekiel",
+        "isaiah",
+        "biblicallyaccurateangels",
+        "christianmysticism",
+        "alloccult"
+      ],
+      "id": "2026-10-19-5",
+      "section": "Section 4",
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "Facts check out: Pseudo-Dionysius c. 500, nine choirs in three triads, Isaiah 6:2, Ezekiel 1:10, rims full of eyes (Ezekiel 1:18), Acts 17:34. Images fit their beats, are period engravings, and are legible. Only polish notes remain: the hook lacks a final period, and Ezekiel 1 calls the creatures 'living creatures', naming them cherubim only at 10:20."
+        }
+      ],
+      "reject_images": [
+        "wellcome:zqnxejm8",
+        "wellcome:dar4q5xw",
+        "wellcome:dbyw2yrc",
+        "wellcome:dhetctga",
+        "wellcome:dsc8k48v",
+        "wellcome:e33uyd25",
+        "wellcome:gqaspbku",
+        "wellcome:hnq9emme",
+        "wellcome:mh5z4y24",
+        "wellcome:zuvennan",
+        "wellcome:synm5zrw",
+        "wellcome:f4bage7v",
+        "wellcome:qweeffwb",
+        "wellcome:v3zmn8cv",
+        "wellcome:h4ycrw8w",
+        "wellcome:ye93k5jh"
+      ],
+      "images": [
+        null,
+        {
+          "key": "wellcome:ad5kkjmm",
+          "url": "https://iiif.wellcomecollection.org/image/V0049800/full/1600,/0/default.jpg",
+          "title": "Athanasius Kircher being guided by an archangel to the celestial spheres. Engraving by J.F. Fleischberger, 1660.",
+          "credit": "Athanasius Kircher being guided by an archangel to the celestial spheres. Engraving by J.F. Fleischberger, 1660. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:gkccjkvp",
+          "url": "https://iiif.wellcomecollection.org/image/V0035400/full/1600,/0/default.jpg",
+          "title": "An apparition of the holy sacrament in a monstrance carried by Seraphim. Engraving by Estruch.",
+          "credit": "An apparition of the holy sacrament in a monstrance carried by Seraphim. Engraving by Estruch. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        {
+          "key": "wellcome:da3zqgqb",
+          "url": "https://iiif.wellcomecollection.org/image/V0034347/full/1600,/0/default.jpg",
+          "title": "Ezekiel has a vision of angels and spheres with eyes coasting along the thunderstruck sea. Etching by R. Pranker, 176-, after B. Picart.",
+          "credit": "Ezekiel has a vision of angels and spheres with eyes coasting along the thunderstruck sea. Etching by R. Pranker, 176-, after B. Picart. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "day": "Saturday",
+      "title": "Sixty-Nine Hours on a Snakeskin",
+      "route": "/witchcraft-folk-magic/hoodoo-rootwork",
+      "hook": "She lay three days on a snakeskin",
+      "beats": [
+        {
+          "text": "New Orleans, late 1920s. Zora Neale Hurston, a student of Franz Boas.",
+          "seconds": 5.5,
+          "image_query": "New Orleans"
+        },
+        {
+          "text": "She sought the hoodoo doctors. Luke Turner claimed Marie Laveau as kin.",
+          "seconds": 5.5,
+          "image_query": "snake"
+        },
+        {
+          "text": "Initiation: face down, navel to a snakeskin. Sixty-nine hours. No food.",
+          "seconds": 6.0,
+          "image_query": "snakeskin"
+        },
+        {
+          "text": "She rose with a new name: the Rain-Bringer.",
+          "seconds": 4.0,
+          "image_query": "lightning"
+        },
+        {
+          "text": "1935. She put it in print: Mules and Men.",
+          "seconds": 4.0,
+          "image_query": "book spine"
+        }
+      ],
+      "mood": "ritual",
+      "caption": "Zora Neale Hurston studied under Franz Boas.\nIn late-1920s New Orleans, she went looking for hoodoo doctors.\nLuke Turner claimed Marie Laveau as his kin.\nHer initiation: sixty-nine hours face down, her navel touching a snakeskin, without food.\nShe came out with a name: the Rain-Bringer.\nShe published it all in Mules and Men, 1935.\nThe full tradition: alloccult.com/witchcraft-folk-magic/hoodoo-rootwork",
+      "hashtags": [
+        "hoodoo",
+        "rootwork",
+        "conjure",
+        "zoranealehurston",
+        "mulesandmen",
+        "marielaveau",
+        "neworleans",
+        "folkmagic",
+        "southernfolklore",
+        "anthropology",
+        "occulthistory",
+        "alloccult"
+      ],
+      "id": "2026-10-19-6",
+      "section": "Section 5",
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "Facts match Hurston's own account in Mules and Men (1935). She studied under Boas and did New Orleans fieldwork in 1928–29. Luke Turner claimed to be Marie Laveau's nephew. Her initiation was sixty-nine hours face down, navel to a snakeskin, without food, and she was named the Rain-Bringer. The hook's 'three days' rounds the sixty-nine hours and echoes Hurston's own framing. All slides are legible and well under the length limit, and the hook stops a scroll. Caption and hashtags are on brand. Nothing blocking."
+        }
+      ],
+      "reject_images": [
+        "wellcome:drtwqjgg",
+        "wellcome:pyvdc39x",
+        "wellcome:vwjq7qb6",
+        "wellcome:fqeak8um",
+        "wellcome:zpdcqmg3",
+        "wellcome:mnm3fnvh",
+        "wellcome:vcjs3rbx",
+        "wellcome:p8gu59ct",
+        "wellcome:gjcqjy6w",
+        "wellcome:scswyq4a",
+        "wellcome:qws4z5nd",
+        "wellcome:nhppj7pw",
+        "wellcome:rmtfyzjr",
+        "wellcome:v3nuutmh",
+        "wellcome:h7h9rjvr",
+        "wellcome:a5ft3j9r",
+        "wellcome:b4f4qmk4",
+        "wellcome:futj28y7",
+        "wellcome:yzggbrzu",
+        "wellcome:yq95sgxw",
+        "wellcome:fduv77yg",
+        "wellcome:dy3vp7zz",
+        "wellcome:ebewqrep",
+        "wellcome:pnn56qpv",
+        "wellcome:ugfqhm83",
+        "aic:91758",
+        "aic:222942",
+        "aic:11",
+        "aic:111",
+        "aic:27",
+        "aic:4",
+        "aic:27992",
+        "wellcome:qft87ddf",
+        "wellcome:j28na8z8",
+        "wellcome:hm4am773",
+        "wellcome:je8ndezz",
+        "wellcome:ut7fxxpf",
+        "wellcome:ykznjgcc",
+        "wellcome:fjgcqdqk",
+        "wellcome:z5tae8qd",
+        "wellcome:jks9qexv",
+        "wellcome:zer8xrhs",
+        "wellcome:n28buc4x",
+        "wellcome:b3w2qn5q",
+        "wellcome:bqhysgu8",
+        "wellcome:gwx76zfx",
+        "wellcome:w5pt3wxb",
+        "wellcome:jcv8seg3"
+      ],
+      "images": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "status": "approved"
+    },
+    {
+      "day": "Sunday",
+      "title": "The Card Test",
+      "route": "/consciousness/psychic-abilities",
+      "hook": "Name this card before it turns",
+      "beats": [
+        {
+          "text": "Duke University, 1934. J. B. Rhine publishes Extra-Sensory Perception.",
+          "seconds": 6.0,
+          "image_query": "university library"
+        },
+        {
+          "text": "Five symbols, designed by Karl Zener. Circle, cross, waves, square, star.",
+          "seconds": 5.5,
+          "image_query": "Zener cards"
+        },
+        {
+          "text": "Twenty-five cards. Chance alone gives you five correct.",
+          "seconds": 4.5,
+          "image_query": "playing cards"
+        },
+        {
+          "text": "Hubert Pearce guessed from another building. Rhine reported about thirty percent.",
+          "seconds": 6.0,
+          "image_query": "telepathy"
+        },
+        {
+          "text": "Critics found the controls weak. The card turns. Did you call it?",
+          "seconds": 5.5,
+          "image_query": "star"
+        }
+      ],
+      "mood": "drone",
+      "caption": "In 1934, J. B. Rhine of Duke University published Extra-Sensory Perception.\nHis test used five symbols, designed by Karl Zener.\nTwenty-five cards. Chance predicts five hits.\nHubert Pearce, a divinity student, guessed from another building.\nRhine reported about thirty percent.\nCritics found the controls weak.\nComment your guess before you rewatch. ☽\nThe full record: alloccult.com/consciousness/psychic-abilities",
+      "hashtags": [
+        "esp",
+        "zenercards",
+        "jbrhine",
+        "parapsychology",
+        "dukeuniversity",
+        "extrasensoryperception",
+        "psychicabilities",
+        "clairvoyance",
+        "psi",
+        "telepathy",
+        "consciousness",
+        "alloccult"
+      ],
+      "id": "2026-10-19-7",
+      "section": "Section 9",
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "Facts check out. Rhine published Extra-Sensory Perception in 1934. Karl Zener designed the five symbols. Chance expectation is 5 of 25. Pearce, a divinity student, guessed from the Duke library in the Pearce-Pratt series at roughly 30%. Critics did attack the controls. Nothing blocking remains. Polish notes: segment 4 should say chance 'predicts' rather than 'gives'. The caption's crescent-moon glyph should go under the no-emoji rule. The segment 5 engraving is a 19th-century mind-reading act, not Duke, but it is thematically related and credited, so it is acceptable."
+        }
+      ],
+      "reject_images": [
+        "wellcome:rxthvm4q",
+        "wellcome:u37xebwh",
+        "wellcome:jyjjgsjr",
+        "wellcome:rbjjthrr",
+        "wellcome:mbrj8865",
+        "wellcome:rkswdwvm",
+        "wellcome:n64zuc8u",
+        "wellcome:h8hzt6pp",
+        "wellcome:kjsg3u3r",
+        "wellcome:yvfdqh4s",
+        "wellcome:erm7ds2r",
+        "wellcome:ump6ry9f",
+        "wellcome:jrkamxfv",
+        "wellcome:zvy3jk3r",
+        "wellcome:ge3uqpwh",
+        "wellcome:tkq6yqqw",
+        "wellcome:vns4f68q",
+        "wellcome:w4xnuxef",
+        "wellcome:k3wkryzk",
+        "wellcome:cgxax3yd",
+        "wellcome:ezzzucgt",
+        "wellcome:funszek7",
+        "wellcome:gxxj3pka",
+        "wellcome:hgw7gwg4",
+        "wellcome:c3xdbkg7",
+        "wellcome:wv4y3rkx",
+        "wellcome:x58g6u2a",
+        "wellcome:tfzxj9xt",
+        "wellcome:jcjs9wgy",
+        "wellcome:j2yg5jhw",
+        "wellcome:zrz9dk24",
+        "wellcome:krrt8bdu",
+        "wellcome:ujvpnznn",
+        "wellcome:rswurw4y",
+        "wellcome:ufb465af",
+        "wellcome:v23j3tn5",
+        "wellcome:ezz25v9n",
+        "wellcome:syk8ffmc",
+        "wellcome:tz88esb2",
+        "wellcome:aav9cscd",
+        "wellcome:s7u3gtpp",
+        "wellcome:v955apth",
+        "wellcome:u23uyf9p",
+        "wellcome:yfec6dbu",
+        "wellcome:rug5smhg",
+        "wellcome:urd8jy6e",
+        "wellcome:qjudb6j3",
+        "wellcome:x25q9t5v"
+      ],
+      "images": [
+        null,
+        null,
+        null,
+        {
+          "key": "wellcome:jvtg3pjg",
+          "url": "https://iiif.wellcomecollection.org/image/L0029047/full/1600,/0/default.jpg",
+          "title": "A pair of mind-readers performing among a group of villagers. Wood engraving by Ch. Baude after A.E. Artigue.",
+          "credit": "A pair of mind-readers performing among a group of villagers. Wood engraving by Ch. Baude after A.E. Artigue. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null
+      ],
+      "status": "approved"
+    }
+  ]
+}
