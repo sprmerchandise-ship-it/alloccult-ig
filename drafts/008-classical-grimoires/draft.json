@@ -1,0 +1,161 @@
+{
+  "id": "008-classical-grimoires",
+  "status": "approved",
+  "title": "Classical Grimoires",
+  "route": "/grimoires-sacred-texts/classical-grimoires",
+  "section": "Section 10",
+  "slides": [
+    {
+      "text": "Medieval demon manuals were written by clergy.",
+      "image_query": "grimoire",
+      "reject": [],
+      "image": {
+        "key": "wellcome:au2my43t",
+        "url": "https://iiif.wellcomecollection.org/image/V0025898/full/1600,/0/default.jpg",
+        "title": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Mezzotint after D. Teniers the younger, 1750/1790.",
+        "credit": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Mezzotint after D. Teniers the younger, 1750/1790. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Old French · grammaire",
+      "text": "Grimoire comes from grammaire: grammar, the art of letters. A grimoire was a book of words that command.",
+      "image_query": "grimoire",
+      "reject": [],
+      "image": {
+        "key": "wellcome:mpt2zjxr",
+        "url": "https://iiif.wellcomecollection.org/image/V0025897ER/full/1600,/0/default.jpg",
+        "title": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Etching after D. Teniers, the younger, 1750/1790.",
+        "credit": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Etching after D. Teniers, the younger, 1750/1790. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Clavicula Salomonis",
+      "text": "The Key of Solomon has no original. Over a hundred manuscripts survive, in many languages. No two agree.",
+      "image_query": "King Solomon",
+      "reject": [],
+      "image": {
+        "key": "wellcome:mwcukc6m",
+        "url": "https://iiif.wellcomecollection.org/image/V0046399/full/1600,/0/default.jpg",
+        "title": "Hazrat Sulaymān (King Solomon) enthoned with Bilquīs and with earthly rulers, divs, peris and the animals kingdom, including the simurgh, paying homage). Gouache painting by a Persian artist, Qajar period.",
+        "credit": "Hazrat Sulaymān (King Solomon) enthoned with Bilquīs and with earthly rulers, divs, peris and the animals kingdom, including the simurgh, paying homage). Gouache painting by a Persian artist, Qajar period. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Munich · Clm 849 · c. 1440",
+      "text": "A Latin necromancy manual, likely by a learned cleric. It conjures demons in the name of Christ.",
+      "image_query": "magic circle",
+      "reject": [],
+      "image": {
+        "key": "wellcome:g3x9kwbc",
+        "url": "https://iiif.wellcomecollection.org/image/V0025858/full/1600,/0/default.jpg",
+        "title": "A conjurer casting spells with his wand and fire surrounded by a kneeling man and demons within the magic circle. Engraving by J. Brown after W.M. Craig, 1813.",
+        "credit": "A conjurer casting spells with his wand and fire surrounded by a kneeling man and demons within the magic circle. Engraving by J. Brown after W.M. Craig, 1813. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Castile · 1256",
+      "text": "Alfonso X ordered the Arabic Ghāyat al-Ḥakīm translated. Latin Europe knew it as Picatrix.",
+      "image_query": "planetary talismans",
+      "reject": [
+        "wellcome:tcufthmx"
+      ],
+      "image": {
+        "key": "wellcome:avwwtx4a",
+        "url": "https://iiif.wellcomecollection.org/image/L0002721/full/1600,/0/default.jpg",
+        "title": "The zodiac man. Watercolour painting by a Persian artist.",
+        "credit": "The zodiac man. Watercolour painting by a Persian artist. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Thomas Aquinas · Summa",
+      "text": "Aquinas condemned the Ars Notoria, a book of prayers for memory and knowledge. Scribes kept copying it.",
+      "image_query": "Thomas Aquinas",
+      "reject": [],
+      "image": {
+        "key": "wellcome:q4m4gtgm",
+        "url": "https://iiif.wellcomecollection.org/image/V0048295/full/1600,/0/default.jpg",
+        "title": "Saint Thomas Aquinas holding a monstrance and a quill. Painted plaque.",
+        "credit": "Saint Thomas Aquinas holding a monstrance and a quill. Painted plaque. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "The Forbidden Library",
+      "text": "Key of Solomon, Picatrix, Abramelin, Grand Grimoire. If you could read only one, which would you open?",
+      "image_query": "magic circle",
+      "reject": [
+        "wellcome:bwdyb656"
+      ],
+      "image": {
+        "key": "wellcome:zk5bv4vr",
+        "url": "https://iiif.wellcomecollection.org/image/V0025853/full/1600,/0/default.jpg",
+        "title": "A grotto containing a magic circle, books and mythical creatures. Etching by J. Vezzani, 1728, after G. Rocchetti after P. Righini.",
+        "credit": "A grotto containing a magic circle, books and mythical creatures. Etching by J. Vezzani, 1728, after G. Rocchetti after P. Righini. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    }
+  ],
+  "caption": "They were not written by witches in the woods.\nThey were written by men who could read Latin.\n\nClerics. Scholars. University men.\nCopying conjurations by candlelight.\nInvoking God to bind what God had cast down.\n\nThe Key of Solomon, with no single original.\nThe Picatrix, carried from al-Andalus to Castile.\nThe Lesser Key, built partly from a list meant to mock it.\nThe Ars Notoria, condemned by Aquinas and copied anyway.\nAbramelin, and the months of silence it demands.\n\nEvery copy was altered.\nEvery scribe added something.\nThe tradition was never one book.\nIt was a shared machinery of names, circles and hours.\n\nThe full entry waits in the Forbidden Library: alloccult.com/grimoires-sacred-texts/classical-grimoires",
+  "hashtags": [
+    "grimoire",
+    "grimoires",
+    "keyofsolomon",
+    "lesserkeyofsolomon",
+    "picatrix",
+    "abramelin",
+    "ceremonialmagic",
+    "solomonicmagic",
+    "occulthistory",
+    "esotericism",
+    "forbiddenknowledge",
+    "alloccult"
+  ],
+  "slide_files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": false,
+      "summary": "Strong concept and mostly accurate text, but three blocking problems. The cover overclaims with 'priests'; the source says 'educated clergy', a wider group that includes men in minor orders. Slide 5's image is an anatomical écorché figure with no link to Picatrix or talismans. Slide 8's image is an East Asian Buddhist mandala scroll, a 'magic circles' title coincidence that misleads beside a list of Western grimoires. Non-blocking polish: slide 2 repeats the cover image, slide 3's 'No two agree' slightly overstates 'not entirely identical', slide 6 uses a page from Weyer's treatise on anger rather than anything demonological, and one caption line has an ambiguous 'it'.",
+      "fixes": [
+        "slide 1 text: Overclaim. The source (Kieckhefer's 'clerical underground') says educated clergy, a group that includes clerics in minor orders and university men, not only ordained priests. A knowledgeable reader would dispute a blanket 'priests'.",
+        "slide 5 image: The image shows a flayed anatomical écorché statue. It has no visible connection to Picatrix, Alfonso X or talismanic magic. The Gaffarel title is only loosely related and the picture itself does not show it.",
+        "slide 8 image: A Japanese/East Asian Buddhist mandala scroll with four patriarchs, matched only through the title words 'magic circles'. It is unrelated to the Western grimoires named on the slide and misleading."
+      ]
+    },
+    {
+      "round": 2,
+      "approved": false,
+      "summary": "Strong, accurate carousel with a scroll-stopping hook. One blocking issue: slide 6 uses a page from Weyer's treatise on anger (De ira morbo), not his demon catalogue, and the credit line says so. Swap it for a Weyer portrait. Minor polish: slide 2 repeats the cover image, slide 3 says 'no two agree' where the source says 'no two identical', and the caption calls Abramelin's retreat 'silence' rather than withdrawal.",
+      "fixes": [
+        "slide 6 image: The image is a preface page from Weyer's De ira morbo, a treatise on the disease of anger. It is the wrong book, unrelated to the Pseudomonarchia Daemonum, and the visible credit line exposes the mismatch. It is also a visually dull block of Latin text."
+      ]
+    },
+    {
+      "round": 3,
+      "approved": false,
+      "summary": "The slide 6 image is still Weyer's De ira morbo, a treatise on anger. Round 2 flagged it as the wrong book, but it was not replaced. That is blocking, and since no Pseudomonarchia image surfaced, slide 6 should be dropped. Six content slides remain, which is enough. Slide 2 reuses the cover scene, which is polish. Slide 3's 'No two agree' slightly overclaims; 'no two identical' is the accurate wording. In the caption, Abramelin demands months of withdrawal, not silence. Everything else is accurate, well matched and legible, and the hook is strong.",
+      "fixes": [
+        "slide 6 dropped"
+      ]
+    },
+    {
+      "round": 4,
+      "approved": true,
+      "summary": "Nothing blocking remains. The facts match the archive page and standard scholarship: Kieckhefer's clerical necromancy, the grimoire/grammaire etymology, 100+ Key of Solomon witnesses, Munich Clm 849 c. 1440, Alfonso X and the 1256 Ghāyat al-Ḥakīm translation, and Aquinas condemning the Ars Notoria in the Summa (II-II q.96). Every image shows its subject or something clearly related, and all text is legible and correctly spelled. There are three polish points. Slide 2 reuses the cover image. Slide 3's 'No two agree' slightly overstates 'no two identical'. The caption's 'months of silence' for Abramelin is looser than the source's eighteen months of withdrawal."
+    }
+  ]
+}
