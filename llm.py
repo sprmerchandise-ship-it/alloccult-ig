@@ -50,11 +50,23 @@ def _post(body):
     req = urllib.request.Request(
         ENDPOINT, data=json.dumps(body).encode(),
         headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
-                 "Content-Type": "application/json", "Accept": "application/json"})
+                 "Content-Type": "application/json",
+                 "Accept": "application/vnd.github+json",       # as GitHub's docs send it
+                 "X-GitHub-Api-Version": "2022-11-28"})
     for attempt in range(6):
         try:
             with urllib.request.urlopen(req, timeout=300) as r:
-                return json.loads(r.read().decode())
+                raw = r.read().decode(errors="replace")
+                try:
+                    return json.loads(raw)
+                except ValueError:
+                    if attempt < 2:                       # an empty reply now and then
+                        print(f"  (empty/non-JSON reply, HTTP {r.status}; retrying)")
+                        time.sleep(10)
+                        continue
+                    raise RuntimeError(
+                        f"GitHub Models sent non-JSON (HTTP {r.status}, "
+                        f"{r.headers.get('Content-Type')}): {raw[:300]!r}") from None
         except urllib.error.HTTPError as e:
             detail = e.read().decode(errors="replace")[:500]
             wait = int(e.headers.get("Retry-After") or 0) or 20 * (attempt + 1)
