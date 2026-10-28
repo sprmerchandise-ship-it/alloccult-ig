@@ -19,7 +19,7 @@ small ones, ~10–15 a minute. Images go in low detail (~85 tokens each) and
 page text is capped at SOURCE_CHARS. Override the models with the LLM_MODEL /
 LLM_FAST_MODEL repo variables (Settings → Secrets and variables → Variables).
 """
-import json, os, time, urllib.error, urllib.request
+import json, os, time, urllib.error, urllib.parse, urllib.request
 
 ENDPOINT = "https://models.github.ai/inference/chat/completions"
 MODEL = os.environ.get("LLM_MODEL") or "openai/gpt-4.1"              # writing + vision reviews
@@ -46,16 +46,27 @@ def _blocks(content):
     return out
 
 
+class _KeepPost(urllib.request.HTTPRedirectHandler):
+    """urllib turns a redirected POST into a bodiless GET (which got back a bare
+    "OK"); report the redirect instead so _post can re-send the POST there."""
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+_open = urllib.request.build_opener(_KeepPost).open
+
+
 def _post(body):
-    req = urllib.request.Request(
-        ENDPOINT, data=json.dumps(body).encode(),
-        headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
-                 "Content-Type": "application/json",
-                 "Accept": "application/vnd.github+json",       # as GitHub's docs send it
-                 "X-GitHub-Api-Version": "2022-11-28"})
+    url = ENDPOINT
     for attempt in range(6):
+        req = urllib.request.Request(
+            url, data=json.dumps(body).encode(),
+            headers={"Authorization": f"Bearer {os.environ['GITHUB_TOKEN']}",
+                     "Content-Type": "application/json",
+                     "Accept": "application/vnd.github+json",       # as GitHub's docs send it
+                     "X-GitHub-Api-Version": "2022-11-28"})
         try:
-            with urllib.request.urlopen(req, timeout=300) as r:
+            with _open(req, timeout=300) as r:
                 raw = r.read().decode(errors="replace")
                 try:
                     return json.loads(raw)
@@ -65,9 +76,13 @@ def _post(body):
                         time.sleep(10)
                         continue
                     raise RuntimeError(
-                        f"GitHub Models sent non-JSON (HTTP {r.status}, "
+                        f"GitHub Models sent non-JSON (HTTP {r.status}, {r.geturl()}, "
                         f"{r.headers.get('Content-Type')}): {raw[:300]!r}") from None
         except urllib.error.HTTPError as e:
+            if e.code in (301, 302, 303, 307, 308) and e.headers.get("Location"):
+                url = urllib.parse.urljoin(url, e.headers["Location"])
+                print(f"  (redirected to {url})")
+                continue
             detail = e.read().decode(errors="replace")[:500]
             wait = int(e.headers.get("Retry-After") or 0) or 20 * (attempt + 1)
             # Per-minute limits clear quickly; a daily limit says to wait hours.
@@ -78,7 +93,7 @@ def _post(body):
             if e.code >= 500 and attempt < 3:
                 time.sleep(10 * (attempt + 1))
                 continue
-            raise RuntimeError(f"GitHub Models error {e.code}: {detail}") from None
+            raise RuntimeError(f"GitHub Models error {e.code} at {url}: {detail}") from None
     raise RuntimeError("GitHub Models: still rate limited after retries")
 
 
