@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  models: read        # GitHub Models (llm.py)
 
 jobs:
   intel:
@@ -18,10 +19,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
 
       - name: Cache depth model (motion.py)
         uses: actions/cache@v4
@@ -43,30 +40,32 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: python competitor_scan.py
 
-      - name: Write report with Claude Code
+      - name: Write report (GitHub Models)
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
         run: |
-          npm install -g @anthropic-ai/claude-code
           DATE=$(date -u +%F)
           echo "DATE=$DATE" >> "$GITHUB_ENV"
-          claude -p "$(sed "s/{{DATE}}/$DATE/g" intel/analysis_prompt.md)" \
-            --allowedTools "Read,Glob,Grep,Write" \
-            --permission-mode acceptEdits
-          test -s "reports/$DATE.md" || { echo "Claude did not write reports/$DATE.md"; exit 1; }
+          python intel_report.py "$DATE"
+          test -s "reports/$DATE.md" || { echo "No report written to reports/$DATE.md"; exit 1; }
           cat "reports/$DATE.md" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Turn the 7 Reel scripts into specs
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
         run: python compose_posts.py
 
-      - name: Render + Claude-review the week's Reels (preview bundle)
+      - name: Render + review the week's Reels (preview bundle)
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          pip install anthropic -q
           if [ -f "queue/$DATE.json" ]; then
             python reel_review.py "queue/$DATE.json" "out/posts-$DATE"
           else

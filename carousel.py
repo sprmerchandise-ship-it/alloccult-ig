@@ -114,9 +114,9 @@ def closing_slide(title, route):
 
 
 def _choose(slide, draft, used):
-    """Claude picks among museum candidates when it can; otherwise the first match."""
+    """The model picks among museum candidates when it can; otherwise the first match."""
     query = slide.get("image_query") or draft["title"]
-    if not os.environ.get("ANTHROPIC_API_KEY"):
+    if not os.environ.get("GITHUB_TOKEN"):
         return museum.find_image(query, used)
     from carousel_ai import choose_image
     return choose_image(slide.get("kicker", ""), slide["text"], query, used,

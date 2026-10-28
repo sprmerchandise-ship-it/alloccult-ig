@@ -1,11 +1,15 @@
 name: Reel Review Check
 
-# Manual live test of the Claude Reel review: re-reviews a fresh copy of the
+# Manual live test of the Reel review (GitHub Models): re-reviews a fresh copy of the
 # first Reel in the newest queue and uploads the result. Changes nothing in
 # the repo and posts nothing.
 
 on:
   workflow_dispatch: {}
+
+permissions:
+  contents: read
+  models: read        # GitHub Models (llm.py)
 
 jobs:
   check:
@@ -25,13 +29,15 @@ jobs:
       - name: Install dependencies & fonts
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install pillow numpy fonttools opencv-python-headless onnxruntime anthropic -q
+          pip install pillow numpy fonttools opencv-python-headless onnxruntime -q
           mkdir -p fonts
           curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
           curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
       - name: Review one Reel
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
           GH_PAT: ${{ secrets.GH_PAT }}
         run: python reel_review.py "$(ls queue/????-??-??.json | sort | tail -1)" out/check --check
       - uses: actions/upload-artifact@v4

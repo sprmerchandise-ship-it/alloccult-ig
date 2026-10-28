@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Claude reviews every Reel before it can post.
+The model reviews every Reel before it can post.
 
 For each spec in a queue file: render → grab a still from the middle of every
-segment (hook, each beat, outro) → Claude checks the stills and the text the
+segment (hook, each beat, outro) → the model checks the stills and the text the
 same way it checks carousels (facts vs. the archive page, image fit and
 appropriateness, legibility, hook, caption) → fixes are applied (new text,
-rejected images re-picked, weak beats dropped) → re-render, up to 3 rounds.
+rejected images re-picked, weak beats dropped) → re-render, up to 2 rounds.
 The spec gets "status": "approved" or "rejected"; post_reel.py only posts
 approved Reels.
 
@@ -14,7 +14,7 @@ approved Reels.
   python reel_review.py queue/2026-10-09.json out/check --check   # live test, saves nothing
 
 Writes the reviewed MP4s and captions.md to the output folder (the weekly
-preview bundle). Needs ANTHROPIC_API_KEY and GH_PAT.
+preview bundle). Needs GITHUB_TOKEN (GitHub Models, see llm.py) and GH_PAT.
 """
 import json, os, subprocess, sys
 
@@ -22,7 +22,7 @@ from carousel_ai import SEVERITY, STR, VOICE, _ask, _jpeg_b64, _obj, history_not
 from render_reel import HOOK_SECONDS, OUTRO_SECONDS, render_spec
 from site_source import page_text
 
-ROUNDS = 4
+ROUNDS = 2          # 7 Reels x 2 rounds stays inside the free daily request limit
 
 REVIEW_SCHEMA = _obj({
     "approved": {"type": "boolean"},

@@ -252,7 +252,7 @@ def render_spec(spec, out):
         for _ in range(5):
             if not images[n]:
                 print(f"  beat {n + 1}: searching '{beat['image_query']}'")
-                if os.environ.get("ANTHROPIC_API_KEY"):
+                if os.environ.get("GITHUB_TOKEN"):
                     from carousel_ai import choose_image
                     images[n] = choose_image(beat.get("kicker", ""), beat["text"],
                                              beat["image_query"], used, rejects)
