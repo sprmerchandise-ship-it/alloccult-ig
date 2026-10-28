@@ -10,7 +10,6 @@ SITE_URL = "alloccult.com"
 REPO_RAW = "https://raw.githubusercontent.com/sprmerchandise-ship-it/alloccult-ig/main"
 PRODUCT_EVERY_N = 4
 STATE_FILE = "state.json"
-CLAUDE_MODEL = "claude-sonnet-4-6"
 GRAPH = "https://graph.facebook.com/v21.0"
 W, H = 1080, 1350
 
@@ -54,16 +53,13 @@ def save_state(s):
     json.dump(s, open(STATE_FILE, "w"), indent=2)
 
 def claude(prompt, system, max_tokens=1500):
-    resp = http_json("https://api.anthropic.com/v1/messages",
-        data={"model": CLAUDE_MODEL, "max_tokens": max_tokens,
-              "system": system, "messages": [{"role": "user", "content": prompt}]},
-        headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"],
-                 "anthropic-version": "2023-06-01"})
-    return "".join(b["text"] for b in resp["content"] if b["type"] == "text").strip()
+    # Name kept from the Claude days; this runs on GitHub Models (llm.py).
+    import llm
+    return llm.ask_text(system, prompt, model=llm.FAST_MODEL, max_tokens=max_tokens)
 
 def claude_json(prompt, system):
-    raw = claude(prompt, system).replace("```json", "").replace("```", "").strip()
-    return json.loads(raw[raw.find("{"):raw.rfind("}") + 1])
+    import llm
+    return llm.ask_json(system, prompt, model=llm.FAST_MODEL, max_tokens=1500)
 
 BRAND = (
     "You are the content brain for ALLOCCULT — a dark occult brand and "
@@ -424,7 +420,7 @@ def posting_switches():
 
 
 DRAFTS = "drafts"
-REVIEW_ROUNDS = 4
+REVIEW_ROUNDS = 2          # each round is one of ~50 free strong-model requests a day
 
 
 def _drafts():
@@ -437,7 +433,7 @@ def _save(path, draft):
 
 
 def new_draft(state):
-    """Claude writes a carousel for the next archive entry → drafts/NNN-slug/draft.json."""
+    """The model writes a carousel for the next archive entry → drafts/NNN-slug/draft.json."""
     import re
     from carousel_ai import write_draft
     from site_source import page_text
@@ -455,7 +451,7 @@ def new_draft(state):
 
 
 def review_draft(path, draft):
-    """Render → Claude review → fix → repeat. Marks the draft approved or rejected."""
+    """Render → model review → fix → repeat. Marks the draft approved or rejected."""
     from carousel import render
     from carousel_ai import apply_fixes, has_blockers, review
     from site_source import page_text
@@ -532,7 +528,7 @@ def main():
         print("A carousel already posted today (UTC) — skipping this scheduled run.")
         return
     state = load_state()
-    # Every carousel is reviewed by Claude (facts, images, legibility) before it
+    # Every carousel is reviewed by the model (facts, images, legibility) before it
     # can post; one that fails review is never published.
     if not prepare_carousel(state):
         print("No carousel passed review today — nothing posted.")

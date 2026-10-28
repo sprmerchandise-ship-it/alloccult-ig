@@ -5,8 +5,8 @@ Weekly competitor scan for @all.occult.
 Pulls recent posts from the accounts in competitors/handles.txt via the
 Instagram Graph API Business Discovery endpoint, ranks them by engagement rate
 ((likes + comments) / followers), and samples top posts for the hashtags in
-competitors/hashtags.txt. Writes competitors/scan.json, which the Claude Code
-analysis step (intel/analysis_prompt.md) turns into the weekly report.
+competitors/hashtags.txt. Writes competitors/scan.json, which intel_report.py
+turns into the weekly report.
 
 Needs IG_ACCESS_TOKEN and IG_USER_ID. Only Business/Creator competitor accounts
 can be read. The hashtag part needs the Public Content Access feature on the

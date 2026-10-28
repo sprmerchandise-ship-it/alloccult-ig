@@ -9,6 +9,8 @@ token build_archive.py uses); returns "" if it can't be fetched.
 """
 import base64, json, os, re, urllib.error, urllib.request
 
+from llm import SOURCE_CHARS      # free-tier requests are ~8k tokens, prompt included
+
 SITE_REPO = "sprmerchandise-ship-it/the-occult-archive"
 
 
@@ -29,7 +31,7 @@ def page_file(app_tsx, route):
     return f"src/{imp.group(1)}.tsx" if imp else None
 
 
-def prose(tsx, limit=60000):
+def prose(tsx, limit=None):
     """Sentences from string literals and JSX text, in page order, de-duplicated."""
     parts = re.findall(r'"((?:[^"\\]|\\.){40,})"|>\s*([^<>{}]{40,}?)\s*<', tsx)
     seen, out = set(), []
@@ -41,7 +43,7 @@ def prose(tsx, limit=60000):
                 and not t.startswith(("http", "font-", "text-", "px-", "bg-"))):
             seen.add(t)
             out.append(t)
-    return "\n".join(out)[:limit]
+    return "\n".join(out)[:limit or SOURCE_CHARS]
 
 
 def page_text(route):

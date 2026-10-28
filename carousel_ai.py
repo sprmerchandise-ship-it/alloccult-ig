@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Claude writes each carousel and Claude reviews it before it can post.
+The model writes each carousel and reviews it before it can post.
 
   write_draft(entry, source_text)  -> draft dict (slides, caption, hashtags)
   review(draft, slide_paths, source_text) -> verdict dict
@@ -13,15 +13,13 @@ legibility; and the hook. apply_fixes() turns a verdict into edits — new text,
 rejected images with new searches — and post.py re-renders and re-reviews
 until it passes or gives up.
 
-Needs ANTHROPIC_API_KEY.
+Runs on GitHub Models (llm.py) — needs GITHUB_TOKEN.
 """
 import base64, io, json
 
-import anthropic
 from PIL import Image
 
-MODEL = "claude-opus-5-5"
-_client = None
+import llm
 
 VOICE = (
     "ALLOCCULT (@all.occult) is a dark occult brand and forbidden-knowledge library "
@@ -31,24 +29,8 @@ VOICE = (
     "Never the phrase 'ancient secrets'. No emojis.")
 
 
-def _ask(system, content, schema, effort="high"):
-    global _client
-    _client = _client or anthropic.Anthropic()
-    resp = _client.beta.messages.create(
-        model=MODEL,
-        max_tokens=16000,
-        betas=["server-side-fallback-2026-07-01"],
-        fallbacks="default",
-        system=system,
-        messages=[{"role": "user", "content": content}],
-        output_config={"effort": effort,
-                       "format": {"type": "json_schema", "schema": schema}},
-    )
-    if resp.stop_reason == "refusal":
-        raise RuntimeError(f"Claude declined: {resp.stop_details}")
-    if resp.stop_reason == "max_tokens":
-        raise RuntimeError("Claude's answer was cut off (max_tokens)")
-    return json.loads(next(b.text for b in resp.content if b.type == "text"))
+def _ask(system, content, schema, fast=False):
+    return llm.ask_json(system, content, schema, model=llm.FAST_MODEL if fast else None)
 
 
 def _obj(props, required=None):
@@ -127,12 +109,12 @@ Choose the one that most directly depicts the slide's subject. Reject any that
 only share a word with it (a pun or coincidence), unrelated portraits or
 landscapes, and sectarian or hateful propaganda. If none truly fits, answer -1.
 "choice" is the number; "reason" is one short sentence."""
-    data = _ask(VOICE, prompt, PICK_SCHEMA, effort="medium")
+    data = _ask(VOICE, prompt, PICK_SCHEMA, fast=True)
     return data["choice"] if -1 <= data["choice"] < len(cands) else -1
 
 
 def choose_image(kicker, text, query, used, rejects):
-    """Claude picks a museum image for a slide/beat, or None. Candidates come
+    """The model picks a museum image for a slide/beat, or None. Candidates come
     from the query, the subject in the kicker ("Norse · Valkyries" →
     "Valkyries") and singular forms. Misfits are added to `rejects`/`used`."""
     import museum
@@ -181,7 +163,7 @@ REVIEW_SCHEMA = _obj({
 })
 
 
-def _jpeg_b64(path, width=760):
+def _jpeg_b64(path, width=512):     # sent in low detail anyway
     im = Image.open(path).convert("RGB")
     im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
     buf = io.BytesIO()
@@ -214,7 +196,7 @@ def has_blockers(verdict):
 
 
 def review(draft, slide_paths, source_text):
-    """Claude's verdict on the rendered carousel. Approves only if it would post it as is."""
+    """The model's verdict on the rendered carousel. Approves only if it would post it as is."""
     content = []
     for n, p in enumerate(slide_paths, start=1):
         content.append({"type": "text", "text": f"Slide {n}:"})

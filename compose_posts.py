@@ -2,23 +2,24 @@
 """
 Turn this week's intel report into 7 structured Reel specs.
 
-Reads the newest reports/YYYY-MM-DD.md (written by Claude Code from
-competitors/scan.json) plus archive_index.json, asks Claude for one Reel spec
+Reads the newest reports/YYYY-MM-DD.md (written by intel_report.py from
+competitors/scan.json) plus archive_index.json, asks the model for one Reel spec
 per day, validates them, and writes queue/YYYY-MM-DD.json. render_reel.py
 renders a spec; post_reel.py publishes the next unposted one each day.
 
-Needs ANTHROPIC_API_KEY.
+Needs GITHUB_TOKEN (GitHub Models, see llm.py).
 """
-import glob, json, os, re, sys, urllib.request
+import glob, json, os, re, sys
 
-from post import BRAND, CLAUDE_MODEL
+import llm
+from post import BRAND
 from music import MOODS
 
 QUEUE_DIR = "queue"
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 PROMPT = """Below is this week's competitor-intel report for @all.occult. Its
-section 6 has 7 Reel scripts, Monday to Sunday. Convert each one into the JSON
+7 Reel scripts, Monday to Sunday. Convert each one into the JSON
 spec our video renderer needs. Keep the report's ideas; tighten the wording.
 
 Rules:
@@ -49,24 +50,15 @@ with exactly 7 reels in day order.
 ARCHIVE ROUTES (route — title):
 {routes}
 
-REPORT:
+REEL SCRIPTS (section 6 of the report):
 {report}
 """
 
 
-def claude_json(prompt, system, max_tokens=8000):
-    # post.claude() caps output at 1500 tokens with a 90 s timeout — too small
-    # for 7 full specs, so this call gets its own limits.
-    req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
-        data=json.dumps({"model": CLAUDE_MODEL, "max_tokens": max_tokens, "system": system,
-                         "messages": [{"role": "user", "content": prompt}]}).encode(),
-        headers={"x-api-key": os.environ["ANTHROPIC_API_KEY"],
-                 "anthropic-version": "2023-06-01", "content-type": "application/json"})
-    with urllib.request.urlopen(req, timeout=300) as r:
-        resp = json.loads(r.read().decode())
-    raw = "".join(b["text"] for b in resp["content"] if b["type"] == "text")
-    return json.loads(raw[raw.find("{"):raw.rfind("}") + 1])
+def reel_section(report):
+    """Just section 6 (the Reel scripts): the whole report won't fit a free-tier request."""
+    m = re.search(r"^## *6\b.*?(?=^## *7\b|\Z)", report, re.S | re.M)
+    return (m.group(0) if m else report)[:14000]
 
 
 def latest_report():
@@ -123,12 +115,12 @@ def main():
     route_list = "\n".join(f"{e['route']} — {e['title']}" for e in archive)
 
     prompt = PROMPT.format(moods=", ".join(MOODS), routes=route_list,
-                           report=open(path, encoding="utf-8").read())
+                           report=reel_section(open(path, encoding="utf-8").read()))
     for attempt in range(2):
         try:
-            reels = claude_json(prompt, BRAND).get("reels", [])
+            reels = llm.ask_json(BRAND, prompt).get("reels", [])
             problems = validate(reels, routes)
-        except (ValueError, KeyError, TypeError, AttributeError) as e:
+        except (ValueError, KeyError, TypeError, AttributeError, RuntimeError) as e:
             reels, problems = [], [f"response was not valid spec JSON ({e})"]
         if not problems:
             break
@@ -136,7 +128,7 @@ def main():
         prompt += ("\n\nYour previous answer had these problems, fix them:\n"
                    + "\n".join(problems))
     else:
-        sys.exit("Claude could not produce valid reel specs.")
+        sys.exit("The model could not produce valid reel specs.")
 
     for i, r in enumerate(reels):
         r["id"] = f"{week}-{i + 1}"
