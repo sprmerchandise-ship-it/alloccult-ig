@@ -1,215 +1,215 @@
 {
-  "generated": "2026-10-26T15:02:39+00:00",
+  "generated": "2026-11-02T17:29:03+00:00",
   "lookback_days": 30,
   "accounts_scanned": 28,
-  "posts_analysed": 214,
+  "posts_analysed": 226,
   "format_summary": {
     "REEL": {
-      "posts": 51,
-      "median_engagement_rate": 0.00166
+      "posts": 66,
+      "median_engagement_rate": 0.00235
     },
     "CAROUSEL_ALBUM": {
-      "posts": 76,
-      "median_engagement_rate": 0.00587
+      "posts": 75,
+      "median_engagement_rate": 0.00626
     },
     "IMAGE": {
-      "posts": 87,
-      "median_engagement_rate": 0.00156
+      "posts": 85,
+      "median_engagement_rate": 0.00191
     }
   },
   "accounts": [
     {
       "handle": "tarotntia1111",
-      "followers": 226473,
-      "media_count": 642,
-      "posts_in_window": 2,
-      "median_engagement_rate": 0.09243
-    },
-    {
-      "handle": "mysticbarbarism",
-      "followers": 54626,
-      "media_count": 365,
-      "posts_in_window": 1,
-      "median_engagement_rate": 0.06808
+      "followers": 225972,
+      "media_count": 645,
+      "posts_in_window": 4,
+      "median_engagement_rate": 0.09054
     },
     {
       "handle": "theionpublishing",
-      "followers": 8132,
+      "followers": 8144,
       "media_count": 213,
-      "posts_in_window": 3,
-      "median_engagement_rate": 0.01513
-    },
-    {
-      "handle": "darklydivinecrystals",
-      "followers": 97826,
-      "media_count": 830,
-      "posts_in_window": 10,
-      "median_engagement_rate": 0.01251
-    },
-    {
-      "handle": "sacredknowledgetarot",
-      "followers": 15132,
-      "media_count": 531,
-      "posts_in_window": 5,
-      "median_engagement_rate": 0.01031
+      "posts_in_window": 2,
+      "median_engagement_rate": 0.01695
     },
     {
       "handle": "grimoiresontape",
-      "followers": 9617,
+      "followers": 9612,
       "media_count": 1477,
-      "posts_in_window": 3,
-      "median_engagement_rate": 0.01009
+      "posts_in_window": 2,
+      "median_engagement_rate": 0.01041
+    },
+    {
+      "handle": "sacredknowledgetarot",
+      "followers": 15152,
+      "media_count": 537,
+      "posts_in_window": 11,
+      "median_engagement_rate": 0.01016
     },
     {
       "handle": "occult.afflecks",
-      "followers": 26209,
-      "media_count": 931,
-      "posts_in_window": 9,
-      "median_engagement_rate": 0.00893
-    },
-    {
-      "handle": "museum_of_witchcraft_and_magic",
-      "followers": 120851,
-      "media_count": 2028,
+      "followers": 26302,
+      "media_count": 937,
       "posts_in_window": 13,
-      "median_engagement_rate": 0.00774
-    },
-    {
-      "handle": "museumofmagicfortunewitchcraft",
-      "followers": 20936,
-      "media_count": 241,
-      "posts_in_window": 3,
-      "median_engagement_rate": 0.00473
-    },
-    {
-      "handle": "witchcraftspellsmagick",
-      "followers": 39832,
-      "media_count": 589,
-      "posts_in_window": 23,
-      "median_engagement_rate": 0.00434
-    },
-    {
-      "handle": "darkstarmagick",
-      "followers": 13539,
-      "media_count": 1725,
-      "posts_in_window": 9,
-      "median_engagement_rate": 0.0034
+      "median_engagement_rate": 0.00855
     },
     {
       "handle": "thehoodwitch",
-      "followers": 482295,
-      "media_count": 4004,
+      "followers": 482924,
+      "media_count": 4009,
+      "posts_in_window": 19,
+      "median_engagement_rate": 0.00731
+    },
+    {
+      "handle": "darklydivinecrystals",
+      "followers": 98137,
+      "media_count": 833,
+      "posts_in_window": 7,
+      "median_engagement_rate": 0.00694
+    },
+    {
+      "handle": "museum_of_witchcraft_and_magic",
+      "followers": 121747,
+      "media_count": 2035,
+      "posts_in_window": 16,
+      "median_engagement_rate": 0.0061
+    },
+    {
+      "handle": "witchcraftspellsmagick",
+      "followers": 40127,
+      "media_count": 594,
       "posts_in_window": 21,
-      "median_engagement_rate": 0.00326
+      "median_engagement_rate": 0.00491
     },
     {
-      "handle": "grimoiremagic",
-      "followers": 128798,
-      "media_count": 1214,
+      "handle": "museumofmagicfortunewitchcraft",
+      "followers": 21705,
+      "media_count": 243,
       "posts_in_window": 5,
-      "median_engagement_rate": 0.00257
+      "median_engagement_rate": 0.00488
     },
     {
-      "handle": "amsterdamhermetica",
-      "followers": 25414,
-      "media_count": 1766,
-      "posts_in_window": 20,
-      "median_engagement_rate": 0.00206
+      "handle": "darkstarmagick",
+      "followers": 13535,
+      "media_count": 1725,
+      "posts_in_window": 9,
+      "median_engagement_rate": 0.00392
     },
     {
-      "handle": "occultgurukul",
-      "followers": 68608,
-      "media_count": 1960,
-      "posts_in_window": 25,
-      "median_engagement_rate": 0.0015
-    },
-    {
-      "handle": "folklorehouse",
-      "followers": 4493,
-      "media_count": 998,
-      "posts_in_window": 25,
-      "median_engagement_rate": 0.00134
+      "handle": "thegingerwitchhaus",
+      "followers": 63158,
+      "media_count": 1031,
+      "posts_in_window": 7,
+      "median_engagement_rate": 0.00274
     },
     {
       "handle": "theesotericwitch",
-      "followers": 12533,
-      "media_count": 1512,
+      "followers": 12588,
+      "media_count": 1536,
       "posts_in_window": 25,
-      "median_engagement_rate": 0.00128
+      "median_engagement_rate": 0.00238
     },
     {
-      "handle": "wiccantips",
-      "followers": 383974,
-      "media_count": 1076,
-      "posts_in_window": 1,
-      "median_engagement_rate": 0.00044
+      "handle": "amsterdamhermetica",
+      "followers": 25485,
+      "media_count": 1771,
+      "posts_in_window": 21,
+      "median_engagement_rate": 0.002
+    },
+    {
+      "handle": "grimoiremagic",
+      "followers": 128737,
+      "media_count": 1216,
+      "posts_in_window": 5,
+      "median_engagement_rate": 0.002
+    },
+    {
+      "handle": "folklorehouse",
+      "followers": 4487,
+      "media_count": 1000,
+      "posts_in_window": 25,
+      "median_engagement_rate": 0.00156
+    },
+    {
+      "handle": "occultgurukul",
+      "followers": 68579,
+      "media_count": 1968,
+      "posts_in_window": 25,
+      "median_engagement_rate": 0.00136
     },
     {
       "handle": "offcultclothing",
-      "followers": 40999,
+      "followers": 41277,
       "media_count": 187,
-      "posts_in_window": 11,
+      "posts_in_window": 9,
       "median_engagement_rate": 0.00041
     },
     {
       "handle": "curio_esoterica",
-      "followers": 109517,
+      "followers": 109529,
       "media_count": 891,
       "posts_in_window": 0,
       "median_engagement_rate": null
     },
     {
       "handle": "etherealuniversityy",
-      "followers": 100430,
+      "followers": 100276,
       "media_count": 72,
       "posts_in_window": 0,
       "median_engagement_rate": null
     },
     {
       "handle": "theoccultarchive",
-      "followers": 1461,
+      "followers": 1455,
       "media_count": 36,
       "posts_in_window": 0,
       "median_engagement_rate": null
     },
     {
+      "handle": "mysticbarbarism",
+      "followers": 54621,
+      "media_count": 365,
+      "posts_in_window": 0,
+      "median_engagement_rate": null
+    },
+    {
+      "handle": "wiccantips",
+      "followers": 383731,
+      "media_count": 1076,
+      "posts_in_window": 0,
+      "median_engagement_rate": null
+    },
+    {
       "handle": "craftingwitch",
-      "followers": 378780,
+      "followers": 378439,
       "media_count": 77,
       "posts_in_window": 0,
       "median_engagement_rate": null
     },
     {
-      "handle": "thegingerwitchhaus",
-      "followers": 63207,
-      "media_count": 1024,
-      "posts_in_window": 0,
-      "median_engagement_rate": null
-    },
-    {
       "handle": "thewitchyaesthetic",
-      "followers": 16224,
+      "followers": 16201,
       "media_count": 625,
       "posts_in_window": 0,
       "median_engagement_rate": null
     },
     {
       "handle": "mythology_of_vikings",
-      "followers": 130116,
+      "followers": 130003,
       "media_count": 831,
       "posts_in_window": 0,
       "median_engagement_rate": null
     },
     {
       "handle": "occultus_official",
-      "followers": 18256,
+      "followers": 18239,
       "media_count": 1078,
       "posts_in_window": 0,
       "median_engagement_rate": null
     },
     {
       "handle": "oc.cult.co",
-      "followers": 27255,
+      "followers": 27226,
       "media_count": 959,
       "posts_in_window": 0,
       "median_engagement_rate": null
@@ -218,653 +218,267 @@
   "top_posts": [
     {
       "handle": "tarotntia1111",
-      "permalink": "https://www.instagram.com/reel/Ddw5qWyxXO0/",
-      "timestamp": "2026-09-26T20:42:02+0000",
+      "permalink": "https://www.instagram.com/reel/DfF309jxB7s/",
+      "timestamp": "2026-10-29T20:34:40+0000",
       "format": "REEL",
-      "likes": 21932,
+      "likes": 21995,
       "comments": 0,
       "likes_hidden": false,
-      "caption": "🖤 WHEN SHOULD YOU CLEANSE YOUR HOME?\n\nDoes your home sometimes feel heavy, stagnant, tense, or energetically uncomfortable?\n\nThat’s when a Home Energy Cleansing ritual can become part of your spiritual practice. ✨\n\n🌑 Consider cleansing your space:\n• After prolonged tension or arguments\n• After moving into a new home\n• After emotionally difficult periods\n• When your space feels stagnant or heavy\n• Whenever you want to reset the atmosphere\n\n🌿 MY HOME CLEANSING INGREDIENTS:\n\n🔥Charcoal Tablets \n\n🧂Salt • \n\n🌿Rosemary • \n\n🍂Mugwort • \n\n🍚Frankincense • \n\n🍚Myrrh • \n\n🌶️Cloves • \n\n🌱White Californian Sage • \n\n🌶️Dragon’s Blood Resin Powder •\n\n☕️Coffee powder• \n\n🍃Bay Leaves • \n\n🔥Camphor\n\n✨ HOW TO USE THEM\n\nCreate your cleansing blend according to your spiritual practice, use it safely with proper ventilation, and move intentionally through your space—especially corners, entrances and areas that feel stagnant.\n\nSet your intention for cleansing, protection, peace, positivity and energetic renewal.\n\nYour space holds your everyday energy.\nSometimes, a reset is exactly what you need. 🌑✨\n\n💾 SAVE this Reel for your next Home Energy Cleansing.\n\nHome Cleansing • Energy Cleansing • Space Cleansing • Aura Cleansing • Energy Protection • Spiritual Protection • Energy Work\n\nContact office number in the bio for Any queries .\nOm Namah Shivaay 🙏🙏🙏🙏🙏 \nLove N Light,\nTarot N Tia 1111\n\n#HomeCleansing #EnergyCleansing #EnergyWork #SpiritualProtection #auracleansing",
-      "engagement_rate": 0.09684,
-      "vs_account_median": 1.05
+      "caption": "🙏Use your Discernment, For spiritual guidance only.🙏\n\nThis is Part 2 of your relationship tarot reading👇🏻\nHERE I AM TELLING YOU HOW I ANALYSE THE TAROT CARDS.LET ME KNOW IF YOU LIKE IT.\n\nThe cards don't lie - your person does want the happiness and stability that commitment brings [The Sun + 10 of Pentacles].\nBut there's fear. Fear of the big life changes that come with it [Death card].\nSo right now? They're in strategy mode.Thinking through family responsibilities, money matters, and how to make it work without breaking what you already have [7 of Swords + 10 of Pentacles].\nThey're not ignoring you. They're figuring out how to give you what you deserve - without losing themselves in the process.\n[Strength]\nIf this hit home for you, Part 3 is coming soon.\nLove N Light,\nTarot N Tia 1111\nFor a personal reading → link in bio\n#TarotReading #RelationshipTarot #LoveTarot #Commitment|ssues #TarotForLove",
+      "engagement_rate": 0.09734,
+      "vs_account_median": 1.08
     },
     {
-      "handle": "darklydivinecrystals",
-      "permalink": "https://www.instagram.com/p/Dd4i0TtiVVo/",
-      "timestamp": "2026-09-29T19:46:50+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 8879,
-      "comments": 236,
+      "handle": "tarotntia1111",
+      "permalink": "https://www.instagram.com/reel/De9y-1-x1ax/",
+      "timestamp": "2026-10-26T17:17:01+0000",
+      "format": "REEL",
+      "likes": 21020,
+      "comments": 0,
       "likes_hidden": false,
-      "caption": "I found myself crying in my car today after reading the documents on this case. You can literally feel the collective pain of survivors and women as a whole. \n\nThese are just a few goddesses out of MANY that you can call on if you choose to do workings against the Cornell 7. Feel free to name more in the comments! \n\nI also wanted to donate to this issue, so a portion of all goddess candles will be given to organizations that provide relief for survivors. \n•\n•\n•\n#witchcraft #witchtips #divinefeminine #witchcommunity #deitywork",
-      "engagement_rate": 0.09318,
-      "vs_account_median": 7.45
+      "caption": "❤️ WHY ARE YOU WORRIED? | A GENERAL LOVE READING 🔮\n\nSometimes, the heart worries about things the mind cannot explain… but is there something you haven’t seen clearly yet? 👀✨\n\nThis general love reading has a message waiting to unfold, and what comes next might give you a different perspective on your situation. ❤️‍🔥\n\nBut wait… the most interesting part is yet to come. 🤫\n\nI’ve divided this reading into parts, so don’t stop here. Watch the next part to follow the message as it unfolds. You might find a perspective that resonates with your own love journey. 💌\n\n✨ Take what resonates and leave what doesn’t.\n\nFollow tarotntia1111 for more general love readings, tarot insights, and relationship guidance.\n\nLove N Light,\nTarot N Tia 1111\n#LoveReading #TarotReading #LoveTarot #GeneralReading #RelationshipGuidance TarotIndia HindiTarot LoveGuidance TarotMessages CollectiveReading",
+      "engagement_rate": 0.09302,
+      "vs_account_median": 1.03
     },
     {
       "handle": "tarotntia1111",
       "permalink": "https://www.instagram.com/reel/DeWpxWYsBr4/",
       "timestamp": "2026-10-11T12:27:25+0000",
       "format": "REEL",
-      "likes": 19926,
-      "comments": 6,
+      "likes": 19896,
+      "comments": 0,
       "likes_hidden": false,
       "caption": "No Caption Needed!\nUSE YOUR DISCERNMENT AND RESEARCH.\nThis Is God’s Grace and Everything is his 🙏🙏🙏🙏🙏🙏.\nOm Namah Shivaay 🙏🙏🙏🙏🙏 \nJai Maa Kamakhya 🌺🌺🌺🌺🌺\n\nLove N Light,\nTarot N Tia 1111",
-      "engagement_rate": 0.08801,
-      "vs_account_median": 0.95
-    },
-    {
-      "handle": "mysticbarbarism",
-      "permalink": "https://www.instagram.com/p/Dd8iy9Gm0VE/",
-      "timestamp": "2026-10-01T09:03:37+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 3709,
-      "comments": 10,
-      "likes_hidden": false,
-      "caption": "These (and others) are now available on my store",
-      "engagement_rate": 0.06808,
-      "vs_account_median": 1.0
+      "engagement_rate": 0.08805,
+      "vs_account_median": 0.97
     },
     {
       "handle": "thehoodwitch",
       "permalink": "https://www.instagram.com/p/Deznw89D0IS/",
       "timestamp": "2026-10-22T18:25:15+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 22666,
-      "comments": 184,
+      "likes": 23505,
+      "comments": 192,
       "likes_hidden": false,
       "caption": "🌹🦂🌹🦂SCORPIO SZN🌹🦂🌹🦂\n\nThe Sun enters Scorpio October 23 at 2:38 AM PDT / 5:38 AM EDT.\n\nThis is one of my favorite times of the year! Scorpio is my sister sign on the zodiac and dominates my big 3. TheHoodwitch.com and my first book, Blood Sex Magic, were both born under Scorpio. It’s a season that always brings me back to myself, reminding me of who I am at my core, my true essence.\n\nScorpio is deeply connected to sex, death, and magic, so you already know why I love this season. Pluto, its modern ruler, is named after the god of the underworld. There’s power in what’s hidden, including the parts of ourselves we’d rather keep private. Plutonian energy can bring up jealousy, obsession, and desires we don’t always know what to do with. Be honest about what’s coming up for you.\n\nWith Venus and Mercury retrograde this season, there’s a lot to unpack around love, money, and our relationships. Some of us are revisiting things we thought we were done with. There’s beauty in facing yourself without hiding from your shadow. \n\nStop dimming your light just to make others comfortable, and remember your own fckin’ power! \n\n✨ KEY DATES\n• Oct 23: Sun enters Scorpio. Examine what lives beneath your reactions.\n• Oct 23: Venus cazimi in Scorpio. Get honest about desire, love, and money.\n• Oct 24: Mercury retrograde in Scorpio. Revisit secrets and unfinished conversations.\n• Oct 25: Venus retrograde returns to Libra. Notice where keeping the peace has replaced reciprocity.\n• Oct 26: Taurus Full Moon, 12:12 AM EDT / Oct 25, 9:12 PM PDT. Listen to what your body needs to feel secure.\n• Nov 4: Mercury cazimi in Scorpio. Return to a difficult question with clearer eyes.\n• Nov 9: Scorpio New Moon. Commit to the changes you want to live.\n• Nov 13: Mercury turns direct in Scorpio; Venus turns direct in Libra. Let what you’ve learned inform your choices.\n\n🔮 This Sunday, October 25, join me for a Patreon members-only celebration of the Taurus Full Moon and TheHoodwitch.com’s birthday! I launched this space under a Taurus Full Moon. Celebrating with the community it grew into means so much to me.\n\nJoin us: patreon.com/thehoodwitch",
-      "engagement_rate": 0.04738,
-      "vs_account_median": 14.53
+      "engagement_rate": 0.04907,
+      "vs_account_median": 6.71
     },
     {
       "handle": "museum_of_witchcraft_and_magic",
       "permalink": "https://www.instagram.com/p/DePN5h7AIrV/",
       "timestamp": "2026-10-08T15:06:35+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 5129,
-      "comments": 59,
+      "likes": 5668,
+      "comments": 63,
       "likes_hidden": false,
       "caption": "We were delighted to welcome Reece Shearsmith to the museum earlier in the year. One of our artefacts is going on the road! Check out Reece’s tour dates to find out what it is….. https://www.fane.co.uk/reece-shearsmith reeceshearsmith_  His latest book, Things I Took From the Dark is out any day now",
-      "engagement_rate": 0.04293,
-      "vs_account_median": 5.55
+      "engagement_rate": 0.04707,
+      "vs_account_median": 7.72
     },
     {
       "handle": "darklydivinecrystals",
       "permalink": "https://www.instagram.com/p/DezfKckkZ-5/",
       "timestamp": "2026-10-22T17:10:06+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 3491,
-      "comments": 18,
+      "likes": 4424,
+      "comments": 22,
       "likes_hidden": false,
       "caption": "Crafting deity candles are just one kind of creation I can make for your spiritual practice. 🕯️\n\nI’m always down to make candles for your pets, your spells, your spirit team, a big life event, or even your original characters. \n\nIf you’re interested in creating a custom candle, feel free to fill out the custom candle form in our b!0 🖤 \n•\n•\n•\n#witchcraft #deitywork #spellcandles #candlemagic #paganwitch",
-      "engagement_rate": 0.03587,
-      "vs_account_median": 2.87
-    },
-    {
-      "handle": "museum_of_witchcraft_and_magic",
-      "permalink": "https://www.instagram.com/p/De16BMXAPa9/",
-      "timestamp": "2026-10-23T15:43:14+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 4101,
-      "comments": 59,
-      "likes_hidden": false,
-      "caption": "Just about safe to venture out! Normal service will hopefully be resumed tomorrow! #stormaustin",
-      "engagement_rate": 0.03442,
-      "vs_account_median": 4.45
-    },
-    {
-      "handle": "darklydivinecrystals",
-      "permalink": "https://www.instagram.com/p/DeANyWOiX20/",
-      "timestamp": "2026-10-02T19:16:59+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 3303,
-      "comments": 10,
-      "likes_hidden": false,
-      "caption": "We have 8 more Vampire Vanity Mystery Boxes left! 🪞🌹Your support for this glamour box has meant the world to me. \n\nIf you’re interested in diving into domination magic, magnetism, and allure, this box is for you ❤️‍🔥 \n•\n•\n•\n#witchcraft #glamourmagic #witchtips #darkfeminine #witchlife",
-      "engagement_rate": 0.03387,
-      "vs_account_median": 2.71
-    },
-    {
-      "handle": "museum_of_witchcraft_and_magic",
-      "permalink": "https://www.instagram.com/p/DdyZ3d3gLcb/",
-      "timestamp": "2026-09-27T10:33:11+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 3696,
-      "comments": 105,
-      "likes_hidden": false,
-      "caption": "So here’s a curious thing…. Someone brought this carved dodecahedron to show us this morning, in the hope of deciphering what it could have been made for. There seems to be the remains of gold paint within the figures. The figures themselves seem to be drawn from several different languages. There’s the Greek figure for Pi, for example, which is the most recognisable. The stone is volcanic in appearance and 10cm (4”) at its widest. Any ideas??? #dodecahedron #ancientalphabet",
-      "engagement_rate": 0.03145,
-      "vs_account_median": 4.06
+      "engagement_rate": 0.0453,
+      "vs_account_median": 6.53
     },
     {
       "handle": "thehoodwitch",
       "permalink": "https://www.instagram.com/p/De7SaGvj_MF/",
       "timestamp": "2026-10-25T17:52:34+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 14063,
-      "comments": 138,
+      "likes": 20673,
+      "comments": 180,
       "likes_hidden": false,
       "caption": "HAPPY FULL MOON IN TAURUS ♉︎🌕\n\nThere is absolutely nothing unspiritual about wanting a beautiful life, a safe home, and enough money to enjoy both. As a Taurus, I will always stand by that. 💅🏾 \n\nIn Greek mythology, Taurus is associated with the white bull Zeus became before carrying Europa across the sea to Crete. Beneath that beautiful appearance was the strength of a god. I think about that when people mistake this sign’s love of pleasure for weakness. Taurus knows the power of holding its ground.\n\nTonight’s Full Moon at 2°46′ Taurus opposes the Scorpio Sun and squares Pluto in Aquarius. This brings intensity to questions of ownership, attachment, and control. Look closely at what you’ve been tolerating to feel secure, and what that security is actually costing you.\n\nVenus, the ruler of Taurus, returns to Libra today while retrograde, and Mercury is now retrograde in Scorpio. We’re revisiting our relationships with money, desire, and reciprocity. Where are you pouring your resources? Are you being nourished by what you continue to feed?\n\nTaurus is fixed earth. Its magic grows through patience, devotion, and tending to what we want to last. Working money magic beneath a Taurus Full Moon is a working for longevity, with the intention of building prosperity that can sustain us for years.\n\nTonight at 5:30 PM PT / 8:30 PM ET, we’re making money bowls together in my Patreon Full Moon ritual. Bring your intentions for the life you’re building. You deserve to enjoy what you work so hard to sustain.\n\nJoin us at Patreon.com/thehoodwitch. The guidebook includes instructions, and the ritual will be recorded if you can’t attend live. 🕯️\n\nOf course you can always read  the Full Moon article at TheHoodwitch.com \n\n#Taurus #BigBull #Moneymagic #fullmoon",
-      "engagement_rate": 0.02944,
-      "vs_account_median": 9.03
-    },
-    {
-      "handle": "grimoiresontape",
-      "permalink": "https://www.instagram.com/p/Dd1nvTZoDiR/",
-      "timestamp": "2026-09-28T16:32:07+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 237,
-      "comments": 13,
-      "likes_hidden": false,
-      "caption": "SOLARY CUNNING CLASS - WEDS 30TH SEPT\n\nHappy Monday, folks. In but two short days – on Wednesday 30th September – I will be delivering my brand new class, Solary Cunning, exploring the working-books of early modern British cunning-folk and analysing their conjurations, charms, and operations for working with the Sun. \n\nFrom timing to materia, golden fairy-flowers to images of yourself in gold (and what to use instead when gold is too costly…!), and from identifying thieves through dream to stopping gossip – not to mention “conjuring the sun” itself by streamlined resort to older medieval arcana – this class will deliver a host of traditional practices and approaches to working with the diurnal luminary of empowerment and thwarting malfeasance. \n\nPutting this class together has already enriched my perspectives and understandings on both planetary magic and cunning-craft, and as such I can happily advise this class to anyone interested in the intersections of astrological magic and folk sorcery, as well as those looking to dive deeper into techniques and workings collected in the personal spellbooks of pre-modern service magicians. \n\nYou can read more about what we’ll be getting into and sign up to join us from the usual 🔗🌳 hub up top. The class will of course also be recorded, and sent out to all ticket holders a few days after the live session. \n\nI hope you can join me for this one!\n.\n.\n.\n#cunningcraft #workingbooks #planetarymagic #conjuration #spellcraft",
-      "engagement_rate": 0.026,
-      "vs_account_median": 2.58
+      "engagement_rate": 0.04318,
+      "vs_account_median": 5.91
     },
     {
       "handle": "museum_of_witchcraft_and_magic",
-      "permalink": "https://www.instagram.com/p/DebYJ9ng9K8/",
-      "timestamp": "2026-10-13T08:33:49+0000",
-      "format": "IMAGE",
-      "likes": 2853,
-      "comments": 15,
+      "permalink": "https://www.instagram.com/p/De16BMXAPa9/",
+      "timestamp": "2026-10-23T15:43:14+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 4450,
+      "comments": 60,
       "likes_hidden": false,
-      "caption": "We are delighted to share another of the incredibly important donations from Patricia Crowther and Ian Lilleyman. Gerald Gardner had a very distinctive style and here he depicts a young witch flying off the Sabbat. We suspect he could have based the witch on Patrica herself, with her distinctive long legs and blonde hair. Artworks by Gerald are incredibly rare and we will be delighted to be exhibiting this piece next year #patriciacrowther #geraldgardner",
-      "engagement_rate": 0.02373,
-      "vs_account_median": 3.07
+      "caption": "Just about safe to venture out! Normal service will hopefully be resumed tomorrow! #stormaustin",
+      "engagement_rate": 0.03704,
+      "vs_account_median": 6.07
+    },
+    {
+      "handle": "darklydivinecrystals",
+      "permalink": "https://www.instagram.com/p/DfALkD-EYgf/",
+      "timestamp": "2026-10-27T15:28:57+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 3011,
+      "comments": 28,
+      "likes_hidden": false,
+      "caption": "More witchy things that I stopped believing because they did not serve me or my practice at all. I feel like these have to be talked about more in the community. \n\nWhat have you stopped believing in as a witch? \n•\n•\n•\n#witchcraft #witchtips #witchcraft101 #witchcommunity #witchlife",
+      "engagement_rate": 0.03097,
+      "vs_account_median": 4.46
     },
     {
       "handle": "occult.afflecks",
       "permalink": "https://www.instagram.com/p/Dee-iG2DC4o/",
       "timestamp": "2026-10-14T18:00:09+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 613,
+      "likes": 665,
       "comments": 6,
       "likes_hidden": false,
       "caption": "Have we unlocked a memory for anyone with the first one?\n\nWhere did your spooky lore start?🤔🖤",
-      "engagement_rate": 0.02362,
-      "vs_account_median": 2.65
+      "engagement_rate": 0.02551,
+      "vs_account_median": 2.98
     },
     {
-      "handle": "occultgurukul",
-      "permalink": "https://www.instagram.com/reel/DebAj3_kyzJ/",
-      "timestamp": "2026-10-13T05:00:02+0000",
-      "format": "REEL",
-      "likes": 1544,
-      "comments": 26,
+      "handle": "museum_of_witchcraft_and_magic",
+      "permalink": "https://www.instagram.com/p/DebYJ9ng9K8/",
+      "timestamp": "2026-10-13T08:33:49+0000",
+      "format": "IMAGE",
+      "likes": 2923,
+      "comments": 15,
       "likes_hidden": false,
-      "caption": "बुध किस भाव में? उस उम्र में उठान 📈\n\nEk classic granth ka sutra: jinka Budh lagna mein hota hai, unke liye 27 saal ki umar khaas hoti hai.\nIsi se technique: 27 = 1st house, 28 = 2nd, 29 = 3rd… aise poori kundli mein ghumaiye.\nBudh 10th house mein hai? Toh 36 ki umar dekhiye. Phir ye cycle ghoomti rehti hai, jab tak hai jaan.\n\n💬 Aapka Budh kis house mein hai, aur aapki \"Budh wali umar\" kaun si nikli? Comment karo\n📌 Save karo, ye technique apni kundli pe try karna\n👉 Us dost ko bhejo jiski umar abhi wahi chal rahi hai\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Budh #Mercury #Kundli #Jyotish #KundliDecoded",
-      "engagement_rate": 0.02288,
-      "vs_account_median": 15.25
+      "caption": "We are delighted to share another of the incredibly important donations from Patricia Crowther and Ian Lilleyman. Gerald Gardner had a very distinctive style and here he depicts a young witch flying off the Sabbat. We suspect he could have based the witch on Patrica herself, with her distinctive long legs and blonde hair. Artworks by Gerald are incredibly rare and we will be delighted to be exhibiting this piece next year #patriciacrowther #geraldgardner",
+      "engagement_rate": 0.02413,
+      "vs_account_median": 3.96
     },
     {
-      "handle": "occultgurukul",
-      "permalink": "https://www.instagram.com/reel/DeZL1CRkwEx/",
-      "timestamp": "2026-10-12T12:00:03+0000",
+      "handle": "sacredknowledgetarot",
+      "permalink": "https://www.instagram.com/reel/De9lLuVOay8/",
+      "timestamp": "2026-10-26T15:16:11+0000",
       "format": "REEL",
-      "likes": 1267,
-      "comments": 42,
+      "likes": 259,
+      "comments": 45,
       "likes_hidden": false,
-      "caption": "गुरु + केतु: अर्जुन को कृष्ण मिले 🏹\n\nKetu ke paas god-gifted talent hota hai, par use kahaan lagana hai, ye samajh nahi aata, jab tak Jupiter beech mein na aaye.\nJaise Mahabharat mein Arjun ko Shri Krishna mile. Guru-Ketu mein Ketu ko pehli baar lagta hai: mujhse zyaada samajhdaar koi aa gaya hai.\nKetu 9th house mein ho, Dhanu (Sagittarius) mein ho, ya Guru ke saath ho, toh insaan in sab cheezon se pare, satisfied ho jaata hai.\n\n💬 Aapka Ketu 9th mein hai, Dhanu mein hai, ya Guru ke saath? Comment karo\n👉 Us dost ko bhejo jo aapka \"Krishna\" hai\n📌 Save karo\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Guru #Ketu #Kundli #Jyotish #KundliDecoded",
-      "engagement_rate": 0.01908,
-      "vs_account_median": 12.72
+      "caption": "Okay, this was WEIRD! \n\nI was filming a plane flying right above me when I noticed something strange… it looked like it was moving SIDEWAYS?! \n\nI kept watching because my brain couldn't quite make sense of what I was seeing.\n\nWatch towards the end of the video. Does anyone else see it, or are my eyes playing tricks on me? 🤔\n\nRhea ♥️ \n\n#strangesky #lookatthesky #weirdmoments #skywatching #caughtoncamera lookup unusualsight planespotting mysteryinthesky whatdidijustsee",
+      "engagement_rate": 0.02006,
+      "vs_account_median": 1.97
     },
     {
       "handle": "darklydivinecrystals",
       "permalink": "https://www.instagram.com/p/DeFeq_7iRLT/",
       "timestamp": "2026-10-04T20:20:44+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 1830,
+      "likes": 1838,
       "comments": 31,
       "likes_hidden": false,
       "caption": "Two worlds are colliding! chaoticrebirth and I have created a service together for anyone who is interested in the Norse God of Chaos, Loki! 🕷️🕸️ \n\nYou will be receiving a channeled tarot reading from Katie, an incredible psychic medium and Loki devotee. These readings are perfect for anyone who actively works with Loki, wants to work with Loki, or who isn’t afraid to get some tough love and guidance on their spiritual path. \n\nThis isn’t about what you WANT to hear, it’s about what you need to hear. \n\nEvery reading will come with a limited edition Loki candle designed by Katie and I! Only 15 spots will be available for this service. \n\nAre you ready to hear what Loki has to say? 🐍 \n•\n•\n•\n#witchcraft #deitywork #deityworship #witchcandles #witchtips",
-      "engagement_rate": 0.01902,
-      "vs_account_median": 1.52
+      "engagement_rate": 0.01904,
+      "vs_account_median": 2.74
+    },
+    {
+      "handle": "thehoodwitch",
+      "permalink": "https://www.instagram.com/p/De5DD_hklTc/",
+      "timestamp": "2026-10-24T20:59:59+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 8926,
+      "comments": 107,
+      "likes_hidden": false,
+      "caption": "That Venus cazimi closing a 100-year cycle was no joke. We’re approaching the Taurus Full Moon, and Mercury has begun its retrograde.\n\nSeeing Hitler’s Eagle’s Nest engulfed in flames feels like a powerful symbol of this cycle closing. Fascism and patriarchy will fight to preserve their power, but I see their reckoning written in the stars.\n\nThese systems have survived through generations of violence. They will not rule forever.\n\nMay we continue to bless and defend our Earth. \n\nMay matriarchy rise, and may those who come after us inherit a liberated world. 🦂⚔️🔥🩸🌹\n\nSlide 1: kot___ko \nSlide 2: Oya by Mariana Seixas \nSlide 3: Kali Ma \nSlide 4: Shekmet\nSlide 5: Durga\nSlide 6: Oracle of Delphi\nSlide 7: Valkyrie \nSlide 8: Medusa \nSlide 9: Diana The Huntress (Artemis)\nSlide 10: Lilith\nSlide 11: Hecate \nSlide 12: Venus of Willendorf\nSlide 13: Mother Mary \nSlide 14: Eagle’s Nest on Fire \n\n 🕯️ OFFERING: If you love and appreciate my work, leave an offering of support : \nVenmo thehoodwitch \nCashApp $BigwitchEnergy \nPayPal: Orders@thehoodwitch.com",
+      "engagement_rate": 0.0187,
+      "vs_account_median": 2.56
     },
     {
       "handle": "theionpublishing",
       "permalink": "https://www.instagram.com/p/DeR269RitI-/",
       "timestamp": "2026-10-09T15:43:31+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 146,
+      "likes": 147,
       "comments": 1,
       "likes_hidden": false,
       "caption": "The Society of Diana is taking flight!\n\nCaroline Tully’s much-anticipated new book has arrived at Theion Publishing, and we’ll be processing all pre-orders over the weekend!\n\nFor this edition, we decided to go with a dust jacket, and now that we’ve seen the finished book, we’re convinced it was the perfect choice.\n\nWhat a gorgeous volume! We couldn’t be happier with how it has turned out!\n\nGet your own copy now at theionpublishing.com \n\nDust cover art: detail from Sean Jefferson’s \"The Necromancer\"\n\n#theionpublishing #witchcraft #occultbooks #witchbooks #occultpublishing",
-      "engagement_rate": 0.01808,
-      "vs_account_median": 1.19
+      "engagement_rate": 0.01817,
+      "vs_account_median": 1.07
     },
     {
-      "handle": "thehoodwitch",
-      "permalink": "https://www.instagram.com/p/De5DD_hklTc/",
-      "timestamp": "2026-10-24T20:59:59+0000",
+      "handle": "theesotericwitch",
+      "permalink": "https://www.instagram.com/p/DfFS1G0FOqM/",
+      "timestamp": "2026-10-29T15:08:47+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 8010,
-      "comments": 95,
+      "likes": 186,
+      "comments": 30,
       "likes_hidden": false,
-      "caption": "That Venus cazimi closing a 100-year cycle was no joke. We’re approaching the Taurus Full Moon, and Mercury has begun its retrograde.\n\nSeeing Hitler’s Eagle’s Nest engulfed in flames feels like a powerful symbol of this cycle closing. Fascism and patriarchy will fight to preserve their power, but I see their reckoning written in the stars.\n\nThese systems have survived through generations of violence. They will not rule forever.\n\nMay we continue to bless and defend our Earth. \n\nMay matriarchy rise, and may those who come after us inherit a liberated world. 🦂⚔️🔥🩸🌹\n\nSlide 1: kot___ko \nSlide 2: Oya by Mariana Seixas \nSlide 3: Kali Ma \nSlide 4: Shekmet\nSlide 5: Durga\nSlide 6: Oracle of Delphi\nSlide 7: Valkyrie \nSlide 8: Medusa \nSlide 9: Diana The Huntress (Artemis)\nSlide 10: Lilith\nSlide 11: Hecate \nSlide 12: Venus of Willendorf\nSlide 13: Mother Mary \nSlide 14: Eagle’s Nest on Fire \n\n 🕯️ OFFERING: If you love and appreciate my work, leave an offering of support : \nVenmo thehoodwitch \nCashApp $BigwitchEnergy \nPayPal: Orders@thehoodwitch.com",
-      "engagement_rate": 0.01681,
-      "vs_account_median": 5.16
-    },
-    {
-      "handle": "witchcraftspellsmagick",
-      "permalink": "https://www.instagram.com/p/Dd5NtiIjZHq/",
-      "timestamp": "2026-09-30T02:01:43+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 653,
-      "comments": 1,
-      "likes_hidden": false,
-      "caption": "✦ Do you know what phase the moon is in tonight?\n\nOver time, following the moon becomes less about remembering every date and more about noticing the cycles: the first sliver of light, the bright nights around the full moon, and the gradual darkening that follows.\n\nThe Practicing Witch Diary 2027 includes a moon calendar and a guide to the lunar phases, so you can find your place in the cycle and decide how you want to work with it. > Swipe to look inside.\n\nNorthern and Southern Hemisphere editions are available at witchcraftspellsmagick.com (link in bio). \n\nBlessed Be,\nBec Black 🖤\n\n#MoonMagick #LunarPhases #ThePracticingWitch #WitchDiary2027 #WitchcraftSpellsMagick",
-      "engagement_rate": 0.01642,
-      "vs_account_median": 3.78
-    },
-    {
-      "handle": "occult.afflecks",
-      "permalink": "https://www.instagram.com/p/Dd8iatSD0ik/",
-      "timestamp": "2026-10-01T09:00:18+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 423,
-      "comments": 0,
-      "likes_hidden": false,
-      "caption": "HAPPY OCTOBER GHOULS!\n\nSwipe to see some of our spooky inspired pins..",
-      "engagement_rate": 0.01614,
-      "vs_account_median": 1.81
-    },
-    {
-      "handle": "museumofmagicfortunewitchcraft",
-      "permalink": "https://www.instagram.com/p/DeCowNfCKtD/",
-      "timestamp": "2026-10-03T17:51:06+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 327,
-      "comments": 9,
-      "likes_hidden": false,
-      "caption": "We at the museum would like to announce that after long consideration, we are changing our name to better reflect the museum and its collections. The museum will now be known as The Edinburgh Museum of Magic & Witchcraft.\n\nThe reason for the name change is for two reasons. One, many companies that provide services for business have regulations against “fortune-telling” and the beginning of this year our previous terminal software company cancelled our account with them because their AI-generated service picked up on the word Fortune-telling in the name of the museum. We don’t really want to see this happening again with the terminal software we are currently using now and the only way to combat this is to change the name of the museum.\n\nSecondly, the team at the museum collectively came together and felt that although the term “fortune-telling” is acceptable in academia, its negative connotations does not reflect the items in the museum associated with divination and similar spiritual practices. There seems to be a bit of a witch hunt resurfacing regarding divination practices provided as a service, and governmental officials and companies seem to be following suit in this. I have seen esoteric shops being targeted in countries where old laws against “fortune-telling” and we want to stand in solidarity with other business that provide divination services and bring an awareness that these are a spiritual practice NOT Fortune-telling, and have been provided as a service to the community for hundreds of years. \n\nWe have also updated our logo and now have tote bags you can purchase in our gift shop. Soon will be available to purchase on our website 😊 \n\n#witchcraftmuseum #witchmuseum #magicmuseum #edinburghwitches #Edinburghpagans",
-      "engagement_rate": 0.01605,
-      "vs_account_median": 3.39
-    },
-    {
-      "handle": "amsterdamhermetica",
-      "permalink": "https://www.instagram.com/p/Dd9t2UKsdO7/",
-      "timestamp": "2026-10-01T20:01:30+0000",
-      "format": "IMAGE",
-      "likes": 385,
-      "comments": 2,
-      "likes_hidden": false,
-      "caption": "🌟UVA ESOTERIC WINTER SCHOOL🌟\n\nApplications for this ONLINE winter school programme is OPEN! 🔮\n\nForbidden Knowledge: Introduction to Esotericism\n\nOrganised by Dr. J. Christian Greer and Corey Andrews\n\nangelheadedhipstersarchive \npraguegnosis \n\n🗓️Monday 18 January - Friday 29 January 2027\n🌐ONLINE\n\nApplication deadline: \nEarly bird deadline - 1 November 2026\nRegular deadline - 13 December 2026\n\nABOUT THE COURSE:\nThe goal of this course is to offer an introductory overview of the study of esotericism as a discipline both historically and in the present. In this two-week online winter course, we will investigate the key thematic aspects of Western esotericism, as they have manifested themselves historically within currents such as Hermeticism, gnosticism, astrology, alchemy, magic, to name but a few. This programme will feature various guest sessions from prominent figures in the study of esotericism.\n\nFind the link in our bio for all info. 🪄\n\n#amsterdamhermetica #winterschool2027 #esotericism #forbiddenknowledge #onlinecourse",
-      "engagement_rate": 0.01523,
-      "vs_account_median": 7.39
-    },
-    {
-      "handle": "theionpublishing",
-      "permalink": "https://www.instagram.com/p/Dehgpz2jMhm/",
-      "timestamp": "2026-10-15T17:36:47+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 119,
-      "comments": 4,
-      "likes_hidden": false,
-      "caption": "Theion Publishing is thrilled to open PRE-ORDERS for PETER MARK ADAMS’ FROM MITHRA TO MITHRAS: THE BIRTH OF A ROMAN MYSTERY CULT \n\nThe second and final volume of his major study THE MYSTERIES OF MITHRAS turns eastward in search of the Roman cult’s ritual ancestry.\n\nAt the centre stand the Magi: the hereditary Median priesthood whose esoteric Mazdean praxis united Mithra, sacrifice, sacred fire, the ritual banquet, divine presence and the entheogenic plant spirit haoma. Drawing upon Commagene, Mount Nemrut, the philoi or “friends of the king”, Anatolian cave sanctuaries and ancient testimony, Adams reconstructs a possible pathway by which this ritual complex entered restricted courtly circles before reaching Rome — and there underwent the transformation from Mithra to Mithras.\n\nFROM MITHRA TO MITHRAS is released in two limited editions.\n\nPRE-ORDER NOW at theionpublishing.com \n\n#theionpublishing #occultbooks #mysterycults #mithras #mysteriesofmithras",
-      "engagement_rate": 0.01513,
-      "vs_account_median": 1.0
-    },
-    {
-      "handle": "occult.afflecks",
-      "permalink": "https://www.instagram.com/p/DezDuNDjZiQ/",
-      "timestamp": "2026-10-22T13:10:18+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 374,
-      "comments": 4,
-      "likes_hidden": false,
-      "caption": "WHAT AN EVENING alternativefashionweekmcr 🖤\n\nThankyou for choosing us to host your pre-show and the catwalk was nothing short of special. Seeing the rest of the afflecks_manchester family’s looks walk the runway was AMAZING.\n\nPlus food from tfrcafe and birdandblendtea cocktails are always a win, right?🥀🖤",
-      "engagement_rate": 0.01442,
-      "vs_account_median": 1.61
-    },
-    {
-      "handle": "darklydivinecrystals",
-      "permalink": "https://www.instagram.com/p/Dd646TGCSx2/",
-      "timestamp": "2026-09-30T17:38:22+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 1363,
-      "comments": 5,
-      "likes_hidden": false,
-      "caption": "A reminder you probably need to hear right now. ❤️‍🔥\n\nVampire Vanity Samhain Mystery boxes are launching tomorrow, 10/1 at 3 PM EST! \n•\n•\n•\n#witchcraft #witchtips #witchlife #witchcraftspells #darkfeminineenergy",
-      "engagement_rate": 0.01398,
-      "vs_account_median": 1.12
-    },
-    {
-      "handle": "darkstarmagick",
-      "permalink": "https://www.instagram.com/p/DeU7nkZEl0m/",
-      "timestamp": "2026-10-10T20:22:17+0000",
-      "format": "IMAGE",
-      "likes": 171,
-      "comments": 11,
-      "likes_hidden": false,
-      "caption": "Does anyone know who this individual is? Our physical store location has once again been attacked, just before the lease ended. We will be filing a police report, but any information about this person's identity will be a huge help!",
-      "engagement_rate": 0.01344,
-      "vs_account_median": 3.95
+      "caption": "It's a match... with Stolas. 🔥 Swipe through the profile.\n\nBe honest: are you Stolas's type? 👇\n\n━━━━━━━━━━━━━━━\n📜 The lore behind the jokes:\nStolas is the 36th spirit of the Ars Goetia, a prince who appears as a mighty raven, then in human form. Known for astronomy and the virtues of herbs and precious stones.\n━━━━━━━━━━━━━━━\n\nWhich demon should I set you up with next?\n\n#goetia #arsgoetia #stolas #demondating #theesotericwitch #witchyhumor #demonology #occulthumor #lesserkeyofsolomon #witchesofinstagram",
+      "engagement_rate": 0.01716,
+      "vs_account_median": 7.21
     },
     {
       "handle": "sacredknowledgetarot",
       "permalink": "https://www.instagram.com/p/De52noDp-SO/",
       "timestamp": "2026-10-25T04:30:34+0000",
       "format": "IMAGE",
-      "likes": 193,
-      "comments": 8,
+      "likes": 237,
+      "comments": 13,
       "likes_hidden": false,
       "caption": "We caught therussiancomic tonight and such a fun night watching our friend Byron Bertram as the Russian comedian! 😂🇷🇺 If you ever get a chance to see his show, GO! He is absolutely hilarious! We laughed so much! 🤣👏❤️\n\nRhea ♥️\n\n#byronbertram #comedians #datenight❤️ #funnycomedian",
-      "engagement_rate": 0.01328,
-      "vs_account_median": 1.29
-    },
-    {
-      "handle": "thehoodwitch",
-      "permalink": "https://www.instagram.com/p/Dec2k6Ty9UY/",
-      "timestamp": "2026-10-13T22:13:29+0000",
-      "format": "IMAGE",
-      "likes": 5588,
-      "comments": 15,
-      "likes_hidden": false,
-      "caption": "Pay attention to what the past few months have taught you about people, power, and your own judgment. This week brings opportunities to act on that knowledge and make decisions you’ve been putting off.\n\nOn October 15, Pluto turns direct in Aquarius, ending the retrograde that began on May 6. What we’ve learned about control, community, and where we give our power away begins to inform how we move forward.\n\nAlso on October 15, the Sun in Libra sextiles Jupiter in Leo, bringing encouragement to our relationships, creative work, and professional connections. Follow up on a promising conversation, share your ideas, and put some effort behind the opportunities you want to develop.\n\nOn October 16, Mars in Leo trines Saturn retrograde in Aries, supporting discipline and follow-through. Fear of rejection may surface when something matters to us. Give yourself enough preparation to take the next step, and be honest about whether the goal still deserves your energy.\n\n🪐Read your weekly horoscopes for your Sun and rising signs at TheHoodwitch.com. Subscribe to Patreon.com/thehoodwitch for your extended horoscopes, with deeper astrological insights and weekly rituals for every zodiac sign.\n\n#Astrology #weeklyHoroscopes #astrología #witchtips",
-      "engagement_rate": 0.01162,
-      "vs_account_median": 3.56
-    },
-    {
-      "handle": "occult.afflecks",
-      "permalink": "https://www.instagram.com/p/DehqOCsCLkj/",
-      "timestamp": "2026-10-15T19:00:23+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 301,
-      "comments": 0,
-      "likes_hidden": false,
-      "caption": "What are you up to this October?🦇\n\nWhy not head down to our Afflecks Manchester shop and pose with the devil wings outside? Bonus points if you're dressed up in costume!🎃\n\nRemember, if you take a picture and tag us on your feed you could be in with a chance of winning £20 to spend on our website!!",
-      "engagement_rate": 0.01148,
-      "vs_account_median": 1.29
-    },
-    {
-      "handle": "amsterdamhermetica",
-      "permalink": "https://www.instagram.com/p/Der_WnhtmB1/",
-      "timestamp": "2026-10-19T19:19:25+0000",
-      "format": "IMAGE",
-      "likes": 279,
-      "comments": 3,
-      "likes_hidden": false,
-      "caption": "🌟UVA ESOTERIC WINTER SCHOOL🌟\n\nApplications for this ONLINE winter school programme is OPEN! 🔮\n\nForbidden Knowledge: Introduction to Esotericism\n\nOrganised by Dr. J. Christian Greer and Corey Andrews\n\nangelheadedhipstersarchive \npraguegnosis \n\n🗓️Monday 18 January - Friday 29 January 2027\n🌐ONLINE\n\nApplication deadline: \nEarly bird deadline - 1 November 2026\nRegular deadline - 13 December 2026\n\nABOUT THE COURSE:\nThe goal of this course is to offer an introductory overview of the study of esotericism as a discipline both historically and in the present. In this two-week online winter course, we will investigate the key thematic aspects of Western esotericism, as they have manifested themselves historically within currents such as Hermeticism, gnosticism, astrology, alchemy, magic, to name but a few. This programme will feature various guest sessions from prominent figures in the study of esotericism.\n\nhttps://www.uva.nl/shared-content/programmas/en/winter-courses/introduction-to-western-esotericism/introduction-to-western-esotericism.html?origin=VW%2FXiBtNQwSjxR%2BVJO%2B5dw#Academic-directors\n(Link can be found also in our bio 🪄)\n\n#amsterdamhermetica #winterschool2027 #esotericism #forbiddenknowledge",
-      "engagement_rate": 0.0111,
-      "vs_account_median": 5.39
-    },
-    {
-      "handle": "darklydivinecrystals",
-      "permalink": "https://www.instagram.com/p/Dd9nGTLiaeE/",
-      "timestamp": "2026-10-01T19:00:27+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 1072,
-      "comments": 8,
-      "likes_hidden": false,
-      "caption": "Our Vampire Vanity Samhain mystery boxes are here! If you’ve been feeling pulled toward wanting to explore domination and magnetism magic, this box has hand crafted tools for your practice 🌹🪞🩸💋\n•\n•\n•\n#witchcraft #glamourmagic #darkfeminine #witchlife #witchcommunity",
-      "engagement_rate": 0.01104,
-      "vs_account_median": 0.88
+      "engagement_rate": 0.0165,
+      "vs_account_median": 1.62
     },
     {
       "handle": "sacredknowledgetarot",
       "permalink": "https://www.instagram.com/reel/De8dxrehVGy/",
       "timestamp": "2026-10-26T04:55:06+0000",
       "format": "REEL",
-      "likes": 153,
-      "comments": 7,
+      "likes": 228,
+      "comments": 13,
       "likes_hidden": false,
       "caption": "Well, that escalated quickly! 😂❄️\n\nLast night, we headed through the mountains to see our friend perform at a comedy club. The dirt road was perfectly clear, and then suddenly... heavy snow, slippery roads, and complete darkness!\n\nWe slowed right down and drove carefully, and as I watched the weather change, it clicked... Mercury and Venus retrograde energy! \n\nIt reminded me how quickly life can change. One minute the path is clear, and the next we're facing unexpected challenges.\n\nSometimes all we can do is slow down, stay calm, and trust ourselves to navigate what's ahead.\n\nJust because the road gets rough doesn't mean you're on the wrong path. \n\nWe made it safely, and the comedy show was worth it!\n\nAnyone else feeling this retrograde energy lately? \n\nLove, Rhea ♥️⛈️\n\n#wildweather #mountainlife #dirtroadlife #mercuryretrograde #venusretrograde",
-      "engagement_rate": 0.01057,
-      "vs_account_median": 1.03
-    },
-    {
-      "handle": "sacredknowledgetarot",
-      "permalink": "https://www.instagram.com/reel/DefkDjlv28P/",
-      "timestamp": "2026-10-14T23:29:53+0000",
-      "format": "REEL",
-      "likes": 147,
-      "comments": 9,
-      "likes_hidden": false,
-      "caption": "breathe it all in...\n\nRhea ♥️ \n\n#MountainLife #peacefulmoments #gratitudeattitude #natureconnections #natureheals",
-      "engagement_rate": 0.01031,
-      "vs_account_median": 1.0
-    },
-    {
-      "handle": "thehoodwitch",
-      "permalink": "https://www.instagram.com/p/DeNUT8lS8n-/",
-      "timestamp": "2026-10-07T21:46:03+0000",
-      "format": "IMAGE",
-      "likes": 4357,
-      "comments": 589,
-      "likes_hidden": false,
-      "caption": "Would you rather visit your ancestors in the past or meet your descendants in the future? \n\nOctober and November are months of ancestral veneration. We tend our altars, prepare offerings, and spend time honoring our dead. This year, Venus retrograde in Scorpio brings questions of love and inheritance into that practice. Some of the beliefs we’re reconsidering have been in our families longer than anyone can remember.\n\nWith Mercury also in Scorpio, I’m interested in what we could learn if we could hear the stories firsthand. Family history changes depending on who is telling it. There are things people take to the grave that everyone else spends a lifetime trying to understand.\n\nIf you could sit down with an ancestor, what would you actually ask? Would you want to know how they practiced their magic? Who taught them? Would you tell them what happened to their children or homes? \n\nI wonder what they would make of us. Would they recognize something they had prayed for, or have some serious questions about what the hell we’re doing. \n\nMeeting our descendants would put us on the other side of that conversation. We would be answering questions about our beliefs, our choices, and things we never imagined anyone would remember.\n\nThat feels like a question worth sitting with this ancestor season. Would you go back, or would you go forward? 🤔🤔\n\n#Ancestors #spiritSeason #witchcraft  #thehoodwitch",
-      "engagement_rate": 0.01026,
-      "vs_account_median": 3.15
-    },
-    {
-      "handle": "sacredknowledgetarot",
-      "permalink": "https://www.instagram.com/reel/DefiMb7Pzyc/",
-      "timestamp": "2026-10-14T23:13:22+0000",
-      "format": "REEL",
-      "likes": 148,
-      "comments": 7,
-      "likes_hidden": false,
-      "caption": "On October 10th, the 10/10 Portal appeared right above me in the sky! I looked up and saw this incredible opening in the clouds, and I knew I had to capture it. The timing was unreal! ✨☁️\n\nRhea ♥️ \n\n#1010portal #portals #SkyMagic",
-      "engagement_rate": 0.01024,
-      "vs_account_median": 0.99
+      "engagement_rate": 0.01591,
+      "vs_account_median": 1.57
     },
     {
       "handle": "theionpublishing",
-      "permalink": "https://www.instagram.com/p/Ddy3u5kKQ2z/",
-      "timestamp": "2026-09-27T14:54:17+0000",
-      "format": "IMAGE",
-      "likes": 82,
-      "comments": 1,
-      "likes_hidden": false,
-      "caption": "A very thoughtful review of The Black Pilgrimage by David Beth over at Paralibrum -- written by a reader clearly inspired by the book. Link in comments. Read it and if you don't own a copy yet, get it from Theion Publishing.\n\n#theionpublishing #davidbeth\n#blackpilgrimage #occultbooks\n#bookreviews\n\nfoto (c) paralibrum 2026",
-      "engagement_rate": 0.01021,
-      "vs_account_median": 0.67
-    },
-    {
-      "handle": "grimoiresontape",
-      "permalink": "https://www.instagram.com/p/DezgA7GCSjG/",
-      "timestamp": "2026-10-22T17:17:32+0000",
+      "permalink": "https://www.instagram.com/p/Dehgpz2jMhm/",
+      "timestamp": "2026-10-15T17:36:47+0000",
       "format": "CAROUSEL_ALBUM",
-      "likes": 97,
-      "comments": 0,
+      "likes": 124,
+      "comments": 4,
       "likes_hidden": false,
-      "caption": "GEOMANCY & THE MAGIC OF PLACE CLASS \n\nHappy Jupiterday folks. This coming Monday 26th October I will be delivering my new class, Worlding Points: Geomancy & the Magic of Place, in which we’ll be exploring how geomantic divination and spellcraft engages with the mysteries and magics of place, paying particular attention to planetary locations and the practical dirt sorceries we can do from there.\n\nGeomancy is sometimes called the terrestrial sister art of astrology, for geomancers map the worldly events and influences of the Earth and Place just as our astrologer colleagues chart the astral virtues and effects of the Heavens and Time. \n\nAs such, geomancy holds out a range of operative engagements with the land and its locales that can offer us incredibly useful and grounded methods and means to cohere and direct a range of influences, energies, and spirits: from surveying the specific sorts of places in which each of the sixteen geomantic figures are “at home” and thus may be indicated in a reading, to suggesting a range of beneficial modalities of spiritwork and spellcraft with those figural entities and influences. \n\nIf you’ve ever wondered where you can bury a spell to best deploy and magnify its effects, or how you should dress or otherwise conduct yourself when gathering dirts for your charms and operations, or what offerings to leave where for planetary workings, this class is most definitely for you.\n\nYou can read more and sign up via the usual 🔗🌳 hub up top in the 🅱️IO ⬆️. This class will be going down live and online at 7pm (ET) this coming Monday 26th October. The class will be recorded and sent out to all ticketholders a few days after the live session. \n\nI hope you can join me for this one!\n.\n.\n.\n#geomancy #planetarymagic #dirtsorcery #spiritwork #spellcraft",
-      "engagement_rate": 0.01009,
-      "vs_account_median": 1.0
+      "caption": "Theion Publishing is thrilled to open PRE-ORDERS for PETER MARK ADAMS’ FROM MITHRA TO MITHRAS: THE BIRTH OF A ROMAN MYSTERY CULT \n\nThe second and final volume of his major study THE MYSTERIES OF MITHRAS turns eastward in search of the Roman cult’s ritual ancestry.\n\nAt the centre stand the Magi: the hereditary Median priesthood whose esoteric Mazdean praxis united Mithra, sacrifice, sacred fire, the ritual banquet, divine presence and the entheogenic plant spirit haoma. Drawing upon Commagene, Mount Nemrut, the philoi or “friends of the king”, Anatolian cave sanctuaries and ancient testimony, Adams reconstructs a possible pathway by which this ritual complex entered restricted courtly circles before reaching Rome — and there underwent the transformation from Mithra to Mithras.\n\nFROM MITHRA TO MITHRAS is released in two limited editions.\n\nPRE-ORDER NOW at theionpublishing.com \n\n#theionpublishing #occultbooks #mysterycults #mithras #mysteriesofmithras",
+      "engagement_rate": 0.01572,
+      "vs_account_median": 0.93
     },
     {
-      "handle": "occultgurukul",
-      "permalink": "https://www.instagram.com/reel/DedlUHqE7lA/",
-      "timestamp": "2026-10-14T05:00:03+0000",
-      "format": "REEL",
-      "likes": 686,
-      "comments": 6,
+      "handle": "museumofmagicfortunewitchcraft",
+      "permalink": "https://www.instagram.com/p/DeCowNfCKtD/",
+      "timestamp": "2026-10-03T17:51:06+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 332,
+      "comments": 9,
       "likes_hidden": false,
-      "caption": "गाली नहीं मिल रही? तो प्रॉब्लम है 😄\n\nJab tak log aapko gaali nahi de rahe, aapka mazaak nahi uda rahe, iska ek hi matlab hai: logon ko aapse farak nahi padta.\nItni badi duniya mein koi aapko chunta hai, \"aaj main isko sunaaunga\". Aapke pados mein jo rehta hai, use koi gaali nahi de raha.\n\n💬 Aapko sabse zyaada kis baat pe sunaya jaata hai? Comment karo\n👉 Us dost ko bhejo jisse log jalte hain\n📌 Save karo, jab koi bura bole tab dekhna\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Mindset #Motivation #AstroArunPandit #Jyotish #KundliDecoded",
-      "engagement_rate": 0.01009,
-      "vs_account_median": 6.73
+      "caption": "We at the museum would like to announce that after long consideration, we are changing our name to better reflect the museum and its collections. The museum will now be known as The Edinburgh Museum of Magic & Witchcraft.\n\nThe reason for the name change is for two reasons. One, many companies that provide services for business have regulations against “fortune-telling” and the beginning of this year our previous terminal software company cancelled our account with them because their AI-generated service picked up on the word Fortune-telling in the name of the museum. We don’t really want to see this happening again with the terminal software we are currently using now and the only way to combat this is to change the name of the museum.\n\nSecondly, the team at the museum collectively came together and felt that although the term “fortune-telling” is acceptable in academia, its negative connotations does not reflect the items in the museum associated with divination and similar spiritual practices. There seems to be a bit of a witch hunt resurfacing regarding divination practices provided as a service, and governmental officials and companies seem to be following suit in this. I have seen esoteric shops being targeted in countries where old laws against “fortune-telling” and we want to stand in solidarity with other business that provide divination services and bring an awareness that these are a spiritual practice NOT Fortune-telling, and have been provided as a service to the community for hundreds of years. \n\nWe have also updated our logo and now have tote bags you can purchase in our gift shop. Soon will be available to purchase on our website 😊 \n\n#witchcraftmuseum #witchmuseum #magicmuseum #edinburghwitches #Edinburghpagans",
+      "engagement_rate": 0.01571,
+      "vs_account_median": 3.22
     },
     {
-      "handle": "grimoiresontape",
-      "permalink": "https://www.instagram.com/p/DeUpLdQpf8l/",
-      "timestamp": "2026-10-10T17:45:13+0000",
-      "format": "IMAGE",
-      "likes": 89,
-      "comments": 3,
+      "handle": "occult.afflecks",
+      "permalink": "https://www.instagram.com/p/DezDuNDjZiQ/",
+      "timestamp": "2026-10-22T13:10:18+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 396,
+      "comments": 4,
       "likes_hidden": false,
-      "caption": "GHOSTLY GRIMOIRES CLASS COMING SOON\n\nHello folks, merry Saturnsday. In honour of the reason for the spooky October season, I'm delighted to announce I'll be teaching my new class, Spectral Grimoire Delivery: When Ghosts Bring Books of Magic, live and online near the end of the month. \n\nIn this class we'll be exploring pre-modern magical operations which experiment with where the conjuration of spirits to deliver grimoiric texts and techniques meets the folk necromancy of working with tutelary shades. \n\nAlong with offering a grounding in the practices of early modern grimoiric magic and an awareness of pre-modern British ghostlore and ghost history, this class’s investigation and analysis will enrich our understandings of when, how, and why ghosts have been deliberately conjured, as well as a deeper appreciation for the techniques of conjuring spirits to deliver magical knowledge and spiritual power.\n\nYou can find out more and sign up via the usual 🔗🌳 hub up top ⬆️. Feel free to reach out with any questions you might have about this material. I hope you can join me. Cheers!\n.\n.\n.\n#grimoires #ghosts #folknecromancy #spiritwork",
-      "engagement_rate": 0.00957,
-      "vs_account_median": 0.95
-    }
-  ],
-  "breakout_posts": [
-    {
-      "handle": "occultgurukul",
-      "permalink": "https://www.instagram.com/reel/DebAj3_kyzJ/",
-      "timestamp": "2026-10-13T05:00:02+0000",
-      "format": "REEL",
-      "likes": 1544,
-      "comments": 26,
-      "likes_hidden": false,
-      "caption": "बुध किस भाव में? उस उम्र में उठान 📈\n\nEk classic granth ka sutra: jinka Budh lagna mein hota hai, unke liye 27 saal ki umar khaas hoti hai.\nIsi se technique: 27 = 1st house, 28 = 2nd, 29 = 3rd… aise poori kundli mein ghumaiye.\nBudh 10th house mein hai? Toh 36 ki umar dekhiye. Phir ye cycle ghoomti rehti hai, jab tak hai jaan.\n\n💬 Aapka Budh kis house mein hai, aur aapki \"Budh wali umar\" kaun si nikli? Comment karo\n📌 Save karo, ye technique apni kundli pe try karna\n👉 Us dost ko bhejo jiski umar abhi wahi chal rahi hai\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Budh #Mercury #Kundli #Jyotish #KundliDecoded",
-      "engagement_rate": 0.02288,
-      "vs_account_median": 15.25
+      "caption": "WHAT AN EVENING alternativefashionweekmcr 🖤\n\nThankyou for choosing us to host your pre-show and the catwalk was nothing short of special. Seeing the rest of the afflecks_manchester family’s looks walk the runway was AMAZING.\n\nPlus food from tfrcafe and birdandblendtea cocktails are always a win, right?🥀🖤",
+      "engagement_rate": 0.01521,
+      "vs_account_median": 1.78
     },
     {
       "handle": "thehoodwitch",
-      "permalink": "https://www.instagram.com/p/Deznw89D0IS/",
-      "timestamp": "2026-10-22T18:25:15+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 22666,
-      "comments": 184,
-      "likes_hidden": false,
-      "caption": "🌹🦂🌹🦂SCORPIO SZN🌹🦂🌹🦂\n\nThe Sun enters Scorpio October 23 at 2:38 AM PDT / 5:38 AM EDT.\n\nThis is one of my favorite times of the year! Scorpio is my sister sign on the zodiac and dominates my big 3. TheHoodwitch.com and my first book, Blood Sex Magic, were both born under Scorpio. It’s a season that always brings me back to myself, reminding me of who I am at my core, my true essence.\n\nScorpio is deeply connected to sex, death, and magic, so you already know why I love this season. Pluto, its modern ruler, is named after the god of the underworld. There’s power in what’s hidden, including the parts of ourselves we’d rather keep private. Plutonian energy can bring up jealousy, obsession, and desires we don’t always know what to do with. Be honest about what’s coming up for you.\n\nWith Venus and Mercury retrograde this season, there’s a lot to unpack around love, money, and our relationships. Some of us are revisiting things we thought we were done with. There’s beauty in facing yourself without hiding from your shadow. \n\nStop dimming your light just to make others comfortable, and remember your own fckin’ power! \n\n✨ KEY DATES\n• Oct 23: Sun enters Scorpio. Examine what lives beneath your reactions.\n• Oct 23: Venus cazimi in Scorpio. Get honest about desire, love, and money.\n• Oct 24: Mercury retrograde in Scorpio. Revisit secrets and unfinished conversations.\n• Oct 25: Venus retrograde returns to Libra. Notice where keeping the peace has replaced reciprocity.\n• Oct 26: Taurus Full Moon, 12:12 AM EDT / Oct 25, 9:12 PM PDT. Listen to what your body needs to feel secure.\n• Nov 4: Mercury cazimi in Scorpio. Return to a difficult question with clearer eyes.\n• Nov 9: Scorpio New Moon. Commit to the changes you want to live.\n• Nov 13: Mercury turns direct in Scorpio; Venus turns direct in Libra. Let what you’ve learned inform your choices.\n\n🔮 This Sunday, October 25, join me for a Patreon members-only celebration of the Taurus Full Moon and TheHoodwitch.com’s birthday! I launched this space under a Taurus Full Moon. Celebrating with the community it grew into means so much to me.\n\nJoin us: patreon.com/thehoodwitch",
-      "engagement_rate": 0.04738,
-      "vs_account_median": 14.53
-    },
-    {
-      "handle": "occultgurukul",
-      "permalink": "https://www.instagram.com/reel/DeZL1CRkwEx/",
-      "timestamp": "2026-10-12T12:00:03+0000",
-      "format": "REEL",
-      "likes": 1267,
-      "comments": 42,
-      "likes_hidden": false,
-      "caption": "गुरु + केतु: अर्जुन को कृष्ण मिले 🏹\n\nKetu ke paas god-gifted talent hota hai, par use kahaan lagana hai, ye samajh nahi aata, jab tak Jupiter beech mein na aaye.\nJaise Mahabharat mein Arjun ko Shri Krishna mile. Guru-Ketu mein Ketu ko pehli baar lagta hai: mujhse zyaada samajhdaar koi aa gaya hai.\nKetu 9th house mein ho, Dhanu (Sagittarius) mein ho, ya Guru ke saath ho, toh insaan in sab cheezon se pare, satisfied ho jaata hai.\n\n💬 Aapka Ketu 9th mein hai, Dhanu mein hai, ya Guru ke saath? Comment karo\n👉 Us dost ko bhejo jo aapka \"Krishna\" hai\n📌 Save karo\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Guru #Ketu #Kundli #Jyotish #KundliDecoded",
-      "engagement_rate": 0.01908,
-      "vs_account_median": 12.72
-    },
-    {
-      "handle": "thehoodwitch",
-      "permalink": "https://www.instagram.com/p/De7SaGvj_MF/",
-      "timestamp": "2026-10-25T17:52:34+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 14063,
-      "comments": 138,
-      "likes_hidden": false,
-      "caption": "HAPPY FULL MOON IN TAURUS ♉︎🌕\n\nThere is absolutely nothing unspiritual about wanting a beautiful life, a safe home, and enough money to enjoy both. As a Taurus, I will always stand by that. 💅🏾 \n\nIn Greek mythology, Taurus is associated with the white bull Zeus became before carrying Europa across the sea to Crete. Beneath that beautiful appearance was the strength of a god. I think about that when people mistake this sign’s love of pleasure for weakness. Taurus knows the power of holding its ground.\n\nTonight’s Full Moon at 2°46′ Taurus opposes the Scorpio Sun and squares Pluto in Aquarius. This brings intensity to questions of ownership, attachment, and control. Look closely at what you’ve been tolerating to feel secure, and what that security is actually costing you.\n\nVenus, the ruler of Taurus, returns to Libra today while retrograde, and Mercury is now retrograde in Scorpio. We’re revisiting our relationships with money, desire, and reciprocity. Where are you pouring your resources? Are you being nourished by what you continue to feed?\n\nTaurus is fixed earth. Its magic grows through patience, devotion, and tending to what we want to last. Working money magic beneath a Taurus Full Moon is a working for longevity, with the intention of building prosperity that can sustain us for years.\n\nTonight at 5:30 PM PT / 8:30 PM ET, we’re making money bowls together in my Patreon Full Moon ritual. Bring your intentions for the life you’re building. You deserve to enjoy what you work so hard to sustain.\n\nJoin us at Patreon.com/thehoodwitch. The guidebook includes instructions, and the ritual will be recorded if you can’t attend live. 🕯️\n\nOf course you can always read  the Full Moon article at TheHoodwitch.com \n\n#Taurus #BigBull #Moneymagic #fullmoon",
-      "engagement_rate": 0.02944,
-      "vs_account_median": 9.03
-    },
-    {
-      "handle": "darklydivinecrystals",
-      "permalink": "https://www.instagram.com/p/Dd4i0TtiVVo/",
-      "timestamp": "2026-09-29T19:46:50+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 8879,
-      "comments": 236,
-      "likes_hidden": false,
-      "caption": "I found myself crying in my car today after reading the documents on this case. You can literally feel the collective pain of survivors and women as a whole. \n\nThese are just a few goddesses out of MANY that you can call on if you choose to do workings against the Cornell 7. Feel free to name more in the comments! \n\nI also wanted to donate to this issue, so a portion of all goddess candles will be given to organizations that provide relief for survivors. \n•\n•\n•\n#witchcraft #witchtips #divinefeminine #witchcommunity #deitywork",
-      "engagement_rate": 0.09318,
-      "vs_account_median": 7.45
-    },
-    {
-      "handle": "amsterdamhermetica",
-      "permalink": "https://www.instagram.com/p/Dd9t2UKsdO7/",
-      "timestamp": "2026-10-01T20:01:30+0000",
+      "permalink": "https://www.instagram.com/p/Dec2k6Ty9UY/",
+      "timestamp": "2026-10-13T22:13:29+0000",
       "format": "IMAGE",
-      "likes": 385,
-      "comments": 2,
+      "likes": 6931,
+      "comments": 16,
       "likes_hidden": false,
-      "caption": "🌟UVA ESOTERIC WINTER SCHOOL🌟\n\nApplications for this ONLINE winter school programme is OPEN! 🔮\n\nForbidden Knowledge: Introduction to Esotericism\n\nOrganised by Dr. J. Christian Greer and Corey Andrews\n\nangelheadedhipstersarchive \npraguegnosis \n\n🗓️Monday 18 January - Friday 29 January 2027\n🌐ONLINE\n\nApplication deadline: \nEarly bird deadline - 1 November 2026\nRegular deadline - 13 December 2026\n\nABOUT THE COURSE:\nThe goal of this course is to offer an introductory overview of the study of esotericism as a discipline both historically and in the present. In this two-week online winter course, we will investigate the key thematic aspects of Western esotericism, as they have manifested themselves historically within currents such as Hermeticism, gnosticism, astrology, alchemy, magic, to name but a few. This programme will feature various guest sessions from prominent figures in the study of esotericism.\n\nFind the link in our bio for all info. 🪄\n\n#amsterdamhermetica #winterschool2027 #esotericism #forbiddenknowledge #onlinecourse",
-      "engagement_rate": 0.01523,
-      "vs_account_median": 7.39
-    },
-    {
-      "handle": "occultgurukul",
-      "permalink": "https://www.instagram.com/reel/DedlUHqE7lA/",
-      "timestamp": "2026-10-14T05:00:03+0000",
-      "format": "REEL",
-      "likes": 686,
-      "comments": 6,
-      "likes_hidden": false,
-      "caption": "गाली नहीं मिल रही? तो प्रॉब्लम है 😄\n\nJab tak log aapko gaali nahi de rahe, aapka mazaak nahi uda rahe, iska ek hi matlab hai: logon ko aapse farak nahi padta.\nItni badi duniya mein koi aapko chunta hai, \"aaj main isko sunaaunga\". Aapke pados mein jo rehta hai, use koi gaali nahi de raha.\n\n💬 Aapko sabse zyaada kis baat pe sunaya jaata hai? Comment karo\n👉 Us dost ko bhejo jisse log jalte hain\n📌 Save karo, jab koi bura bole tab dekhna\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Mindset #Motivation #AstroArunPandit #Jyotish #KundliDecoded",
-      "engagement_rate": 0.01009,
-      "vs_account_median": 6.73
-    },
-    {
-      "handle": "museum_of_witchcraft_and_magic",
-      "permalink": "https://www.instagram.com/p/DePN5h7AIrV/",
-      "timestamp": "2026-10-08T15:06:35+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 5129,
-      "comments": 59,
-      "likes_hidden": false,
-      "caption": "We were delighted to welcome Reece Shearsmith to the museum earlier in the year. One of our artefacts is going on the road! Check out Reece’s tour dates to find out what it is….. https://www.fane.co.uk/reece-shearsmith reeceshearsmith_  His latest book, Things I Took From the Dark is out any day now",
-      "engagement_rate": 0.04293,
-      "vs_account_median": 5.55
-    },
-    {
-      "handle": "theesotericwitch",
-      "permalink": "https://www.instagram.com/p/DemcbCbF6wc/",
-      "timestamp": "2026-10-17T15:36:05+0000",
-      "format": "IMAGE",
-      "likes": 83,
-      "comments": 6,
-      "likes_hidden": false,
-      "caption": "Here's the thing about The Lovers that surprises people: it's not primarily a romance card. Yes, it can point to love and partnership, but the deeper meaning is about choice. About standing at a crossroads and having to decide which path aligns with your authentic self. It's one of the most powerful cards in the deck because it's about integration, bringing together different parts of yourself into wholeness. 💕\n\nThe imagery usually shows two figures with an angel above them, and that's significant. The Lovers asks us to make choices that honor both our earthly desires and our higher values. It's not about picking passion over responsibility or vice versa. It's about finding the path where both can coexist. The choice that feels right in your gut and in your soul.\n\nWhen The Lovers appears, pay attention to what decisions are weighing on you. What are you being asked to commit to? And here's the uncomfortable part: choosing one thing often means releasing another. The Lovers doesn't let us stay on the fence forever. At some point, we have to choose. ✨\n\n#tarot #thelovers #tarotcommunity #tarotreading #witchesofinstagram #spirituality #choices #tarotcards #modernwitch #tarotwisdom #authenticity #soulmate",
-      "engagement_rate": 0.0071,
-      "vs_account_median": 5.55
-    },
-    {
-      "handle": "amsterdamhermetica",
-      "permalink": "https://www.instagram.com/p/Der_WnhtmB1/",
-      "timestamp": "2026-10-19T19:19:25+0000",
-      "format": "IMAGE",
-      "likes": 279,
-      "comments": 3,
-      "likes_hidden": false,
-      "caption": "🌟UVA ESOTERIC WINTER SCHOOL🌟\n\nApplications for this ONLINE winter school programme is OPEN! 🔮\n\nForbidden Knowledge: Introduction to Esotericism\n\nOrganised by Dr. J. Christian Greer and Corey Andrews\n\nangelheadedhipstersarchive \npraguegnosis \n\n🗓️Monday 18 January - Friday 29 January 2027\n🌐ONLINE\n\nApplication deadline: \nEarly bird deadline - 1 November 2026\nRegular deadline - 13 December 2026\n\nABOUT THE COURSE:\nThe goal of this course is to offer an introductory overview of the study of esotericism as a discipline both historically and in the present. In this two-week online winter course, we will investigate the key thematic aspects of Western esotericism, as they have manifested themselves historically within currents such as Hermeticism, gnosticism, astrology, alchemy, magic, to name but a few. This programme will feature various guest sessions from prominent figures in the study of esotericism.\n\nhttps://www.uva.nl/shared-content/programmas/en/winter-courses/introduction-to-western-esotericism/introduction-to-western-esotericism.html?origin=VW%2FXiBtNQwSjxR%2BVJO%2B5dw#Academic-directors\n(Link can be found also in our bio 🪄)\n\n#amsterdamhermetica #winterschool2027 #esotericism #forbiddenknowledge",
-      "engagement_rate": 0.0111,
-      "vs_account_median": 5.39
-    },
-    {
-      "handle": "offcultclothing",
-      "permalink": "https://www.instagram.com/reel/DemHOSgBgWp/",
-      "timestamp": "2026-10-17T12:30:06+0000",
-      "format": "REEL",
-      "likes": 86,
-      "comments": 3,
-      "likes_hidden": false,
-      "caption": "POV: Bro said “pack light” but made room for OFFCULT. 😮‍💨🔥\nYour streetwear essentials deserve a spot on every trip.\n\nShop your favourites at www.offcult.com\n\nOffcult clothing, oversized t-shirts for men, graphic t-shirts, streetwear fashion, Gen Z fashion, trendy men’s outfits, casual wear for men, everyday streetwear",
-      "engagement_rate": 0.00217,
-      "vs_account_median": 5.29
-    },
-    {
-      "handle": "thehoodwitch",
-      "permalink": "https://www.instagram.com/p/De5DD_hklTc/",
-      "timestamp": "2026-10-24T20:59:59+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 8010,
-      "comments": 95,
-      "likes_hidden": false,
-      "caption": "That Venus cazimi closing a 100-year cycle was no joke. We’re approaching the Taurus Full Moon, and Mercury has begun its retrograde.\n\nSeeing Hitler’s Eagle’s Nest engulfed in flames feels like a powerful symbol of this cycle closing. Fascism and patriarchy will fight to preserve their power, but I see their reckoning written in the stars.\n\nThese systems have survived through generations of violence. They will not rule forever.\n\nMay we continue to bless and defend our Earth. \n\nMay matriarchy rise, and may those who come after us inherit a liberated world. 🦂⚔️🔥🩸🌹\n\nSlide 1: kot___ko \nSlide 2: Oya by Mariana Seixas \nSlide 3: Kali Ma \nSlide 4: Shekmet\nSlide 5: Durga\nSlide 6: Oracle of Delphi\nSlide 7: Valkyrie \nSlide 8: Medusa \nSlide 9: Diana The Huntress (Artemis)\nSlide 10: Lilith\nSlide 11: Hecate \nSlide 12: Venus of Willendorf\nSlide 13: Mother Mary \nSlide 14: Eagle’s Nest on Fire \n\n 🕯️ OFFERING: If you love and appreciate my work, leave an offering of support : \nVenmo thehoodwitch \nCashApp $BigwitchEnergy \nPayPal: Orders@thehoodwitch.com",
-      "engagement_rate": 0.01681,
-      "vs_account_median": 5.16
-    },
-    {
-      "handle": "museum_of_witchcraft_and_magic",
-      "permalink": "https://www.instagram.com/p/De16BMXAPa9/",
-      "timestamp": "2026-10-23T15:43:14+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 4101,
-      "comments": 59,
-      "likes_hidden": false,
-      "caption": "Just about safe to venture out! Normal service will hopefully be resumed tomorrow! #stormaustin",
-      "engagement_rate": 0.03442,
-      "vs_account_median": 4.45
-    },
-    {
-      "handle": "museum_of_witchcraft_and_magic",
-      "permalink": "https://www.instagram.com/p/DdyZ3d3gLcb/",
-      "timestamp": "2026-09-27T10:33:11+0000",
-      "format": "CAROUSEL_ALBUM",
-      "likes": 3696,
-      "comments": 105,
-      "likes_hidden": false,
-      "caption": "So here’s a curious thing…. Someone brought this carved dodecahedron to show us this morning, in the hope of deciphering what it could have been made for. There seems to be the remains of gold paint within the figures. The figures themselves seem to be drawn from several different languages. There’s the Greek figure for Pi, for example, which is the most recognisable. The stone is volcanic in appearance and 10cm (4”) at its widest. Any ideas??? #dodecahedron #ancientalphabet",
-      "engagement_rate": 0.03145,
-      "vs_account_median": 4.06
+      "caption": "Pay attention to what the past few months have taught you about people, power, and your own judgment. This week brings opportunities to act on that knowledge and make decisions you’ve been putting off.\n\nOn October 15, Pluto turns direct in Aquarius, ending the retrograde that began on May 6. What we’ve learned about control, community, and where we give our power away begins to inform how we move forward.\n\nAlso on October 15, the Sun in Libra sextiles Jupiter in Leo, bringing encouragement to our relationships, creative work, and professional connections. Follow up on a promising conversation, share your ideas, and put some effort behind the opportunities you want to develop.\n\nOn October 16, Mars in Leo trines Saturn retrograde in Aries, supporting discipline and follow-through. Fear of rejection may surface when something matters to us. Give yourself enough preparation to take the next step, and be honest about whether the goal still deserves your energy.\n\n🪐Read your weekly horoscopes for your Sun and rising signs at TheHoodwitch.com. Subscribe to Patreon.com/thehoodwitch for your extended horoscopes, with deeper astrological insights and weekly rituals for every zodiac sign.\n\n#Astrology #weeklyHoroscopes #astrología #witchtips",
+      "engagement_rate": 0.01439,
+      "vs_account_median": 1.97
     },
     {
       "handle": "darkstarmagick",
@@ -875,8 +489,394 @@
       "comments": 11,
       "likes_hidden": false,
       "caption": "Does anyone know who this individual is? Our physical store location has once again been attacked, just before the lease ended. We will be filing a police report, but any information about this person's identity will be a huge help!",
-      "engagement_rate": 0.01344,
-      "vs_account_median": 3.95
+      "engagement_rate": 0.01345,
+      "vs_account_median": 3.43
+    },
+    {
+      "handle": "amsterdamhermetica",
+      "permalink": "https://www.instagram.com/p/Der_WnhtmB1/",
+      "timestamp": "2026-10-19T19:19:25+0000",
+      "format": "IMAGE",
+      "likes": 339,
+      "comments": 3,
+      "likes_hidden": false,
+      "caption": "🌟UVA ESOTERIC WINTER SCHOOL🌟\n\nApplications for this ONLINE winter school programme is OPEN! 🔮\n\nForbidden Knowledge: Introduction to Esotericism\n\nOrganised by Dr. J. Christian Greer and Corey Andrews\n\nangelheadedhipstersarchive \npraguegnosis \n\n🗓️Monday 18 January - Friday 29 January 2027\n🌐ONLINE\n\nApplication deadline: \nEarly bird deadline - 1 November 2026\nRegular deadline - 13 December 2026\n\nABOUT THE COURSE:\nThe goal of this course is to offer an introductory overview of the study of esotericism as a discipline both historically and in the present. In this two-week online winter course, we will investigate the key thematic aspects of Western esotericism, as they have manifested themselves historically within currents such as Hermeticism, gnosticism, astrology, alchemy, magic, to name but a few. This programme will feature various guest sessions from prominent figures in the study of esotericism.\n\nhttps://www.uva.nl/shared-content/programmas/en/winter-courses/introduction-to-western-esotericism/introduction-to-western-esotericism.html?origin=VW%2FXiBtNQwSjxR%2BVJO%2B5dw#Academic-directors\n(Link can be found also in our bio 🪄)\n\n#amsterdamhermetica #winterschool2027 #esotericism #forbiddenknowledge",
+      "engagement_rate": 0.01342,
+      "vs_account_median": 6.71
+    },
+    {
+      "handle": "thehoodwitch",
+      "permalink": "https://www.instagram.com/p/De-XNPiDy-x/",
+      "timestamp": "2026-10-26T22:32:13+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 6263,
+      "comments": 3,
+      "likes_hidden": false,
+      "caption": "🦇🌹WEEKLY HORROR-SCOPES 🦇🌹\n\nOctober 26–November 1\n\nHalloween week begins with the Taurus Full Moon bringing our desires into focus. We may be craving more affection, more stability, or enough peace to enjoy what we already have. Pay attention to what feels worth your time and what has become exhausting to maintain.\n\nWith Mercury and Venus both retrograde, unfinished conversations may find their way back to us. The Sun’s square to Pluto can make an old struggle over control harder to ignore, while Friday’s Mercury–Mars square could leave us with very little patience for shenanigans. Give yourself time to decide what you actually want to say before responding.\n\nThe Moon is at home in Cancer on Halloween, drawing us toward familiar faces, family stories, and the people we miss. Leave room for an unexpected invitation or a conversation that changes the evening for the better.\n\n🌕 Your weekly horoscopes are available now at TheHoodwitch.com and for your extended reading, witch tips, and a ritual created specifically for your zodiac sign, join me at Patreon.com/thehoodwitch\n\n#Astrology #astrologia #witchtips #zodiac #horoscopes",
+      "engagement_rate": 0.01298,
+      "vs_account_median": 1.78
+    },
+    {
+      "handle": "witchcraftspellsmagick",
+      "permalink": "https://www.instagram.com/p/De1TGI2ldF-/",
+      "timestamp": "2026-10-23T10:04:05+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 502,
+      "comments": 4,
+      "likes_hidden": false,
+      "caption": "✦ How do you connect with your inner witch?\n\nThis may be one of those questions where you think, My inner witch—what is that?\n\nOr perhaps you’re thinking, I would if I had time!\n\nI know what you need… it’s just below. 🖤\n\nThe answer may be as clear as day… time outdoors, sitting beneath a tree, listening to the wind and watching ravens swoop overhead.\n\nPerhaps it’s watching a candle flicker or drops of rain slowly slide down a leaf and fall with a plop. It might be the odd objects you find on your travels, a mist that lingers or an air of magickal possibility.\n\nTaking time to notice your surroundings and how you are feeling. Really feeling. Finding that connection with the firm ground beneath you, the air around you, the water within your body and the heat that warms you.\n\nThe Energy Work and Inner Witch pages in The Practicing Witch Diary 2027 give you simple practices to follow when time is short or you’re unsure where to begin. Choose one that suits your day and make a little space for your witchcraft.\n\nSwipe to explore pages 48–49 of this 372-page Book of Shadows.\n\nNorthern and Southern Hemisphere editions are available at witchcraftspellsmagick.com (link in bio).\n\nBlessed Be,\nBec Black 🖤\n\n#InnerWitch #EnergyWork #ThePracticingWitch #WitchDiary2027 #WitchcraftSpellsMagick",
+      "engagement_rate": 0.01261,
+      "vs_account_median": 2.57
+    },
+    {
+      "handle": "occult.afflecks",
+      "permalink": "https://www.instagram.com/p/DehqOCsCLkj/",
+      "timestamp": "2026-10-15T19:00:23+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 304,
+      "comments": 0,
+      "likes_hidden": false,
+      "caption": "What are you up to this October?🦇\n\nWhy not head down to our Afflecks Manchester shop and pose with the devil wings outside? Bonus points if you're dressed up in costume!🎃\n\nRemember, if you take a picture and tag us on your feed you could be in with a chance of winning £20 to spend on our website!!",
+      "engagement_rate": 0.01156,
+      "vs_account_median": 1.35
+    },
+    {
+      "handle": "witchcraftspellsmagick",
+      "permalink": "https://www.instagram.com/p/DfHZl8hlW2d/",
+      "timestamp": "2026-10-30T10:46:22+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 462,
+      "comments": 0,
+      "likes_hidden": false,
+      "caption": "✦ Do you have pentagrams around your home?\n\nFive fallen sticks, twine, dried flowers and whatever the season offers. \nThere is magick in choosing each piece and giving it a purpose.\n\nAs you bind the ends of the sticks, consider what you wish to welcome into your home.\n\nProtection, warmth, love, peace?\n\nFocus on each knot holding your intention.\n\nFor seasonal  practices; The Practicing Witch Diary 2027 – Book of Shadows is available in Northern and Southern Hemisphere editions.\n\nLook inside at witchcraftspellsmagick.com (link in bio).\n\nBlessed Be,\nBec Black 🖤\n\n#ThePracticingWitch #WitchDiary2027 #ProtectionMagick #SeasonalWitchcraft #WitchcraftSpellsMagick",
+      "engagement_rate": 0.01151,
+      "vs_account_median": 2.34
+    },
+    {
+      "handle": "grimoiresontape",
+      "permalink": "https://www.instagram.com/p/DezgA7GCSjG/",
+      "timestamp": "2026-10-22T17:17:32+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 104,
+      "comments": 0,
+      "likes_hidden": false,
+      "caption": "GEOMANCY & THE MAGIC OF PLACE CLASS \n\nHappy Jupiterday folks. This coming Monday 26th October I will be delivering my new class, Worlding Points: Geomancy & the Magic of Place, in which we’ll be exploring how geomantic divination and spellcraft engages with the mysteries and magics of place, paying particular attention to planetary locations and the practical dirt sorceries we can do from there.\n\nGeomancy is sometimes called the terrestrial sister art of astrology, for geomancers map the worldly events and influences of the Earth and Place just as our astrologer colleagues chart the astral virtues and effects of the Heavens and Time. \n\nAs such, geomancy holds out a range of operative engagements with the land and its locales that can offer us incredibly useful and grounded methods and means to cohere and direct a range of influences, energies, and spirits: from surveying the specific sorts of places in which each of the sixteen geomantic figures are “at home” and thus may be indicated in a reading, to suggesting a range of beneficial modalities of spiritwork and spellcraft with those figural entities and influences. \n\nIf you’ve ever wondered where you can bury a spell to best deploy and magnify its effects, or how you should dress or otherwise conduct yourself when gathering dirts for your charms and operations, or what offerings to leave where for planetary workings, this class is most definitely for you.\n\nYou can read more and sign up via the usual 🔗🌳 hub up top in the 🅱️IO ⬆️. This class will be going down live and online at 7pm (ET) this coming Monday 26th October. The class will be recorded and sent out to all ticketholders a few days after the live session. \n\nI hope you can join me for this one!\n.\n.\n.\n#geomancy #planetarymagic #dirtsorcery #spiritwork #spellcraft",
+      "engagement_rate": 0.01082,
+      "vs_account_median": 1.04
+    },
+    {
+      "handle": "museumofmagicfortunewitchcraft",
+      "permalink": "https://www.instagram.com/p/DfK3qTQIjf7/",
+      "timestamp": "2026-10-31T19:06:46+0000",
+      "format": "IMAGE",
+      "likes": 229,
+      "comments": 5,
+      "likes_hidden": false,
+      "caption": "We would like to make a BIG thank you to all our visitors who waited patiently in the que to the museum today. We appreciate it greatly and wish you all a Happy Halloween. \n\nMany Blessings, \n\nThe Museum Team. \n\n#halloween #samhain #witchcraftmuseum #witchmuseum #museumofmagic",
+      "engagement_rate": 0.01078,
+      "vs_account_median": 2.21
+    },
+    {
+      "handle": "witchcraftspellsmagick",
+      "permalink": "https://www.instagram.com/p/De3p_k8CaIl/",
+      "timestamp": "2026-10-24T08:02:16+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 429,
+      "comments": 3,
+      "likes_hidden": false,
+      "caption": "✦ The witch within! Who is the witch within you? \nAn extrovert, an introvert or a little of both? Do you practice a particular type of magick?\n\nI first created The Practicing Witch Diary — Book of Shadows six years ago. Each year, I release a new version for the year ahead.\n\nThe diary was created to help all witches, from very experienced practitioners to those new to the craft, find, nurture  and hold on to the witch within.\n\nEach page is a place to grow your practice, record your witchcraft story and document your journey.\n\nThe 2027 edition is now available, and before you ask… yes, it comes in both Northern and Southern Hemisphere editions!\n\nMy hope is that these pages make it easier to stay connected to your practice within a busy life, bringing you closer to the witch within through 2027 and beyond.\n\nExplore both editions at witchcraftspellsmagick.com (link in bio).\n\nBlessed Be,\nBec Black 🖤\n\n#InnerWitch #WitchcraftPractice #ThePracticingWitch #WitchDiary2027 #WitchcraftSpellsMagick",
+      "engagement_rate": 0.01077,
+      "vs_account_median": 2.19
+    },
+    {
+      "handle": "sacredknowledgetarot",
+      "permalink": "https://www.instagram.com/reel/DefkDjlv28P/",
+      "timestamp": "2026-10-14T23:29:53+0000",
+      "format": "REEL",
+      "likes": 151,
+      "comments": 10,
+      "likes_hidden": false,
+      "caption": "breathe it all in...\n\nRhea ♥️ \n\n#MountainLife #peacefulmoments #gratitudeattitude #natureconnections #natureheals",
+      "engagement_rate": 0.01063,
+      "vs_account_median": 1.05
+    },
+    {
+      "handle": "thehoodwitch",
+      "permalink": "https://www.instagram.com/p/DeNUT8lS8n-/",
+      "timestamp": "2026-10-07T21:46:03+0000",
+      "format": "IMAGE",
+      "likes": 4419,
+      "comments": 606,
+      "likes_hidden": false,
+      "caption": "Would you rather visit your ancestors in the past or meet your descendants in the future? \n\nOctober and November are months of ancestral veneration. We tend our altars, prepare offerings, and spend time honoring our dead. This year, Venus retrograde in Scorpio brings questions of love and inheritance into that practice. Some of the beliefs we’re reconsidering have been in our families longer than anyone can remember.\n\nWith Mercury also in Scorpio, I’m interested in what we could learn if we could hear the stories firsthand. Family history changes depending on who is telling it. There are things people take to the grave that everyone else spends a lifetime trying to understand.\n\nIf you could sit down with an ancestor, what would you actually ask? Would you want to know how they practiced their magic? Who taught them? Would you tell them what happened to their children or homes? \n\nI wonder what they would make of us. Would they recognize something they had prayed for, or have some serious questions about what the hell we’re doing. \n\nMeeting our descendants would put us on the other side of that conversation. We would be answering questions about our beliefs, our choices, and things we never imagined anyone would remember.\n\nThat feels like a question worth sitting with this ancestor season. Would you go back, or would you go forward? 🤔🤔\n\n#Ancestors #spiritSeason #witchcraft  #thehoodwitch",
+      "engagement_rate": 0.01041,
+      "vs_account_median": 1.42
+    },
+    {
+      "handle": "sacredknowledgetarot",
+      "permalink": "https://www.instagram.com/reel/DefiMb7Pzyc/",
+      "timestamp": "2026-10-14T23:13:22+0000",
+      "format": "REEL",
+      "likes": 150,
+      "comments": 7,
+      "likes_hidden": false,
+      "caption": "On October 10th, the 10/10 Portal appeared right above me in the sky! I looked up and saw this incredible opening in the clouds, and I knew I had to capture it. The timing was unreal! ✨☁️\n\nRhea ♥️ \n\n#1010portal #portals #SkyMagic",
+      "engagement_rate": 0.01036,
+      "vs_account_median": 1.02
+    },
+    {
+      "handle": "thehoodwitch",
+      "permalink": "https://www.instagram.com/p/DfNb8XUj4i2/",
+      "timestamp": "2026-11-01T19:02:13+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 4979,
+      "comments": 19,
+      "likes_hidden": false,
+      "caption": "🕯️Feliz Día de Muertos 🖤\n\nToday, I celebrate my loved ones, those who came before me, whose sacrifices, wisdom, and love continue to live through me.\n\nDía de Muertos is NOT the “Mexican Halloween”. it is a sacred celebration of life, death, and remembrance. Through our ofrendas, candles, Cempasúchil, prayers, and favorite foods, we honor our beloved dead with gratitude and joy.\n\nToday, my heart also grieves for the innocent lives that have been lost in ICE custody and the families torn apart by detention and deportation. Those who have died were not merely statistics. They were human beings with names, families, histories, and people who loved them very much. They deserve remembrance, dignity, and justice.\n\nOur dead are never forgotten as long as we continue to speak their names.\n\nIn 2018, we shared the true history and Indigenous origins of Día de Muertos. Read “The Truth Behind Día de los Muertos” at TheHoodwitch.com \n\nPara nuestros muertos, con todo nuestro amor. 🕯️❤️",
+      "engagement_rate": 0.01035,
+      "vs_account_median": 1.42
+    },
+    {
+      "handle": "occultgurukul",
+      "permalink": "https://www.instagram.com/reel/DedlUHqE7lA/",
+      "timestamp": "2026-10-14T05:00:03+0000",
+      "format": "REEL",
+      "likes": 702,
+      "comments": 6,
+      "likes_hidden": false,
+      "caption": "गाली नहीं मिल रही? तो प्रॉब्लम है 😄\n\nJab tak log aapko gaali nahi de rahe, aapka mazaak nahi uda rahe, iska ek hi matlab hai: logon ko aapse farak nahi padta.\nItni badi duniya mein koi aapko chunta hai, \"aaj main isko sunaaunga\". Aapke pados mein jo rehta hai, use koi gaali nahi de raha.\n\n💬 Aapko sabse zyaada kis baat pe sunaya jaata hai? Comment karo\n👉 Us dost ko bhejo jisse log jalte hain\n📌 Save karo, jab koi bura bole tab dekhna\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Mindset #Motivation #AstroArunPandit #Jyotish #KundliDecoded",
+      "engagement_rate": 0.01032,
+      "vs_account_median": 7.59
+    },
+    {
+      "handle": "sacredknowledgetarot",
+      "permalink": "https://www.instagram.com/reel/De-8QmJONF0/",
+      "timestamp": "2026-10-27T03:57:20+0000",
+      "format": "REEL",
+      "likes": 148,
+      "comments": 6,
+      "likes_hidden": false,
+      "caption": "I filmed this beautiful Taurus Full Moon from my balcony last night, and I wanted to share it with you.\n\nIf this video found you, take it as a little reminder that good things are still coming your way. \n\nLife can change in the most unexpected ways. One moment, things feel uncertain, and the next, something wonderful happens that you never saw coming.\n\nStay open to the blessings, the good news, the new opportunities, and the beautiful surprises life has in store for you.\n\nYour life can change for the better at any moment. ✨\n\nLove,\nRhea ♥️ \n\n#FullMoon #TaurusFullMoon #BlessingsAreComing #GoodThingsAreComing #TrustTheUniverse",
+      "engagement_rate": 0.01016,
+      "vs_account_median": 1.0
+    },
+    {
+      "handle": "grimoiresontape",
+      "permalink": "https://www.instagram.com/p/DeUpLdQpf8l/",
+      "timestamp": "2026-10-10T17:45:13+0000",
+      "format": "IMAGE",
+      "likes": 93,
+      "comments": 3,
+      "likes_hidden": false,
+      "caption": "GHOSTLY GRIMOIRES CLASS COMING SOON\n\nHello folks, merry Saturnsday. In honour of the reason for the spooky October season, I'm delighted to announce I'll be teaching my new class, Spectral Grimoire Delivery: When Ghosts Bring Books of Magic, live and online near the end of the month. \n\nIn this class we'll be exploring pre-modern magical operations which experiment with where the conjuration of spirits to deliver grimoiric texts and techniques meets the folk necromancy of working with tutelary shades. \n\nAlong with offering a grounding in the practices of early modern grimoiric magic and an awareness of pre-modern British ghostlore and ghost history, this class’s investigation and analysis will enrich our understandings of when, how, and why ghosts have been deliberately conjured, as well as a deeper appreciation for the techniques of conjuring spirits to deliver magical knowledge and spiritual power.\n\nYou can find out more and sign up via the usual 🔗🌳 hub up top ⬆️. Feel free to reach out with any questions you might have about this material. I hope you can join me. Cheers!\n.\n.\n.\n#grimoires #ghosts #folknecromancy #spiritwork",
+      "engagement_rate": 0.00999,
+      "vs_account_median": 0.96
+    },
+    {
+      "handle": "witchcraftspellsmagick",
+      "permalink": "https://www.instagram.com/p/DeoUEJQFYMd/",
+      "timestamp": "2026-10-18T09:02:12+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 397,
+      "comments": 3,
+      "likes_hidden": false,
+      "caption": "✦ Do you already walk the witch’s path?\n\nWhether you have just step on this path or have been practicing for years, The Practicing Witch Diary 2027 is made for you!\n\nA 372-page Book of Shadows with prompted pages to fill in, loaded with information to help you practice and keep practicing witchcraft throughout the year.\n\nWelcome 2027 with less thought and more magick! \n\nThere are two editions: Northern and Southern Hemisphere. \nYes, Aussie and Kiwi witches, finally a comprehensive Southern Hemisphere edition for practicing witchcraft!\n\nWitchcraft in tune and aligned with the seasons and lunar cycles.\n\nExplore both editions at witchcraftspellsmagick.com (link in bio).\n\nBlessed Be,\nBec Black 🖤\n\n#WitchcraftCommunity #WitchcraftPractice #WitchDiary2027 #ThePracticingWitch #WitchcraftSpellsMagick",
+      "engagement_rate": 0.00997,
+      "vs_account_median": 2.03
+    },
+    {
+      "handle": "sacredknowledgetarot",
+      "permalink": "https://www.instagram.com/reel/DefiwJ7PP5e/",
+      "timestamp": "2026-10-14T23:18:25+0000",
+      "format": "REEL",
+      "likes": 138,
+      "comments": 13,
+      "likes_hidden": false,
+      "caption": "Captured this beautiful, massive rainbow from my balcony a few days ago, and I just had to share it with you all! \n\nThis video doesn't even come close to doing it justice. It was so much bigger and more beautiful in person. One of those moments when you just stop everything and admire the magic of Mother Nature. \n\nRhea ✨❤️\n\n#rainbows #RainbowBlessings #backyardvibes #mountainlifestyle #mountianliving",
+      "engagement_rate": 0.00997,
+      "vs_account_median": 0.98
+    }
+  ],
+  "breakout_posts": [
+    {
+      "handle": "museum_of_witchcraft_and_magic",
+      "permalink": "https://www.instagram.com/p/DePN5h7AIrV/",
+      "timestamp": "2026-10-08T15:06:35+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 5668,
+      "comments": 63,
+      "likes_hidden": false,
+      "caption": "We were delighted to welcome Reece Shearsmith to the museum earlier in the year. One of our artefacts is going on the road! Check out Reece’s tour dates to find out what it is….. https://www.fane.co.uk/reece-shearsmith reeceshearsmith_  His latest book, Things I Took From the Dark is out any day now",
+      "engagement_rate": 0.04707,
+      "vs_account_median": 7.72
+    },
+    {
+      "handle": "occultgurukul",
+      "permalink": "https://www.instagram.com/reel/DedlUHqE7lA/",
+      "timestamp": "2026-10-14T05:00:03+0000",
+      "format": "REEL",
+      "likes": 702,
+      "comments": 6,
+      "likes_hidden": false,
+      "caption": "गाली नहीं मिल रही? तो प्रॉब्लम है 😄\n\nJab tak log aapko gaali nahi de rahe, aapka mazaak nahi uda rahe, iska ek hi matlab hai: logon ko aapse farak nahi padta.\nItni badi duniya mein koi aapko chunta hai, \"aaj main isko sunaaunga\". Aapke pados mein jo rehta hai, use koi gaali nahi de raha.\n\n💬 Aapko sabse zyaada kis baat pe sunaya jaata hai? Comment karo\n👉 Us dost ko bhejo jisse log jalte hain\n📌 Save karo, jab koi bura bole tab dekhna\n\nApni kundli khud padhna seekhiye: Astro Arun Pandit ki live Kundli Pathshala. Bio link 🔗\n\nAstro Arun Pandit • Live Session • Occult Gurukul\n\n#Mindset #Motivation #AstroArunPandit #Jyotish #KundliDecoded",
+      "engagement_rate": 0.01032,
+      "vs_account_median": 7.59
+    },
+    {
+      "handle": "theesotericwitch",
+      "permalink": "https://www.instagram.com/p/DfFS1G0FOqM/",
+      "timestamp": "2026-10-29T15:08:47+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 186,
+      "comments": 30,
+      "likes_hidden": false,
+      "caption": "It's a match... with Stolas. 🔥 Swipe through the profile.\n\nBe honest: are you Stolas's type? 👇\n\n━━━━━━━━━━━━━━━\n📜 The lore behind the jokes:\nStolas is the 36th spirit of the Ars Goetia, a prince who appears as a mighty raven, then in human form. Known for astronomy and the virtues of herbs and precious stones.\n━━━━━━━━━━━━━━━\n\nWhich demon should I set you up with next?\n\n#goetia #arsgoetia #stolas #demondating #theesotericwitch #witchyhumor #demonology #occulthumor #lesserkeyofsolomon #witchesofinstagram",
+      "engagement_rate": 0.01716,
+      "vs_account_median": 7.21
+    },
+    {
+      "handle": "occultgurukul",
+      "permalink": "https://www.instagram.com/reel/DfEbZRLIKNW/",
+      "timestamp": "2026-10-29T07:04:40+0000",
+      "format": "REEL",
+      "likes": 620,
+      "comments": 22,
+      "likes_hidden": false,
+      "caption": "Kya aapne kabhi socha hai ki Astrology mein baalon se judi samasyaon ko bhi Kundli ke through analyse kiya jaata hai? \n\nShukra, Budh aur Rahu ki Kundli mein position se lekar Pitra Rin ke concept tak, Astrology mein aisi kai interesting baatein hain jo ise aur bhi fascinating banati hain. \nAgar aap bhi Kundli ke hidden patterns samajhna aur Astrology ko practically seekhna chahte hain, toh join karein Pandit Ji ka Premium Live Astrology Batch! \n\n📲 Registration ke liye Link in Bio par click karein ya QR code scan karein.\n\n#OccultGurukul #VedicAstrology #KundliAnalysis #PitraRin #LearnAstrology #JyotishGyan #AstrologyCourse #AstrologyLearning",
+      "engagement_rate": 0.00936,
+      "vs_account_median": 6.88
+    },
+    {
+      "handle": "thehoodwitch",
+      "permalink": "https://www.instagram.com/p/Deznw89D0IS/",
+      "timestamp": "2026-10-22T18:25:15+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 23505,
+      "comments": 192,
+      "likes_hidden": false,
+      "caption": "🌹🦂🌹🦂SCORPIO SZN🌹🦂🌹🦂\n\nThe Sun enters Scorpio October 23 at 2:38 AM PDT / 5:38 AM EDT.\n\nThis is one of my favorite times of the year! Scorpio is my sister sign on the zodiac and dominates my big 3. TheHoodwitch.com and my first book, Blood Sex Magic, were both born under Scorpio. It’s a season that always brings me back to myself, reminding me of who I am at my core, my true essence.\n\nScorpio is deeply connected to sex, death, and magic, so you already know why I love this season. Pluto, its modern ruler, is named after the god of the underworld. There’s power in what’s hidden, including the parts of ourselves we’d rather keep private. Plutonian energy can bring up jealousy, obsession, and desires we don’t always know what to do with. Be honest about what’s coming up for you.\n\nWith Venus and Mercury retrograde this season, there’s a lot to unpack around love, money, and our relationships. Some of us are revisiting things we thought we were done with. There’s beauty in facing yourself without hiding from your shadow. \n\nStop dimming your light just to make others comfortable, and remember your own fckin’ power! \n\n✨ KEY DATES\n• Oct 23: Sun enters Scorpio. Examine what lives beneath your reactions.\n• Oct 23: Venus cazimi in Scorpio. Get honest about desire, love, and money.\n• Oct 24: Mercury retrograde in Scorpio. Revisit secrets and unfinished conversations.\n• Oct 25: Venus retrograde returns to Libra. Notice where keeping the peace has replaced reciprocity.\n• Oct 26: Taurus Full Moon, 12:12 AM EDT / Oct 25, 9:12 PM PDT. Listen to what your body needs to feel secure.\n• Nov 4: Mercury cazimi in Scorpio. Return to a difficult question with clearer eyes.\n• Nov 9: Scorpio New Moon. Commit to the changes you want to live.\n• Nov 13: Mercury turns direct in Scorpio; Venus turns direct in Libra. Let what you’ve learned inform your choices.\n\n🔮 This Sunday, October 25, join me for a Patreon members-only celebration of the Taurus Full Moon and TheHoodwitch.com’s birthday! I launched this space under a Taurus Full Moon. Celebrating with the community it grew into means so much to me.\n\nJoin us: patreon.com/thehoodwitch",
+      "engagement_rate": 0.04907,
+      "vs_account_median": 6.71
+    },
+    {
+      "handle": "amsterdamhermetica",
+      "permalink": "https://www.instagram.com/p/Der_WnhtmB1/",
+      "timestamp": "2026-10-19T19:19:25+0000",
+      "format": "IMAGE",
+      "likes": 339,
+      "comments": 3,
+      "likes_hidden": false,
+      "caption": "🌟UVA ESOTERIC WINTER SCHOOL🌟\n\nApplications for this ONLINE winter school programme is OPEN! 🔮\n\nForbidden Knowledge: Introduction to Esotericism\n\nOrganised by Dr. J. Christian Greer and Corey Andrews\n\nangelheadedhipstersarchive \npraguegnosis \n\n🗓️Monday 18 January - Friday 29 January 2027\n🌐ONLINE\n\nApplication deadline: \nEarly bird deadline - 1 November 2026\nRegular deadline - 13 December 2026\n\nABOUT THE COURSE:\nThe goal of this course is to offer an introductory overview of the study of esotericism as a discipline both historically and in the present. In this two-week online winter course, we will investigate the key thematic aspects of Western esotericism, as they have manifested themselves historically within currents such as Hermeticism, gnosticism, astrology, alchemy, magic, to name but a few. This programme will feature various guest sessions from prominent figures in the study of esotericism.\n\nhttps://www.uva.nl/shared-content/programmas/en/winter-courses/introduction-to-western-esotericism/introduction-to-western-esotericism.html?origin=VW%2FXiBtNQwSjxR%2BVJO%2B5dw#Academic-directors\n(Link can be found also in our bio 🪄)\n\n#amsterdamhermetica #winterschool2027 #esotericism #forbiddenknowledge",
+      "engagement_rate": 0.01342,
+      "vs_account_median": 6.71
+    },
+    {
+      "handle": "darklydivinecrystals",
+      "permalink": "https://www.instagram.com/p/DezfKckkZ-5/",
+      "timestamp": "2026-10-22T17:10:06+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 4424,
+      "comments": 22,
+      "likes_hidden": false,
+      "caption": "Crafting deity candles are just one kind of creation I can make for your spiritual practice. 🕯️\n\nI’m always down to make candles for your pets, your spells, your spirit team, a big life event, or even your original characters. \n\nIf you’re interested in creating a custom candle, feel free to fill out the custom candle form in our b!0 🖤 \n•\n•\n•\n#witchcraft #deitywork #spellcandles #candlemagic #paganwitch",
+      "engagement_rate": 0.0453,
+      "vs_account_median": 6.53
+    },
+    {
+      "handle": "museum_of_witchcraft_and_magic",
+      "permalink": "https://www.instagram.com/p/De16BMXAPa9/",
+      "timestamp": "2026-10-23T15:43:14+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 4450,
+      "comments": 60,
+      "likes_hidden": false,
+      "caption": "Just about safe to venture out! Normal service will hopefully be resumed tomorrow! #stormaustin",
+      "engagement_rate": 0.03704,
+      "vs_account_median": 6.07
+    },
+    {
+      "handle": "thehoodwitch",
+      "permalink": "https://www.instagram.com/p/De7SaGvj_MF/",
+      "timestamp": "2026-10-25T17:52:34+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 20673,
+      "comments": 180,
+      "likes_hidden": false,
+      "caption": "HAPPY FULL MOON IN TAURUS ♉︎🌕\n\nThere is absolutely nothing unspiritual about wanting a beautiful life, a safe home, and enough money to enjoy both. As a Taurus, I will always stand by that. 💅🏾 \n\nIn Greek mythology, Taurus is associated with the white bull Zeus became before carrying Europa across the sea to Crete. Beneath that beautiful appearance was the strength of a god. I think about that when people mistake this sign’s love of pleasure for weakness. Taurus knows the power of holding its ground.\n\nTonight’s Full Moon at 2°46′ Taurus opposes the Scorpio Sun and squares Pluto in Aquarius. This brings intensity to questions of ownership, attachment, and control. Look closely at what you’ve been tolerating to feel secure, and what that security is actually costing you.\n\nVenus, the ruler of Taurus, returns to Libra today while retrograde, and Mercury is now retrograde in Scorpio. We’re revisiting our relationships with money, desire, and reciprocity. Where are you pouring your resources? Are you being nourished by what you continue to feed?\n\nTaurus is fixed earth. Its magic grows through patience, devotion, and tending to what we want to last. Working money magic beneath a Taurus Full Moon is a working for longevity, with the intention of building prosperity that can sustain us for years.\n\nTonight at 5:30 PM PT / 8:30 PM ET, we’re making money bowls together in my Patreon Full Moon ritual. Bring your intentions for the life you’re building. You deserve to enjoy what you work so hard to sustain.\n\nJoin us at Patreon.com/thehoodwitch. The guidebook includes instructions, and the ritual will be recorded if you can’t attend live. 🕯️\n\nOf course you can always read  the Full Moon article at TheHoodwitch.com \n\n#Taurus #BigBull #Moneymagic #fullmoon",
+      "engagement_rate": 0.04318,
+      "vs_account_median": 5.91
+    },
+    {
+      "handle": "offcultclothing",
+      "permalink": "https://www.instagram.com/reel/DemHOSgBgWp/",
+      "timestamp": "2026-10-17T12:30:06+0000",
+      "format": "REEL",
+      "likes": 91,
+      "comments": 3,
+      "likes_hidden": false,
+      "caption": "POV: Bro said “pack light” but made room for OFFCULT. 😮‍💨🔥\nYour streetwear essentials deserve a spot on every trip.\n\nShop your favourites at www.offcult.com\n\nOffcult clothing, oversized t-shirts for men, graphic t-shirts, streetwear fashion, Gen Z fashion, trendy men’s outfits, casual wear for men, everyday streetwear",
+      "engagement_rate": 0.00228,
+      "vs_account_median": 5.56
+    },
+    {
+      "handle": "darklydivinecrystals",
+      "permalink": "https://www.instagram.com/p/DfALkD-EYgf/",
+      "timestamp": "2026-10-27T15:28:57+0000",
+      "format": "CAROUSEL_ALBUM",
+      "likes": 3011,
+      "comments": 28,
+      "likes_hidden": false,
+      "caption": "More witchy things that I stopped believing because they did not serve me or my practice at all. I feel like these have to be talked about more in the community. \n\nWhat have you stopped believing in as a witch? \n•\n•\n•\n#witchcraft #witchtips #witchcraft101 #witchcommunity #witchlife",
+      "engagement_rate": 0.03097,
+      "vs_account_median": 4.46
+    },
+    {
+      "handle": "occultgurukul",
+      "permalink": "https://www.instagram.com/reel/Deluv8Tic21/",
+      "timestamp": "2026-10-17T08:57:23+0000",
+      "format": "REEL",
+      "likes": 387,
+      "comments": 7,
+      "likes_hidden": false,
+      "caption": "Shani Lagna mein hain? 🪐 Toh life mein shortcuts se zyada hard work aur patience ka role ho sakta hai!\n\nVedic Astrology mein Shani ko discipline, responsibility aur karma se joda jaata hai. Kundli mein inki position ko samajhna zaroori hai, kyunki har chart ki interpretation alag hoti hai. \n\nAapki Kundli mein Shani kis house mein hain? \n\nAstrology ko practical tareeke se seekhne ke liye join karein Master Astrology Live Batch. Link in Bio! 🔮\n\n#ShaniDev #ShaniInLagna #VedicAstrology #AstrologyInHindi #KundliAnalysis",
+      "engagement_rate": 0.00575,
+      "vs_account_median": 4.23
+    },
+    {
+      "handle": "occultgurukul",
+      "permalink": "https://www.instagram.com/reel/De_paYPFUoE/",
+      "timestamp": "2026-10-27T10:31:35+0000",
+      "format": "REEL",
+      "likes": 362,
+      "comments": 11,
+      "likes_hidden": false,
+      "caption": "Kya aapki kundali mein Budh Grah strong hai? ✨\n\nAaiye, 5 simple points se janiye Budh Grah se jude kuch jyotishiya sanket. \n\n💬 Apna score 5 mein se comments mein zaroor batayein!\n\n#BudhGrah #VedicAstrology #JyotishGyan #KundaliAnalysis #Astrology",
+      "engagement_rate": 0.00544,
+      "vs_account_median": 4.0
+    },
+    {
+      "handle": "museum_of_witchcraft_and_magic",
+      "permalink": "https://www.instagram.com/p/DebYJ9ng9K8/",
+      "timestamp": "2026-10-13T08:33:49+0000",
+      "format": "IMAGE",
+      "likes": 2923,
+      "comments": 15,
+      "likes_hidden": false,
+      "caption": "We are delighted to share another of the incredibly important donations from Patricia Crowther and Ian Lilleyman. Gerald Gardner had a very distinctive style and here he depicts a young witch flying off the Sabbat. We suspect he could have based the witch on Patrica herself, with her distinctive long legs and blonde hair. Artworks by Gerald are incredibly rare and we will be delighted to be exhibiting this piece next year #patriciacrowther #geraldgardner",
+      "engagement_rate": 0.02413,
+      "vs_account_median": 3.96
+    },
+    {
+      "handle": "darkstarmagick",
+      "permalink": "https://www.instagram.com/p/DeU7nkZEl0m/",
+      "timestamp": "2026-10-10T20:22:17+0000",
+      "format": "IMAGE",
+      "likes": 171,
+      "comments": 11,
+      "likes_hidden": false,
+      "caption": "Does anyone know who this individual is? Our physical store location has once again been attacked, just before the lease ended. We will be filing a police report, but any information about this person's identity will be a huge help!",
+      "engagement_rate": 0.01345,
+      "vs_account_median": 3.43
     }
   ],
   "hashtags": {
@@ -886,50 +886,50 @@
         "permalink": "https://www.instagram.com/p/DY-UBCwMVtz/",
         "timestamp": "2026-05-30T18:56:25+0000",
         "format": "IMAGE",
-        "likes": 10203,
+        "likes": 10199,
         "comments": 204,
         "likes_hidden": false,
         "caption": "The temples have fallen silent. The priesthoods have vanished. Empires have risen from dust and returned to it. Yet the current of the Ancient Wisdom has never ceased to flow.\n\nFrom the shadowed sanctuaries of Egypt, where the mysteries of divine kingship, cosmic order, and the perfection of the soul were first clothed in symbol and ritual, there emerged a tradition not bound to any single creed or civilization. The outward forms changed with the centuries — pagan, Christian, Enlightenment, and secular, but the inner doctrine endured.\n\nFreemasonry stands as one of the great vessels of that continuity. Neither a religion nor a relic of the past, it serves as a living repository of initiatic knowledge, preserving through allegory, architecture, geometry, and ceremonial drama those perennial truths once taught within the mystery schools of antiquity. The sacred eye, the pillars, the celestial vault, the working tools of the builder; all are fragments of a language far older than the modern world.\n\nThe Pharaoh and the Mason are separated by millennia, yet they stand beneath the same Light. One gazes upon the mysteries through the symbols of Egypt, the other through the symbolism of the Lodge. The garments differ; the wisdom remains.\n\nFor while nations, faiths, and philosophies pass through successive ages, the Brotherhood persists as a guardian of the hidden tradition, preserving the ember of ancient knowledge against the darkness of forgetfulness, carrying it from age to age until the seeker is prepared to receive it.\n\nLux ex Tenebris. Ordo ab Chao.\nThe forms of civilization change; the Mystery endures."
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DdbsvU8Ivdt/",
-        "timestamp": "2026-09-18T14:55:38+0000",
-        "format": "IMAGE",
-        "likes": 7413,
-        "comments": 200,
-        "likes_hidden": false,
-        "caption": "Powerful Money Magnet Card ,👍✌️👍\n\n#occult"
-      },
-      {
-        "handle": null,
         "permalink": "https://www.instagram.com/p/DYkj0VAD7c_/",
         "timestamp": "2026-05-20T18:53:47+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 5856,
+        "likes": 5863,
         "comments": 50,
         "likes_hidden": false,
         "caption": "high priestess\nI’m back to spending 90% of my time working on my tarot deck. it’s been a lot of work (with a lot more left to do) but it’s also been a lot of fun trying to find my take on all the cards. I post a lot more updates about it over on my patreon, so maybe take a look over there if that’s something you’re interested in. \n\n#tarot #highpriestess #occult #witch #witchy"
       },
       {
         "handle": null,
+        "permalink": "https://www.instagram.com/p/DeL2DPNIQKR/",
+        "timestamp": "2026-10-07T07:40:33+0000",
+        "format": "IMAGE",
+        "likes": 2523,
+        "comments": 2064,
+        "likes_hidden": false,
+        "caption": "Yes 4610567 💶💸💶💸💶🍀\n\n#lawofattraction #abundance #occult"
+      },
+      {
+        "handle": null,
         "permalink": "https://www.instagram.com/p/Dd8yp44loj7/",
         "timestamp": "2026-10-01T11:22:11+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 4311,
-        "comments": 98,
+        "likes": 4321,
+        "comments": 99,
         "likes_hidden": false,
         "caption": "Exvangelical Thoughts - pt. 10\n\nThe Demon Haunted World\n\n#webcomic #christianity #exvangelical #christiannationalism #occult"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/Ddm9hDIqP3Z/",
-        "timestamp": "2026-09-22T23:53:55+0000",
-        "format": "IMAGE",
-        "likes": 4287,
-        "comments": 42,
+        "permalink": "https://www.instagram.com/p/DeSRIWSEqPj/",
+        "timestamp": "2026-10-09T19:32:32+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 4142,
+        "comments": 21,
         "likes_hidden": false,
-        "caption": "𝔗𝔥𝔢𝔶 𝔱𝔯𝔦𝔢𝔡 𝔱𝔬 𝔟𝔲𝔯𝔶 𝔪𝔢"
+        "caption": "The Fury Family is BACK in my sequel “Carnival of Furies”! The Grrls are rolling into the Big Easy for beignets and black magick! Available on Kindle and in paperback NOW! Link in bio⬆️⬆️⬆️💖🦇🎡🚬🍸🎭💀🎃👻🎠🎢🦇🎪💖 #witch #occult #vampire #lgbt #books"
       },
       {
         "handle": null,
@@ -953,33 +953,33 @@
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DdZKzYeFVYw/",
-        "timestamp": "2026-09-17T15:20:02+0000",
+        "permalink": "https://www.instagram.com/p/DcymauvDcI_/",
+        "timestamp": "2026-09-02T15:51:27+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 2810,
-        "comments": 236,
+        "likes": 3342,
+        "comments": 6,
         "likes_hidden": false,
-        "caption": "There’s never been a “pure” feminism. There’s a very dark side of that movement of which few know. #feminism #marywollstonecraft #firstwavefeminism #occult #cadystanton"
+        "caption": "Freehand action 🖤 \n.\n.\n.\n#occult #tradtattoo #fantasytattoo #wizard #tattoo"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/Dd9OC3hA4yh/",
-        "timestamp": "2026-10-01T15:21:36+0000",
+        "permalink": "https://www.instagram.com/p/DeynusitFbC/",
+        "timestamp": "2026-10-22T09:05:45+0000",
         "format": "IMAGE",
-        "likes": 1750,
-        "comments": 110,
+        "likes": 3023,
+        "comments": 52,
         "likes_hidden": false,
-        "caption": "Do you have any cats, and what are their names? 😽 This is our baby Lemmy ❤️\n\n#bengalcat#makeup#tattoos#piercings#motörhead"
+        "caption": "𝔓𝔲𝔱 𝔪𝔢 𝔡𝔬𝔴𝔫 𝔴𝔥𝔢𝔯𝔢 𝔱𝔥𝔢 𝔤𝔯𝔢𝔢𝔫𝔢𝔯𝔶 𝔰𝔱𝔦𝔫𝔤𝔰"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DeEelp-jalC/",
-        "timestamp": "2026-10-04T11:00:05+0000",
+        "permalink": "https://www.instagram.com/p/DfDXUAKkm__/",
+        "timestamp": "2026-10-28T21:09:21+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 1631,
-        "comments": 12,
+        "likes": 2112,
+        "comments": 101,
         "likes_hidden": false,
-        "caption": "For years, Terra Keck has collected other people’s encounters with things that shouldn’t be there. The pattern she keeps finding isn’t in the encounters. It’s in what happens afterwards.\n\nThe encounters themselves barely change. Lights that move wrong. Small figures with big eyes and tiny mouths. The names shift across centuries -  fairies, angels, visitations, craft - but the shape of the experience holds, and so does the silence after it. Saying it out loud costs you something, and most people work that out fast.\n\nTerra is an artist and a curatorial partner at Field Projects in Chelsea. She makes her drawings by erasing, building the image out of what she takes away, and she approaches all of it from the position that the universe is, at its core, benevolent.\n\nShe has one of her own, too. There’s a recording.\n\nSomewhere in this conversation, she stops being the one studying it.\n\nFull episode Monday. 7am ET. Link in bio.\n\nherlovelyface\nfieldprojects\nwitchyes \n\n#visionaryart #occult #contemporaryart #brooklynartist #ufo"
+        "caption": "the four archangels surround you 🕯️\n\nin the lesser banishing ritual of the pentagram, the arrangement matters. facing east, raphael is before you, gabriel behind you, michael to your right and auriel (also called uriel) to your left. air, water, fire and earth become four quarters around a single center: you.\n\nthe rite took shape within the hermetic order of the golden dawn, founded in 1888. it combines the qabalistic cross, traced pentagrams, divine names and the archangelic invocation to purify and prepare ritual space.\n\nthe sequence has a detail worth noticing: the pentagrams and divine names come before the angels. the standard lesser banishing ritual repeats the same banishing earth pentagram at all four quarters and not four different elemental pentagrams. the qabalistic cross opens and closes the rite.\n\nthe result is a symbolic world in balance. this is the golden dawn’s ceremonial synthesis, not universal christian doctrine or a single shared jewish angelology. protection is the ritual’s spiritual intention.\n\nsave this passage, share this post with a friend, follow blayden.k for more esoteric explorations, and come explore with us yourself at inner sanctum (link in bio): innersanctum.club\n\n#occult #magick #ceremonialmagick #archangels #esoteric"
       }
     ],
     "witchcraft": [
@@ -988,8 +988,8 @@
         "permalink": "https://www.instagram.com/p/Dby0Ayrmygp/",
         "timestamp": "2026-08-08T21:18:51+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 47982,
-        "comments": 3044,
+        "likes": 47966,
+        "comments": 3045,
         "likes_hidden": false,
         "caption": "My grandmother’s generation never called these spells. They called them what you do when nothing else has worked. 🕯️\n\nWhich one did you stop scrolling on? 👇\nSwipe to see them all.\n\nFor more spells like this, comment BOOK and I will send you the spell books of my witch grandmother. 🔮✨\n\n#folkmagic #grannymagic #oldwaysneverdied #witchcraft #hedgewitch"
       },
@@ -998,8 +998,8 @@
         "permalink": "https://www.instagram.com/p/DdtcJ1vjcKr/",
         "timestamp": "2026-09-25T12:16:58+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 28549,
-        "comments": 1255,
+        "likes": 28605,
+        "comments": 1262,
         "likes_hidden": false,
         "caption": "FOLLOW & SHARE 3 TIMES TO CLAIM ❤️\n\nSAVE FOR LATER\n\nCOMMENT: 1111 ( FOR PERMANENT RESULTS) \n\n#witchcraft #witchesofinstagram #witchesofig #witch #magic"
       },
@@ -1008,8 +1008,8 @@
         "permalink": "https://www.instagram.com/p/DePr0fdEoMI/",
         "timestamp": "2026-10-08T19:28:02+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 17838,
-        "comments": 69,
+        "likes": 18848,
+        "comments": 70,
         "likes_hidden": false,
         "caption": "Our staff is hard at work on your divination! We will be with you momentarily.\n.\n#hamster #witchcraft #illustration #procreateart #procreate"
       },
@@ -1018,7 +1018,7 @@
         "permalink": "https://www.instagram.com/p/Dd_phbBETb4/",
         "timestamp": "2026-10-02T14:00:03+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 17785,
+        "likes": 17848,
         "comments": 18,
         "likes_hidden": false,
         "caption": "Os “alto em” de um(a) bruxo(a)! ✨\n.\nTiragens de tarot particulares pelo link na bio ;)\n.\n.\n.\n.\n.\n.\n.\n.\n#bruxaria #memes #tarot #witchcraft #reels"
@@ -1028,8 +1028,8 @@
         "permalink": "https://www.instagram.com/p/DdHlLxaFs9o/",
         "timestamp": "2026-09-10T19:24:44+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 17587,
-        "comments": 68,
+        "likes": 17675,
+        "comments": 69,
         "likes_hidden": false,
         "caption": ">The link to buy t-shirts, hoodies, posters, and more is in the bio.<\n\n#antiracism #witch #witchcraft #tshirtdesign #antifa"
       },
@@ -1038,7 +1038,7 @@
         "permalink": "https://www.instagram.com/p/Dd-zjroje3_/",
         "timestamp": "2026-10-02T06:08:33+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 8012,
+        "likes": 8074,
         "comments": 55,
         "likes_hidden": false,
         "caption": "Me & the Devil \n\nFinally, my favourite season has arrived\n🔥💫🐐\n\nPs 👉🏻 Also my latest collection is available on the link in bio \n.\n#witch #witchcraft #seasonofthewitch #practicalmagic #meandthedevil"
@@ -1048,17 +1048,17 @@
         "permalink": "https://www.instagram.com/p/DeXMyg7Fjn5/",
         "timestamp": "2026-10-11T17:30:01+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 5970,
-        "comments": 984,
+        "likes": 6874,
+        "comments": 1067,
         "likes_hidden": false,
-        "caption": "🔮Parts of Magic might be beyond definition… \n\nBut the science of magic has been catching up fast. \n\nSo let’s get your logic on board & make some Magic together this Samhain.\n\n📲Comment “SPELL” to get the details of our upcoming 5 day magic-for-health challenge sent to your inbox. The challenge starts Monday 10/26!\n\n#witchcraft #witchesofinstagram #witchtober #spiritualmindset #witchtips"
+        "caption": "🔮Parts of Magic might be beyond definition… \n\nBut the science of magic has been catching up fast. \n\nSo let’s get your logic on board & make some Magic together this Samhain.\n\n📲Comment “SPELL” to get the details of our upcoming 5 day magic-for-health challenge sent to your inbox. The challenge starts Monday 10/26!\n\n‼️EDIT: now that the challenge has started please comment “EXPLORE” to get the details on the Fitness Witchcraft mini course \n\n#witchcraft #witchesofinstagram #witchtober #spiritualmindset #witchtips"
       },
       {
         "handle": null,
         "permalink": "https://www.instagram.com/p/DcT2t63G6-n/",
         "timestamp": "2026-08-21T17:17:26+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 6173,
+        "likes": 6171,
         "comments": 127,
         "likes_hidden": false,
         "caption": "Many ex Mormons have found my account recently, and it led me to think about why people who leave high control religions may find their home in witchcraft and other nature based religions. I am grateful to have a practice that honors both women and Mother Earth. #witchcraft #spirituality #exmormon #nature"
@@ -1068,20 +1068,20 @@
         "permalink": "https://www.instagram.com/p/DeNUT8lS8n-/",
         "timestamp": "2026-10-07T21:46:03+0000",
         "format": "IMAGE",
-        "likes": 4357,
-        "comments": 589,
+        "likes": 4419,
+        "comments": 606,
         "likes_hidden": false,
         "caption": "Would you rather visit your ancestors in the past or meet your descendants in the future? \n\nOctober and November are months of ancestral veneration. We tend our altars, prepare offerings, and spend time honoring our dead. This year, Venus retrograde in Scorpio brings questions of love and inheritance into that practice. Some of the beliefs we’re reconsidering have been in our families longer than anyone can remember.\n\nWith Mercury also in Scorpio, I’m interested in what we could learn if we could hear the stories firsthand. Family history changes depending on who is telling it. There are things people take to the grave that everyone else spends a lifetime trying to understand.\n\nIf you could sit down with an ancestor, what would you actually ask? Would you want to know how they practiced their magic? Who taught them? Would you tell them what happened to their children or homes? \n\nI wonder what they would make of us. Would they recognize something they had prayed for, or have some serious questions about what the hell we’re doing. \n\nMeeting our descendants would put us on the other side of that conversation. We would be answering questions about our beliefs, our choices, and things we never imagined anyone would remember.\n\nThat feels like a question worth sitting with this ancestor season. Would you go back, or would you go forward? 🤔🤔\n\n#Ancestors #spiritSeason #witchcraft  #thehoodwitch"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/Ddg1UGAAqut/",
-        "timestamp": "2026-09-20T14:52:59+0000",
+        "permalink": "https://www.instagram.com/p/DeUYWAVAmzf/",
+        "timestamp": "2026-10-10T15:15:45+0000",
         "format": "IMAGE",
-        "likes": 4780,
-        "comments": 61,
+        "likes": 4463,
+        "comments": 17,
         "likes_hidden": false,
-        "caption": "If you want to see all of my cool stuff—meet me at Fan-X in Salt Lake City, Utah next weekend September 24-26.  I’m bringing the spooky stuff like grimoires, my Star Wars collection, Lord of the Rings, Harry Potter, all of the MANGA, and several movie props.  Use discount code: BOOKGUY for discounted tickets.  Moons Rare Books will be at both 1500.  #manga #lotr #starwarsfan #fanx #witchcraft"
+        "caption": "10/10 portal & Libra New Moon said manifest bigger, bitch!!!🌙🔑\n\nI made a little free key ritual for Patreon if you wanna actually do something with all this energy instead of just staring at the moon and hoping for the best 😂 Link in bio to join the coven!🖤\n\n#newmooninlibra #witchmemes #manifestation #astrologymemes #zodiacmemes"
       }
     ],
     "esoteric": [
@@ -1090,37 +1090,37 @@
         "permalink": "https://www.instagram.com/p/DY-UBCwMVtz/",
         "timestamp": "2026-05-30T18:56:25+0000",
         "format": "IMAGE",
-        "likes": 10203,
+        "likes": 10199,
         "comments": 204,
         "likes_hidden": false,
         "caption": "The temples have fallen silent. The priesthoods have vanished. Empires have risen from dust and returned to it. Yet the current of the Ancient Wisdom has never ceased to flow.\n\nFrom the shadowed sanctuaries of Egypt, where the mysteries of divine kingship, cosmic order, and the perfection of the soul were first clothed in symbol and ritual, there emerged a tradition not bound to any single creed or civilization. The outward forms changed with the centuries — pagan, Christian, Enlightenment, and secular, but the inner doctrine endured.\n\nFreemasonry stands as one of the great vessels of that continuity. Neither a religion nor a relic of the past, it serves as a living repository of initiatic knowledge, preserving through allegory, architecture, geometry, and ceremonial drama those perennial truths once taught within the mystery schools of antiquity. The sacred eye, the pillars, the celestial vault, the working tools of the builder; all are fragments of a language far older than the modern world.\n\nThe Pharaoh and the Mason are separated by millennia, yet they stand beneath the same Light. One gazes upon the mysteries through the symbols of Egypt, the other through the symbolism of the Lodge. The garments differ; the wisdom remains.\n\nFor while nations, faiths, and philosophies pass through successive ages, the Brotherhood persists as a guardian of the hidden tradition, preserving the ember of ancient knowledge against the darkness of forgetfulness, carrying it from age to age until the seeker is prepared to receive it.\n\nLux ex Tenebris. Ordo ab Chao.\nThe forms of civilization change; the Mystery endures."
       },
       {
         "handle": null,
+        "permalink": "https://www.instagram.com/p/DTvUQJbAQW0/",
+        "timestamp": "2026-01-20T16:32:27+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 6053,
+        "comments": 179,
+        "likes_hidden": false,
+        "caption": "Xena: Warrior Princess wasn't just a show. It was an esoteric blueprint.\n\nFalse light. Shadow integration. Karma. Sovereignty. The Way of the Spiritual Warrior.\n\nWhat's your favorite episode?\n\n#xenawarriorprincess #esoteric #shadowwork #spiritualsovereignty #hiddenteachings"
+      },
+      {
+        "handle": null,
         "permalink": "https://www.instagram.com/p/DQXAcubEciP/",
         "timestamp": "2025-10-28T16:23:27+0000",
         "format": "IMAGE",
-        "likes": 4418,
+        "likes": 4419,
         "comments": 5,
         "likes_hidden": false,
         "caption": "#relatable #lockin #shopkins #girlblog #girlblogger #girlbloggeraesthetic #justgirlythings #girlythings #girlymemes #memes #girly #y2k #angel #angelcore #ethereal #esoteric #esotericmemes #pinterest #pinterestmemes #pinterestgirl #tumblr #tumblrgirl #whispermemes #whisper #333 #444 #777"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DV_4ZM1DdqC/",
-        "timestamp": "2026-03-17T19:58:54+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 4190,
-        "comments": 134,
-        "likes_hidden": false,
-        "caption": "Sybil Leek & the witch village of Burley ꩜🍃\n\n\"𝑰 𝒉𝒂𝒗𝒆 𝒃𝒆𝒆𝒏 𝒄𝒂𝒍𝒍𝒆𝒅 '𝒂 𝒍𝒆𝒈𝒆𝒏𝒅', 𝒘𝒉𝒊𝒄𝒉 𝒔𝒆𝒆𝒎𝒔 𝒂 𝒓𝒂𝒕𝒉𝒆𝒓 𝒅𝒆𝒍𝒊𝒈𝒉𝒕𝒇𝒖𝒍 𝒕𝒉𝒊𝒏𝒈 𝒕𝒐 𝒃𝒆\"\n\n𖦹 Hidden in the heart of the New Forest lies the magickal witch village of Burley. Famous for its many witchcraft shops and wild ponies, the village was once home to its most notable resident, Sybil Leek; a self professed white witch who in the 1950s could often be seen walking through Burley with her pet jackdaw, Mr Hotfoot Jackson, perched on her shoulder. 🐦‍⬛ \n\n𖦹 Sybil was born on 22nd February 1917, at \"a crossroads where three rivers meet, in a wild and witch-ridden part of Staffordshire\". Her mother was a psychic and her grandmother an astrologer who tutored her in the ways of magick. Whilst folk such as author H.G.Wells and occultist Aleister Crowley were frequent visitors to the family home, the latter she recalls teaching her poetry whilst mountain climbing. \n\n𖦹 After being initiated into a French coven, Sybil then spent some time living with the Romani before settling in Burley and opening an antiques shop. During this period she started the Horsa Coven, of which she was High Priestess, and she also gave covenofwitchesburley its name. \n\n𖦹 Burley though, was not to remain her home, and leaving England behind she moved to America and became a renowned author, writing nigh on 60 books on astrology and witchcraft. She also partnered with parapsychologist Hans Holzner and together they investigated cases of hauntings across America. \nSybil left this world on 26th October 1982, and i'll leave you with an excerpt from her brilliant book Diary of a Witch ꩜🍃\n\n\"𝑷𝒐𝒑𝒖𝒍𝒂𝒓 𝒎𝒚𝒕𝒉𝒐𝒍𝒐𝒈𝒚 𝒘𝒐𝒖𝒍𝒅 𝒉𝒂𝒗𝒆 𝒊𝒕 𝒕𝒉𝒂𝒕 𝒘𝒆 𝒘𝒊𝒕𝒄𝒉𝒆𝒔 𝒂𝒓𝒆 𝒂 𝒍𝒊𝒄𝒆𝒏𝒕𝒊𝒐𝒖𝒔 𝒍𝒐𝒕, 𝒇𝒐𝒓𝒆𝒗𝒆𝒓 𝒓𝒖𝒏𝒏𝒊𝒏𝒈 𝒂𝒓𝒐𝒖𝒏𝒅 𝒉𝒂𝒍𝒇 𝒏𝒂𝒌𝒆𝒅 𝒖𝒏𝒅𝒆𝒓 𝒕𝒉𝒆 𝒍𝒊𝒈𝒉𝒕 𝒐𝒇 𝒕𝒉𝒆 𝒎𝒐𝒐𝒏 𝒎𝒂𝒌𝒊𝒏𝒈 𝒘𝒆𝒊𝒓𝒅 𝒎𝒂𝒅-𝒅𝒐𝒈 𝒏𝒐𝒊𝒔𝒆𝒔. 𝑰𝒏 𝒎𝒚 𝒉𝒐𝒎𝒆 𝒊𝒏 𝒕𝒉𝒆 𝑵𝒆𝒘 𝑭𝒐𝒓𝒆𝒔𝒕 𝒊𝒕 𝒘𝒐𝒖𝒍𝒅 𝒕𝒂𝒌𝒆 𝒂 𝒕𝒐𝒖𝒈𝒉𝒆𝒓 𝒄𝒉𝒂𝒓𝒂𝒄𝒕𝒆𝒓 𝒕𝒉𝒂𝒏 𝑰 𝒕𝒐 𝒓𝒖𝒏 𝒂𝒓𝒐𝒖𝒏𝒅 𝒏𝒂𝒌𝒆𝒅 𝒂𝒎𝒐𝒏𝒈 𝒂𝒍𝒍 𝒕𝒉𝒐𝒔𝒆 𝒈𝒐𝒓𝒔𝒆 𝒃𝒖𝒔𝒉𝒆𝒔\""
-      },
-      {
-        "handle": null,
         "permalink": "https://www.instagram.com/p/DUn_N1FjyhA/",
         "timestamp": "2026-02-11T16:45:23+0000",
         "format": "IMAGE",
-        "likes": 3695,
+        "likes": 3694,
         "comments": 7,
         "likes_hidden": false,
         "caption": "Тгк- flower_familiar (ссылка в шапке профиля)"
@@ -1130,20 +1130,10 @@
         "permalink": "https://www.instagram.com/p/DOZWr3NCI76/",
         "timestamp": "2025-09-09T21:13:27+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 3325,
+        "likes": 3320,
         "comments": 59,
         "likes_hidden": false,
         "caption": "🖤 \n.\n.\n.\n#darkart #gothart #gothicart #occultart #artificialintelligence #aiart #aiartwork #aiartist #aiartcommunity #midjourney #midjourneyart #wicca #witchcraft #paganwitch #witch #witchaesthetic #witchart #witchesofinstagram #witchvibes #synthography #esoteric #witchy #midjourneygallery #darkfantasy #darkfantasyart #esotericart #darkaesthetic #darkaesthetics #blackmetal"
-      },
-      {
-        "handle": null,
-        "permalink": "https://www.instagram.com/p/DWEaOFCAvBh/",
-        "timestamp": "2026-03-19T14:11:26+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 2518,
-        "comments": 22,
-        "likes_hidden": false,
-        "caption": "Let’s make one thing clear from the start. God is everything, but religion, as most people know it, is something constructed. Not divine in its current form, but shaped over time by human hands with power and control in mind. History wasn’t just written, it was edited, filtered, and locked away until truth became distant and almost unrecognizable.\n\nWhat we live in is not just a world, it’s a curated version of reality. Information was never meant to be fully free, because free information wakes people up. And once people wake up, the illusion begins to crack. That’s why truth is often hidden, complicated, or drowned in noise.\n\nThey didn’t just organize society, they divided perception. Borders were drawn not only on maps, but in minds. Countries became enclosures, ideologies became identities, and people forgot what unity feels like. Instead, they were placed into systems where they compete for survival, believing that’s natural.\n\nMeanwhile, those at the top never played the same game. They sit at the table while others fight over crumbs and call it competition. In reality, it’s a controlled structure where distraction keeps most from seeing the bigger picture.\n\nEven spirituality was reshaped. People were taught to pray from a place of weakness, hoping to be saved, instead of understanding their connection to something greater. And a person who believes they are powerless is easier to guide.\n\nIf everything broke at once, systems, beliefs, everything people rely on, the truth wouldn’t disappear with it. It would do the opposite. It would surface. Because truth doesn’t depend on structures, only illusions do. And once those structures fail, what’s left is raw understanding. Not comfort, not fear, just clarity that was always there, buried under layers.\n\nWhat we call truth today is often just an inherited version, passed through generations, translated, adjusted, and reshaped until it fits a certain narrative. Not necessarily false, but not untouched either.\n\nSo the real question was never about finding truth. It’s about realizing who shaped the version of truth you’ve been given, and why❓\n\n#33\n#esoteric\n#gnosticism \n#esotericknowledge \n#mason"
       },
       {
         "handle": null,
@@ -1157,30 +1147,40 @@
       },
       {
         "handle": null,
+        "permalink": "https://www.instagram.com/p/DWEaOFCAvBh/",
+        "timestamp": "2026-03-19T14:11:26+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 2515,
+        "comments": 22,
+        "likes_hidden": false,
+        "caption": "Let’s make one thing clear from the start. God is everything, but religion, as most people know it, is something constructed. Not divine in its current form, but shaped over time by human hands with power and control in mind. History wasn’t just written, it was edited, filtered, and locked away until truth became distant and almost unrecognizable.\n\nWhat we live in is not just a world, it’s a curated version of reality. Information was never meant to be fully free, because free information wakes people up. And once people wake up, the illusion begins to crack. That’s why truth is often hidden, complicated, or drowned in noise.\n\nThey didn’t just organize society, they divided perception. Borders were drawn not only on maps, but in minds. Countries became enclosures, ideologies became identities, and people forgot what unity feels like. Instead, they were placed into systems where they compete for survival, believing that’s natural.\n\nMeanwhile, those at the top never played the same game. They sit at the table while others fight over crumbs and call it competition. In reality, it’s a controlled structure where distraction keeps most from seeing the bigger picture.\n\nEven spirituality was reshaped. People were taught to pray from a place of weakness, hoping to be saved, instead of understanding their connection to something greater. And a person who believes they are powerless is easier to guide.\n\nIf everything broke at once, systems, beliefs, everything people rely on, the truth wouldn’t disappear with it. It would do the opposite. It would surface. Because truth doesn’t depend on structures, only illusions do. And once those structures fail, what’s left is raw understanding. Not comfort, not fear, just clarity that was always there, buried under layers.\n\nWhat we call truth today is often just an inherited version, passed through generations, translated, adjusted, and reshaped until it fits a certain narrative. Not necessarily false, but not untouched either.\n\nSo the real question was never about finding truth. It’s about realizing who shaped the version of truth you’ve been given, and why❓\n\n#33\n#esoteric\n#gnosticism \n#esotericknowledge \n#mason"
+      },
+      {
+        "handle": null,
+        "permalink": "https://www.instagram.com/p/DfDXUAKkm__/",
+        "timestamp": "2026-10-28T21:09:21+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 2112,
+        "comments": 101,
+        "likes_hidden": false,
+        "caption": "the four archangels surround you 🕯️\n\nin the lesser banishing ritual of the pentagram, the arrangement matters. facing east, raphael is before you, gabriel behind you, michael to your right and auriel (also called uriel) to your left. air, water, fire and earth become four quarters around a single center: you.\n\nthe rite took shape within the hermetic order of the golden dawn, founded in 1888. it combines the qabalistic cross, traced pentagrams, divine names and the archangelic invocation to purify and prepare ritual space.\n\nthe sequence has a detail worth noticing: the pentagrams and divine names come before the angels. the standard lesser banishing ritual repeats the same banishing earth pentagram at all four quarters and not four different elemental pentagrams. the qabalistic cross opens and closes the rite.\n\nthe result is a symbolic world in balance. this is the golden dawn’s ceremonial synthesis, not universal christian doctrine or a single shared jewish angelology. protection is the ritual’s spiritual intention.\n\nsave this passage, share this post with a friend, follow blayden.k for more esoteric explorations, and come explore with us yourself at inner sanctum (link in bio): innersanctum.club\n\n#occult #magick #ceremonialmagick #archangels #esoteric"
+      },
+      {
+        "handle": null,
         "permalink": "https://www.instagram.com/p/Dd_HfMwq8Oe/",
         "timestamp": "2026-10-02T09:06:01+0000",
         "format": "IMAGE",
-        "likes": 1943,
+        "likes": 1956,
         "comments": 46,
         "likes_hidden": false,
         "caption": "Transmission received ~ detail\n.\n.\n.\n.\n.\n.\n.\n.\n.\n\n#oilpainting \n#symbolism\n#art\n#esoteric \n#surreal"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DQcPCz6jwwb/",
-        "timestamp": "2025-10-30T17:07:11+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 1772,
-        "comments": 11,
-        "likes_hidden": false,
-        "caption": "eve eve \n\nWorm Story (Keita Kurosaka, 1989) + “Plan” by Venus\n\nTake Off (Gunvor Nelson, 1972) + “C’est pas moi” by Hard Corps\n\n“Changing the Face of Things” (1932) + “Makimono” by Das Ding\n\nMother Joan of the Angels (Kawalerowicz, 1961)\n\n#dreamcore #queerart #shoegaze #cinema #lbgtq #dreamwave #astrology #whimsigoth #gothgothgoth #esoteric #filmedit #sadboy #whimsigothic"
-      },
-      {
-        "handle": null,
         "permalink": "https://www.instagram.com/p/DeKRXA4ln1l/",
         "timestamp": "2026-10-06T17:00:04+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 1715,
+        "likes": 1740,
         "comments": 24,
         "likes_hidden": false,
         "caption": "🪽🪽\n\n#esoteric #imjustagirl #womenwhorunwiththewolves #darkfeminine #foryou"
@@ -1192,7 +1192,7 @@
         "permalink": "https://www.instagram.com/p/DKrOSmrs4Ca/",
         "timestamp": "2025-06-09T09:40:51+0000",
         "format": "IMAGE",
-        "likes": 8611,
+        "likes": 8609,
         "comments": 75,
         "likes_hidden": false,
         "caption": "-XCIII-\nCredit: xciiisociety \n#saturn #lucumi #santero #memetics #mememagic #qblh #hermeticorderofthegoldendawn #hermeticism #occultism #voudon #blackcube #93 #gnostic #voodoo #palomayombe #lucifer #blackcubereligion #blackcubeofsaturn #qabbalah #rosecroix #saturnworship #elegba #hermeticism #alchemy #goetia #blackcube #occultmemes #̬̇̐ͥs̹ͧͣͯu̝͉̖r̟͓ͭreͪ̊a̤̜̍l̰̒ͯm̮̲e̱̹̰ͤ̓m̆ͤe͖s̜͚ͨ̂ #discordianism #konxompax #lightinextension #memetics #voudon"
@@ -1202,7 +1202,7 @@
         "permalink": "https://www.instagram.com/p/DOQa4DZgLhm/",
         "timestamp": "2025-09-06T09:56:54+0000",
         "format": "IMAGE",
-        "likes": 7766,
+        "likes": 7765,
         "comments": 66,
         "likes_hidden": false,
         "caption": "-XCIII-\nCredit: xciiisociety \n#saturn #lucumi #santero #memetics #mememagic #qblh #hermeticorderofthegoldendawn #hermeticism #occultism #voudon #blackcube #93 #gnostic #voodoo #palomayombe #lucifer #blackcubereligion #blackcubeofsaturn #qabbalah #rosecroix #saturnworship #elegba #hermeticism #alchemy #goetia #blackcube #occultmemes #̬̇̐ͥs̹ͧͣͯu̝͉̖r̟͓ͭreͪ̊a̤̜̍l̰̒ͯm̮̲e̱̹̰ͤ̓m̆ͤe͖s̜͚ͨ̂ #discordianism #konxompax #lightinextension #memetics #voudon"
@@ -1212,7 +1212,7 @@
         "permalink": "https://www.instagram.com/p/Dc8zPV2uucj/",
         "timestamp": "2026-09-06T14:56:01+0000",
         "format": "IMAGE",
-        "likes": 1218,
+        "likes": 1216,
         "comments": 1,
         "likes_hidden": false,
         "caption": "Maymon, Demon King of the South. // According to the Grimoire of St. Cyprian, Maymon is one of the Four Demon Kings, and is attributed to the South. He is associated with a black bird, crowned and standing upon a branch, similar to the illustration found in Faust’s Magia Naturalis et Innaturalis. In Clavis Inferni, Maymon is placed in opposition to the Archangel Gabriel. He is also associated with sovereignty over other spirits, including Asmodeus, who is described as acting under his power. // Sterling silver, link in profile."
@@ -1222,7 +1222,7 @@
         "permalink": "https://www.instagram.com/p/Dd4vRFAz36Q/",
         "timestamp": "2026-09-29T21:35:51+0000",
         "format": "IMAGE",
-        "likes": 1116,
+        "likes": 1114,
         "comments": 1,
         "likes_hidden": false,
         "caption": "Egyn, Demon King of the North. // According to the Grimoire of St. Cyprian, Egyn is one of the Four Demon Kings, and is attributed to the North. He is associated with a blue, crowned bear, representing the element of Earth. In Clavis Inferni, Egyn is placed in opposition to the Archangel Uriel. He is associated with knowledge of the natural world, hidden things, and the revelation of secrets. // Sterling silver, link in profile."
@@ -1252,7 +1252,7 @@
         "permalink": "https://www.instagram.com/p/DA30E2sJfMM/",
         "timestamp": "2024-10-08T17:47:58+0000",
         "format": "IMAGE",
-        "likes": 1026,
+        "likes": 1025,
         "comments": 4,
         "likes_hidden": false,
         "caption": "Anu, Lord of the Constellations. // Known as the Sky Father, King of the Gods, Lord of the Constellations, Anu is the divine personification of the sky, supreme God and father of all the deities in the Mesopotamian religion. He was believed to be the supreme source of all authority, for the other gods and for all mortal rulers, and he is described in one text as the one “who contains the entire universe”. He is identified with the north ecliptic pole centered in the constellation Draco. His symbol is the Dingir, a star shaped ideogram that represents the heavens. The original association of divinity is thus with the “bright” or “shining” stars in the sky. // Sterling silver, link in profile."
@@ -1262,7 +1262,7 @@
         "permalink": "https://www.instagram.com/p/DbQ0WnSuioF/",
         "timestamp": "2026-07-26T16:27:57+0000",
         "format": "IMAGE",
-        "likes": 1007,
+        "likes": 1004,
         "comments": 2,
         "likes_hidden": false,
         "caption": "Baphomet. // “They have built the high places of Topheth, which is in the valley of the son of Hinnom, to burn their sons and their daughters in the fire, which I did not command, and it did not come into My mind.” —Jer. 7:31 // Winter Solstice, the shortest day of the year, was linked with Capricornus in the Zodiac. Eliphas Levi studied thus intently because of its connection with ceremonial magic, identifying it with Baphomet, the ass-headed idol of the Templar Knights. Still, it was greatly misunderstood. He succeeded in identifying the goat with Pan, portrayed as Pan Pangenitor, the All-Begetter. It is the male creative force, the goat leaping with lust upon the summit of the earth. It is also refers to all gods containing these correspondences, such as Sheitan or Satan. Essential to the symbolism is the surroundings, the barren places, especially high places, mountaintops. The Old Testament is full of stories of the temptation of kings who worshiped in “high places”, desolate summits uncontaminated by the deeds of men. // Sterling silver, link in profile."
@@ -1272,122 +1272,122 @@
         "permalink": "https://www.instagram.com/p/DAql2pupxxn/",
         "timestamp": "2024-10-03T14:33:34+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 998,
+        "likes": 992,
         "comments": 8,
         "likes_hidden": false,
         "caption": "Heart, skin, and flesh. // The keys to the construction of the Enochian Lamen are in the condensation of the 12x7 table containing the letters of the names of the seven planetary Heptarchic Kings and their Princes. From the outside in, the Lamen is divided into three sections: the flesh, heart, and skin. The flesh is added to the perimeter of the Lamen, then the heart to the corners of the inner square. The skin is added to the corners of the diamond square, and the remaining letters of the 12x7 table are woven in between. As the Table of Practice conciliates Heaven and earth, so does the Lamen placed over the heart conciliate the magician to the Holy Table. // Gold, link in profile."
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/Dav68V9JsN5/",
-        "timestamp": "2026-07-13T21:50:58+0000",
+        "permalink": "https://www.instagram.com/p/C84b62KRSpd/",
+        "timestamp": "2024-07-01T13:30:00+0000",
         "format": "IMAGE",
-        "likes": 993,
-        "comments": 4,
-        "likes_hidden": false,
-        "caption": "Xeper signet ring. // I worked on this ring a few years ago. This signet ring features the hieroglyphs of Xeper: the scarab god of transformation and remanifestation, the mouth, the spoken word that creates and the scroll, the written word that preserves. I’ve always found something magical in the process of crafting and making things by hand. The artificer transforms thought into form. Taking an idea and slowly bringing it into existence mirrors the process of creating experiences. In creating something, we also create opportunities to change and become. // Sterling silver, link in profile."
+        "likes": null,
+        "comments": 5,
+        "likes_hidden": true,
+        "caption": "#metaphysical #hermeticism #godconciousness #youaregod #imaginationisgod #magick #mentaldiet #thegodwithin #drjosephmurphy #louiseberlay"
       }
     ],
     "tarot": [
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DezNGp9IGSK/",
-        "timestamp": "2026-10-22T14:32:17+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 2689,
-        "comments": 3,
-        "likes_hidden": false,
-        "caption": "Unas frasecitas para leer los Arcanos desde lo cotidiano 🃏✨\n\n#tarot #lecturadetarot #tarotista"
-      },
-      {
-        "handle": null,
-        "permalink": "https://www.instagram.com/p/De2cx0Ykj5N/",
-        "timestamp": "2026-10-23T20:46:59+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 2548,
-        "comments": 10,
-        "likes_hidden": false,
-        "caption": "MIS HADITAAAAAAAAS ⭐️💞🕯️ volví y de a poco voy a subir sus publicaciones favoritas. \n\nque anillo les tocó? a mi el primero jajajaaja 😭😭😫 😸 #mensajedeldía #tarot #witchythings"
-      },
-      {
-        "handle": null,
-        "permalink": "https://www.instagram.com/p/Dejx1YxEcm8/",
-        "timestamp": "2026-10-16T14:45:24+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 2476,
-        "comments": 6,
-        "likes_hidden": false,
-        "caption": "😌🍃\n\n#zodiaco #horoscopo #signos #astrologia #tarot"
-      },
-      {
-        "handle": null,
-        "permalink": "https://www.instagram.com/p/De4TXemjvSW/",
-        "timestamp": "2026-10-24T14:03:13+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 2081,
-        "comments": 330,
-        "likes_hidden": false,
-        "caption": "Uyumlanmak için hemen yorumlara; “aldım kabul ettim” yazzzzz….\n\n✅ Tüm soru işaretlerinin cevabı burada!💯🔮Fal bakımı için Whatsapp’tan bize ulaş!\n\n☎️Whatsapp hattımız: +90 541 972 41 93\n\n🩷BAKIM ÇEŞİTLERİMİZ🩷\n\n❇️AŞK FALI: Aşk falı kartlı bir açılım olup tamamen aşk hayatınıza odaklı bir bakımdır. İlişki durumunuz ne olursa olsun sorularınıza özel bir şekilde aşk hayatınız için bakım yapılmaktadır. İlişkiniz varsa mevcut ilişkinizin değerlendirmesi, ilişkiniz yoksa gelecekteki aşk ihtimalleriniz, karmaşık bir durumda iseniz çözüm analizleriniz, ayrı iseniz olası durumlarınız üzerinden genel bir değerlendirme yapılmaktadır. Aşk hayatınız ile ilgili sizi bekleyen tüm detaylara değinilmektedir. \n\n❇️SU FALI: Tamamen durugörü ile bakılan bir bakımdır. Kahve falı ve tarot falına göre çok daha detaylıdır. Ayrıca durugörü ile bakıldığından fal baktıran kişinin üzerindeki nazarı ve negatif enerjiyi de almaktadır. İçerik olarak; aşk hayatı, sosyal hayat, iş hayatı, sağlık, kariyer ve finansla ilgili tüm konuları kapsamaktadır. Tarih ve kişilik analizleri konusunda net bilgiler vermektedir. Merak ettiğiniz sorularınıza özel olarak bakılmaktadır.\n\n❇️TAROT FALI: Bu kartlar hem görünen ve bilinen hem de bilinmeyen gizli olay ve durumları tanımlar. Olayların ne zaman gerçekleşeceği hakkında bilgi verir. Aslında çoğu zaman farkında olduğumuz ama göz ardı ettiğimiz şeyleri de açığa çıkarır. Tarot klasiklerin bir efsanesidir! \n\n❇️KAHVE FALI: “Neyse halim çıksın falim!” diyerek kapattığın fincanın genel yorumlanmasıdır. O anda kahvenize ne yansımışsa, hayatınızla ilgili gözüken detaylar nelerse onlar paylaşılır ve size aktarılır. Fincandaki detaylara değinilmektedir.\n\n🧡AYNI GÜN RANDEVU\n🧡SORULARINA ÖZEL BAKIMLAR\n🧡DÜNYA’NIN HER YERİNE HİZMET\n🧡%100 MEMNUNİYET\n\n◼️DANIŞMANLIK İÇİN◼️\n\n👉🏻☎️Whatsapp hattımız: +90 541 972 41 93\n\n#fal #tarot #kahve #burç #astroloji"
-      },
-      {
-        "handle": null,
-        "permalink": "https://www.instagram.com/p/De1wQ5qi2bH/",
-        "timestamp": "2026-10-23T14:18:22+0000",
+        "permalink": "https://www.instagram.com/p/De-batUOEct/",
+        "timestamp": "2026-10-26T23:09:04+0000",
         "format": "IMAGE",
-        "likes": 2237,
-        "comments": 0,
+        "likes": 17233,
+        "comments": 565,
         "likes_hidden": false,
-        "caption": "no está mal querer recibir el mismo amor que das. Si vos estás pendiente de alguien, le demostrás cariño, te preocupás y hacés lo posible por estar presente, también es normal que quieras sentir eso de la otra persona. No sos difícil de querer por necesitar atención, cariño o que te demuestren que les importás. No estás pidiendo demasiado por querer sentirte querida, simplemente, también necesitás recibir ese amor que tanto das. #destacar #frases #tarot #destacame #brujitips🧙‍♀️"
+        "caption": "🔥 SOL EM ESCORPIÃO, LUA EM ÁRIES: QUANDO A ALMA PEDE CORAGEM PARA MUDAR.\n\nO Sol em Escorpião nos convida a mergulhar nas profundezas do nosso ser. É tempo de olhar para aquilo que escondemos, reconhecer nossas sombras, perceber os vínculos que nos aprisionam e encontrar força para transformar o que já não faz sentido.\nA Lua em Áries acrescenta fogo a esse processo. Ela simboliza impulso, coragem, iniciativa e a necessidade de agir. Aquilo que antes suportávamos em silêncio pode começar a incomodar. O que adiávamos por medo pode exigir uma decisão.\n\n🔥 É a intensidade de Escorpião encontrando a coragem de Áries.\nMas existe um cuidado importante: nem toda emoção precisa se transformar em reação imediata. Nem toda verdade precisa ser dita no calor da raiva. E nem toda mudança precisa acontecer de forma abrupta.\n\nA verdadeira força está em reconhecer o que sentimos sem permitir que nossas emoções decidam tudo por nós.\n\nTalvez essa combinação nos convide a refletir:\n\n✨ O que preciso transformar dentro de mim?\n✨ Onde tenho me calado por medo de desagradar?\n✨ Que atitude venho adiando por insegurança?\n✨ Estou agindo por coragem ou apenas reagindo à dor?\n\nEscorpião nos ensina que transformar exige profundidade. Áries nos lembra que, em algum momento, precisamos dar o primeiro passo.\nNão se trata de destruir tudo o que existe, mas de encontrar coragem para deixar de alimentar aquilo que já não combina com quem estamos nos tornando.\nQue o fogo não seja apenas impulso, mas também força para romper padrões. Que a intensidade não se transforme em conflito, mas em consciência. E que toda mudança comece com uma escolha mais verdadeira consigo mesma.\n\n🌿 Transformar-se também é um ato de coragem.\n\nBárbara | Terapia Holística Mar\nterapiaholisticamar \n#terapia #horoscopo #tarot #transition #espiritualidade"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DevTjAjBoVZ/",
-        "timestamp": "2026-10-21T15:00:04+0000",
+        "permalink": "https://www.instagram.com/p/DfKH6BxB9Pd/",
+        "timestamp": "2026-10-31T12:09:34+0000",
         "format": "IMAGE",
-        "likes": 2054,
-        "comments": 66,
+        "likes": 7723,
+        "comments": 20,
         "likes_hidden": false,
-        "caption": "“ABRIR Y CERRAR”\n\nYo pensaba que estaba aprendiendo a leer cartas.\nNo sabía que estaba abriendo espacios.\n\nAtendía 40, 50, 60 personas al día.\nEscuchaba secretos que nadie más sabía.\nDolores que no eran míos.\nHistorias que no me pertenecían.\n\nY cometí un error.\n\nIntenté recordarlo todo.\nGuardar cada consulta en mi mente.\nCargar cada historia como si fuera parte de mí.\n\nA los pocos meses estaba saturado.\nSoñaba con los problemas de otros.\nSentía emociones que no eran mías.\n\nMi energía comenzó a alterarse en áreas de mi propia vida.\n\nAhí entendí algo que ningún libro enseña:\n\nLeer es abrir.\n\nPero si no sabes cerrar… te quedas con lo que no te pertenece.\nTuve que aprender a protegerme.\nA abrir el espacio antes de cada consulta.\nA cerrarlo después.\nA tirar en la papelera energética todo lo dicho.\n\nNo era teatralidad.\n\nEra higiene.\n\nPorque cargar energías ajenas es una carga real.\nY ese fue solo el comienzo.\n\nCuando aprendí a cerrar…\nel mensaje empezó a llegar más lejos.\n\nPor AlbertoRoss77 astrotarotista 🧙‍♂️ \n\n#Namaste 🙏✨\n\n#tarot\n#tarotista\n#meditation \n#espiritualidad"
+        "caption": "Hoje, quando se “celebra”\no Halloween  muitas  crianças vão fantasiadas de bruxa para a escola. É interessante pensar sobre isso.\n\nExiste uma cidade alemã onde foram queimadas  o maior número de mulheres chamadas bruxas.\n\nQuando se diz bruxa, se volta para lá. Para o fogo. E quando nós dizemos que queremos ser magas e não bruxas, não estamos trocando de nome.\n\nEstamos dizendo outra coisa: queremos circular dentro desta sociedade sem o risco de sermos\nqueimadas por falar.\n\nO fogo que queimou aquelas mulheres é o mesmo fogo que trouxe a maga para a sociedade de hoje. Mulheres que se tornaram fogo dentro do fogo.\n\nA bruxa traz a explosão dos saberes ocultos: o caldeirão, o que pode dar bom ou ruim, o que ainda\nnão se sabe. A maga não tem isso. A maga traz a palavra da estabilidade, a Sabedoria contínua.\n\nQueremos sair da carta do Louco. Nós também somos Maga, Sacerdotisa, Imperatriz, Papisa. Dar o feminino a todas essas ferramentas é deixar de considerar a mulher como possibilidade de ser\nqueimada e passar a considerá-la como possibilidade de ser escutada.\n\nPorque enquanto a mulher for a louca, ou a condicionada pelos próprios humores, a política\ncontinuará fechada para nós.\n\nÉ sutil continuar fazendo festa de bruxa nas escolas. Perpetua a época em que o destino da mulher\nera ser queimada.\n\nDe que lado do fogo você está?\n\n#bruxas #magas #feminino #tarot #aimperatriz asacerdotisa\ncabala"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DerbISaEWae/",
-        "timestamp": "2026-10-19T14:00:04+0000",
+        "permalink": "https://www.instagram.com/p/DfIeGeuILnE/",
+        "timestamp": "2026-10-30T20:44:03+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 2097,
-        "comments": 18,
+        "likes": 6246,
+        "comments": 15,
         "likes_hidden": false,
-        "caption": "Última semana da eleição mais importante que temos atualmente! Dia 25, pense em tudo que foi conquistado até aqui, se não por você, pense no que foi conquistado pelos outros, pelo próximo, pela sociedade! Pense na nossa soberania, pense nas nossas terras raras, pense em todos aqueles que não estão mais aqui, que perderam sua chance de falar, pense nos povos originários e em nossas minorias, pense no BRASIL! 🇧🇷 \n\nDia 25, vote 13! 🌟✊🏻❤️\n.\n.\n.\n.\n.\n.\n.\n#politica #esquerda #tarot #witchcraft #lula"
+        "caption": "Welcome to the witchiest meme roundup that ever there was. And the final slide? That's the real truth about witches they don't want you to know.\n\nHappy Samhain, happy witches' new year, and happy spooky season, y'all. Tap into your power because we're gonna need it more than ever. \n\n#mentalhealthmemes #therapymemes #anxietymemes #funny #memes #mondaymemes #hspmemes #empathmemes #funnymemes #spiritualmemes #witchmemes #HSP #empathsbelike #empathproblems #tarot #witchymemes #spiritualmemes"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/De5Z555lPPc/",
-        "timestamp": "2026-10-25T00:19:35+0000",
+        "permalink": "https://www.instagram.com/p/DfMrvN8Di4b/",
+        "timestamp": "2026-11-01T12:00:02+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 1541,
-        "comments": 205,
+        "likes": 4130,
+        "comments": 32,
         "likes_hidden": false,
-        "caption": "MERCURIO RETRÓGRADO EN ESCORPIO ♏\n\nNo todo lo que vuelve merece una segunda oportunidad. Algunas cosas regresan para que puedas verlas con otros ojos, entender lo que antes no veías y tomar decisiones diferentes.\n\nDel 24 de octubre al 13 de noviembre, Mercurio retrógrado en Escorpio nos invita a revisar conversaciones, acuerdos, pensamientos y situaciones que todavía tienen algo por revelar. No es momento de sacar conclusiones apresuradas ni de reaccionar sin tener toda la información.\n\n🔎 La clave está en revisar antes de responder, escuchar antes de suponer y pensar antes de decidir.\n\nGuardá este post para tener presentes las recomendaciones durante el tránsito y compartilo con alguien que necesite leerlo.\n\n❤️ Dale like si te gusta.\n💬 Comentá si te resonó.\n📩 Compartí.\n🔖 Guardá.\n✨ Seguime para más astrología.\n\n#MercurioRetrogrado #Astrologia #horoscopo #tarot #espiritualidad"
+        "caption": "♒ ACUARIO — AS DE BASTOS\n\n¡ATENCIÓN, ACUARIO! ♒\n\nHORÓSCOPO CONSCIENTE\n\nNOVIEMBRE 2026\n\n☀️ Solar | 🌙 Lunar | ⬆️ Ascendente\n\nHay fuegos que llegan para iluminar.\n\nY hay fuegos que llegan para quemar lo que ya no sirve.\n\nEl As de Bastos es una chispa.\n\nUn comienzo. Una idea. Una rebelión. Una fuerza que aparece y dice:\n\nEsto ya no puede seguir igual.\n\nNoviembre trae una invitación a iniciar, activar, crear y mover estructuras.\n\nPuede sentirse como una necesidad de cambio que no solamente pertenece a una persona, sino también a grupos, comunidades, equipos y proyectos compartidos.\n\nPero acá está el desafío:\n\n¿qué hacemos con el fuego?\n\nPorque empoderarse no significa incendiarlo todo.\n\nLa verdadera revolución requiere consciencia.\n\nHay momentos en los que debemos romper con una estructura.\n\nY otros en los que simplemente tenemos que dejar de alimentarla.\n\nTu creatividad, tus proyectos y tus vínculos con grupos pueden convertirse en escenarios de renovación.\n\nNo desperdicies esa chispa demostrando que tenés razón.\n\nUsala para construir.\n\n🌌 ¿Qué relación hay entre esta carta y los procesos colectivos que se mueven durante noviembre? En la versión extendida exploramos esa energía y sus desafíos.\n\n🔗 Leé el Horóscopo Consciente completo en el enlace del perfil o comentá ASTROS y te lo enviamos por DM.\n\n🔮 ¿Querés explorar qué áreas de tu carta natal están pidiendo renovación? Comentá TAROT y te contamos sobre nuestras consultas de Tarot y Astrología.\n\n💬 ¿Qué cambiarías mañana mismo si supieras que nadie va a juzgarte?\n\nPor AlbertoRoss77 Astrotarotista 🧙‍♂️\n\n#Acuario #HoroscopoConsciente #Tarot #Astrologia #CaminosDeConocimiento"
+      },
+      {
+        "handle": null,
+        "permalink": "https://www.instagram.com/p/DfCpIGjILXx/",
+        "timestamp": "2026-10-28T14:25:46+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 3620,
+        "comments": 30,
+        "likes_hidden": false,
+        "caption": "Frases de libros y arcanos 🤎🙏🏻 es un ejercicio hermoso para aprender, leer frases y pensar que arcano las diría ✨🌞🌈 #tarot #tarotespaña #tarotterapéutico #tarotonline #tarotamor"
+      },
+      {
+        "handle": null,
+        "permalink": "https://www.instagram.com/p/DfPEc2ZjuOH/",
+        "timestamp": "2026-11-02T10:15:25+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 1947,
+        "comments": 452,
+        "likes_hidden": false,
+        "caption": "🎉Uyumlandıysan, “ALDIM KABUL ETTİM” ✍🏻 yaz ve enerjiyi mühürle…\n\n🍀WhatsApp hattımız: +90 541 972 41 93 🫶🏻\n\n🫶🏻\n\n⭐️\n\n#tarot #kahvekeyfi #kahvefincanı #falbakımı #tarotonline"
+      },
+      {
+        "handle": null,
+        "permalink": "https://www.instagram.com/p/DfI1EMwEfeO/",
+        "timestamp": "2026-10-31T00:05:32+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 2058,
+        "comments": 40,
+        "likes_hidden": false,
+        "caption": "Frazetta Fantasy Tarot by Lo Scarabeo (loscarabeotarot) drops tomorrow, Halloween Day, at 12 PM EST.\n\nIf you missed our Kickstarter earlier this year, the standard retail edition will be available in our online store. 78 cards featuring the artwork of Frank Frazetta.\n\n$35 USD. Limited quantities.\nfrazettagirls.com #frazettagirls #loscarabeo #tarot #frazetta"
       },
       {
         "handle": null,
         "permalink": "https://www.instagram.com/p/De25a8EnEqz/",
         "timestamp": "2026-10-24T00:57:16+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 1561,
+        "likes": 1570,
         "comments": 183,
         "likes_hidden": false,
         "caption": "Vocês me pediram tanto e nos últimos minutos eu resolvi trazer essa leitura deixando minha opinião política de lado e apenas focando na mensagem que o oráculo trouxe, então vamos lá: \n\nFlávio Bolsonaro \n\nO oráculo mostra Flávio muito forte nessas eleições, inclusive liderando às votações em grande parte do país. \nEle chegará muito perto do seu objetivo, porém não o vejo concretizando. \nO oráculo dos ossos mostra Flávio no centro, que significa um \"QUASE\" / \"PRÓXIMO DAQUILO QUE QUER, PORÉM AINDA NÃO É MOMENTO\".\nVejo comemorações, porém seguidas de uma grande frustração. \nEntão realmente, não o vejo cumprindo um mandato como presidente do Brasil.\n\nLula \n\nO oráculo mostra o atual presidente conseguindo nos últimos instantes virar muitos votos e mudar a cabeça de muitas pessoas. Ele conseguirá novos eleitores, novos votos, e o vejo conseguindo trazer algumas verdades à tona que mudarão a opinião de muita gente. \nO oráculo fala de transformação, reviravoltas e o fim de uma temporada difícil seguida de alívio.\nNão o vejo entregando seu posto para outro, mas sim, permanecendo exatamente onde está, podendo assim \"respirar tranquilo\" após um longo período de tensão. \n\nÉ isso, boa votação para todos nós! 🇧🇷\n\n#brasil #eleicoes #segundoturno #tarot #oraculo"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DevuJpLmHje/",
-        "timestamp": "2026-10-21T06:04:06+0000",
+        "permalink": "https://www.instagram.com/p/DfNKaYXxf9R/",
+        "timestamp": "2026-11-01T16:31:48+0000",
         "format": "IMAGE",
-        "likes": 921,
-        "comments": 484,
+        "likes": 1601,
+        "comments": 59,
         "likes_hidden": false,
-        "caption": "Bom dia, meu Anjo! 🧿\nQue esta figa seja um símbolo de proteção e um lembrete para cuidar da sua energia. Que o seu dia seja leve, cheio de paz e rodeado de pessoas que lhe querem bem.\nTambém pode contactar-nos pelo WhatsApp do perfil.\n.\n.\n❤️ O Tarot pode ajudar.\n.\n💖 Descubra o que pode estar a bloquear a sua vida neste momento.\n.\n📲 Fale connosco no WhatsApp:\n(+351) 930 909 069\n.\n☎️ Centro Maria Helena:\n(+351) 218 077 000\n.\n.\n#Taro #Tarot #Signos #Previsoes #Astrologia #Espiritualidade"
+        "caption": "🔥2026 bitmeden hayatında neler değişebilir? Yılın son iki ayı sana hangi sürprizleri hazırlıyor? 💌 Beklenmedik bir mesaj mı? 😎Aşkta yeni bir sayfa mı? Maddi anlamda sevindiren bir gelişme mi? Yoksa uzun zamandır beklediğin bir dileğin için yeni bir fırsat mı? 💫\n✨ Burcunu bul ve yıl bitmeden seni nelerin bekleyebileceğini keşfet! Yeni başlangıçlara hazırsan yorumlara “2026’nın güzelliklerini kabul ediyorum” yaz.🌟 Bu gönderiyi 2026 bitmeden güzel bir gelişme yaşamasını istediğin arkadaşına gönder. Yılın son kehanetleri için takipte kal!\n\nBilgi ve Danışmanlık İçin Whatsapp 📲 +90 541 177 10 05 \n•\n•\n•\n#astroloji #tarot #burçyorumları #keşfetteyizzz #burçyorumu"
+      },
+      {
+        "handle": null,
+        "permalink": "https://www.instagram.com/p/DfKwHRjEd5y/",
+        "timestamp": "2026-10-31T18:00:05+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 1320,
+        "comments": 5,
+        "likes_hidden": false,
+        "caption": "Quizá esta noche nos invite a recordar a alguien que echamos de menos. A recuperar una fotografía, una receta, una historia familiar. A preguntarnos qué hemos recibido de las personas que vinieron antes.\n\nPero también a mirar con cariño aquello que hemos heredado y que ya no queremos seguir llevando. Porque en una familia se transmiten cosas preciosas. Y también silencios, miedos, responsabilidades y formas de vivir que quizá tuvieron sentido en otro momento, pero que hoy podemos empezar a transformar.\n\nHonrar nuestras raíces también puede significar permitir que algunas historias terminen con nosotras.\n\nY me parece una reflexión preciosa para hoy.\n\nQuizá puedas encender una vela, recordar a alguien, escribirle unas palabras o simplemente dedicar un momento a agradecer aquello que su vida dejó en la tuya. Y quizá también puedas preguntarte qué parte de esa herencia quieres seguir cultivando y qué parte necesita, por fin, descansar.\n\nSi os apetece, podéis acompañar esta reflexión con una lectura de tarot de tres cartas:\n\n1. El legado de mis raíces que me sostiene.\n2. La herencia que ya no quiero seguir repitiendo.\n3. La nueva forma de vivir que elijo cultivar.\n\nFeliz Samhain 🕯️🖤\n.\n.\n#tarot #tarotterapéutico #samhain #marinaalejandre"
       }
     ],
     "alchemy": [
@@ -1396,27 +1396,17 @@
         "permalink": "https://www.instagram.com/p/DWC43UYiEVN/",
         "timestamp": "2026-03-19T00:02:27+0000",
         "format": "IMAGE",
-        "likes": 18866,
+        "likes": 18878,
         "comments": 95,
         "likes_hidden": false,
         "caption": "❤️‍🩹🤍IKR? That’s alchemy!\nCred unknown \n#alchemy #witch #healing #growth #magic"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DVivATTDQ7C/",
-        "timestamp": "2026-03-06T12:18:53+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 8544,
-        "comments": 44,
-        "likes_hidden": false,
-        "caption": "This is the frequency we’re walking into Abundance Alchemy with.\n\nNot “please universe, maybe, if it’s meant to be.” Let me get 50-11 signs - forgetting that YOU ARE THE SIGN.\n\nYou decide you get to have it all. And lock into that self@love because who are you to NOT have it all?!?!?\n\nUniverse — show me how good it can get. Show me what overflow actually feels like. Show me what it looks like when I stop chasing and start commanding.\n\nThat’s the energy. That’s the identity. \n\nThat’s what 10 weeks inside Abundance Alchemy builds into your bones.\n\nThis is the last weekend to get in at the current rate. Payment plan available.\n\nPrice goes up Monday. \n\nCourse starts March 15th - May 17th. Join us LIVE or go at your own pace with lifetime access. Use these transmissions to embody abundance & align with your desires.\n\nIf you’ve been watching — this is your sign 😏\n\nComment “ALCHEMY” to enroll & catch up with the Bonus masterclasses in the portal before the course officially begins. \n\n#tatiannatarot #abundance #alchemy #decide #source"
-      },
-      {
-        "handle": null,
         "permalink": "https://www.instagram.com/p/DUJ5kGmCm-f/",
         "timestamp": "2026-01-31T00:18:55+0000",
         "format": "IMAGE",
-        "likes": 8379,
+        "likes": 8378,
         "comments": 56,
         "likes_hidden": false,
         "caption": "_thecosmicmuse_"
@@ -1426,7 +1416,7 @@
         "permalink": "https://www.instagram.com/p/DeBy9OjoJuA/",
         "timestamp": "2026-10-03T10:01:02+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 7677,
+        "likes": 7805,
         "comments": 4,
         "likes_hidden": false,
         "caption": "On this 3rd October, let’s revise the first law of alchemy in Fullmetal Alchemist: Brotherhood:\n\n“Humankind cannot gain anything without first giving something in return. To obtain, something of equal value must be lost. That is Alchemy’s First Law of Equivalent Exchange”\n\nNever forget 3rd October.\n\n#FullmetalAlchemistBrotherhood #FMAB #EdwardElric #Alchemy #October3rd\n\nFullmetal Alchemist Brotherhood, FMAB, Fullmetal Alchemist, Edward Elric, Alphonse Elric, Alchemy, Equivalent Exchange, Law of Equivalent Exchange, 3rd October, October 3rd, Never Forget 3rd October, Never Forget October 3rd, Edward and Alphonse, Elric Brothers, Amestris, Truth, Gate of Truth, Philosopher’s Stone, Human Transmutation, Roy Mustang, Winry Rockbell, anime, anime quotes, anime edit, anime reels, manga, shonen anime, Brotherhood, Fullmetal Alchemist quote, FMA"
@@ -1436,17 +1426,27 @@
         "permalink": "https://www.instagram.com/p/DWeY7PviBRv/",
         "timestamp": "2026-03-29T16:34:55+0000",
         "format": "IMAGE",
-        "likes": 6553,
+        "likes": 6551,
         "comments": 218,
         "likes_hidden": false,
         "caption": "The greatest spiritual teachers have always taught man to look within himself for the Divine. \n\nHuman & Divine can never be separate. \n\nIt is the source from which we’ve all came. \n\nJesus. Moses. Buddha. Krishna. Plato. Lao Tzu. Rumi. Socrates. Emerson. \n\nLeaders. Revolutionaries. Mystics. \n\nDifferent names. Different times. Same message. \n\nIt is us who’ve blinded ourselves from the truth that veils the deeper understanding of this reality. \n\nWe’ve separated ourselves so far (especially in the West) from true connection to the nature of life. \n\nBlinded. Distracted. Hypnotized. Programmed. \n\nIf you lose touch with your mind, body, soul, and nature. You’ll always look to the churches and temples for your answers. Anywhere outside of you. \n\nThere is nothing inherently wrong with this, it can be beneficial for most people. \n\nBut if you want to awaken all of you, you’ll have to step beyond the limitations of these structures into the source of creation itself. \n\nPeople only know what’s been passed on from generations and their environment unfortunately. \n\nInfluencing their belief and structure of how they see or understand this reality. \n\nRare is it to come across a being that has immersed themselves into the dark void of the unknown, adventured past where the 99 aren’t willing to go. \n\nNow is the time to reclaim your power my friends. \n\nThe power that birthed this universe, is inside of you. It always had been, you’ve simply forgotten. \n\nAnd with great power, comes great responsibility. \n\nSeek earnestly, and you will find. \nKeep knocking, the door will open. \n\n🙏"
       },
       {
         "handle": null,
+        "permalink": "https://www.instagram.com/p/DRcGWuAjd36/",
+        "timestamp": "2025-11-24T12:22:40+0000",
+        "format": "CAROUSEL_ALBUM",
+        "likes": 6056,
+        "comments": 27,
+        "likes_hidden": false,
+        "caption": "💰Early Enrollment is now Live for Abundance Alchemy: Turning Struggle into Gold - my 10 week initiation course - at the lowest rate it will be! So many of yall have already joined because you’re ready to remember and live from a space where you are the Source!\n\nComment “ALCHEMY” to join the 2026 cohort & also access the BONUSES:\n\n• the Energetics of Opulence (& get started on that instantly)\n• 2 LIVE MONEY MASTERCLASSES for the cohort, before our course officially starts in March 2026. \n\nFeel it out & decide.\n\nSee yall babes in the course 😘\n\n#tatiannatarot #abundance #goddess #energy #transformation #alchemy #guidance #connection"
+      },
+      {
+        "handle": null,
         "permalink": "https://www.instagram.com/p/DYhWEJpjDKK/",
         "timestamp": "2026-05-19T12:55:54+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 4831,
+        "likes": 4833,
         "comments": 16,
         "likes_hidden": false,
         "caption": "She pops up when I least expect it!!\nThis little sketch is from 'On Alchemy' by Cotnoir.\n\n#hekate #hecate #onalchemy #alchemy #watkinsbooks"
@@ -1456,27 +1456,17 @@
         "permalink": "https://www.instagram.com/p/DclvdEZjcNR/",
         "timestamp": "2026-08-28T16:00:04+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 4822,
+        "likes": 4819,
         "comments": 17,
         "likes_hidden": false,
         "caption": "L’alchimie parfaite ★\n\n#billieeilish #finneas #brothersisterlove❤️ #alchemy #souls"
       },
       {
         "handle": null,
-        "permalink": "https://www.instagram.com/p/DUY6MOoEl2O/",
-        "timestamp": "2026-02-05T20:12:50+0000",
-        "format": "CAROUSEL_ALBUM",
-        "likes": 3546,
-        "comments": 25,
-        "likes_hidden": false,
-        "caption": "Feeling generally upset about evil men/the patriarchy/f*ckboys, while refusing to give up on believing whole-heartedly in the goodness of men, so made some memes about it because memes are an alchemical healing force in my realm bb🫧⚖️⚔️🌹\n\nAll images sourced from Pinterest, slide two art is by Elena Kukanova\n\n#alchemy #tolkien #romantic #relationshipmeme #enchantedforest"
-      },
-      {
-        "handle": null,
         "permalink": "https://www.instagram.com/p/DZISzLSCFQE/",
         "timestamp": "2026-06-03T15:57:45+0000",
         "format": "CAROUSEL_ALBUM",
-        "likes": 2417,
+        "likes": 2416,
         "comments": 199,
         "likes_hidden": false,
         "caption": "What if the dragon emerging from the Grail was never a symbol of evil, but a symbol of embodied wisdom?\n\nOne of the most overlooked symbols in Christian sacred art is the dragon emerging from a chalice.\n\nIt appears beside John the Beloved.\n\nIt appears beside Mary Magdalene.\n\nYet few people ever question what it means.\n\nWhat if the dragon represented sacred wisdom rather than something to be conquered?\n\nWhat if the Grail was never simply a cup, but the initiated vessel capable of carrying that wisdom?\n\nAnd what if the true Dragon Bloodline was never just about ancestry but a lineage of consciousness carried through those who remembered?\n\nThe deeper I explore the dragon mysteries, the more I see the same symbols reappearing:\n\nThe dragon. The Grail. The rose. Sophia. Venus. Magdalene. The hidden teachings.\n\nTo explore these mysteries further I recommend Ani William’s book, one of the amazing guest authors on my France retreats, Guardians of the Dragon Path. \n\nThis remembrance is at the heart of my work through the School of Feminine Arts and the Rose Path Magdalene Retreats.\n\nThe body remembers.\n\nThe land remembers.\n\nAnd somewhere deep within us, the ancient wisdom is emerging too. \n\nComment ARTS for upcoming courses in the School of Feminine Arts.\n\nComment RETREATS for more information on my Rose Path Magdalene Retreats in France & Spain."
@@ -1490,6 +1480,16 @@
         "comments": 14,
         "likes_hidden": false,
         "caption": "What you are observing is the diagram of the Tree of Life of the Kabbalah, the fundamental structure of Jewish mystical cosmology, later adopted and reinterpreted within Western Hermetic alchemy. The Tree is composed of ten Sephiroth (divine emanations) connected by twenty-two paths, corresponding to the letters of the Hebrew alphabet and, in esoteric tradition, to the Major Arcana of the Tarot.\n\nAt the summit stands the Supernal Triad — Kether, Chokmah, and Binah — which represents the primordial process of emanation: from pure Will to dynamic Wisdom and finally to formative Understanding. Descending along the three Pillars (Mercy, Severity, and Balance), energy progressively condenses until it reaches Malkuth, the Kingdom, corresponding to the material plane.\n\nFor the alchemist, this scheme is not merely metaphysical speculation; it is an operative map of inner transformation. The Sephiroth reflect states of consciousness, psychic forces, and stages of refinement of the Self, while the paths indicate the trials and integrations necessary for ascent. To study this diagram is to understand that the alchemical Work — Solve et Coagula — is not simply the transmutation of metals, but the reintegration of the human being into its transcendent origin.\n\n#cabala\n#esoterismo\n#alchemy\n#occultism\n#corpushermeticum\n\nYou are part of the family, press the LIKE button ❤ and write a COMMENT,What do you think? \n-------------------------\nI remind you that if you want to attract wealth into your life and not remain in a state of survival,\nI can create a personal sigil for you.\neliminate your deficiency paradigm, you deserve wealth!\nIt's not your fault, but I can help you.\nLink in BIO!"
+      },
+      {
+        "handle": null,
+        "permalink": "https://www.instagram.com/p/Ddwh_eiAzkf/",
+        "timestamp": "2026-09-26T17:10:46+0000",
+        "format": "IMAGE",
+        "likes": 1492,
+        "comments": 0,
+        "likes_hidden": false,
+        "caption": "In the 11th century, a Byzantine writer made a startling claim: to reject astrology was to deny the wisdom of God. How could a Christian culture employ astrologers at court, teach their knowledge through poetry, use Solomonic manuals and paint the zodiac inside churches?\nAcross the thousand-year history of Byzantium—the Greek-speaking Eastern Roman Empire centred on Constantinople—astrology and alchemy flourished as bona fide forms of knowledge, while magical and Solomonic practices remained part of religious and practical life. The magical traditions of late antiquity continued through Christianisation, developed within Byzantine culture, and remain present in the Orthodox world today.\n\nThe full length lecture is now available on Thyrathen as well as on the IAAM website. You’ll also find a reader’s guide to the articles I drew on for the lecture and my lecture slides. Link in bio and story. \n\n#astrology #greekmagic #pagan #solomonic #alchemy"
       }
     ]
   },
