@@ -9,8 +9,9 @@ A carousel is a draft in drafts/<id>/draft.json:
    "slides": [{"kicker": "PARIS · 1424", "text": "...", "image_query": "..."}],
    "caption", "hashtags": [...]}
 
-slides[0] is the cover: its "text" is the hook. A closing "read the full
-entry" slide is added automatically. Each slide gets public-domain artwork
+slides[0] is the cover: its "text" is the hook; "series" (optional) is a
+label above it. A closing card is added automatically: the draft's
+"question" for comments when it has one, else "read the full entry". Each slide gets public-domain artwork
 (museum.py; resolved choices are saved back as slide["image"] so re-renders
 are stable — set "image": null to pick again, and add its key to the
 slide's "reject" list so it is never picked again).
@@ -24,7 +25,7 @@ Nothing here publishes. post.py posts the oldest draft whose status is
 import glob, json, os, sys
 from PIL import Image, ImageDraw, ImageFilter
 
-import museum
+import llm, museum
 from render_reel import GOLD, PARCHMENT, DUST, _credit, contain, cover, drawable, font, sigil, wrap
 
 W, H = 1080, 1350
@@ -43,7 +44,7 @@ def _text_block(d, lines, fnt, y, gap, fill):
     return y
 
 
-def cover_slide(art, hook, credit):
+def cover_slide(art, hook, credit, series=""):
     img = Image.new("RGB", (W, H), BG)
     if art:
         # Pale engravings fight the gold text: dim the art, then add a dark
@@ -65,6 +66,14 @@ def cover_slide(art, hook, credit):
         lines = wrap(d, drawable(hook.upper(), f), f, W - 150)
     gap = f.size + 18
     y = H - 300 - (len(lines) - 1) * gap
+    if series:                                  # e.g. "THE FORBIDDEN LIBRARY · NO. 12"
+        sf = font("Cinzel", 32, 700)
+        sy = y - gap / 2 - 50
+        label = drawable(series.upper(), sf)
+        lw = d.textlength(label, font=sf)
+        d.text((W / 2, sy), label, font=sf, fill=PARCHMENT, anchor="mm")
+        for x0, x1 in ((W / 2 - lw / 2 - 90, W / 2 - lw / 2 - 25), (W / 2 + lw / 2 + 25, W / 2 + lw / 2 + 90)):
+            d.line([(x0, sy), (x1, sy)], fill=GOLD, width=2)
     _text_block(d, lines, f, y, gap, GOLD)
     d.text((W / 2, H - 170), "swipe  →", font=font("EBGaramond", 36, 500), fill=PARCHMENT, anchor="mm")
     if credit:
@@ -100,6 +109,27 @@ def content_slide(art, kicker, text, credit, n, total):
     return img
 
 
+def question_slide(question, series=""):
+    """Closing card: the question to answer in the comments, then save/share."""
+    img = Image.new("RGB", (W, H), BG)
+    d = ImageDraw.Draw(img)
+    sigil(d, W / 2, 300, 140)
+    if series:
+        d.text((W / 2, 510), drawable(series.upper(), font("Cinzel", 30, 700)),
+               font=font("Cinzel", 30, 700), fill=DUST, anchor="mm")
+    qf = font("Cinzel", 64, 700)
+    lines = wrap(d, drawable(question, qf), qf, W - 180)
+    if len(lines) > 4:
+        qf = font("Cinzel", 52, 700)
+        lines = wrap(d, drawable(question, qf), qf, W - 180)
+    y = _text_block(d, lines, qf, 640, qf.size + 20, GOLD)
+    d.text((W / 2, y + 50), "Answer in the comments", font=font("EBGaramond", 42), fill=PARCHMENT, anchor="mm")
+    d.text((W / 2, y + 120), "save this  ·  send it to someone who needs it",
+           font=font("EBGaramond", 34), fill=DUST, anchor="mm")
+    d.text((W / 2, H - 110), SITE, font=font("Cinzel", 40, 700), fill=GOLD, anchor="mm")
+    return img
+
+
 def closing_slide(title, route):
     img = Image.new("RGB", (W, H), BG)
     d = ImageDraw.Draw(img)
@@ -116,7 +146,7 @@ def closing_slide(title, route):
 def _choose(slide, draft, used):
     """The model picks among museum candidates when it can; otherwise the first match."""
     query = slide.get("image_query") or draft["title"]
-    if not os.environ.get("GITHUB_TOKEN"):
+    if not llm.available():
         return museum.find_image(query, used)
     from carousel_ai import choose_image
     return choose_image(slide.get("kicker", ""), slide["text"], query, used,
@@ -170,10 +200,11 @@ def render(draft_dir):
     out = []
     for n, (s, a) in enumerate(zip(slides, arts)):
         credit = s["image"]["credit"] if s.get("image") and a else ""
-        img = (cover_slide(_art(a), s["text"], credit) if n == 0 else
+        img = (cover_slide(_art(a), s["text"], credit, draft.get("series", "")) if n == 0 else
                content_slide(_art(a), s.get("kicker", ""), s["text"], credit, n + 1, total))
         out.append(img)
-    out.append(closing_slide(draft["title"], draft["route"]))
+    out.append(question_slide(draft["question"], draft.get("series", ""))
+               if draft.get("question") else closing_slide(draft["title"], draft["route"]))
     files = []
     for n, img in enumerate(out, start=1):
         f = os.path.join(draft_dir, f"{n:02d}.jpg")

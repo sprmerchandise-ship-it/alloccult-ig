@@ -1,61 +1,33 @@
-name: Debug GitHub Models (temporary)
+name: Pipeline check (temporary)
 
-# Temporary: probes the GitHub Models endpoint a few ways and logs exactly what
-# comes back, to find why llm.py gets a bare "OK". Runs only on this branch.
+# Temporary: runs trends.py on a GitHub runner (Wikimedia is reachable there)
+# and prints what it collected. Runs only on this branch. Removed before merge.
 on:
   push:
     branches: [ccr-a6f75997-qmgmf3]
-    paths: [".github/workflows/models-debug.yml", "llm.py"]
+    paths: [".github/workflows/models-debug.yml", "trends.py"]
   workflow_dispatch: {}
 
 permissions:
   contents: read
-  models: read
 
 jobs:
-  probe:
+  check:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-
-      - name: 1. Catalog (GET)
-        run: curl -sS -i https://models.github.ai/catalog/models | head -c 1500; echo
-
-      - name: 2. Chat, minimal headers
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ephem -q
+      - name: trends.py
         run: |
-          curl -sS -i -X POST https://models.github.ai/inference/chat/completions \
-            -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" \
-            -d '{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Say hi"}]}' | head -c 2500; echo
-
-      - name: 3. Chat, headers llm.py sends
-        run: |
-          curl -sS -i -X POST https://models.github.ai/inference/chat/completions \
-            -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" \
-            -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" \
-            -d '{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Say hi"}]}' | head -c 2500; echo
-
-      - name: 4. Chat, verbose (redirects, TLS, proxy)
-        run: |
-          curl -sS -v -X POST https://models.github.ai/inference/chat/completions \
-            -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" \
-            -d '{"model":"openai/gpt-4.1-mini","max_tokens":20,"messages":[{"role":"user","content":"Say hi"}]}' \
-            2>&1 | grep -v -i authorization | head -80
-
-      - name: 5. Org-attributed endpoint
-        run: |
-          curl -sS -i -X POST "https://models.github.ai/orgs/${GITHUB_REPOSITORY_OWNER}/inference/chat/completions" \
-            -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" \
-            -d '{"model":"openai/gpt-4.1-mini","messages":[{"role":"user","content":"Say hi"}]}' | head -c 1500; echo
-
-      - name: 6. Legacy Azure endpoint
-        run: |
-          curl -sS -i -X POST https://models.inference.ai.azure.com/chat/completions \
-            -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" \
-            -d '{"model":"gpt-4o-mini","messages":[{"role":"user","content":"Say hi"}]}' | head -c 1500; echo
-
-      - name: 7. llm.py itself
-        run: python -c "import llm; print(repr(llm.ask_text('You are terse.', 'Say hi')))"
-        continue-on-error: true
+          python trends.py "$(date -u +%F)"
+          python - <<'PY'
+          import json, glob
+          t = json.load(open(sorted(glob.glob("trends/*.json"))[-1]))
+          print("wikipedia:", len(t["wikipedia"]), [a["title"] for a in t["wikipedia"][:40]])
+          print("calendar:", *t["calendar"], sep="\n  ")
+          print("hashtag_top:", len(t["instagram"].get("hashtag_top", [])))
+          PY

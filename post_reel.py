@@ -46,9 +46,12 @@ def next_spec(posted):
     if not queues:
         return None, None, None
     queue = json.load(open(queues[-1]))
+    today = time.strftime("%Y-%m-%d", time.gmtime())
     for i, spec in enumerate(queue["reels"]):
-        # Only Reels that passed review (reel_review.py) are ever posted.
-        if spec["id"] not in posted and spec.get("status") == "approved":
+        # Only Reels that passed review (reel_review.py) are ever posted, and
+        # only from their planned date on (a missed day catches up the next).
+        if spec["id"] not in posted and spec.get("status") == "approved" \
+                and spec.get("date", today) <= today:
             return queues[-1], queue, i
     return queues[-1], queue, None
 
@@ -118,7 +121,7 @@ def main():
     state = json.load(open(STATE)) if os.path.exists(STATE) else {"posted": []}
     qpath, queue, idx = next_spec(set(state["posted"]))
     if idx is None:
-        print("Nothing to post: no queue yet, or no approved Reel left this week.")
+        print("Nothing to post today: no Reel planned for today, or none approved.")
         return
     spec = queue["reels"][idx]
     print(f"Reel {spec['id']} ({spec['day']}): {spec['title']}")
@@ -132,7 +135,7 @@ def main():
         return
 
     media_id = publish(video, caption)
-    record_published(media_id, "reel", spec["route"], spec.get("section", ""))
+    record_published(media_id, "reel", spec.get("route") or spec["title"], spec.get("section", ""))
     state["posted"].append(spec["id"])
     json.dump(state, open(STATE, "w"), indent=2)
     print(f"Published reel {media_id}")

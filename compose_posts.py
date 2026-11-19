@@ -1,142 +1,124 @@
 #!/usr/bin/env python3
 """
-Turn this week's intel report into 7 structured Reel specs.
+Turn the week's planned Reels (plan/YYYY-MM-DD.json, from planner.py) into
+the structured specs the video renderer needs → queue/YYYY-MM-DD.json.
 
-Reads the newest reports/YYYY-MM-DD.md (written by intel_report.py from
-competitors/scan.json) plus archive_index.json, asks the model for one Reel spec
-per day, validates them, and writes queue/YYYY-MM-DD.json. render_reel.py
-renders a spec; post_reel.py publishes the next unposted one each day.
+Reels are fast countdowns: a 2.5 s hook, then 5–7 numbered beats of 2.5–4.5 s.
+render_reel.py renders a spec; reel_review.py checks it; post_reel.py posts
+each approved Reel on its planned date.
 
-Needs GITHUB_TOKEN (GitHub Models, see llm.py).
+Needs an AI key (see llm.py).
 """
-import glob, json, os, re, sys
+import glob, json, os, sys
 
 import llm
-from post import BRAND
+from carousel_ai import VOICE
 from music import MOODS
 
 QUEUE_DIR = "queue"
-DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-PROMPT = """Below is this week's competitor-intel report for @all.occult. Its
-7 Reel scripts, Monday to Sunday. Convert each one into the JSON
-spec our video renderer needs. Keep the report's ideas; tighten the wording.
+PROMPT = """Write the on-screen script for this Instagram Reel for @all.occult.
+
+PLAN:
+{item}
+
+It is a fast countdown: every beat is one numbered item, counting down to the
+strongest one last (e.g. "3 · The Codex Gigas…", "2 · …", "1 · …").
 
 Rules:
-- "route" must be one of the archive routes listed below (pick the closest).
-- Keep every date, name, number and quotation exactly as the report has them.
-- On-screen text ("hook", beat "text") uses the Latin alphabet only —
-  transliterate Hebrew, Greek or Coptic words (e.g. "NRWN QSR", "Abraxas").
-- "hook": on-screen opener, max 8 words, no trailing full stop.
-- "beats": 4–6 items. "text" max 14 words — one punchy line on screen.
-  "seconds" 3.5–6. Total of all beats 18–32 seconds.
+- Use only facts from the plan, or ones you are certain of. Every date, name
+  and number must be historically accurate.
+- On-screen text uses the Latin alphabet only — transliterate Hebrew, Greek or
+  Coptic words.
+- "hook": on-screen opener, max 8 words, no trailing full stop; a startling,
+  specific claim (the plan's hook, tightened if needed).
+- "beats": 5–7 items. "text" max 12 words, starting with its number and " · ".
+  "seconds" 2.5–4.5. Total of all beats 15–25 seconds.
 - "image_query": 1–3 plain words a museum catalogue would match, for a
-  public-domain artwork that fits that beat — e.g. "alchemy", "astrolabe",
-  "Saturn", "dance of death", "witches sabbath", "Hermes", "zodiac man",
-  "memento mori", "Kabbalah", "Mithras", "skeleton", "vampire", "witch".
-  The first search is the Wellcome Collection (old prints, woodcuts and
-  manuscripts on magic, medicine, death and religion), so name the thing
-  itself, not a scene or a mood. No modern or abstract phrases.
-  Use a different query for every beat.
+  public-domain artwork of that beat's subject — e.g. "alchemy", "astrolabe",
+  "Saturn", "dance of death", "Codex Gigas", "zodiac man", "memento mori". We
+  search the Wellcome Collection first (old prints, woodcuts, manuscripts on
+  magic, medicine, death and religion), so name the thing itself, not a mood.
+  A different query for every beat.
 - "mood": one of {moods} — the soundtrack feel.
-- "caption": max 90 words, ends by pointing to alloccult.com.
+- "caption": max 90 words, short lines; opens with the hook idea, ends with the
+  plan's question{site}. No giveaways or product promotion.
 - "hashtags": exactly 12, lowercase, no # sign.
-- Every fact must be historically accurate.
-
-Return ONLY JSON: {{"reels": [{{"day", "title", "route", "hook", "beats":
-[{{"text", "seconds", "image_query"}}], "mood", "caption", "hashtags"}}]}}
-with exactly 7 reels in day order.
-
-ARCHIVE ROUTES (route — title):
-{routes}
-
-REEL SCRIPTS (section 6 of the report):
-{report}
 """
 
+SPEC_SCHEMA = {"type": "object", "additionalProperties": False,
+               "required": ["hook", "beats", "mood", "caption", "hashtags"], "properties": {
+    "hook": {"type": "string"},
+    "beats": {"type": "array", "items": {"type": "object", "additionalProperties": False,
+              "required": ["text", "seconds", "image_query"], "properties": {
+                  "text": {"type": "string"}, "seconds": {"type": "number"},
+                  "image_query": {"type": "string"}}}},
+    "mood": {"type": "string"},
+    "caption": {"type": "string"},
+    "hashtags": {"type": "array", "items": {"type": "string"}},
+}}
 
-def reel_section(report):
-    """Just section 6 (the Reel scripts): the whole report won't fit a free-tier request."""
-    m = re.search(r"^## *6\b.*?(?=^## *7\b|\Z)", report, re.S | re.M)
-    return (m.group(0) if m else report)[:14000]
 
-
-def latest_report():
-    reports = sorted(glob.glob("reports/????-??-??.md"))
-    if not reports:
-        sys.exit("No report in reports/ — run the intel step first.")
-    return reports[-1]
-
-
-def validate(reels, routes):
+def validate(spec):
     problems = []
-    if len(reels) != 7:
-        problems.append(f"expected 7 reels, got {len(reels)}")
-    for i, r in enumerate(reels):
-        tag = f"reel {i + 1}"
-        if r.get("route") not in routes:
-            problems.append(f"{tag}: unknown route {r.get('route')!r}")
-        beats = r.get("beats") or []
-        if not 3 <= len(beats) <= 7:
-            problems.append(f"{tag}: {len(beats)} beats")
-        for b in beats:
-            b["seconds"] = min(6.0, max(3.5, float(b.get("seconds", 4.5))))
-            if not b.get("text") or not b.get("image_query"):
-                problems.append(f"{tag}: beat missing text/image_query")
-        if r.get("mood") not in MOODS:
-            r["mood"] = "drone"
-        r["hashtags"] = [h.lower().lstrip("#").replace(" ", "")
-                         for h in r.get("hashtags", [])][:12]
-        if not r.get("hook") or not r.get("caption"):
-            problems.append(f"{tag}: missing hook/caption")
+    beats = spec.get("beats") or []
+    if not 4 <= len(beats) <= 7:
+        problems.append(f"{len(beats)} beats (want 5–7)")
+    for b in beats:
+        b["seconds"] = min(4.5, max(2.5, float(b.get("seconds", 3.5))))
+        if not b.get("text") or not b.get("image_query"):
+            problems.append("beat missing text/image_query")
+    if spec.get("mood") not in MOODS:
+        spec["mood"] = "drone"
+    spec["hashtags"] = [h.lower().lstrip("#").replace(" ", "") for h in spec.get("hashtags", [])][:12]
+    if not spec.get("hook") or not spec.get("caption"):
+        problems.append("missing hook/caption")
     return problems
 
 
-def unposted_in_newest_queue():
-    queues = sorted(glob.glob(f"{QUEUE_DIR}/????-??-??.json"))
-    if not queues:
-        return None, 0
-    posted = set(json.load(open("reel_state.json"))["posted"]) if os.path.exists("reel_state.json") else set()
-    reels = json.load(open(queues[-1]))["reels"]
-    return queues[-1], sum(r["id"] not in posted for r in reels)
+def compose(item):
+    site = (f", then a last line pointing to alloccult.com{item['related_route']}"
+            if item.get("related_route") else "")
+    prompt = PROMPT.format(item=json.dumps(item, ensure_ascii=False, indent=1),
+                           moods=", ".join(MOODS), site=site)
+    for _ in range(2):
+        try:
+            spec = llm.ask_json(VOICE, prompt, SPEC_SCHEMA)
+            problems = validate(spec)
+        except (ValueError, KeyError, TypeError, RuntimeError) as e:
+            spec, problems = None, [f"not valid spec JSON ({e})"]
+        if not problems:
+            return spec
+        print(f"  {item['title']}: " + "; ".join(problems))
+        prompt += "\n\nYour previous answer had these problems, fix them:\n" + "\n".join(problems)
+    return None
 
 
 def main():
-    # Don't throw away a reviewed queue that hasn't finished posting (e.g. one
-    # made mid-week): keep posting it and compose next week instead.
-    current, left = unposted_in_newest_queue()     # counts only unposted Reels
-    if left >= 2:
-        print(f"{current} still has {left} unposted reels — keeping it, not composing a new queue.")
+    plans = sorted(glob.glob("plan/????-??-??.json"))
+    if not plans:
+        sys.exit("No plan in plan/ — run planner.py first.")
+    plan = json.load(open(plans[-1], encoding="utf-8"))
+    out = os.path.join(QUEUE_DIR, f"{plan['week']}.json")
+    if os.path.exists(out):
+        print(f"{out} already exists — keeping it.")
         return
-    path = latest_report()
-    week = re.search(r"(\d{4}-\d{2}-\d{2})", path).group(1)
-    archive = json.load(open("archive_index.json", encoding="utf-8"))
-    routes = {e["route"]: e for e in archive}
-    route_list = "\n".join(f"{e['route']} — {e['title']}" for e in archive)
-
-    prompt = PROMPT.format(moods=", ".join(MOODS), routes=route_list,
-                           report=reel_section(open(path, encoding="utf-8").read()))
-    for attempt in range(2):
-        try:
-            reels = llm.ask_json(BRAND, prompt).get("reels", [])
-            problems = validate(reels, routes)
-        except (ValueError, KeyError, TypeError, AttributeError, RuntimeError) as e:
-            reels, problems = [], [f"response was not valid spec JSON ({e})"]
-        if not problems:
-            break
-        print("Spec problems:", *problems, sep="\n  ")
-        prompt += ("\n\nYour previous answer had these problems, fix them:\n"
-                   + "\n".join(problems))
-    else:
-        sys.exit("The model could not produce valid reel specs.")
-
-    for i, r in enumerate(reels):
-        r["id"] = f"{week}-{i + 1}"
-        r["day"] = DAYS[i]
-        r["section"] = routes[r["route"]].get("section", "")
+    reels = []
+    for item in plan["items"]:
+        if item["format"] != "reel":
+            continue
+        print(f"Composing {item['day']} {item['date']}: {item['title']}")
+        spec = compose(item)
+        if not spec:
+            print("  could not compose a valid spec — skipping this Reel")
+            continue
+        reels.append({"id": item["id"], "day": item["day"], "date": item["date"],
+                      "title": item["title"], "route": item.get("related_route", ""),
+                      "section": item["pillar"], "facts": item["facts"], **spec})
+    if not reels:
+        sys.exit("No Reel specs composed.")
     os.makedirs(QUEUE_DIR, exist_ok=True)
-    out = os.path.join(QUEUE_DIR, f"{week}.json")
-    json.dump({"week": week, "report": path, "reels": reels},
+    json.dump({"week": plan["week"], "plan": plans[-1], "reels": reels},
               open(out, "w"), indent=2, ensure_ascii=False)
     print(f"Wrote {out}: " + "; ".join(f"{r['day'][:3]} {r['title']}" for r in reels))
 

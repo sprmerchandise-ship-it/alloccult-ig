@@ -14,13 +14,13 @@ approved Reels.
   python reel_review.py queue/2026-10-09.json out/check --check   # live test, saves nothing
 
 Writes the reviewed MP4s and captions.md to the output folder (the weekly
-preview bundle). Needs GITHUB_TOKEN (GitHub Models, see llm.py) and GH_PAT.
+preview bundle). Needs an AI key (see llm.py) and GH_PAT.
 """
 import json, os, subprocess, sys
 
 from carousel_ai import SEVERITY, STR, VOICE, _ask, _jpeg_b64, _obj, history_note
 from render_reel import HOOK_SECONDS, OUTRO_SECONDS, render_spec
-from site_source import page_text
+from site_source import source_notes
 
 ROUNDS = 2          # 7 Reels x 2 rounds stays inside the free daily request limit
 
@@ -81,7 +81,7 @@ Reject an image if it doesn't show its beat's subject or something clearly
 related; if its museum title shows it's a pun or coincidence; if it is
 sectarian, racist or hateful propaganda; if it is gratuitous gore or nudity; or
 if it's illegible. Reject text that is inaccurate, overclaims, misdates,
-contradicts the archive page without good reason, or is clumsy; on-screen lines
+contradicts the source notes without good reason, or is clumsy; on-screen lines
 must stay short (max ~14 words). Check legibility and that the hook stops a
 scroll.
 
@@ -101,8 +101,8 @@ CAPTION:
 
 HASHTAGS: {' '.join(spec['hashtags'])}
 
-ARCHIVE PAGE TEXT (alloccult.com{spec['route']}):
-{source or '(unavailable)'}"""})
+SOURCE NOTES (check against these and established scholarship):
+{source or '(none — rely on established scholarship)'}"""})
     return _ask(VOICE, content, REVIEW_SCHEMA)
 
 
@@ -190,7 +190,7 @@ def main():
         for k in ("status", "review_log", "images", "reject_images"):
             spec.pop(k, None)
         print(f"Check run: reviewing a fresh copy of {spec['id']} ({spec['title']})")
-        ok = review_spec(spec, outdir, page_text(spec["route"]))
+        ok = review_spec(spec, outdir, source_notes(spec.get("route"), spec.get("facts", ())))
         json.dump(spec, open(os.path.join(outdir, "reviewed_spec.json"), "w"), indent=2, ensure_ascii=False)
         print("Result:", spec["status"])
         return
@@ -199,12 +199,13 @@ def main():
         if spec.get("status") in ("approved", "posted"):
             continue
         print(f"Reviewing {spec['id']} ({spec['day']}): {spec['title']}")
-        review_spec(spec, outdir, page_text(spec["route"]))
+        review_spec(spec, outdir, source_notes(spec.get("route"), spec.get("facts", ())))
         json.dump(queue, open(qpath, "w"), indent=2, ensure_ascii=False)   # save as we go
     for spec in queue["reels"]:
         credits = "\n".join(f"- {i['credit']}" for i in spec.get("images") or [] if i)
         notes.append(f"## {spec['day']} — {spec['title']}  [{spec.get('status', 'unreviewed').upper()}]\n\n"
-                     f"File: `{spec['id']}.mp4` · mood: {spec.get('mood')} · alloccult.com{spec['route']}\n\n"
+                     f"File: `{spec['id']}.mp4` · {spec.get('date', '')} · mood: {spec.get('mood')}"
+                     + (f" · alloccult.com{spec['route']}" if spec.get("route") else "") + "\n\n"
                      f"{spec['caption']}\n\n" + " ".join("#" + h for h in spec["hashtags"])
                      + f"\n\nImages:\n{credits or '- (none)'}\n")
     open(os.path.join(outdir, "captions.md"), "w").write("\n".join(notes))

@@ -21,13 +21,13 @@ onnxruntime for parallax; without them it falls back to Ken Burns), and fonts/Ci
 import argparse, json, math, os, re, shutil, subprocess, sys, tempfile, zlib
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
-import museum, music
+import llm, museum, music
 
 W, H, FPS = 1080, 1920, 30
 GOLD = (212, 175, 55)
 PARCHMENT = (236, 226, 204)
 DUST = (150, 140, 120)
-HOOK_SECONDS, OUTRO_SECONDS = 3.0, 3.0
+HOOK_SECONDS, OUTRO_SECONDS = 2.5, 2.5
 
 
 def font(name, size, weight=None):
@@ -252,7 +252,7 @@ def render_spec(spec, out):
         for _ in range(5):
             if not images[n]:
                 print(f"  beat {n + 1}: searching '{beat['image_query']}'")
-                if os.environ.get("GITHUB_TOKEN"):
+                if llm.available():
                     from carousel_ai import choose_image
                     images[n] = choose_image(beat.get("kicker", ""), beat["text"],
                                              beat["image_query"], used, rejects)

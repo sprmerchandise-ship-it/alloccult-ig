@@ -53,7 +53,7 @@ def save_state(s):
     json.dump(s, open(STATE_FILE, "w"), indent=2)
 
 def claude(prompt, system, max_tokens=1500):
-    # Name kept from the Claude days; this runs on GitHub Models (llm.py).
+    # Name kept from the Claude days; the provider is chosen in llm.py.
     import llm
     return llm.ask_text(system, prompt, model=llm.FAST_MODEL, max_tokens=max_tokens)
 
@@ -432,17 +432,37 @@ def _save(path, draft):
     json.dump(draft, open(path, "w"), indent=2, ensure_ascii=False)
 
 
-def new_draft(state):
-    """The model writes a carousel for the next archive entry → drafts/NNN-slug/draft.json."""
+def todays_plan():
+    """(plan covers today?, today's planned carousel or None) — from plan/*.json (planner.py)."""
+    import glob
+    today = time.strftime("%Y-%m-%d", time.gmtime())
+    covered = False
+    for p in sorted(glob.glob("plan/????-??-??.json"), reverse=True):
+        for item in json.load(open(p))["items"]:
+            if item["date"] == today:
+                covered = True
+                if item["format"] == "carousel":
+                    return True, item
+    return covered, None
+
+
+def new_draft(state, item=None):
+    """The model writes a carousel → drafts/NNN-slug/draft.json: for today's
+    planned item, or (no plan) for the next archive entry."""
     import re
-    from carousel_ai import write_draft
+    from carousel_ai import write_draft, write_plan_draft
     from site_source import page_text
-    entry = choose_entry(state)
-    recent = [d["title"] for _, d in _drafts()][-10:]
-    print(f"Writing a carousel for: {entry['title']} ({entry['route']})")
-    draft = write_draft(entry, page_text(entry["route"]), recent)
+    if item:
+        print(f"Writing today's planned carousel ({item['pillar']}): {item['title']}")
+        route = item.get("related_route")
+        draft = write_plan_draft(item, page_text(route) if route else "")
+    else:
+        entry = choose_entry(state)
+        recent = [d["title"] for _, d in _drafts()][-10:]
+        print(f"No plan for today — writing a carousel for: {entry['title']} ({entry['route']})")
+        draft = write_draft(entry, page_text(entry["route"]), recent)
     n = len(_drafts()) + 1
-    slug = re.sub(r"[^a-z0-9]+", "-", entry["title"].lower()).strip("-")[:40]
+    slug = re.sub(r"[^a-z0-9]+", "-", draft["title"].lower()).strip("-")[:40]
     draft = {"id": f"{n:03d}-{slug}", "status": "draft", **draft}
     path = f"{DRAFTS}/{draft['id']}/draft.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -454,8 +474,8 @@ def review_draft(path, draft):
     """Render → model review → fix → repeat. Marks the draft approved or rejected."""
     from carousel import render
     from carousel_ai import apply_fixes, has_blockers, review
-    from site_source import page_text
-    source = page_text(draft["route"])
+    from site_source import source_notes
+    source = source_notes(draft.get("route"), draft.get("facts", ()))
     folder = os.path.dirname(path)
     log = draft.setdefault("review_log", [])
     for rnd in range(1, REVIEW_ROUNDS + 1):
@@ -490,8 +510,16 @@ def prepare_carousel(state):
     if any(d.get("status") == "approved" for _, d in drafts):
         return True
     pending = [(p, d) for p, d in drafts if d.get("status") == "draft"]
-    path, draft = pending[0] if pending else new_draft(state)
-    return review_draft(path, draft)
+    if pending:
+        return review_draft(*pending[0])
+    covered, item = todays_plan()
+    if covered and not item:
+        print("Today is a Reel day in this week's plan — no carousel.")
+        return False
+    if item and any(d.get("plan_id") == item["id"] for _, d in drafts):
+        print(f"Today's carousel ({item['id']}) was already drafted.")
+        return False
+    return review_draft(*new_draft(state, item))
 
 
 def post_approved_draft(state):
@@ -507,10 +535,11 @@ def post_approved_draft(state):
             continue
         git_push(files + [path], f"Carousel slides: {draft['id']}")   # images must be public first
         pid = publish_carousel([f"{REPO_RAW}/{f}" for f in files], caption_for(draft))
-        record_published(pid, "lore", draft["route"], draft.get("section", ""))
+        record_published(pid, "lore", draft.get("route") or draft["title"], draft.get("section", ""))
         draft.update(status="posted", media_id=pid, posted_at=int(time.time()))
         _save(path, draft)
-        state["posted_lore"].append(draft["route"])
+        if draft.get("route"):
+            state["posted_lore"].append(draft["route"])
         state.setdefault("recent_sections", []).append(draft.get("section", ""))
         state["recent_sections"] = state["recent_sections"][-8:]
         print(f"Posted {draft['id']}: {draft['title']}")

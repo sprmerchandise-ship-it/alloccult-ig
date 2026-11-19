@@ -2,16 +2,15 @@
 """
 Weekly competitor-intel report, written by the model from competitors/scan.json.
 
-Replaces the Claude Code step: the scan (~120 KB) is boiled down to the posts
-that matter, then two requests — one for the analysis, one for the 7 Reel
-scripts compose_posts.py turns into specs — each fit inside a free GitHub
-Models request (~8k tokens in, ~4k out). Writes reports/YYYY-MM-DD.md.
+The scan (~120 KB) is boiled down to the posts that matter and analysed in one
+request. Writes reports/YYYY-MM-DD.md; planner.py then adds section 6, the
+week's content plan.
 
   python intel_report.py 2026-10-26
 
-Needs GITHUB_TOKEN (see llm.py).
+Needs an AI key (see llm.py).
 """
-import glob, json, re, sys
+import json, sys
 
 import llm
 
@@ -42,16 +41,8 @@ def scan_digest(scan):
     }, ensure_ascii=False, separators=(",", ":"))
 
 
-def previous_reel_titles():
-    reports = sorted(glob.glob("reports/????-??-??.md"))
-    if not reports:
-        return "none"
-    text = open(reports[-1], encoding="utf-8").read()
-    return "; ".join(re.findall(r"^### .*?[\"“](.+?)[\"”]", text, re.M)) or "none"
-
-
 ANALYSIS = """Write sections 1–5 and 7 of this week's competitor-intel report, in
-Markdown, from the competitor scan below. Section 6 (Reel scripts) is written
+Markdown, from the competitor scan below. Section 6 (the week's plan) is written
 separately — leave it out.
 
 Scan notes: top_posts are ranked by engagement rate ((likes + comments) /
@@ -76,45 +67,14 @@ under 1,200 words.
 SCAN:
 {scan}"""
 
-SCRIPTS = """Write section 6 of this week's report: 7 Reel scripts for the coming
-week, Monday to Sunday, for @all.occult. Base each on the analysis below and on
-one archive entry from the list (cite its route). Mix topics across different
-archive sections. Don't copy any competitor — adapt the pattern to our archive.
-Don't repeat last week's Reels: {previous}.
-
-Start with "## 6. Seven Reels". For each, a "### DAY — \\"Title\\"" heading, then:
-- Route: the archive route
-- Pattern: which observed pattern it applies (with its permalink)
-- Hook: on-screen text for the first 1.5 seconds, max 8 words
-- Beats: 4–6 lines of on-screen text with rough timings, 20–40 seconds total
-- Visual: one line (dark, gold-on-black)
-- Caption: max 90 words, ending with a pointer to alloccult.com; then 12
-  lowercase hashtags
-- Audio: mood only
-About 220 words per Reel. Every fact must be historically accurate.
-
-ANALYSIS:
-{analysis}
-
-ARCHIVE ROUTES (route — title):
-{routes}"""
-
-
 def main():
     date = sys.argv[1]
     scan = json.load(open("competitors/scan.json", encoding="utf-8"))
-    archive = json.load(open("archive_index.json", encoding="utf-8"))
-    routes = "\n".join(f"{e['route']} — {e['title']}" for e in archive)
-
     analysis = llm.ask_text(INTRO, ANALYSIS.format(scan=scan_digest(scan)[:14000]))
-    scripts = llm.ask_text(INTRO, SCRIPTS.format(previous=previous_reel_titles(),
-                                                 analysis=analysis[:9000], routes=routes))
-    # Put section 6 back in its place, before the Experiments section.
-    parts = re.split(r"(?=^## *7\b)", analysis, maxsplit=1, flags=re.M)
-    body = parts[0].rstrip() + "\n\n" + scripts.strip() + "\n\n" + (parts[1] if len(parts) > 1 else "")
+    # Section 6 (this week's plan) is added by planner.py.
     out = f"reports/{date}.md"
     open(out, "w", encoding="utf-8").write(
-        f"# ALLOCCULT — Competitor Intel & Reel Plan ({date})\n\n{body.strip()}\n")
+        f"# ALLOCCULT — Competitor Intel & Content Plan ({date})\n\n{analysis.strip()}\n")
     print(f"Wrote {out}")
 
 

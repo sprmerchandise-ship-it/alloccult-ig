@@ -56,6 +56,18 @@ def page_text(route):
         return ""
 
 
+def source_notes(route="", facts=()):
+    """What a reviewer checks a post against: the plan's facts, plus the archive
+    page text when the post links to one."""
+    parts = []
+    if facts:
+        parts.append("PLANNED FACTS (to be checked, not assumed true):\n" + "\n".join(f"- {f}" for f in facts))
+    page = page_text(route) if route else ""
+    if page:
+        parts.append(f"ARCHIVE PAGE TEXT (alloccult.com{route}):\n{page}")
+    return "\n\n".join(parts)
+
+
 if __name__ == "__main__":
     import sys
     print(page_text(sys.argv[1] if len(sys.argv) > 1 else "/death-afterlife/death-cults-psychopomps")[:3000])

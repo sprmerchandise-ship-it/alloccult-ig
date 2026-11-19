@@ -12,7 +12,6 @@ on:
 
 permissions:
   contents: write
-  models: read        # GitHub Models (llm.py)
 
 jobs:
   reel:
@@ -38,7 +37,7 @@ jobs:
       - name: Install dependencies & fonts
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install pillow numpy fonttools opencv-python-headless onnxruntime -q
+          pip install pillow numpy fonttools opencv-python-headless onnxruntime anthropic ephem -q
           mkdir -p fonts
           curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
           curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
@@ -48,7 +47,9 @@ jobs:
           PYTHONUNBUFFERED: "1"
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}        # free AI (llm.py); or:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # paid AI (llm.py)
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
         run: python post_reel.py ${{ inputs.dry_run && '--dry-run' || '' }}

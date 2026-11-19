@@ -7,12 +7,17 @@ on:
 
 permissions:
   contents: write
-  models: read        # GitHub Models (llm.py)
 
 jobs:
   intel:
     runs-on: ubuntu-latest
     timeout-minutes: 120
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}        # free AI (llm.py); or:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}  # paid AI (llm.py)
+      LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+      LLM_MODEL: ${{ vars.LLM_MODEL }}
+      LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
     steps:
       - uses: actions/checkout@v4
 
@@ -29,10 +34,11 @@ jobs:
       - name: Install dependencies & fonts
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-          pip install pillow numpy fonttools opencv-python-headless onnxruntime -q
+          pip install pillow numpy fonttools opencv-python-headless onnxruntime anthropic ephem -q
           mkdir -p fonts
           curl -sL -o "fonts/Cinzel.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/Cinzel%5Bwght%5D.ttf"
           curl -sL -o "fonts/EBGaramond.ttf" "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/EBGaramond%5Bwght%5D.ttf"
+          echo "DATE=$(date -u +%F)" >> "$GITHUB_ENV"
 
       - name: Scan competitor accounts
         env:
@@ -40,36 +46,30 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: python competitor_scan.py
 
-      - name: Write report (GitHub Models)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
-          LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
+      - name: Collect trends (Wikipedia, sky + folk calendar, hashtags)
+        run: python trends.py "$DATE"
+
+      - name: Write competitor report
         run: |
-          DATE=$(date -u +%F)
-          echo "DATE=$DATE" >> "$GITHUB_ENV"
           python intel_report.py "$DATE"
           test -s "reports/$DATE.md" || { echo "No report written to reports/$DATE.md"; exit 1; }
+
+      - name: Plan the week (5 carousels + 2 Reels)
+        run: |
+          python planner.py "$DATE"
           cat "reports/$DATE.md" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Turn the 7 Reel scripts into specs
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
-          LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
+      - name: Turn the 2 planned Reels into specs
         run: python compose_posts.py
 
       - name: Render + review the week's Reels (preview bundle)
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}          # GitHub Models (free, llm.py)
-          LLM_MODEL: ${{ vars.LLM_MODEL }}
-          LLM_FAST_MODEL: ${{ vars.LLM_FAST_MODEL }}
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           if [ -f "queue/$DATE.json" ]; then
             python reel_review.py "queue/$DATE.json" "out/posts-$DATE"
           else
-            echo "No new queue this week (previous one still posting)."
+            echo "No Reel queue this week."
           fi
 
       - name: Upload posts bundle
@@ -80,12 +80,14 @@ jobs:
           retention-days: 30
           if-no-files-found: ignore
 
-      - name: Commit scan, report + queue
-        if: always()   # keep the report even if composing/rendering failed
+      - name: Commit scan, trends, report, plan + queue
+        if: always()   # keep what was made even if a later step failed
         run: |
           git config user.name "alloccult-bot"
           git config user.email "bot@alloccult.com"
-          for f in competitors/scan.json "reports/$DATE.md" "queue/$DATE.json"; do [ -e "$f" ] && git add "$f"; done
-          git diff --cached --quiet || git commit -m "Weekly competitor intel + reel queue: $DATE"
+          for f in competitors/scan.json "trends/$DATE.json" "reports/$DATE.md" "plan/$DATE.json" "queue/$DATE.json"; do
+            [ -e "$f" ] && git add "$f"
+          done
+          git diff --cached --quiet || git commit -m "Weekly intel, trends + content plan: $DATE"
           git pull --rebase
           git push
