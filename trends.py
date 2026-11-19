@@ -23,6 +23,7 @@ from collections import Counter
 UA = "alloccult-bot/1.0 (https://alloccult.com)"
 SKIP_PREFIXES = ("Special:", "Wikipedia:", "Portal:", "File:", "Help:", "Category:",
                  "Template:", "Talk:", "User:", "Main_Page", "-")
+SKIP_WORDS = ("xnxx", "xvideos", "pornhub", "xhamster", ".xxx", "onlyfans", "cleavage")
 
 # (month, day, name, one line of what it is). Only well-attested dates.
 FOLK_DAYS = [
@@ -73,7 +74,7 @@ def wikipedia(today, days=7, keep=400):
             continue
         for a in arts:
             t = a["article"]
-            if not t.startswith(SKIP_PREFIXES):
+            if not t.startswith(SKIP_PREFIXES) and not any(w in t.lower() for w in SKIP_WORDS):
                 views[t] += a["views"]
     return [{"title": t.replace("_", " "), "views": v} for t, v in views.most_common(keep)]
 
