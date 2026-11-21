@@ -25,8 +25,15 @@ def fetch_insights(post_id, token):
         data = get(url)
     except urllib.error.HTTPError as e:
         body = e.read().decode()
-        if "permission" in body.lower() or "insights" in body.lower():
-            raise PermissionError(body)
+        try:
+            err = json.loads(body).get("error", {})
+        except ValueError:
+            err = {}
+        code = err.get("code")
+        # 10 / 200–299: permission missing; 190: token invalid or expired.
+        if code == 10 or code == 190 or (isinstance(code, int) and 200 <= code < 300):
+            raise PermissionError(err.get("message") or body)
+        print(f"  {post_id}: no insights ({err.get('message') or body[:200]})")
         return None            # metric not available for this media type / too new
     vals = {m["name"]: m["values"][0]["value"] for m in data.get("data", [])}
     reach = vals.get("reach", 0)
@@ -56,9 +63,10 @@ def main():
             if p.get("section"):
                 by_section[p["section"]].append(ins["score"])
             time.sleep(1)
-    except PermissionError:
-        print("Token lacks 'instagram_manage_insights' permission — skipping "
-              "analytics. Add it in Graph API Explorer to enable learning.")
+    except PermissionError as e:
+        print(f"Instagram refused the insights request: {e}\n"
+              "The token needs the 'instagram_manage_insights' permission (and must be "
+              "valid) — see README. Skipping analytics.")
         return
 
     if not scored:
