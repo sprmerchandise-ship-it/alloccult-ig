@@ -1,10 +1,10 @@
 # ALLOCCULT Instagram Automation
 
-Automatically posts to **@all.occult** on a schedule. Rotation: two esoteric
-lore posts (educational captions about the symbolism in your artwork), then one
-product post with a "link in bio" call to action. Captions are generated in
-the ALLOCCULT brand voice by a free GitHub Models LLM (see "AI model" below); product images come from the Etsy shop
-(alloccult.etsy.com).
+Automatically posts to **@all.occult** on a schedule: every week, 4 Reels
+and 3 carousels planned from what's trending (see "The weekly plan" below),
+written, illustrated and fact-checked by an AI model (see "AI model"). Product
+posts from the Etsy shop (alloccult.etsy.com) can be switched on in
+`posting.json`.
 
 ## One-time setup
 
@@ -37,20 +37,30 @@ the ALLOCCULT brand voice by a free GitHub Models LLM (see "AI model" below); pr
    - `IG_ACCESS_TOKEN`
 3. Repo → Actions tab → enable workflows.
 
-### AI model: GitHub Models (free)
+### AI model: Gemini (free) or Anthropic (paid)
 
-All writing and reviewing runs on GitHub Models through `llm.py`, using the
-workflows' built-in `GITHUB_TOKEN` (`permissions: models: read`) — no API key
-or credits. Defaults: `openai/gpt-4.1` for writing and the vision reviews,
-`openai/gpt-4.1-mini` for image picks and captions. To try another model, set
-the repo variables `LLM_MODEL` / `LLM_FAST_MODEL` (Settings → Secrets and
-variables → Actions → Variables) to a model id from github.com/marketplace/models.
+All writing and reviewing goes through `llm.py`. Add **one** of these repo
+secrets (Settings → Secrets and variables → Actions → New repository secret):
 
-The free tier allows about 8,000 input / 4,000 output tokens per request and
-roughly 50 strong-model requests a day, so: archive page text is capped at
-12,000 characters, review images go in low detail, carousels and Reels get at
-most 2 review rounds, and the weekly report works from a digest of the scan.
-If a daily limit is hit, that run fails and the next scheduled run picks up.
+- `GEMINI_API_KEY` — free. Create a key at aistudio.google.com (Get API key).
+  Defaults: `gemini-2.5-flash` for writing and the vision reviews,
+  `gemini-2.5-flash-lite` for image picks. The free tier's daily limits are set
+  per project and shown in AI Studio; if one is hit, that run fails and the
+  next scheduled run picks up.
+- `ANTHROPIC_API_KEY` — paid per use (console.anthropic.com). Defaults:
+  `claude-opus-5-5` for writing and reviews, `claude-haiku-5-5` for image picks.
+
+If both are set, Gemini is used; set the repo variable `LLM_PROVIDER` to
+`anthropic` to force Anthropic. To try other models, set the repo variables
+`LLM_MODEL` / `LLM_FAST_MODEL` (Settings → Secrets and variables → Actions →
+Variables).
+
+(Until November 2026 this used GitHub Models, which GitHub retired on 30 July
+2026; every request then got a bare "OK" back and nothing could post.)
+
+Requests are kept small for the free tier: archive page text is capped at
+12,000 characters, review images go in low detail, and carousels and Reels get
+at most 2 review rounds.
 
 ### 3. Test it
 
@@ -80,50 +90,83 @@ then check @all.occult. If it worked, you're done — it now posts daily at
   shop RSS feed (1 photo per listing). If neither works, that day's product post
   becomes a lore post instead of failing.
 
-## Carousels: written and reviewed by the model before they post
+## The weekly plan
 
-Every day at 18:00 UTC, `post.py`:
-
-1. **Posts an approved draft** if one is waiting (`drafts/<id>/draft.json` with
-   `"status": "approved"`).
-2. Otherwise it **reviews the next pending draft**, or the model writes a new one
-   for the next archive entry (`carousel_ai.write_draft`). The draft is grounded
-   in that page's text on alloccult.com (`site_source.py`).
-3. **Renders it** (`carousel.py`): public-domain art on every slide, the hook on
-   the cover, and a closing "read the full entry" card.
-4. **The model reviews the rendered slides** (`carousel_ai.review`, with vision).
-   It checks facts against the page and established history, checks that each
-   image shows the subject and suits the brand (no puns or coincidences, no
-   propaganda, no gore), and checks legibility and the hook. Problems are fixed:
-   new text, or the image is rejected and searched again. It then re-renders and
-   re-reviews, up to 2 rounds.
-5. **Posts it only if it passes.** A draft that still fails is marked
-   `"rejected"` and never published. Every round is kept in the draft's
-   `review_log`.
-
-Manual run: Actions → ALLOCCULT Instagram Post → Run workflow with
-"prepare_only" to write and review the next carousel without posting it.
-`posting.json` turns carousels, Reels and product posts on or off. Needs the
-`GH_PAT` secret (to read the archive page text).
-
-## Weekly competitor intel + Reels with music
-
-**Every Monday 08:00 UTC** — `.github/workflows/competitor-intel.yml`:
+**Every Monday ~07:50 UTC** — `.github/workflows/competitor-intel.yml`:
 
 1. `competitor_scan.py` reads the last 30 days of posts from every account in
    `competitors/handles.txt` (Graph API Business Discovery), ranks them by
    engagement rate ((likes + comments) / followers), flags "breakout" posts that
    beat their own account's median, and samples top posts for
    `competitors/hashtags.txt`. → `competitors/scan.json`
-2. `intel_report.py` boils the scan down to the posts that matter and has the
-   model write `reports/YYYY-MM-DD.md`: what's working, formats, accounts to
-   watch, hashtags, and **7 Reel scripts** for the week.
-3. `compose_posts.py` turns those scripts into structured specs (hook, 4–6
-   beats, image search terms, music mood, caption, 12 hashtags), each tied to
-   an alloccult.com archive route. → `queue/YYYY-MM-DD.json`
-4. `render_reel.py` renders all 7 as 1080×1920 MP4s and uploads them as the
-   **posts-YYYY-MM-DD** artifact (Actions → the run → Artifacts), with
-   `captions.md` listing captions, hashtags and image credits. Review them here.
+2. `trends.py` collects what's happening, free: the most-read English
+   Wikipedia articles of the past week, the next 3 weeks of sky and folk dates
+   (moon phases, Sun sign changes, solstices, Mercury stations — computed with
+   PyEphem — plus feast days like Krampusnacht and St Lucy's), and the top
+   hashtag posts. → `trends/YYYY-MM-DD.json`
+3. `intel_report.py` writes the competitor analysis → `reports/YYYY-MM-DD.md`.
+4. `planner.py` has the model pick the trending topics with a real occult or
+   history angle, then plan the 7 days → `plan/YYYY-MM-DD.json`, also added to
+   the report as section 6:
+
+   | Day | Format | What |
+   |---|---|---|
+   | Mon, Wed, Fri, Sat | Reel | fast countdowns ("3 cursed books…") on the most shareable subjects |
+   | Tue, Thu, Sun | carousel | 3 of the 5 pillars, rotating so all five come round every ~2 weeks |
+
+   The pillars: **The Forbidden Library** (a numbered series on one real
+   manuscript or object), **The Occult Behind It** (the real history behind
+   something trending), **Cosmic Calendar** (a coming sky or folk date),
+   **Myth vs History**, **Find Yours** (a lookup list from one historical
+   source; "comment yours").
+
+   Reels lead while the account is small: Instagram shows them to people who
+   don't follow you yet. The October posts showed it (Reels reached 77–116
+   accounts, carousels 0–1). Carousels get ~2.6× the engagement per follower
+   in this niche, so shift `SLOTS` in `planner.py` toward them once the
+   account has a following — `insights.json` (weekly) shows when.
+   alloccult.com is one source among many: a post links to an archive page
+   only when one really fits. The planner never proposes giveaways, contests or
+   product promotions.
+5. `compose_posts.py` turns the 4 planned Reels into specs (hook, 5–7 numbered
+   beats, image search terms, music mood, caption, 12 hashtags). →
+   `queue/YYYY-MM-DD.json`
+6. `reel_review.py` renders and reviews them; the bundle is uploaded as the
+   **posts-YYYY-MM-DD** artifact (Actions → the run → Artifacts).
+
+To plan right away instead of waiting for Monday: Actions → Weekly Competitor
+Intel → Run workflow. The plan always covers the 7 days from the day it runs.
+
+## Carousels: written and reviewed by the model before they post
+
+Every day at 18:00 UTC, `post.py`:
+
+1. **Posts an approved draft** if one is waiting (`drafts/<id>/draft.json` with
+   `"status": "approved"`).
+2. Otherwise it **reviews the next pending draft**, or the model writes today's
+   planned carousel (`carousel_ai.write_plan_draft`): 7–9 slides built the way
+   its pillar works, from the plan's facts (and the archive page, if it links
+   one). On a Reel day it does nothing. With no plan at all it falls back to
+   the next archive entry (`carousel_ai.write_draft`).
+3. **Renders it** (`carousel.py`): public-domain art on every slide, the series
+   label and hook on the cover, and a closing card with the question to answer
+   in the comments.
+4. **The model reviews the rendered slides** (`carousel_ai.review`, with vision).
+   It checks facts against the plan's notes and established history, checks
+   that each image shows the subject and suits the brand (no puns or
+   coincidences, no propaganda, no gore), and checks legibility and the hook.
+   Problems are fixed: new text, or the image is rejected and searched again.
+   It then re-renders and re-reviews, up to 2 rounds.
+5. **Posts it only if it passes.** A draft that still fails is marked
+   `"rejected"` and never published. Every round is kept in the draft's
+   `review_log`.
+
+Manual run: Actions → ALLOCCULT Instagram Post → Run workflow with
+"prepare_only" to write and review today's carousel without posting it.
+`posting.json` turns carousels, Reels and product posts on or off. Needs the
+`GH_PAT` secret (to read archive page text).
+
+## Reels with music
 
 **The model reviews every Reel** (`reel_review.py`) right after rendering: stills
 from each segment are checked like carousels (facts, image fit, legibility,
@@ -132,16 +175,15 @@ marked `"status": "approved"` are ever posted. "Reel Review Check" (Actions) is
 a manual live test that changes nothing.
 
 **Every day 15:00 UTC** — `.github/workflows/reel.yml` runs `post_reel.py`:
-renders the next unposted Reel from this week's queue (same artwork as the
-preview), uploads it straight to Instagram (resumable upload — no hosting
+on a planned Reel day (Monday, Wednesday, Friday, Saturday; a missed one
+catches up the next day) it renders that Reel (same artwork as the preview), uploads it straight to Instagram (resumable upload — no hosting
 needed), and publishes it. It is recorded in `published.json`, so
 `analytics.py` scores Reels alongside carousels.
 
 **Scheduled Reels are on.** To pause them, set the repo variable
 `REELS_ENABLED` to `false` (Settings → Secrets and variables → Actions →
 Variables). Manual runs (Actions → ALLOCCULT Daily Reel → Run workflow, with an
-optional "dry run") always work. If the newest queue still has 2+ unposted
-Reels on Monday, the weekly run keeps it rather than composing a new one.
+optional "dry run") always work.
 
 **Watch the week's Reels** on the `previews` branch (open an `.mp4` → View
 raw), refreshed after every weekly run. After editing a `queue/*.json` by
@@ -198,12 +240,14 @@ hand, run Actions → Publish Reel Previews with no run ID to re-render it.
 ### Run locally
 
 ```bash
-sudo apt install ffmpeg && pip install pillow numpy fonttools opencv-python-headless onnxruntime
+sudo apt install ffmpeg && pip install pillow numpy fonttools opencv-python-headless onnxruntime ephem anthropic
 mkdir -p fonts   # then download Cinzel.ttf + EBGaramond.ttf as in post.yml
-export IG_USER_ID=... IG_ACCESS_TOKEN=... GITHUB_TOKEN=...   # PAT with the "Models" permission
+export IG_USER_ID=... IG_ACCESS_TOKEN=... GEMINI_API_KEY=...   # or ANTHROPIC_API_KEY
 python competitor_scan.py
 DATE=$(date -u +%F)
+python trends.py "$DATE"
 python intel_report.py "$DATE"
+python planner.py "$DATE"
 python compose_posts.py
 python render_reel.py "queue/$DATE.json" all "out/posts-$DATE"   # preview bundle
 python post_reel.py --dry-run                                     # render next, don't post

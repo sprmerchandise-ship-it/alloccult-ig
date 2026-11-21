@@ -13,7 +13,7 @@ legibility; and the hook. apply_fixes() turns a verdict into edits — new text,
 rejected images with new searches — and post.py re-renders and re-reviews
 until it passes or gives up.
 
-Runs on GitHub Models (llm.py) — needs GITHUB_TOKEN.
+Runs on the model in llm.py (Gemini or Anthropic).
 """
 import base64, io, json
 
@@ -84,6 +84,86 @@ PAGE TEXT:
     slides += [{"kicker": s["kicker"], "text": s["text"], "image_query": s["image_query"]}
                for s in data["slides"]]
     return {"title": entry["title"], "route": entry["route"], "section": entry.get("section", ""),
+            "slides": slides, "caption": data["caption"],
+            "hashtags": [h.lower().lstrip("#").replace(" ", "") for h in data["hashtags"]][:12]}
+
+
+PILLAR_GUIDE = {
+    "forbidden_library": """Walk through one real object. Kickers name places and
+holdings (e.g. "Stockholm · National Library", "MS 408 · Yale"). Order: where it
+is now → what it is → where it came from → the legend → what scholars found →
+the strangest true detail LAST. Never present a legend as fact; say "legend has
+it" or name who claimed it.""",
+    "behind_the_trend": """Slide 1 names the trend people know (the film, series,
+game, anniversary) in one line. Every later slide is the real history behind
+it. Only documented connections; if the creators never said they drew on it,
+present it as "the real history", not as what they meant.""",
+    "cosmic_calendar": """Slide 1 gives the exact date (and time, in UTC, if the
+plan has one). Then the folklore, rites and history of that date or sky event
+across 2–3 cultures or periods, each with its source or region in the kicker.
+Describe historical practice; don't promise effects.""",
+    "myth_vs_history": """One myth per slide. "kicker": "MYTH: " + the popular
+claim in at most 5 words (e.g. "MYTH: 9 million witches burned"). "text": what
+the sources actually say, starting "History:", with the real date/source.""",
+    "find_yours": """A lookup list from ONE named historical source, stated on
+slide 1 (author, title, year). Each later slide covers 2 entries, e.g. text
+"January: garnet, against... | February: amethyst, against..." (max 30 words).
+Every entry exactly as the source gives it — no modern additions.""",
+}
+
+PLAN_DRAFT_SCHEMA = _obj({
+    "slides": {"type": "array", "items": _obj({"kicker": STR, "text": STR, "image_query": STR})},
+    "caption": STR,
+    "hashtags": {"type": "array", "items": STR},
+})
+
+
+def series_label(item):
+    if item["pillar"] == "forbidden_library":
+        return f"The Forbidden Library · No. {item.get('series_no', 1)}"
+    return {"behind_the_trend": "The Occult Behind It", "cosmic_calendar": "Cosmic Calendar",
+            "myth_vs_history": "Myth vs History", "find_yours": "Find Yours"}.get(item["pillar"], "")
+
+
+def write_plan_draft(item, source_text=""):
+    """A carousel for one planned item (planner.py) — any pillar, any subject."""
+    site = (f"\nThe last caption line: \"More in the Forbidden Library: alloccult.com{item['related_route']}\""
+            if item.get("related_route") else "")
+    prompt = f"""Write an Instagram carousel for @all.occult from this plan.
+
+PLAN:
+{json.dumps({k: item[k] for k in ("pillar", "title", "hook", "angle", "why_now", "facts", "question")},
+            ensure_ascii=False, indent=1)}
+
+HOW THIS PILLAR WORKS:
+{PILLAR_GUIDE[item["pillar"]]}
+
+The cover (written separately) carries the hook: "{item['hook']}".
+The closing card (also separate) asks: "{item['question']}".
+
+Rules:
+- 7–9 "slides" after the cover, one idea each, building to the strongest
+  point last. "kicker" max 32 characters; "text" max 26 words (find_yours: 30).
+- Use the plan's facts and the source text below; add only facts you are
+  certain of. If a planned fact looks wrong to you, leave it out.
+- "image_query": 1–3 words naming the slide's subject as a museum catalogue
+  would ("Codex Gigas", "Saturn", "mandrake", "witches sabbath", "astrolabe").
+  We search the Wellcome Collection first (old prints, woodcuts, manuscripts).
+- "caption": 100–160 words in short lines. First line: the hook idea as a
+  statement. Then the substance. Then the closing question, then
+  "Save this for later."{site}
+- No giveaways, contests or product promotion.
+- "hashtags": exactly 12, lowercase, no # sign, mixing niche and broad tags.
+
+SOURCE TEXT:
+{source_text or '(none — use the plan facts and established scholarship only)'}"""
+    data = _ask(VOICE, prompt, PLAN_DRAFT_SCHEMA)
+    slides = [{"text": item["hook"], "image_query": data["slides"][0]["image_query"]}]
+    slides += [{"kicker": s["kicker"], "text": s["text"], "image_query": s["image_query"]}
+               for s in data["slides"]]
+    return {"title": item["title"], "route": item.get("related_route", ""), "section": item["pillar"],
+            "plan_id": item["id"], "date": item["date"], "series": series_label(item),
+            "question": item["question"], "facts": item["facts"],
             "slides": slides, "caption": data["caption"],
             "hashtags": [h.lower().lstrip("#").replace(" ", "") for h in data["hashtags"]][:12]}
 
@@ -208,13 +288,13 @@ def review(draft, slide_paths, source_text):
     content.append({"type": "text", "text": f"""You are the last check before this carousel
 posts publicly on @all.occult. Be strict: post only if you would be proud of it.
 
-Review every slide (the last slide is a fixed "read the full entry" card — check
-it only for legibility) and the caption. Reject an image if it doesn't show the
+Review every slide (the last slide is a fixed closing card with the question —
+check it only for legibility) and the caption. Reject an image if it doesn't show the
 slide's subject or something clearly related; if its title shows it's a pun or
 coincidence (e.g. a costume print called "Une Femme de Charon"); if it is
 sectarian, racist or hateful propaganda; if it is gratuitous gore or nudity; or
 if it is too poor to read. Reject text that is inaccurate, overclaims, misdates,
-contradicts the page text without good reason, or is clumsy. Check legibility,
+contradicts the source notes without good reason, or is clumsy. Check legibility,
 spelling, and that the hook would stop a scroll.
 
 For each problem give a fix: a better "new_image_query" (1–3 words naming the
@@ -238,8 +318,8 @@ CAPTION:
 
 HASHTAGS: {' '.join(draft['hashtags'])}
 
-ARCHIVE PAGE TEXT (alloccult.com{draft['route']}):
-{source_text or '(unavailable)'}"""})
+SOURCE NOTES (check against these and established scholarship):
+{source_text or '(none — rely on established scholarship)'}"""})
     return _ask(VOICE, content, REVIEW_SCHEMA)
 
 

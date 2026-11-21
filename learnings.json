@@ -1,0 +1,20 @@
+{
+  "top_sections": [
+    "Section 15",
+    "Section 4",
+    "Section 7"
+  ],
+  "section_avg": {
+    "Section 1": 1.0,
+    "Section 2": 1.5,
+    "Section 7": 43.0,
+    "Section 15": 108.0,
+    "Section 10": 0.5,
+    "Section 4": 77.0,
+    "Section 11": 2.0,
+    "Section 9": 1.5,
+    "Section 13": 0.0,
+    "Section 8": 1.0
+  },
+  "updated": 1795301925
+}
