@@ -125,7 +125,7 @@ def _gemini_post(body):
             headers={"Authorization": f"Bearer {os.environ['GEMINI_API_KEY']}",
                      "Content-Type": "application/json"})
         try:
-            with urllib.request.urlopen(req, timeout=300) as r:
+            with urllib.request.urlopen(req, timeout=600) as r:
                 raw = r.read().decode(errors="replace")
             try:
                 return json.loads(raw)
@@ -135,6 +135,9 @@ def _gemini_post(body):
             detail = e.read().decode(errors="replace")[:500]
             wait = int(e.headers.get("Retry-After") or 0) or 20 * (attempt + 1)
             # Per-minute limits clear quickly; a daily limit says to wait hours.
+            if e.code == 400 and "reasoning" in detail.lower() and body.pop("reasoning_effort", None):
+                print("  (model doesn't take reasoning_effort; retrying without it)")
+                continue
             if e.code == 429 and wait <= 120 and attempt < 5:
                 print(f"  (rate limited; waiting {wait}s)")
                 time.sleep(wait)
@@ -145,6 +148,12 @@ def _gemini_post(body):
                 time.sleep(10 * (attempt + 1))
                 continue
             raise RuntimeError(f"Gemini error {e.code}: {detail}") from None
+        except (TimeoutError, urllib.error.URLError) as e:
+            if attempt < 2:                       # a slow or dropped answer: ask again
+                print(f"  (no answer from Gemini: {e}; retrying)")
+                time.sleep(15)
+                continue
+            raise RuntimeError(f"Gemini did not answer: {e}") from None
     raise RuntimeError("Gemini: still rate limited after retries")
 
 
@@ -153,7 +162,10 @@ class QuotaExceeded(RuntimeError):
 
 
 def _gemini_chat(system, content, model, max_tokens, schema):
-    body = {"model": model, "max_tokens": max_tokens,
+    # Thinking tokens count against max_tokens on Gemini's thinking models, so
+    # leave room, and keep thinking light: these are writing tasks, not puzzles.
+    body = {"model": model, "max_tokens": max(max_tokens, 16000),
+            "reasoning_effort": os.environ.get("LLM_REASONING") or "low",
             "messages": [{"role": "system", "content": system},
                          {"role": "user", "content": _openai_blocks(content)}]}
     if schema:
