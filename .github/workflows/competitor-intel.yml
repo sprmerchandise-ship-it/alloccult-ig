@@ -44,7 +44,9 @@ jobs:
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-        run: python competitor_scan.py
+        # If Instagram refuses (e.g. its hourly API limit), plan from the last scan.
+        run: |
+          python competitor_scan.py || echo "::warning::Competitor scan failed — planning from the last scan ($(python3 -c 'import json; print(json.load(open("competitors/scan.json"))["generated"])'))."
 
       - name: Collect trends (Wikipedia, sky + folk calendar, hashtags)
         run: python trends.py "$DATE"
