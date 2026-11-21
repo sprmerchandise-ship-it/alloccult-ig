@@ -125,7 +125,7 @@ def _gemini_post(body):
             headers={"Authorization": f"Bearer {os.environ['GEMINI_API_KEY']}",
                      "Content-Type": "application/json"})
         try:
-            with urllib.request.urlopen(req, timeout=600) as r:
+            with urllib.request.urlopen(req, timeout=300) as r:
                 raw = r.read().decode(errors="replace")
             try:
                 return json.loads(raw)
@@ -149,7 +149,7 @@ def _gemini_post(body):
                 continue
             raise RuntimeError(f"Gemini error {e.code}: {detail}") from None
         except (TimeoutError, urllib.error.URLError) as e:
-            if attempt < 2:                       # a slow or dropped answer: ask again
+            if attempt < 3:                       # a stalled or dropped answer: ask again
                 print(f"  (no answer from Gemini: {e}; retrying)")
                 time.sleep(15)
                 continue
