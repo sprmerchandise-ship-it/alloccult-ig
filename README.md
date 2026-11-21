@@ -43,10 +43,12 @@ All writing and reviewing goes through `llm.py`. Add **one** of these repo
 secrets (Settings → Secrets and variables → Actions → New repository secret):
 
 - `GEMINI_API_KEY` — free. Create a key at aistudio.google.com (Get API key).
-  Defaults: `gemini-2.5-flash` for writing and the vision reviews,
-  `gemini-2.5-flash-lite` for image picks. The free tier's daily limits are set
-  per project and shown in AI Studio; if one is hit, that run fails and the
-  next scheduled run picks up.
+  It asks Google for the newest stable Flash model the key can use (e.g.
+  `gemini-3.8-flash`) for writing and the vision reviews, and the matching
+  Flash-Lite for image picks — Google closes older models to new keys. The free
+  tier's daily limits are set per project and shown in AI Studio; when the
+  Flash quota runs out, requests finish on Flash-Lite, and if that runs out
+  too, the run fails and the next scheduled run picks up.
 - `ANTHROPIC_API_KEY` — paid per use (console.anthropic.com). Defaults:
   `claude-opus-5-5` for writing and reviews, `claude-haiku-5-5` for image picks.
 

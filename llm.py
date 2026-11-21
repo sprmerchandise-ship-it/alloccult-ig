@@ -6,7 +6,9 @@ Two providers; which one runs depends on the repo secret that is set
 (or force one with the LLM_PROVIDER repo variable: "gemini" or "anthropic"):
 
   GEMINI_API_KEY     Google Gemini API, free tier (key from aistudio.google.com).
-                     Used when set — it costs nothing.
+                     Used when set — it costs nothing. Picks the newest Flash
+                     model the key can use; if its daily free quota runs out,
+                     the request is finished on Flash-Lite.
   ANTHROPIC_API_KEY  Anthropic API (paid, per token).
 
 (GitHub Models, used before, was retired by GitHub on 30 July 2026: every
@@ -27,10 +29,14 @@ the models with the LLM_MODEL / LLM_FAST_MODEL repo variables
 import json, os, time, urllib.error, urllib.request
 
 DEFAULTS = {   # (writing + vision reviews, image picks and other small calls)
-    "gemini": ("gemini-2.5-flash", "gemini-2.5-flash-lite"),
+    # Gemini: None = ask Google for the newest Flash / Flash-Lite this key can
+    # use (Google closes older models to new keys, e.g. gemini-2.5-flash).
+    "gemini": (None, None),
     "anthropic": ("claude-opus-5-5", "claude-haiku-5-5"),
 }
-GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions"
+GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/openai"
+GEMINI_ENDPOINT = GEMINI_BASE + "/chat/completions"
+GEMINI_FALLBACK = ("gemini-3.8-flash", "gemini-3.8-flash-lite")   # if the model list can't be read
 MAX_OUTPUT = 4000
 SOURCE_CHARS = 12000          # archive page text sent with a prompt (~3,000 tokens)
 
@@ -56,7 +62,40 @@ def _model(fast):
         raise RuntimeError("No AI provider: add a GEMINI_API_KEY (free) or ANTHROPIC_API_KEY "
                            "repo secret (Settings → Secrets and variables → Actions).")
     env = os.environ.get("LLM_FAST_MODEL" if fast else "LLM_MODEL")
-    return env or DEFAULTS[p][1 if fast else 0]
+    if env:
+        return env
+    if p == "gemini":
+        return _gemini_pick(fast)
+    return DEFAULTS[p][1 if fast else 0]
+
+
+_GEMINI_MODELS = None
+
+
+def _gemini_models():
+    """Model ids this key can use, from Google's model list (cached)."""
+    global _GEMINI_MODELS
+    if _GEMINI_MODELS is None:
+        req = urllib.request.Request(GEMINI_BASE + "/models",
+                                     headers={"Authorization": f"Bearer {os.environ['GEMINI_API_KEY']}"})
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                data = json.loads(r.read().decode())
+            _GEMINI_MODELS = [m["id"].removeprefix("models/") for m in data.get("data", [])]
+        except (urllib.error.URLError, ValueError, KeyError) as e:
+            print(f"  (couldn't list Gemini models: {e})")
+            _GEMINI_MODELS = []
+    return _GEMINI_MODELS
+
+
+def _gemini_pick(fast):
+    """Newest stable 'gemini-<version>-flash' (or '-flash-lite' when fast)."""
+    import re
+    want = re.compile(r"^gemini-(\d+(?:\.\d+)?)-flash" + ("-lite" if fast else "") + "$")
+    found = [(float(m.group(1)), mid) for mid in _gemini_models() if (m := want.match(mid))]
+    if found:
+        return max(found)[1]
+    return GEMINI_FALLBACK[1 if fast else 0]
 
 
 MODEL = os.environ.get("LLM_MODEL") or None       # kept for callers that pass llm.MODEL
@@ -100,11 +139,17 @@ def _gemini_post(body):
                 print(f"  (rate limited; waiting {wait}s)")
                 time.sleep(wait)
                 continue
+            if e.code == 429:
+                raise QuotaExceeded(f"Gemini daily limit reached for {body['model']}: {detail}") from None
             if e.code >= 500 and attempt < 3:
                 time.sleep(10 * (attempt + 1))
                 continue
             raise RuntimeError(f"Gemini error {e.code}: {detail}") from None
     raise RuntimeError("Gemini: still rate limited after retries")
+
+
+class QuotaExceeded(RuntimeError):
+    pass
 
 
 def _gemini_chat(system, content, model, max_tokens, schema):
@@ -114,7 +159,16 @@ def _gemini_chat(system, content, model, max_tokens, schema):
     if schema:
         body["response_format"] = {"type": "json_schema", "json_schema": {
             "name": "answer", "strict": True, "schema": schema}}
-    choice = _gemini_post(body)["choices"][0]
+    try:
+        choice = _gemini_post(body)["choices"][0]
+    except QuotaExceeded as e:
+        lite = _model(True)
+        if model == lite:
+            raise
+        # The strong model's free daily quota is small; finish on Flash-Lite.
+        print(f"  ({e.args[0][:80]}… — using {lite} instead)")
+        body["model"] = lite
+        choice = _gemini_post(body)["choices"][0]
     if choice.get("finish_reason") == "length":
         raise RuntimeError("The model's answer was cut off (max_tokens)")
     if choice.get("finish_reason") == "content_filter":
