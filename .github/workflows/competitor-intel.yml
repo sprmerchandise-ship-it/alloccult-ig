@@ -54,12 +54,12 @@ jobs:
           python intel_report.py "$DATE"
           test -s "reports/$DATE.md" || { echo "No report written to reports/$DATE.md"; exit 1; }
 
-      - name: Plan the week (5 carousels + 2 Reels)
+      - name: Plan the week (4 Reels + 3 carousels)
         run: |
           python planner.py "$DATE"
           cat "reports/$DATE.md" >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Turn the 2 planned Reels into specs
+      - name: Turn the 4 planned Reels into specs
         run: python compose_posts.py
 
       - name: Render + review the week's Reels (preview bundle)

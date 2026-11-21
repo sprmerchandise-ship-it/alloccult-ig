@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-The week's content plan: 5 carousels + 2 Reels, chosen from what's trending.
+The week's content plan: 4 Reels + 3 carousels, chosen from what's trending.
 
   python planner.py 2026-11-23      # needs trends/2026-11-23.json (trends.py)
 
@@ -20,8 +20,11 @@ import datetime as dt, glob, json, os, re, sys
 import llm
 from carousel_ai import VOICE
 
-# Weekday (Monday = 0) → format. Carousels lead (2.6× the engagement of Reels in our niche).
-SLOTS = ["carousel", "carousel", "reel", "carousel", "carousel", "reel", "carousel"]
+# Weekday (Monday = 0) → format. Reels lead while the account is small: Instagram
+# shows them to non-followers, and our October Reels reached 77–116 accounts
+# where carousels reached 0–1. Carousels win per follower (2.6× in our niche),
+# so shift toward them once the account has a following (insights.json).
+SLOTS = ["reel", "carousel", "reel", "carousel", "reel", "reel", "carousel"]
 DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 PILLARS = {
@@ -100,6 +103,16 @@ def recent_titles(weeks=4):
     return out
 
 
+def carousel_pillars():
+    """This week's carousel pillars: the next ones in a fixed rotation, so all
+    five come round every ~2 weeks."""
+    order = list(PILLARS)
+    done = sum(i["format"] == "carousel" for p in glob.glob("plan/????-??-??.json")
+               for i in json.load(open(p))["items"])
+    n = SLOTS.count("carousel")
+    return [order[(done + k) % len(order)] for k in range(n)]
+
+
 def next_series_no():
     nos = []
     for p in glob.glob("plan/????-??-??.json"):
@@ -107,7 +120,7 @@ def next_series_no():
     return max(nos, default=0) + 1
 
 
-def plan_prompt(start, trends, picks, routes, recent, series_no, analysis):
+def plan_prompt(start, trends, picks, routes, recent, series_no, analysis, pillars_now):
     slots = "\n".join(f"- {DAYS[d.weekday()]} {d:%d %b}: {SLOTS[d.weekday()]}" for d in _days(start))
     pillars = "\n".join(f"- {k}: {v}" for k, v in PILLARS.items())
     ig = trends.get("instagram") or {}
@@ -118,12 +131,16 @@ PILLARS:
 {pillars}
 
 Rules:
-- The 5 carousels use all 5 pillars, one each. The 2 Reels are fast countdowns
-  ("3 objects…", "5 signs…") from any pillar except find_yours.
-- forbidden_library is "No. {series_no}" in its series: put it in the title.
-- behind_the_trend must come from TRENDING below; if nothing there is strong,
+- The 3 carousels use these pillars, one each, on whichever carousel day fits
+  best: {', '.join(pillars_now)}.
+- The 4 Reels are fast countdowns ("3 objects…", "5 signs…") from any pillar
+  except find_yours. They are how new people find us, so pick the most
+  shareable subjects: our best Reels so far were about vampires, gematria and
+  the Goetia's demons.
+- A forbidden_library carousel is "No. {series_no}" in its series: put it in the title.
+- behind_the_trend (when used) must come from TRENDING below; if nothing there is strong,
   use the calendar or a hashtag-feed topic instead and say so in why_now.
-- cosmic_calendar uses a date from CALENDAR and goes on that day or 1–2 days
+- cosmic_calendar (when used) uses a date from CALENDAR and goes on that day or 1–2 days
   before it. Copy the date/time exactly.
 - Hooks follow what works in our niche: a startling, specific, true claim, or
   a withheld reveal ("Yale has a secret. And it's been locked behind marble
@@ -157,15 +174,15 @@ def _days(start):
     return [start + dt.timedelta(days=n) for n in range(7)]
 
 
-def validate(items, start, routes):
+def validate(items, start, routes, pillars_now):
     problems = []
     if len(items) != 7:
         problems.append(f"expected 7 items, got {len(items)}")
     for i, d in zip(items, _days(start)):
         i["format"] = SLOTS[d.weekday()]
     carousels = [i for i in items[:7] if i["format"] == "carousel"]
-    if sorted(i.get("pillar") for i in carousels) != sorted(PILLARS):
-        problems.append("the 5 carousels must use the 5 pillars once each")
+    if sorted(i.get("pillar") for i in carousels) != sorted(pillars_now):
+        problems.append(f"the carousels must use these pillars once each: {', '.join(pillars_now)}")
     for i, d in zip(items, _days(start)):
         n = d.weekday()
         if i.get("related_route") and i["related_route"] not in routes:
@@ -207,11 +224,12 @@ def main():
     for p in picks:
         print(f"  {p['title']}: {p['angle']}")
     series_no = next_series_no()
-    prompt = plan_prompt(start, trends, picks, route_list, recent_titles(), series_no, analysis)
+    pillars_now = carousel_pillars()
+    prompt = plan_prompt(start, trends, picks, route_list, recent_titles(), series_no, analysis, pillars_now)
     for attempt in range(2):
         try:
             plan = llm.ask_json(VOICE, prompt, PLAN_SCHEMA)
-            problems = validate(plan["items"], start, routes)
+            problems = validate(plan["items"], start, routes, pillars_now)
         except (ValueError, KeyError, TypeError, RuntimeError) as e:
             plan, problems = None, [f"response was not valid plan JSON ({e})"]
         if not problems:

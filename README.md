@@ -1,7 +1,7 @@
 # ALLOCCULT Instagram Automation
 
-Automatically posts to **@all.occult** on a schedule: every week, 5 carousels
-and 2 Reels planned from what's trending (see "The weekly plan" below),
+Automatically posts to **@all.occult** on a schedule: every week, 4 Reels
+and 3 carousels planned from what's trending (see "The weekly plan" below),
 written, illustrated and fact-checked by an AI model (see "AI model"). Product
 posts from the Etsy shop (alloccult.etsy.com) can be switched on in
 `posting.json`.
@@ -109,16 +109,26 @@ then check @all.occult. If it worked, you're done — it now posts daily at
    history angle, then plan the 7 days → `plan/YYYY-MM-DD.json`, also added to
    the report as section 6:
 
-   | Day | Format | | Pillars (one carousel each) |
-   |---|---|---|---|
-   | Mon, Tue, Thu, Fri, Sun | carousel | | **The Forbidden Library** (a numbered series on one real manuscript or object), **The Occult Behind It** (the real history behind something trending), **Cosmic Calendar** (a coming sky or folk date), **Myth vs History**, **Find Yours** (a lookup list from one historical source; "comment yours") |
-   | Wed, Sat | Reel | | fast countdowns ("3 cursed books…") from any pillar |
+   | Day | Format | What |
+   |---|---|---|
+   | Mon, Wed, Fri, Sat | Reel | fast countdowns ("3 cursed books…") on the most shareable subjects |
+   | Tue, Thu, Sun | carousel | 3 of the 5 pillars, rotating so all five come round every ~2 weeks |
 
-   Carousels lead because they get ~2.6× the engagement of Reels in this niche.
+   The pillars: **The Forbidden Library** (a numbered series on one real
+   manuscript or object), **The Occult Behind It** (the real history behind
+   something trending), **Cosmic Calendar** (a coming sky or folk date),
+   **Myth vs History**, **Find Yours** (a lookup list from one historical
+   source; "comment yours").
+
+   Reels lead while the account is small: Instagram shows them to people who
+   don't follow you yet. The October posts showed it (Reels reached 77–116
+   accounts, carousels 0–1). Carousels get ~2.6× the engagement per follower
+   in this niche, so shift `SLOTS` in `planner.py` toward them once the
+   account has a following — `insights.json` (weekly) shows when.
    alloccult.com is one source among many: a post links to an archive page
    only when one really fits. The planner never proposes giveaways, contests or
    product promotions.
-5. `compose_posts.py` turns the 2 planned Reels into specs (hook, 5–7 numbered
+5. `compose_posts.py` turns the 4 planned Reels into specs (hook, 5–7 numbered
    beats, image search terms, music mood, caption, 12 hashtags). →
    `queue/YYYY-MM-DD.json`
 6. `reel_review.py` renders and reviews them; the bundle is uploaded as the
@@ -165,8 +175,8 @@ marked `"status": "approved"` are ever posted. "Reel Review Check" (Actions) is
 a manual live test that changes nothing.
 
 **Every day 15:00 UTC** — `.github/workflows/reel.yml` runs `post_reel.py`:
-on a planned Reel day (Wednesday, Saturday; a missed one catches up the next
-day) it renders that Reel (same artwork as the preview), uploads it straight to Instagram (resumable upload — no hosting
+on a planned Reel day (Monday, Wednesday, Friday, Saturday; a missed one
+catches up the next day) it renders that Reel (same artwork as the preview), uploads it straight to Instagram (resumable upload — no hosting
 needed), and publishes it. It is recorded in `published.json`, so
 `analytics.py` scores Reels alongside carousels.
 
