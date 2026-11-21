@@ -48,9 +48,10 @@ def next_spec(posted):
     queue = json.load(open(queues[-1]))
     today = time.strftime("%Y-%m-%d", time.gmtime())
     for i, spec in enumerate(queue["reels"]):
-        # Only Reels that passed review (reel_review.py) are ever posted, and
+        # Only Reels that pass review (reel_review.py) are ever posted — one the
+    # weekly run couldn't review is reviewed here first — and
         # only from their planned date on (a missed day catches up the next).
-        if spec["id"] not in posted and spec.get("status") == "approved" \
+        if spec["id"] not in posted and spec.get("status") in ("approved", None) \
                 and spec.get("date", today) <= today:
             return queues[-1], queue, i
     return queues[-1], queue, None
@@ -127,6 +128,15 @@ def main():
     print(f"Reel {spec['id']} ({spec['day']}): {spec['title']}")
 
     os.makedirs("out", exist_ok=True)
+    if spec.get("status") != "approved":
+        from reel_review import review_spec
+        from site_source import source_notes
+        print("Not reviewed yet — reviewing now.")
+        ok = review_spec(spec, "out", source_notes(spec.get("route"), spec.get("facts", ())))
+        json.dump(queue, open(qpath, "w"), indent=2, ensure_ascii=False)
+        if not ok:
+            print(f"{spec['id']} did not pass review — not posting it.")
+            return
     video = render_spec(spec, f"out/{spec['id']}.mp4")
     json.dump(queue, open(qpath, "w"), indent=2, ensure_ascii=False)   # keep chosen images
     caption = caption_for(spec)

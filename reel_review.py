@@ -199,7 +199,13 @@ def main():
         if spec.get("status") in ("approved", "posted"):
             continue
         print(f"Reviewing {spec['id']} ({spec['day']}): {spec['title']}")
-        review_spec(spec, outdir, source_notes(spec.get("route"), spec.get("facts", ())))
+        try:
+            review_spec(spec, outdir, source_notes(spec.get("route"), spec.get("facts", ())))
+        except RuntimeError as e:
+            # One stalled AI request shouldn't cost the rest of the week; the
+            # daily Reel job reviews an unreviewed Reel before posting it.
+            spec.pop("status", None)
+            print(f"  review failed ({e}); left unreviewed — it will be reviewed on its day")
         json.dump(queue, open(qpath, "w"), indent=2, ensure_ascii=False)   # save as we go
     for spec in queue["reels"]:
         credits = "\n".join(f"- {i['credit']}" for i in spec.get("images") or [] if i)
