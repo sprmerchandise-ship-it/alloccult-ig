@@ -1,0 +1,370 @@
+{
+  "week": "2026-11-21",
+  "plan": "plan/2026-11-21.json",
+  "reels": [
+    {
+      "id": "2026-11-21-1",
+      "day": "Saturday",
+      "date": "2026-11-21",
+      "title": "3 Historical Vampire Graves That Defied Science",
+      "route": "/death-afterlife/vampirology",
+      "section": "myth_vs_history",
+      "facts": [
+        "In 2014, archaeologists at Drawsko, Poland documented multiple 17th-century burials with iron sickles placed across throats.",
+        "A female skeleton excavated in 2022 in Pien, Poland was buried with a padlock on her toe and a sickle neck-restraint.",
+        "Calmet published Traite sur les apparitions des esprits et sur les vampires in 1751 documenting Balkan burial exhumations.",
+        "The 1344 Czech chronicle of Neplach records shepherd Myslata being staked through the heart to cease nocturnal attacks.",
+        "Venice island of Lazzaretto Nuovo yielded a 16th-century plague mass burial containing a woman with a brick forced into her jaw."
+      ],
+      "hook": "Iron sickles locked across their throats",
+      "beats": [
+        {
+          "text": "5 · 1751: Dom Calmet documents official Balkan vampire exhumations",
+          "seconds": 3.5,
+          "image_query": "vampire"
+        },
+        {
+          "text": "4 · 1344: Czech chronicles record staking shepherd Myslata's corpse",
+          "seconds": 3.5,
+          "image_query": "chronicle"
+        },
+        {
+          "text": "3 · Venice: A 16th-century plague skull wedged with brick",
+          "seconds": 4.0,
+          "image_query": "skull"
+        },
+        {
+          "text": "2 · Drawsko, Poland: 17th-century graves with throat sickles",
+          "seconds": 4.0,
+          "image_query": "skeleton"
+        },
+        {
+          "text": "1 · Pien, 2022: Female burial with padlock and neck-blade",
+          "seconds": 4.5,
+          "image_query": "grave"
+        }
+      ],
+      "mood": "drone",
+      "caption": "Iron sickles locked across severed throats. Padlocked toes buried deep in Polish soil. Bricks forced into the jaws of plague victims in Venetian mass graves. These were not superstitions whispered in darkness. They were state-sanctioned burial rites meant to bind the restless dead to their earth. The historical record confirms what folklore tried to conceal. Which burial shocks you most: 1, 2, or 3? Read the accounts at alloccult.com/death-afterlife/vampirology.",
+      "hashtags": [
+        "vampire",
+        "folklore",
+        "archaeology",
+        "darkhistory",
+        "occult",
+        "medieval",
+        "morbidhistory",
+        "deathcustoms",
+        "esoteric",
+        "skeletons",
+        "plague",
+        "mementomori"
+      ],
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "All segments present historically accurate archaeological and documented cases of anti-vampiric burial rites across Europe (Pień, Drawsko, Venice, Neplach's chronicle, and Calmet's 1751 treatise). The imagery and historical citations align well with source records."
+        }
+      ],
+      "reject_images": [
+        "wellcome:mj9sdn47",
+        "wellcome:ubx372bp",
+        "wellcome:jukgk5xc",
+        "wellcome:cn4na45z",
+        "wellcome:nqms4atm",
+        "wellcome:fj37v48m",
+        "wellcome:drzu4prf",
+        "wellcome:x4ydgr4r",
+        "wellcome:gtp8yrz8",
+        "wellcome:m5c2yx7j",
+        "wellcome:asv54tmh",
+        "wellcome:rx9dd3d9",
+        "wellcome:s8ragnrr",
+        "wellcome:ss6xkjvx",
+        "wellcome:tjad4wr2",
+        "wellcome:p3nwaxvv"
+      ],
+      "images": [
+        {
+          "key": "wellcome:d7vtnwd2",
+          "url": "https://iiif.wellcomecollection.org/image/L0005336/full/1600,/0/default.jpg",
+          "title": "A Lamia",
+          "credit": "A Lamia — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        {
+          "key": "wellcome:qb8h86jz",
+          "url": "https://iiif.wellcomecollection.org/image/V0042155/full/1600,/0/default.jpg",
+          "title": "A skull. Etching.",
+          "credit": "A skull. Etching. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        {
+          "key": "wellcome:yw5xuhem",
+          "url": "https://iiif.wellcomecollection.org/image/L0072210/full/1600,/0/default.jpg",
+          "title": "Illustration of a skeleton in a grave - The Second Excavation",
+          "credit": "Illustration of a skeleton in a grave - The Second Excavation — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "2026-11-21-3",
+      "day": "Monday",
+      "date": "2026-11-23",
+      "title": "3 Darkest Secrets of the Goetia",
+      "route": "/ceremonial-magic/goetia-demonology",
+      "section": "behind_the_trend",
+      "facts": [
+        "Harley MS 6483 in the British Library contains the earliest complete English copy of the Ars Goetia dating to 1712.",
+        "Demon number 1, Bael, appears with three heads: a toad, a man, and a cat, commanding 66 legions.",
+        "The vessel described in the Lemegeton was made of brass and sealed with lead bearing the secret seal of Solomon.",
+        "Wierus cataloged 69 spirits earlier in the 1577 appendix Pseudomonarchia Daemonum before Mathers translated 72.",
+        "Demon number 32, Asmoday, confers the ring of virtutes and teaches arithmetic, astronomy, and geometry."
+      ],
+      "hook": "King Solomon bound 72 spirits in brass",
+      "beats": [
+        {
+          "text": "5 · Harley MS 6483 holds the earliest complete English Goetia",
+          "seconds": 3.5,
+          "image_query": "grimoire"
+        },
+        {
+          "text": "4 · Johann Weyer listed 69 spirits in his 1577 text",
+          "seconds": 3.5,
+          "image_query": "demon"
+        },
+        {
+          "text": "3 · Spirit 32 Asmoday confers the ring of Virtues",
+          "seconds": 4.0,
+          "image_query": "astronomy"
+        },
+        {
+          "text": "2 · Solomon sealed their brass vessel with molten lead",
+          "seconds": 4.0,
+          "image_query": "alchemical vessel"
+        },
+        {
+          "text": "1 · Bael rules first with heads of man, toad, cat",
+          "seconds": 4.0,
+          "image_query": "woodcut monster"
+        }
+      ],
+      "mood": "drone",
+      "caption": "King Solomon bound 72 spirits in a vessel of brass. Sealed with lead. Guarded by divine names.\n\nFrom Johann Weyer's 1577 catalog to British Library Harley MS 6483, the hierarchy remains documented.\n\nFirst stands Bael. Thirty-second sits Asmoday.\n\nWhich demon number do you study?\n\nalloccult.com/ceremonial-magic/goetia-demonology",
+      "hashtags": [
+        "arsgoetia",
+        "demonology",
+        "lemegeton",
+        "solomonicmagic",
+        "occultism",
+        "grimoire",
+        "asmodeus",
+        "bael",
+        "ceremonialmagic",
+        "esoteric",
+        "darkhistory",
+        "britishlibrary"
+      ],
+      "review_log": [
+        {
+          "round": 1,
+          "approved": false,
+          "summary": "Segment 5 uses an engraving of a craftsman seal-cutter's workshop/tools based on a pun on 'seal', which is irrelevant and inappropriate. It must be replaced with relevant occult or vessel imagery.",
+          "fixes": [
+            "beat 4 image: The image depicts an artisan seal-cutter and his workshop tools, which is an unrelated literal pun on sealing."
+          ]
+        },
+        {
+          "round": 2,
+          "approved": true,
+          "summary": "All segments, historical facts, and images align with Solomonic occult scholarship and brand tone. No blocking errors."
+        }
+      ],
+      "reject_images": [
+        "wellcome:m6z9jc5x",
+        "wellcome:zghfx74p",
+        "wellcome:ahq83u8w",
+        "wellcome:k7wpadqk",
+        "wellcome:mkf77d3p",
+        "wellcome:tndfw92r",
+        "wellcome:m84cpq75",
+        "wellcome:zjvuxavy",
+        "wellcome:ccjzhjxb",
+        "wellcome:nbgu6wad",
+        "wellcome:m6h7axn4",
+        "wellcome:a2mg47hf",
+        "wellcome:n2d959gv",
+        "wellcome:yyhx62y7",
+        "wellcome:dc9pp4xz",
+        "wellcome:cr4wxy9v",
+        "wellcome:v9yxa8hp",
+        "wellcome:pb8v982f",
+        "wellcome:pdcqcuk5",
+        "wellcome:rk4vnrge",
+        "wellcome:s86e4pa9",
+        "wellcome:wssvpabv",
+        "wellcome:yxgrnf46",
+        "wellcome:z6m83ypq",
+        "wellcome:rpa2384p",
+        "wellcome:a7wfv9vu",
+        "wellcome:auauumg2",
+        "wellcome:fse3a3ax",
+        "wellcome:bwjyc38p",
+        "wellcome:jrya633h",
+        "wellcome:zmdh26dv",
+        "aic:80192",
+        "wellcome:w93qxexe",
+        "wellcome:b76qherw",
+        "wellcome:ptdpt743",
+        "wellcome:awvf2u5s",
+        "wellcome:ebzj44yd",
+        "wellcome:khza6qpq",
+        "wellcome:hv8egnvr",
+        "wellcome:f88sxya9"
+      ],
+      "images": [
+        {
+          "key": "wellcome:au2my43t",
+          "url": "https://iiif.wellcomecollection.org/image/V0025898/full/1600,/0/default.jpg",
+          "title": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Mezzotint after D. Teniers the younger, 1750/1790.",
+          "credit": "A man reading a grimoire, grinning; next to him a hooded man, kneeling on the floor, is holding a torch: they are conjuring up demons. Mezzotint after D. Teniers the younger, 1750/1790. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        null,
+        null,
+        {
+          "key": "wellcome:xb9855bw",
+          "url": "https://iiif.wellcomecollection.org/image/V0007455/full/1600,/0/default.jpg",
+          "title": "A fantastic monster: a cyclops with multiple heads and arms and the legs of a goat, said to be found in Spain in 1655. Reproduction of a woodcut.",
+          "credit": "A fantastic monster: a cyclops with multiple heads and arms and the legs of a goat, said to be found in Spain in 1655. Reproduction of a woodcut. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "id": "2026-11-21-5",
+      "day": "Wednesday",
+      "date": "2026-11-25",
+      "title": "3 Gematria Numbers Tied to Occult Death",
+      "route": "/numerology-cosmic-order/gematria",
+      "section": "myth_vs_history",
+      "facts": [
+        "In Hebrew gematria, Maveth (Death, Mem-Vau-Tav) computes to a numerical value of 446.",
+        "The number 666 appears in Revelation 13:18 as the number of the Beast, calculating to Nero Caesar in Hebrew spelling NRON QSR.",
+        "The Zohar, authored in Castile in the late 13th century, asserts letters are the literal structural blocks of creation.",
+        "Cordovero's Pardes Rimonim (1548) details the system of Temurah and the 231 gates of letter transposition from Sefer Yetzirah.",
+        "The angel of death Samael (Samekh-Mem-Aleph-Lamed) totals 131 in classic mispar hekhrechi reckoning."
+      ],
+      "hook": "Numbers conceal the names of the damned",
+      "beats": [
+        {
+          "text": "5 · Letters form the structural fabric of reality",
+          "seconds": 3.0,
+          "image_query": "kabbalah manuscript"
+        },
+        {
+          "text": "4 · Cordovero mapped the 231 gates of transposition",
+          "seconds": 3.5,
+          "image_query": "sephiroth"
+        },
+        {
+          "text": "3 · The number 131 spells the poison angel Samael",
+          "seconds": 4.0,
+          "image_query": "fallen angel"
+        },
+        {
+          "text": "2 · The value 446 calculates the Hebrew Maveth death",
+          "seconds": 4.0,
+          "image_query": "memento mori"
+        },
+        {
+          "text": "1 · The Beast 666 encodes the emperor Nron Qsr",
+          "seconds": 4.5,
+          "image_query": "apocalypse beast"
+        }
+      ],
+      "mood": "drone",
+      "caption": "Numbers conceal the names of the damned.\n\nIn Hebrew gematria, letters are not symbols. They are the architecture of existence.\n\nSamael, the angel of death, is ciphered into 131.\nMaveth, literal death, yields 446.\nThe Beast of Revelation hides the name Nron Qsr inside 666.\n\nEvery name carries its own numeric sentence.\n\nWhat is your primary number?\n\nRead more at alloccult.com/numerology-cosmic-order/gematria",
+      "hashtags": [
+        "gematria",
+        "kabbalah",
+        "occultism",
+        "esoteric",
+        "samael",
+        "grimoire",
+        "darkhistory",
+        "numerology",
+        "demonology",
+        "apocalypse",
+        "zohar",
+        "mysticism"
+      ]
+    },
+    {
+      "id": "2026-11-21-7",
+      "day": "Friday",
+      "date": "2026-11-27",
+      "title": "4 Blood Covenants from Real Witchcraft Trials",
+      "route": "/witchcraft-folk-magic/traditional-witchcraft",
+      "section": "myth_vs_history",
+      "facts": [
+        "The 1634 trial of Father Urbain Grandier in Loudun produced a Latin contract purportedly signed by Lucifer, Asmodeus, and Leviathan.",
+        "Grandier's pact is preserved in the Bibliotheque nationale de France, cataloged under French manuscript archives.",
+        "The 1487 publication of Malleus Maleficarum by Heinrich Kramer standardized legal definitions of the diabolical pact across Europe.",
+        "During the 1692 Salem trials, Mary Osgood confessed under coercion to signing the Devil's book with a red liquid.",
+        "King James VI of Scotland published Daemonologie in 1597 describing bodily marks given by the Devil as signatures of fealty."
+      ],
+      "hook": "Pacts signed in blood actually exist",
+      "beats": [
+        {
+          "text": "4 · 1487: Malleus Maleficarum legally codifies diabolical pacts across Europe.",
+          "seconds": 3.5,
+          "image_query": "witchcraft woodcut"
+        },
+        {
+          "text": "3 · 1597: King James VI defines Devil marks as signatures.",
+          "seconds": 3.5,
+          "image_query": "demonology"
+        },
+        {
+          "text": "2 · 1692: Mary Osgood confesses to signing in red liquid.",
+          "seconds": 3.5,
+          "image_query": "Salem witchcraft"
+        },
+        {
+          "text": "1 · 1634: Urbain Grandier's contract bears Lucifer's inverted signature.",
+          "seconds": 4.5,
+          "image_query": "diabolical pact"
+        },
+        {
+          "text": "The original French court manuscript survives in Paris today.",
+          "seconds": 3.0,
+          "image_query": "manuscript"
+        }
+      ],
+      "mood": "drone",
+      "caption": "Pacts signed in blood actually exist in historical archives. Early modern courts preserved forged signatures of Lucifer, Asmodeus, and Leviathan as valid evidence for execution. Inquisitors treated the diabolical covenant not as myth, but as binding legal reality written in red ink. How many trials occurred in your country? Read the records at alloccult.com/witchcraft-folk-magic/traditional-witchcraft",
+      "hashtags": [
+        "occult",
+        "witchcraft",
+        "witchtrials",
+        "malleusmaleficarum",
+        "salemwitchtrials",
+        "esoteric",
+        "darkhistory",
+        "demonology",
+        "grimoire",
+        "historicalwitchcraft",
+        "folkmagic",
+        "forbiddenknowledge"
+      ]
+    }
+  ]
+}
