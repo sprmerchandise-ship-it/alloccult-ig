@@ -317,40 +317,35 @@
       "facts": [
         "The 1634 trial of Father Urbain Grandier in Loudun produced a Latin contract purportedly signed by Lucifer, Asmodeus, and Leviathan.",
         "Grandier's pact is preserved in the Bibliotheque nationale de France, cataloged under French manuscript archives.",
-        "The 1487 publication of Malleus Maleficarum by Heinrich Kramer standardized legal definitions of the diabolical pact across Europe.",
-        "During the 1692 Salem trials, Mary Osgood confessed under coercion to signing the Devil's book with a red liquid.",
-        "King James VI of Scotland published Daemonologie in 1597 describing bodily marks given by the Devil as signatures of fealty."
+        "King James VI of Scotland published Daemonologie in 1597 describing bodily marks given by the Devil as signatures of fealty.",
+        "The Malleus Maleficarum (1486/87, Heinrich Kramer) made the pact with the Devil central to its definition of witchcraft; it was a treatise, not a law code.",
+        "In March 1692 at Salem, Tituba confessed to making her mark in the Devil's book."
       ],
-      "hook": "Pacts signed in blood actually exist",
+      "hook": "Contracts with the Devil survive in archives",
       "beats": [
         {
-          "text": "4 · 1487: Malleus Maleficarum legally codifies diabolical pacts across Europe.",
+          "text": "4 · 1487: The Malleus puts the Devil's pact at witchcraft's heart",
           "seconds": 3.5,
           "image_query": "witchcraft woodcut"
         },
         {
-          "text": "3 · 1597: King James VI defines Devil marks as signatures.",
+          "text": "3 · 1597: King James VI calls the Devil's mark his seal",
           "seconds": 3.5,
           "image_query": "demonology"
         },
         {
-          "text": "2 · 1692: Mary Osgood confesses to signing in red liquid.",
+          "text": "2 · 1692: At Salem, Tituba confesses to signing the Devil's book",
           "seconds": 3.5,
           "image_query": "Salem witchcraft"
         },
         {
-          "text": "1 · 1634: Urbain Grandier's contract bears Lucifer's inverted signature.",
+          "text": "1 · 1634: Grandier's 'pact', signed by demons, survives in Paris",
           "seconds": 4.5,
           "image_query": "diabolical pact"
-        },
-        {
-          "text": "The original French court manuscript survives in Paris today.",
-          "seconds": 3.0,
-          "image_query": "manuscript"
         }
       ],
       "mood": "drone",
-      "caption": "Pacts signed in blood actually exist in historical archives. Early modern courts preserved forged signatures of Lucifer, Asmodeus, and Leviathan as valid evidence for execution. Inquisitors treated the diabolical covenant not as myth, but as binding legal reality written in red ink. How many trials occurred in your country? Read the records at alloccult.com/witchcraft-folk-magic/traditional-witchcraft",
+      "caption": "Contracts with the Devil survive in archives.\nAt Loudun in 1634, a 'pact' bearing the names of Lucifer, Asmodeus and Leviathan was used against the priest Urbain Grandier. He was burned. The document is still in Paris.\nCourts across Europe treated the Devil's pact as real evidence.\nHow many witch trials took place in your country?\nRead the records: alloccult.com/witchcraft-folk-magic/traditional-witchcraft",
       "hashtags": [
         "occult",
         "witchcraft",
