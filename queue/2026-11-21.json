@@ -83,7 +83,15 @@
         "wellcome:s8ragnrr",
         "wellcome:ss6xkjvx",
         "wellcome:tjad4wr2",
-        "wellcome:p3nwaxvv"
+        "wellcome:p3nwaxvv",
+        "wellcome:tcmcuynz",
+        "wellcome:wwtufhr6",
+        "wellcome:xtss7w9w",
+        "wellcome:frhtxqc9",
+        "wellcome:nqp2n6d4",
+        "wellcome:u87bh3ft",
+        "wellcome:aby7q6tu",
+        "aic:7385"
       ],
       "images": [
         {
@@ -93,7 +101,13 @@
           "credit": "A Lamia — Wellcome Collection (public domain)",
           "source": "wellcome"
         },
-        null,
+        {
+          "key": "aic:51535",
+          "url": "https://www.artic.edu/iiif/2/5f54b67e-5bf8-26ef-3e34-92404f648e4b/full/843,/0/default.jpg",
+          "title": "Image of Death (Imago Mortis), from the Nuremberg Chronicle",
+          "credit": "Image of Death (Imago Mortis), from the Nuremberg Chronicle, Michel Wolgemut — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
         {
           "key": "wellcome:qb8h86jz",
           "url": "https://iiif.wellcomecollection.org/image/V0042155/full/1600,/0/default.jpg",
