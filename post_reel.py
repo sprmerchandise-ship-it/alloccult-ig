@@ -42,19 +42,22 @@ def call(method, url, params=None, headers=None, body=None, fatal=True):
 
 
 def next_spec(posted):
-    queues = sorted(glob.glob("queue/????-??-??.json"))
-    if not queues:
-        return None, None, None
-    queue = json.load(open(queues[-1]))
+    """The oldest due Reel across the queues: planned for today or a day in
+    the last week that was missed. Only Reels that pass review are ever
+    posted — one the weekly run couldn't review is reviewed first (main)."""
     today = time.strftime("%Y-%m-%d", time.gmtime())
-    for i, spec in enumerate(queue["reels"]):
-        # Only Reels that pass review (reel_review.py) are ever posted — one the
-    # weekly run couldn't review is reviewed here first — and
-        # only from their planned date on (a missed day catches up the next).
-        if spec["id"] not in posted and spec.get("status") in ("approved", None) \
-                and spec.get("date", today) <= today:
-            return queues[-1], queue, i
-    return queues[-1], queue, None
+    week_ago = time.strftime("%Y-%m-%d", time.gmtime(time.time() - 6 * 86400))
+    due = []
+    for path in sorted(glob.glob("queue/????-??-??.json")):
+        queue = json.load(open(path))
+        for i, spec in enumerate(queue["reels"]):
+            if spec["id"] not in posted and spec.get("status") in ("approved", None) \
+                    and week_ago <= spec.get("date", "") <= today:
+                due.append((spec["date"], path, i))
+    if not due:
+        return None, None, None
+    _, path, i = min(due)
+    return path, json.load(open(path)), i
 
 
 def caption_for(spec):
