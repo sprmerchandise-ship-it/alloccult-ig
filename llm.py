@@ -144,9 +144,12 @@ def _gemini_post(body):
                 continue
             if e.code == 429:
                 raise QuotaExceeded(f"Gemini daily limit reached for {body['model']}: {detail}") from None
-            if e.code >= 500 and attempt < 3:
-                time.sleep(10 * (attempt + 1))
+            if e.code >= 500 and attempt < 4:
+                print(f"  (Gemini error {e.code}; retrying)")
+                time.sleep(30 * (attempt + 1))
                 continue
+            if e.code in (500, 502, 503, 504):
+                raise QuotaExceeded(f"Gemini unavailable ({e.code}) for {body['model']}: {detail}") from None
             raise RuntimeError(f"Gemini error {e.code}: {detail}") from None
         except (TimeoutError, urllib.error.URLError) as e:
             if attempt < 3:                       # a stalled or dropped answer: ask again
@@ -158,7 +161,8 @@ def _gemini_post(body):
 
 
 class QuotaExceeded(RuntimeError):
-    pass
+    """The model can't serve this request now (daily quota used up, or
+    overloaded): the caller finishes it on Flash-Lite."""
 
 
 def _gemini_chat(system, content, model, max_tokens, schema):

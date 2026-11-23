@@ -69,10 +69,11 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          if [ -f "queue/$DATE.json" ]; then
-            python reel_review.py "queue/$DATE.json" "out/posts-$DATE"
+          Q=$(ls queue/????-??-??.json 2>/dev/null | sort | tail -1)
+          if [ -n "$Q" ]; then
+            python reel_review.py "$Q" "out/posts-$DATE"     # reviews only Reels not yet reviewed
           else
-            echo "No Reel queue this week."
+            echo "No Reel queue."
           fi
 
       - name: Upload posts bundle
@@ -88,7 +89,7 @@ jobs:
         run: |
           git config user.name "alloccult-bot"
           git config user.email "bot@alloccult.com"
-          for f in competitors/scan.json "trends/$DATE.json" "reports/$DATE.md" "plan/$DATE.json" "queue/$DATE.json"; do
+          for f in competitors/scan.json trends reports plan queue; do
             [ -e "$f" ] && git add "$f"
           done
           git diff --cached --quiet || git commit -m "Weekly intel, trends + content plan: $DATE"

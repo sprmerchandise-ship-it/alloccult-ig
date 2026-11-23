@@ -208,8 +208,15 @@ def main():
     date = sys.argv[1] if len(sys.argv) > 1 else dt.date.today().isoformat()
     path = f"trends/{date}.json"
     trends = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
-    # The plan covers the 7 days from today (the weekly run is on Mondays).
-    start = dt.date.fromisoformat(date)
+    # The plan covers 7 days from today, or from the day after the current
+    # plan ends, so a new plan never replaces days already planned.
+    today = dt.date.fromisoformat(date)
+    ends = [dt.date.fromisoformat(json.load(open(p))["items"][-1]["date"])
+            for p in glob.glob("plan/????-??-??.json")]
+    start = max([today] + [e + dt.timedelta(days=1) for e in ends])
+    if start > today + dt.timedelta(days=6):
+        print(f"Already planned through {start - dt.timedelta(days=1)} — no new plan needed.")
+        return
     archive = json.load(open("archive_index.json", encoding="utf-8"))
     routes = {e["route"] for e in archive}
     route_list = "\n".join(f"{e['route']} — {e['title']}" for e in archive)
