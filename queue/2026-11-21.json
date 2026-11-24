@@ -239,7 +239,23 @@
         "wellcome:ebzj44yd",
         "wellcome:khza6qpq",
         "wellcome:hv8egnvr",
-        "wellcome:f88sxya9"
+        "wellcome:f88sxya9",
+        "aic:7605",
+        "aic:35367",
+        "aic:149088",
+        "aic:136981",
+        "aic:44164",
+        "aic:18408",
+        "aic:44384",
+        "aic:148358",
+        "aic:157149",
+        "aic:61581",
+        "aic:267830",
+        "aic:11",
+        "aic:111",
+        "aic:27",
+        "aic:4",
+        "aic:27992"
       ],
       "images": [
         {
@@ -251,7 +267,13 @@
         },
         null,
         null,
-        null,
+        {
+          "key": "wellcome:v2vnssnr",
+          "url": "https://iiif.wellcomecollection.org/image/V0025560/full/1600,/0/default.jpg",
+          "title": "An alchemist at a furnace with a large 'receiver', with diagrams of alchemical apparatus. Woodcut, 1658.",
+          "credit": "An alchemist at a furnace with a large 'receiver', with diagrams of alchemical apparatus. Woodcut, 1658. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
         {
           "key": "wellcome:xb9855bw",
           "url": "https://iiif.wellcomecollection.org/image/V0007455/full/1600,/0/default.jpg",
