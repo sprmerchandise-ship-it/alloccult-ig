@@ -32,14 +32,14 @@ jobs:
     env:
       RUN_ID: ${{ inputs.run_id || github.event.workflow_run.id }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       - name: Cache depth model (motion.py)
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: models
           key: depth-anything-v2-vits
@@ -55,7 +55,7 @@ jobs:
       - name: Download posts bundle
         if: env.RUN_ID != ''
         continue-on-error: true      # weeks that keep the previous queue have no bundle
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           pattern: posts-*
           path: bundle
