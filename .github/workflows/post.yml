@@ -57,6 +57,7 @@ jobs:
         run: |
           git config user.name "alloccult-bot"
           git config user.email "bot@alloccult.com"
+          git rebase --abort 2>/dev/null || true   # a failed push in post.py can leave one open
           git add state.json
           [ -e published.json ] && git add published.json
           git add drafts
