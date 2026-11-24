@@ -1,5 +1,5 @@
 {
-  "counter": 84,
+  "counter": 85,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -86,16 +86,17 @@
     "/mystical-religion/buddhist-esotericism",
     "/secret-societies/rosicrucians",
     "/consciousness/near-death-experiences",
-    "/grimoires-sacred-texts/classical-grimoires"
+    "/grimoires-sacred-texts/classical-grimoires",
+    "/hermeticism-alchemy/alchemy"
   ],
   "recent_sections": [
-    "Section 7",
     "Section 10",
     "Section 11",
     "Section 13",
     "Section 2",
     "Section 8",
     "Section 9",
-    "Section 10"
+    "Section 10",
+    "behind_the_trend"
   ]
 }
