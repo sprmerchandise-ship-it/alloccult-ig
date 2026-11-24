@@ -194,13 +194,14 @@ def render_slides(hook, slides, outdir, symbol="\u2726", entry_title=""):
     return paths
 
 def git_push(paths, msg):
+    # The identity is needed by the rebase too (it rewrites our commit when
+    # another workflow pushed meanwhile), not only by the commit.
+    ident = ["-c", "user.name=alloccult-bot", "-c", "user.email=bot@alloccult.com"]
     subprocess.run(["git", "add"] + paths, check=True)
     staged = subprocess.run(["git", "diff", "--cached", "--quiet"]).returncode != 0
     if staged:
-        subprocess.run(["git", "-c", "user.name=alloccult-bot",
-                        "-c", "user.email=bot@alloccult.com",
-                        "commit", "-m", msg], check=True)
-    subprocess.run(["git", "pull", "--rebase", "-q"], check=True)
+        subprocess.run(["git", *ident, "commit", "-m", msg], check=True)
+    subprocess.run(["git", *ident, "pull", "--rebase", "-q"], check=True)
     subprocess.run(["git", "push"], check=True)
 
 def wait_ready(cid):

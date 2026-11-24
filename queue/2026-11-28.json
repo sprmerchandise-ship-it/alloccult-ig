@@ -6,218 +6,121 @@
       "id": "2026-11-28-1",
       "day": "Saturday",
       "date": "2026-11-28",
-      "title": "Full Moon in Gemini Rites",
-      "route": "/divination-arts/astrology",
+      "title": "5 St Andrew's Eve Love Spells",
+      "route": "/witchcraft-folk-magic/folk-magic-traditions",
       "section": "cosmic_calendar",
       "facts": [
-        "Full Moon in Gemini occurred on 2026-11-24 at 14:53 UTC",
-        "Gemini is ruled by Mercury in classical astrology",
-        "Associated with pneumatic current and dualistic scrying",
-        "Historical texts advise mental invocations during air signs",
-        "Planetary hour calculations dictate the exact ritual window"
+        "St Andrew's Eve is the night of 29–30 November; in Poland it is called Andrzejki",
+        "Polish girls poured hot wax through the eye of a key into cold water and read their future from its shadow",
+        "Shoes were lined up from the wall to the door; the owner of the first to cross the threshold would marry first",
+        "In Romania, garlic was hung on doors and windows that night to keep away strigoi, the restless dead",
+        "Romanian girls slept with basil under their pillow to dream of their future husband",
+        "In German lands, girls prayed to St Andrew on Andreasnacht to see their future husband in a dream"
       ],
-      "hook": "The moon turns in Gemini. The air fractures.",
+      "hook": "Tomorrow night, summon your future husband",
       "beats": [
         {
-          "text": "5 · Calculated for 24 November 2026 at 14:53 UTC.",
-          "seconds": 3.0,
-          "image_query": "astronomical chart"
-        },
-        {
-          "text": "4 · Gemini is bound to the dominion of Mercury.",
-          "seconds": 3.0,
-          "image_query": "mercury planetary woodcut"
-        },
-        {
-          "text": "3 · The pneumatic current awakens dualistic scrying methods.",
+          "text": "5 · Romania: garlic on every door against the dead",
           "seconds": 3.5,
-          "image_query": "wind spirit engraving"
+          "image_query": "garlic"
         },
         {
-          "text": "2 · Classical texts mandate mental invocations during air signs.",
+          "text": "4 · Germany: pray to St Andrew, then dream of him",
           "seconds": 3.5,
-          "image_query": "astrological manuscript"
+          "image_query": "Saint Andrew"
         },
         {
-          "text": "1 · Planetary hour calculations dictate the exact ritual window.",
+          "text": "3 · Romania: basil under the pillow brings his face",
           "seconds": 3.5,
-          "image_query": "astrolabe instrument"
+          "image_query": "basil"
+        },
+        {
+          "text": "2 · Poland: line up shoes; first out the door weds",
+          "seconds": 3.5,
+          "image_query": "shoes"
+        },
+        {
+          "text": "1 · Poland: pour hot wax through a key, read its shadow",
+          "seconds": 4,
+          "image_query": "candle wax"
         }
       ],
       "mood": "ritual",
-      "caption": "The moon turns in Gemini. The air fractures.\n\nThe mechanics of the cosmos do not wait. The Full Moon of November 2026 unlocked the pneumatic current.\n\nMercury rules this domain. Dualistic scrying requires exactitude.\n\nWhat degree is your Gemini placement?\n\nalloccult.com/divination-arts/astrology",
+      "caption": "Tomorrow night is St Andrew's Eve.\n\nFor centuries, girls across Eastern Europe used it to see who they would marry.\n\nIn Poland: hot wax poured through a key, its shadow read on the wall. Shoes walked to the door.\nIn Romania: basil under the pillow, garlic against the strigoi.\n\nWould you try one tomorrow night?\n\nalloccult.com/witchcraft-folk-magic/folk-magic-traditions",
       "hashtags": [
-        "occult",
-        "astrology",
-        "gemini",
-        "fullmoon",
-        "hermeticism",
+        "standrewseve",
+        "andrzejki",
+        "lovedivination",
+        "folkmagic",
+        "folklore",
         "divination",
+        "witchcraft",
+        "polishfolklore",
+        "romanianfolklore",
+        "occult",
         "esoteric",
-        "mercury",
-        "ritual",
-        "magick",
-        "alloccult",
-        "forbiddenlibrary"
-      ],
-      "review_log": [
-        {
-          "round": 1,
-          "approved": true,
-          "summary": "All segments align with historical occult and astrological principles. Voice and facts are accurate."
-        }
-      ],
-      "reject_images": [],
-      "images": [
-        {
-          "key": "wellcome:ftc2etye",
-          "url": "https://iiif.wellcomecollection.org/image/V0024760/full/1600,/0/default.jpg",
-          "title": "Clocks: an elaborate astronomical mantel clock. Coloured lithograph, [c.1875?].",
-          "credit": "Clocks: an elaborate astronomical mantel clock. Coloured lithograph, [c.1875?]. — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
-        {
-          "key": "wellcome:wg9ykr4g",
-          "url": "https://iiif.wellcomecollection.org/image/V0024873ER/full/1600,/0/default.jpg",
-          "title": "Astronomy: the god Mercury; representing the planet Mercury. Engraving by N. Dorigny, 1695, after Raphael, 1516.",
-          "credit": "Astronomy: the god Mercury; representing the planet Mercury. Engraving by N. Dorigny, 1695, after Raphael, 1516. — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
-        {
-          "key": "wellcome:rnhkpz3c",
-          "url": "https://iiif.wellcomecollection.org/image/L0034708/full/1600,/0/default.jpg",
-          "title": "Acupuncture chart of back of head, 17th C. Chinese woodblock",
-          "credit": "Acupuncture chart of back of head, 17th C. Chinese woodblock — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
-        {
-          "key": "wellcome:dt4zxk99",
-          "url": "https://iiif.wellcomecollection.org/image/L0027306/full/1600,/0/default.jpg",
-          "title": "Blagrave, Astrological Practice of Physick",
-          "credit": "Blagrave, Astrological Practice of Physick — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
-        {
-          "key": "wellcome:afwpbhkb",
-          "url": "https://iiif.wellcomecollection.org/image/V0025084ET/full/1600,/0/default.jpg",
-          "title": "Navigation: an astrolabe, a cross-staff, and a back-staff or Davis's sextant. Drawing after Edmund Gunter, 1624.",
-          "credit": "Navigation: an astrolabe, a cross-staff, and a back-staff or Davis's sextant. Drawing after Edmund Gunter, 1624. — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        }
-      ],
-      "status": "approved"
+        "alloccult"
+      ]
     },
     {
       "id": "2026-11-28-3",
       "day": "Monday",
       "date": "2026-11-30",
-      "title": "St Andrew's Eve Love Divination",
-      "route": "/witchcraft-folk-magic/folk-magic-traditions",
-      "section": "cosmic_calendar",
+      "title": "The Necromancy Rite Hidden in The Odyssey",
+      "route": "",
+      "section": "behind_the_trend",
       "facts": [
-        "St Andrew's Eve falls annually on November 30",
-        "Practiced extensively across Poland, Ukraine, and Romania",
-        "Young women poured molten lead into cold water to read future spouses' shapes",
-        "Grains were counted under pillows to summon prophetic dreams",
-        "Folk magic amalgamated Christian saints with pagan hearth spirits"
+        "Book 11 of Homer's Odyssey, the Nekyia, describes Odysseus calling up the dead",
+        "The witch-goddess Circe gives him the instructions",
+        "He digs a pit about a cubit wide and pours milk and honey, then wine, then water, and sprinkles white barley",
+        "He sacrifices a ram and a black ewe, and the dead gather to drink the blood",
+        "The ghosts can speak to him only after drinking the blood",
+        "He holds the others back with his sword until the prophet Tiresias has drunk and foretold his journey home"
       ],
-      "hook": "Pillow magic on St Andrew's Eve breaks reality.",
+      "hook": "Homer wrote a rite for raising the dead",
       "beats": [
         {
-          "text": "5 · November 30 marks the exact date of St Andrew's Eve.",
-          "seconds": 3.0,
-          "image_query": "calendar manuscript"
-        },
-        {
-          "text": "4 · Practitioners across Poland, Ukraine, and Romania unlocked the veil.",
-          "seconds": 3.0,
-          "image_query": "Eastern European folk magic"
-        },
-        {
-          "text": "3 · Molten lead poured into cold water revealed future spouses.",
+          "text": "5 · Book 11: Odysseus must question the dead",
           "seconds": 3.5,
-          "image_query": "alchemy molten metal"
+          "image_query": "Odysseus"
         },
         {
-          "text": "2  Grains counted beneath pillows summoned prophetic dreams of fate.",
+          "text": "4 · The witch-goddess Circe teaches him the rite",
           "seconds": 3.5,
-          "image_query": "sleeping figure medieval"
+          "image_query": "Circe"
         },
         {
-          "text": "1 · Christian saints merged with ancient pagan hearth spirits.",
-          "seconds": 3.5,
-          "image_query": "woodcut ritual"
+          "text": "3 · Dig a pit. Pour milk, honey, wine, water, barley",
+          "seconds": 4,
+          "image_query": "libation"
+        },
+        {
+          "text": "2 · Slay a ram and black ewe; the dead swarm",
+          "seconds": 4,
+          "image_query": "ram sacrifice"
+        },
+        {
+          "text": "1 · Only after drinking blood can ghosts speak",
+          "seconds": 4,
+          "image_query": "underworld"
         }
       ],
-      "mood": "ritual",
-      "caption": "Pillow magic on St Andrew's Eve breaks reality.\n\nNovember 30 bridges the mundane and the unseen.\nIn Poland, Ukraine, and Romania, youth pierced the veil.\nMolten lead hissed in water.\nGrains under pillows bred prophetic visions.\nChristian ritual fused with older hearth spirits.\n\nWhich dream omen did you test?\n\nalloccult.com/witchcraft-folk-magic/folk-magic-traditions",
+      "mood": "drone",
+      "caption": "The Odyssey is in cinemas. Book 11 is the strangest part.\n\nCirce tells Odysseus how to call up the dead: a pit, milk and honey, wine, water, barley, then the blood of a ram and a black ewe.\n\nThe ghosts crowd in. Only those who drink may speak. He holds them back with his sword until the prophet Tiresias comes.\n\nWould you go down to the underworld for an answer?",
       "hashtags": [
+        "theodyssey",
+        "homer",
+        "necromancy",
+        "greekmythology",
+        "circe",
+        "nekyia",
+        "underworld",
+        "ancientmagic",
+        "odysseus",
         "occult",
-        "folkmagic",
-        "standrewsday",
-        "witchcraft",
-        "divination",
         "esoteric",
-        "tradition",
-        "history",
-        "magic",
-        "prophecy",
-        "rituals",
-        "forbiddenknowledge"
-      ],
-      "review_log": [
-        {
-          "round": 1,
-          "approved": true,
-          "summary": "All segments and caption are historically accurate, concise, and aligned with brand guidelines."
-        }
-      ],
-      "reject_images": [
-        "wellcome:jutmp5u2",
-        "wellcome:hkfvh4xn",
-        "wellcome:h92xyz8t",
-        "wellcome:j958fxju",
-        "wellcome:krfpd4n9",
-        "wellcome:nj7v8ygr",
-        "wellcome:rptftc4c",
-        "wellcome:wsutmnbz",
-        "wellcome:ey95jj8x",
-        "wellcome:bvxtesya",
-        "wellcome:tatuuz5x",
-        "wellcome:pug7crg8",
-        "wellcome:upgtky2y",
-        "wellcome:vgdwmyb7",
-        "wellcome:wekyfakp",
-        "wellcome:gac5je2g",
-        "wellcome:bp6wfgxw",
-        "wellcome:h3gxpw2n",
-        "wellcome:t82vjbxu",
-        "wellcome:gkwk7axs",
-        "wellcome:m8ncfujy",
-        "wellcome:wp7mpgjs",
-        "wellcome:zzwhp7e5",
-        "wellcome:ckjttvuw"
-      ],
-      "images": [
-        {
-          "key": "wellcome:v2jdrckc",
-          "url": "https://iiif.wellcomecollection.org/image/V0047985/full/1600,/0/default.jpg",
-          "title": "Two winged genii standing outside a veiled arch hold up the dedication to the Roman calendar. Engraving, 1761.",
-          "credit": "Two winged genii standing outside a veiled arch hold up the dedication to the Roman calendar. Engraving, 1761. — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
-        null,
-        null,
-        {
-          "key": "wellcome:s42cwgtc",
-          "url": "https://iiif.wellcomecollection.org/image/V0033250EL/full/1600,/0/default.jpg",
-          "title": "An angel appearing to a sleeping man. Woodcut.",
-          "credit": "An angel appearing to a sleeping man. Woodcut. — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
-        null
-      ],
-      "status": "approved"
+        "alloccult"
+      ]
     },
     {
       "id": "2026-11-28-5",
@@ -227,13 +130,14 @@
       "route": "/mystical-religion/theosophy-anthroposophy",
       "section": "behind_the_trend",
       "facts": [
-        "Prince Albert died on December 14, 1861",
-        "Queen Victoria maintained lifelong public mourning in black crepe",
-        "Seances became common fixtures in high-society drawing rooms",
-        "Mediums like D.D. Home performed before European royalty",
-        "Spiritualism bridged scientific inquiry and romantic grief"
+        "Prince Albert died on 14 December 1861",
+        "Queen Victoria wore mourning black from then until her death in 1901",
+        "Modern Spiritualism began in 1848 with the Fox sisters' rappings in Hydesville, New York",
+        "Séances became a fashionable entertainment in Victorian drawing rooms",
+        "The medium D. D. Home held séances for Napoleon III and Empress Eugénie",
+        "Stories that Victoria contacted Albert through a medium are legend, not documented"
       ],
-      "hook": "Victoria wore black. Europe dissolved into séances.",
+      "hook": "Victoria wore black for 40 years",
       "beats": [
         {
           "text": "5 · Prince Albert died on December 14, 1861.",
@@ -241,28 +145,28 @@
           "image_query": "Prince Albert portrait"
         },
         {
-          "text": "4 · Queen Victoria maintained lifelong public mourning in black crepe.",
+          "text": "4 · Victoria wore black until her death in 1901.",
           "seconds": 3.0,
           "image_query": "Queen Victoria mourning"
         },
         {
-          "text": "3 · Séances became common fixtures in high-society drawing rooms.",
+          "text": "3 · Séances became the fashion in Victorian drawing rooms.",
           "seconds": 3.0,
           "image_query": "Victorian seance"
         },
         {
-          "text": "2 · Mediums like D.D. Home performed before European royalty.",
+          "text": "2 · D. D. Home held séances for Napoleon III.",
           "seconds": 3.0,
           "image_query": "Daniel Dunglas Home"
         },
         {
-          "text": "1 · Spiritualism bridged scientific inquiry and romantic grief.",
+          "text": "1 · Did Victoria contact Albert? Legend, not record.",
           "seconds": 3.0,
           "image_query": "spiritualism seance"
         }
       ],
       "mood": "drone",
-      "caption": "Victoria wore black.\nEurope dissolved into séances.\nGrief opened the veil.\nRoyalty welcomed the dead back to the drawing room.\n\nHave you ever attended a séance?\n\nalloccult.com/mystical-religion/theosophy-anthroposophy",
+      "caption": "Victoria wore black for 40 years.\n\nAlbert died in December 1861. She mourned until her own death in 1901, and her age became obsessed with the dead.\n\nSéances filled Victorian drawing rooms. Mediums performed for emperors.\nAnd the story that Victoria reached Albert through a medium? Legend, not record.\n\nHave you ever attended a séance?\n\nalloccult.com/mystical-religion/theosophy-anthroposophy",
       "hashtags": [
         "occult",
         "victorian",
@@ -339,153 +243,61 @@
       "id": "2026-11-28-7",
       "day": "Friday",
       "date": "2026-12-04",
-      "title": "3 Manuscripts That Drive Historians Insane",
-      "route": "/grimoires-sacred-texts/classical-grimoires",
-      "section": "forbidden_library",
+      "title": "Krampus Comes Tomorrow Night",
+      "route": "/witchcraft-folk-magic/folk-magic-traditions",
+      "section": "cosmic_calendar",
       "facts": [
-        "The Voynich Manuscript resides at Yale University, shelfmark MS 408",
-        "The Rohonc Codex features over 200 unreadable symbols in Hungary",
-        "The Copiale Cipher is written in 95,000 cryptic characters on gold paper",
-        "John Dee's Liber Loogeth contains direct angelic seals in the British Library",
-        "Codex Gigas weighs 75 kilograms and contains the Devil's portrait"
+        "Krampus is a horned, hairy demon of Alpine folklore who travels with St Nicholas",
+        "Krampusnacht is 5 December, the eve of St Nicholas' Day",
+        "St Nicholas rewards good children while Krampus punishes bad ones",
+        "He carries birch switches and rattling chains, and sometimes a basket to carry children off",
+        "In Krampus runs, men in carved wooden masks and sheepskins parade through Alpine towns",
+        "Krampus greeting cards, 'Gruß vom Krampus', were popular from the late 1800s"
       ],
-      "hook": "Three books. Three curses. Zero translations.",
+      "hook": "Tomorrow night, the Krampus comes",
       "beats": [
         {
-          "text": "Yale holds MS 408, the unreadable Voynich Manuscript.",
-          "seconds": 3.0,
-          "image_query": "Voynich manuscript"
-        },
-        {
-          "text": "Hungary hides the Rohonc Codex and its 200 symbols.",
-          "seconds": 3.0,
-          "image_query": "medieval manuscript"
-        },
-        {
-          "text": "The Copiale Cipher binds 95,000 characters in gold.",
-          "seconds": 3.0,
-          "image_query": "Copiale Cipher"
-        },
-        {
-          "text": "British Library preserves Dee's angelic Liber Loogeth.",
-          "seconds": 3.0,
-          "image_query": "John Dee sigil"
-        },
-        {
-          "text": "The 75 kilogram Codex Gigas reveals the Devil.",
+          "text": "5 · A horned Alpine demon who walks with St Nicholas",
           "seconds": 3.5,
-          "image_query": "Codex Gigas"
+          "image_query": "Krampus"
+        },
+        {
+          "text": "4 · Nicholas rewards the good. Krampus punishes the bad",
+          "seconds": 3.5,
+          "image_query": "Saint Nicholas"
+        },
+        {
+          "text": "3 · Birch switches, chains, a basket for children",
+          "seconds": 3.5,
+          "image_query": "devil with chains"
+        },
+        {
+          "text": "2 · Masked men in sheepskins still run through Alpine towns",
+          "seconds": 4,
+          "image_query": "devil mask"
+        },
+        {
+          "text": "1 · 5 December: Krampusnacht. Lock the door",
+          "seconds": 3.5,
+          "image_query": "devil"
         }
       ],
       "mood": "drone",
-      "caption": "Three books.\nThree curses.\nZero translations.\n\nArchives hide what scholars refuse to decode.\nFrom Yale to the British Library, these pages defy reason.\n\nWhich manuscript scares you most?\n\nalloccult.com/grimoires-sacred-texts/classical-grimoires",
+      "caption": "Tomorrow is Krampusnacht.\n\nOn the eve of St Nicholas' Day, the saint brings gifts to good children. His companion comes for the rest: horned, hairy, carrying birch switches, chains and a basket.\n\nIn Alpine towns, masked Krampus runs still fill the streets.\n\nWere you told about the Krampus as a child?\n\nalloccult.com/witchcraft-folk-magic/folk-magic-traditions",
       "hashtags": [
+        "krampus",
+        "krampusnacht",
+        "alpinefolklore",
+        "stnicholas",
+        "folklore",
+        "christmasfolklore",
+        "darkchristmas",
+        "demonology",
+        "folkhorror",
         "occult",
-        "grimoire",
-        "manuscript",
-        "history",
-        "rarebooks",
-        "voynich",
         "esoteric",
-        "codexgigas",
-        "johndee",
-        "darkhistory",
-        "forbiddenknowledge",
-        "archive"
-      ],
-      "review_log": [
-        {
-          "round": 1,
-          "approved": false,
-          "summary": "Segments 4 and 6 have incorrect or mismatched images from the Wellcome collection, and some text formatting contains artifacts like control characters.",
-          "fixes": [
-            "beat 1 text: Contains stray formatting artifacts.",
-            "beat 2 text: Contains stray formatting artifacts.",
-            "beat 3 text: Contains stray formatting artifacts.",
-            "beat 3 image: Cipher comparison chart is unrelated to Copiale Cipher manuscript binding.",
-            "beat 4 text: Contains stray formatting artifacts.",
-            "beat 5 text: Contains stray formatting artifacts.",
-            "beat 5 image: Orchid illustration has no relation to Codex Gigas."
-          ]
-        },
-        {
-          "round": 2,
-          "approved": true,
-          "summary": "All segments and caption are historically accurate, legible, and adhere strictly to the dark occult brand voice."
-        }
-      ],
-      "reject_images": [
-        "aic:10927",
-        "aic:14698",
-        "aic:14691",
-        "aic:14694",
-        "aic:14705",
-        "aic:2174",
-        "aic:8205",
-        "aic:8621",
-        "wellcome:ftpuwv5a",
-        "wellcome:fwp8wy9g",
-        "wellcome:wgy6h8a4",
-        "wellcome:feey5gsr",
-        "wellcome:ahm6y56n",
-        "wellcome:rxrajdzp",
-        "wellcome:xyhmeaa4",
-        "aic:11782",
-        "wellcome:cnrt49rb",
-        "wellcome:gary9397",
-        "wellcome:hy2bv6zb",
-        "wellcome:qf4brqud",
-        "wellcome:rw2z2x7x",
-        "wellcome:tw89ygrf",
-        "wellcome:vywjhrju",
-        "wellcome:av53e54t",
-        "wellcome:m3qpp3tr",
-        "wellcome:x3yumbw9",
-        "aic:11802",
-        "aic:51595",
-        "aic:71519",
-        "aic:5571",
-        "aic:11695",
-        "aic:8210",
-        "wellcome:sazayg72",
-        "wellcome:tk2eu4gt",
-        "wellcome:tyk2phjx",
-        "wellcome:jw8gpt6b",
-        "wellcome:b4r7fmnr",
-        "wellcome:mgf5ng9r",
-        "wellcome:rkx2epar",
-        "wellcome:ebfkmny7",
-        "wellcome:vgt2uk4w",
-        "wellcome:sgdt6pch",
-        "wellcome:e293dfz2",
-        "wellcome:y32cdjyx",
-        "wellcome:cxyfbphx",
-        "wellcome:egakhbck",
-        "wellcome:hevduyh5",
-        "wellcome:xp3nut5u",
-        "wellcome:mvmm85np",
-        "wellcome:btjm5axx",
-        "wellcome:cbycddxc",
-        "wellcome:fag45gg4",
-        "wellcome:nbv4f8qb",
-        "wellcome:t5gcrpxb",
-        "wellcome:xzjx5wyh",
-        "wellcome:j2xqpwa7"
-      ],
-      "images": [
-        null,
-        null,
-        null,
-        {
-          "key": "wellcome:hp7y4b4m",
-          "url": "https://iiif.wellcomecollection.org/image/V0001504ER/full/1600,/0/default.jpg",
-          "title": "John Dee. Stipple engraving.",
-          "credit": "John Dee. Stipple engraving. — Wellcome Collection (public domain)",
-          "source": "wellcome"
-        },
-        null
-      ],
-      "status": "approved"
+        "alloccult"
+      ]
     }
   ]
 }

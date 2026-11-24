@@ -40,7 +40,7 @@ FOLK_DAYS = [
     (11, 1, "All Saints / Día de Muertos begins", "feast of the saints; Mexican Day of the Dead"),
     (11, 2, "All Souls' Day", "prayers for the dead; soul cakes"),
     (11, 25, "St Catherine's Day", "the wheel saint; spinsters' divination"),
-    (11, 30, "St Andrew's Eve", "love divination across Eastern Europe"),
+    (11, 29, "St Andrew's Eve", "love divination across Eastern Europe (night of 29–30 Nov)"),
     (12, 5, "Krampusnacht", "Krampus comes for the wicked, in Alpine folklore"),
     (12, 6, "St Nicholas' Day", "gifts in shoes; the saint and his dark companion"),
     (12, 13, "St Lucy's Day", "light in the longest dark; Lussi and the wild night"),
