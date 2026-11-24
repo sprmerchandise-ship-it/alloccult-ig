@@ -1,0 +1,200 @@
+{
+  "id": "009-saturn-devouring-his-son-the-true-alchem",
+  "status": "approved",
+  "title": "Saturn Devouring His Son: The True Alchemical Curse",
+  "route": "/hermeticism-alchemy/alchemy",
+  "section": "behind_the_trend",
+  "plan_id": "2026-11-21-4",
+  "date": "2026-11-24",
+  "series": "The Occult Behind It",
+  "question": "Have you seen this in the Prado?",
+  "facts": [
+    "Francisco Goya painted Saturn Devouring His Son directly onto the plaster dining room wall of the Quinta del Sordo between 1819 and 1823.",
+    "The work was never titled or explained by Goya; Antonio Brugada cataloged it in 1828 after Goya's death.",
+    "In alchemical treatise Atalanta Fugiens (1617) by Michael Maier, Saturn eating his child signifies lead consuming volatile matter.",
+    "Baron Frederic Emile d'Erlanger funded the transfer of the mural to canvas in 1874 before donating it to the Prado.",
+    "Neoplatonist Proclus wrote that Cronus consumes his offspring to symbolize the inexorable devourer of temporal existence."
+  ],
+  "slides": [
+    {
+      "text": "Goya never intended this painting for public eyes.",
+      "image_query": "Francisco Goya",
+      "reject": [],
+      "image": {
+        "key": "wellcome:brj5jc6r",
+        "url": "https://iiif.wellcomecollection.org/image/L0019604/full/1600,/0/default.jpg",
+        "title": "Two naked witches riding on a broomstick accompanied by an owl. Etching by F. Goya, 1796/1798.",
+        "credit": "Two naked witches riding on a broomstick accompanied by an owl. Etching by F. Goya, 1796/1798. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "The Quinta del Sordo",
+      "text": "Francisco Goya painted Saturn Devouring His Son directly onto the plaster dining room wall of his country house between 1819 and 1823.",
+      "image_query": "Francisco Goya",
+      "reject": [
+        "wellcome:c4t73cyw",
+        "wellcome:dpaaske6",
+        "wellcome:dzz8ncdf",
+        "wellcome:ezhc6du2",
+        "wellcome:fseax4gp",
+        "wellcome:grfru3qq",
+        "wellcome:hhjekmsj",
+        "wellcome:jh4xjqhe",
+        "wellcome:tx6nadrg",
+        "wellcome:ypbryuvu",
+        "wellcome:yk4ctbfx",
+        "wellcome:ubsyrwav",
+        "wellcome:bmd24932",
+        "wellcome:qf4ppmzu",
+        "wellcome:s67n27nv",
+        "wellcome:ey5hszhj"
+      ],
+      "image": null
+    },
+    {
+      "kicker": "Private Terrors",
+      "text": "The work was never titled or explained by Goya. Antonio Brugada first cataloged it in 1828 after the artist's death.",
+      "image_query": "black paintings",
+      "reject": [
+        "wellcome:enbvgmqz",
+        "wellcome:x2sv98xu",
+        "wellcome:en8eq6xu",
+        "wellcome:ch5gzmvs",
+        "wellcome:y27rg3wd",
+        "wellcome:b54hpr3a",
+        "wellcome:ephbewxs",
+        "wellcome:pfqa6e4g",
+        "wellcome:qabqx4x6",
+        "wellcome:g5e3hsdj",
+        "wellcome:jvyqczq3",
+        "wellcome:qrnjm98t",
+        "wellcome:erdfqmde",
+        "wellcome:bfmng6fb",
+        "wellcome:jhpwjhjv",
+        "wellcome:p9frjmhw"
+      ],
+      "image": null
+    },
+    {
+      "kicker": "Alchemical Lead",
+      "text": "In Michael Maier's 1617 treatise Atalanta Fugiens, Saturn devouring his child signifies the alchemical process of lead consuming volatile matter.",
+      "image_query": "Atalanta Fugiens",
+      "reject": [],
+      "image": {
+        "key": "wellcome:utt6rndm",
+        "url": "https://iiif.wellcomecollection.org/image/L0029171/full/1600,/0/default.jpg",
+        "title": "M. Maier, Atalanta fvgiens, hoc est emblemata...",
+        "credit": "M. Maier, Atalanta fvgiens, hoc est emblemata... — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Temporal Devourer",
+      "text": "Neoplatonist philosopher Proclus wrote that Cronus consumes his offspring to symbolize the inexorable devourer of temporal existence and material forms.",
+      "image_query": "Saturn Chronos",
+      "reject": [],
+      "image": {
+        "key": "wellcome:uw3rwzty",
+        "url": "https://iiif.wellcomecollection.org/image/V0047955/full/1600,/0/default.jpg",
+        "title": "A reading woman tries in vain to stop Chronos as he passes by; representing the inexorable passing of time. Stipple engraving.",
+        "credit": "A reading woman tries in vain to stop Chronos as he passes by; representing the inexorable passing of time. Stipple engraving. — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    },
+    {
+      "kicker": "Canvas Transfer",
+      "text": "Baron Frederic Emile d'Erlanger funded the perilous transfer of the decaying mural from crumbling plaster to canvas in 1874.",
+      "image_query": "oil painting",
+      "reject": [
+        "wellcome:te9umssc",
+        "wellcome:eduwgypw",
+        "wellcome:g4vsrvq6",
+        "wellcome:ate4hnvb",
+        "wellcome:ay66wj5p",
+        "wellcome:bsu5974r",
+        "wellcome:bt9n5666",
+        "wellcome:c2sp4waw",
+        "wellcome:suywvjga",
+        "wellcome:fwjcb8gu",
+        "wellcome:d85dsk4v",
+        "wellcome:y2xjc57x",
+        "wellcome:gta9g25y",
+        "wellcome:zqv2a6y2",
+        "wellcome:s4dtb5vy",
+        "wellcome:jz6jebkv"
+      ],
+      "image": null
+    },
+    {
+      "kicker": "The Prado",
+      "text": "The transferred mural was eventually donated to the Museo del Prado, where it now hangs under climate-controlled glass in Madrid.",
+      "image_query": "Museo del Prado",
+      "reject": [
+        "wellcome:ja2xpjuy",
+        "wellcome:dzeq99w3",
+        "wellcome:hw8qs6nj",
+        "wellcome:rwye9sw6",
+        "wellcome:g82te7kf",
+        "wellcome:eukryu6y",
+        "wellcome:bx7hs6fq",
+        "wellcome:smzgazqd",
+        "wellcome:m6u79h8m",
+        "wellcome:h2hy62fw",
+        "wellcome:rpv5bkjw",
+        "wellcome:ndbtjanz",
+        "wellcome:qt6xntfs",
+        "wellcome:tsu78928",
+        "wellcome:e6ey86yr",
+        "wellcome:wnfpbr63"
+      ],
+      "image": null
+    },
+    {
+      "kicker": "Forbidden Lore",
+      "text": "Goya's dark vision merges classical mythology with hidden alchemical truths, surviving only because it was torn from a dying wall.",
+      "image_query": "alchemy manuscript",
+      "reject": [],
+      "image": {
+        "key": "wellcome:ey95jj8x",
+        "url": "https://iiif.wellcomecollection.org/image/L0032811/full/1600,/0/default.jpg",
+        "title": "Two Monks practising alchemy",
+        "credit": "Two Monks practising alchemy — Wellcome Collection (public domain)",
+        "source": "wellcome"
+      }
+    }
+  ],
+  "caption": "Goya never intended this painting for public eyes. Painted in the absolute isolation of the Quinta del Sordo, these black murals laid bare a terrifying descent into age, madness, and alchemical ruin. Long before it became a modern internet fixture, the image mapped the heavy, consuming weight of Saturnian lead. Neoplatonists saw it as time eating its own creations; alchemists saw the dissolution of matter. Stripped from the plaster in 1874, it remains a monument to forbidden psychological depths. Have you seen this in the Prado? Save this for later. More in the Forbidden Library: alloccult.com/hermeticism-alchemy/alchemy",
+  "hashtags": [
+    "occult",
+    "alchemy",
+    "goya",
+    "saturn",
+    "hermeticism",
+    "esoteric",
+    "darkart",
+    "historyofart",
+    "prado",
+    "philosophy",
+    "mythology",
+    "forbiddenknowledge"
+  ],
+  "slide_files": [
+    "01.jpg",
+    "02.jpg",
+    "03.jpg",
+    "04.jpg",
+    "05.jpg",
+    "06.jpg",
+    "07.jpg",
+    "08.jpg",
+    "09.jpg"
+  ],
+  "review_log": [
+    {
+      "round": 1,
+      "approved": true,
+      "summary": "The carousel accurately details the history, occult symbolism, and alchemical interpretations of Goya's Saturn Devouring His Son. All facts and dates align with historical record."
+    }
+  ]
+}
