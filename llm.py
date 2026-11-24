@@ -156,7 +156,7 @@ def _gemini_post(body):
                 print(f"  (no answer from Gemini: {e}; retrying)")
                 time.sleep(15)
                 continue
-            raise RuntimeError(f"Gemini did not answer: {e}") from None
+            raise QuotaExceeded(f"Gemini did not answer ({e}) for {body['model']}") from None
     raise RuntimeError("Gemini: still rate limited after retries")
 
 

@@ -2,7 +2,10 @@ name: ALLOCCULT Daily Reel
 
 on:
   schedule:
-    - cron: "37 14 * * *"   # daily ~14:37 UTC (off the hour: :00 runs start hours late)
+    # Three tries a day (off the hour: :00 runs start hours late); one Reel a day at most.
+    - cron: "37 10 * * *"
+    - cron: "37 14 * * *"
+    - cron: "37 18 * * *"
   workflow_dispatch:
     inputs:
       dry_run:

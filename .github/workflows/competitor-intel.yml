@@ -3,6 +3,7 @@ name: Weekly Competitor Intel
 on:
   schedule:
     - cron: "47 7 * * 1"   # Mondays ~07:47 UTC, after maintenance (off the hour: :00 runs start hours late)
+    - cron: "47 7 * * 3"   # Wednesdays: a second chance if Monday's plan failed (skips if planned)
   workflow_dispatch: {}
 
 permissions:
@@ -54,13 +55,13 @@ jobs:
 
       - name: Write competitor report
         run: |
-          python intel_report.py "$DATE"
-          test -s "reports/$DATE.md" || { echo "No report written to reports/$DATE.md"; exit 1; }
+          # The plan matters more than the report: carry on without it if the AI fails.
+          python intel_report.py "$DATE" || echo "::warning::No competitor report this time; planning without it."
 
       - name: Plan the week (4 Reels + 3 carousels)
         run: |
           python planner.py "$DATE"
-          cat "reports/$DATE.md" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f "reports/$DATE.md" ]; then cat "reports/$DATE.md" >> "$GITHUB_STEP_SUMMARY"; fi
 
       - name: Turn the 4 planned Reels into specs
         run: python compose_posts.py
