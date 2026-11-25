@@ -323,7 +323,7 @@
         {
           "text": "1 · The Beast 666 encodes the emperor Nron Qsr",
           "seconds": 4.5,
-          "image_query": "apocalypse beast"
+          "image_query": "Apocalypse beast"
         }
       ],
       "mood": "drone",
@@ -341,7 +341,63 @@
         "apocalypse",
         "zohar",
         "mysticism"
-      ]
+      ],
+      "review_log": [
+        {
+          "round": 1,
+          "approved": false,
+          "summary": "Segments 6 and 7 show a blank parchment folio where the manuscript text/illumination failed or is absent, and the text on segment 5 is awkwardly phrased ('Hebrew Maveth death'). Replacing the blank Apocalypse image and polishing segment 5.",
+          "fixes": [
+            "beat 5 image: The image is a blank parchment page (Folio 33 recto) with no visible art or text."
+          ]
+        },
+        {
+          "round": 2,
+          "approved": true,
+          "summary": "All segments align accurately with historical and occult sources, featuring proper imagery and text."
+        }
+      ],
+      "reject_images": [
+        "wellcome:jzc7yud7"
+      ],
+      "images": [
+        {
+          "key": "wellcome:axdnst4v",
+          "url": "https://iiif.wellcomecollection.org/image/L0038198/full/1600,/0/default.jpg",
+          "title": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers.",
+          "credit": "The Kabbalah unveiled, containing the following books of the Zohar : 1. The book of concealed mystery. 2. The greater holy assembly. 3. The lesser holy assembly / translated into English from the Latin version of Knorr von Rosenroth, and collated with the original Chaldee and Hebrew text by S.L. MacGregor Mathers. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:16",
+          "url": "https://www.artic.edu/iiif/2/e82b61d4-1d5b-a15d-4d2e-ff9caca3fb51/full/843,/0/default.jpg",
+          "title": "The Fall of the Giants",
+          "credit": "The Fall of the Giants, Salvator Rosa — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:nwut64yz",
+          "url": "https://iiif.wellcomecollection.org/image/V0035010/full/1600,/0/default.jpg",
+          "title": "Fallen angels with animalized characteristics tumble from heaven under the sword of Michael. Engraving by R. Sadeler, 1583, after M. de Vos.",
+          "credit": "Fallen angels with animalized characteristics tumble from heaven under the sword of Michael. Engraving by R. Sadeler, 1583, after M. de Vos. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:wwtufhr6",
+          "url": "https://iiif.wellcomecollection.org/image/V0042141/full/1600,/0/default.jpg",
+          "title": "A skeleton as memento mori. Etching.",
+          "credit": "A skeleton as memento mori. Etching. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:qjf744ss",
+          "url": "https://iiif.wellcomecollection.org/image/L0029301/full/1600,/0/default.jpg",
+          "title": "The Apocalypse. Folio 33 verso",
+          "credit": "The Apocalypse. Folio 33 verso — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
     },
     {
       "id": "2026-11-21-7",
