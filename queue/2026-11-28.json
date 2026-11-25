@@ -60,6 +60,50 @@
         "occult",
         "esoteric",
         "alloccult"
+      ],
+      "review_log": [],
+      "reject_images": [
+        "wellcome:rqp79m56",
+        "wellcome:vrqbqdhd",
+        "wellcome:w38bnz7s",
+        "wellcome:g9buwgjc",
+        "wellcome:vsaa36mw",
+        "wellcome:pdmnnnfu",
+        "wellcome:tw8q47zt",
+        "wellcome:z325zejz",
+        "wellcome:b2sd47nc",
+        "wellcome:e2fz799a",
+        "wellcome:nx2dt3rt",
+        "wellcome:muncs7nx",
+        "wellcome:aqh3w4ax",
+        "wellcome:xvbc2z65",
+        "wellcome:v7arbfqw",
+        "wellcome:rp7yrmua"
+      ],
+      "images": [
+        {
+          "key": "wellcome:ppa53xq5",
+          "url": "https://iiif.wellcomecollection.org/image/V0043947ER/full/1600,/0/default.jpg",
+          "title": "Common garlic (Allium sativum): bulb, flower head, single flower and single clove. Coloured lithograph after M. A. Burnett, c. 1850.",
+          "credit": "Common garlic (Allium sativum): bulb, flower head, single flower and single clove. Coloured lithograph after M. A. Burnett, c. 1850. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:auabdgg3",
+          "url": "https://iiif.wellcomecollection.org/image/V0031541/full/1600,/0/default.jpg",
+          "title": "Saint Andrew. Engraving.",
+          "credit": "Saint Andrew. Engraving. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        {
+          "key": "wellcome:p624c9wm",
+          "url": "https://iiif.wellcomecollection.org/image/V0023706/full/1600,/0/default.jpg",
+          "title": "Shoemakers: machinery used in the making of shoes. Engraving.",
+          "credit": "Shoemakers: machinery used in the making of shoes. Engraving. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null
       ]
     },
     {
@@ -120,7 +164,53 @@
         "occult",
         "esoteric",
         "alloccult"
-      ]
+      ],
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "All segments, texts, images, and the caption are accurate, historically sound, and properly formatted according to brand guidelines."
+        }
+      ],
+      "reject_images": [],
+      "images": [
+        {
+          "key": "aic:270366",
+          "url": "https://www.artic.edu/iiif/2/722438a8-f53a-b48a-4aef-ad9cea8a8b8e/full/843,/0/default.jpg",
+          "title": "Odysseus, at the Doors of Hades, Meets the Shades of Tiresias and Anticlea",
+          "credit": "Odysseus, at the Doors of Hades, Meets the Shades of Tiresias and Anticlea, Johann Heinrich Lips — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:s8mtqrg3",
+          "url": "https://iiif.wellcomecollection.org/image/V0035984/full/1600,/0/default.jpg",
+          "title": "Circe, Ulysses [Odysseus] and Mercury [Hermes]. Etching by P. Aquila after Annibale Carracci.",
+          "credit": "Circe, Ulysses [Odysseus] and Mercury [Hermes]. Etching by P. Aquila after Annibale Carracci. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "aic:87663",
+          "url": "https://www.artic.edu/iiif/2/2257d6be-92b3-e4cd-dcc9-05f2da4daf5a/full/843,/0/default.jpg",
+          "title": "Phiale (Shallow Bowl for Pouring Ritual Libations)",
+          "credit": "Phiale (Shallow Bowl for Pouring Ritual Libations), Ancient Greek — Art Institute of Chicago (public domain)",
+          "source": "aic"
+        },
+        {
+          "key": "wellcome:p42m2tx2",
+          "url": "https://iiif.wellcomecollection.org/image/V0007523EL/full/1600,/0/default.jpg",
+          "title": "Two women and two rams at a sacrifice. Engraving by E. Delaune, ca. 1560.",
+          "credit": "Two women and two rams at a sacrifice. Engraving by E. Delaune, ca. 1560. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:hw29dyq5",
+          "url": "https://iiif.wellcomecollection.org/image/V0042049/full/1600,/0/default.jpg",
+          "title": "The Cumaean Sibyl leads Aeneas to the underworld: they encounter Cerberus. Etching.",
+          "credit": "The Cumaean Sibyl leads Aeneas to the underworld: they encounter Cerberus. Etching. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
     },
     {
       "id": "2026-11-28-5",
@@ -274,12 +364,12 @@
         {
           "text": "2 · Masked men in sheepskins still run through Alpine towns",
           "seconds": 4,
-          "image_query": "devil mask"
+          "image_query": "Krampus parade mask"
         },
         {
           "text": "1 · 5 December: Krampusnacht. Lock the door",
           "seconds": 3.5,
-          "image_query": "devil"
+          "image_query": "Krampus vintage postcard"
         }
       ],
       "mood": "drone",
@@ -297,7 +387,110 @@
         "occult",
         "esoteric",
         "alloccult"
-      ]
+      ],
+      "review_log": [
+        {
+          "round": 1,
+          "approved": false,
+          "summary": "Segment 5 uses a museum image of Bhutanese dancers in India instead of Alpine Krampus imagery. Segment 6 uses a witchcraft woodcut instead of Krampus imagery.",
+          "fixes": [
+            "beat 4 image: Image shows Bhutanese dancers in Calcutta, not Alpine Krampus runners.",
+            "beat 5 image: Image shows witchcraft and the devil, not Krampus."
+          ]
+        },
+        {
+          "round": 2,
+          "approved": true,
+          "summary": "All segments, text, and images are historically accurate and aligned with the brand voice."
+        }
+      ],
+      "reject_images": [
+        "aic:11",
+        "aic:111",
+        "aic:27",
+        "aic:4",
+        "aic:27992",
+        "aic:65",
+        "aic:9",
+        "aic:16",
+        "aic:20",
+        "aic:28",
+        "aic:24",
+        "aic:19",
+        "aic:2068",
+        "aic:20684",
+        "aic:93",
+        "wellcome:zwhpj5j3",
+        "wellcome:cjptxgqu",
+        "wellcome:jd39jz66",
+        "wellcome:qh4v2r3u",
+        "wellcome:ax76cv7j",
+        "wellcome:f7we84ax",
+        "wellcome:egph2g49",
+        "wellcome:khekf3ak",
+        "wellcome:x4qmstwx",
+        "wellcome:spvy27y2",
+        "wellcome:fjthfn63",
+        "wellcome:vfgzv9e8",
+        "wellcome:e9vy4q89",
+        "wellcome:erwv4hg4",
+        "wellcome:fjs8xxdn",
+        "wellcome:ekrn5hpv",
+        "wellcome:hc9e7v4h",
+        "wellcome:bj78wxpf",
+        "wellcome:az4rj55z",
+        "wellcome:rsetm4x3",
+        "wellcome:vyhab3jh",
+        "wellcome:kr5hu2h9",
+        "wellcome:njhaztk4",
+        "wellcome:vghs82s7",
+        "wellcome:h9xb5c53",
+        "wellcome:sshb95hq",
+        "wellcome:d8udnra2",
+        "wellcome:q8taxv95",
+        "wellcome:fe4t8vhh",
+        "wellcome:sa7ruvvp",
+        "wellcome:drd9c528",
+        "wellcome:x9df7ctk",
+        "wellcome:y49trr49",
+        "wellcome:f5cxm4ds",
+        "wellcome:vaem9a6m",
+        "wellcome:hd7dg2tz",
+        "wellcome:yzjzupbs",
+        "wellcome:bkz2zkfr",
+        "wellcome:c7uub44v",
+        "wellcome:e8fez4rb",
+        "wellcome:euuab99s",
+        "wellcome:dyh5jcts",
+        "wellcome:tmm6c9hu",
+        "wellcome:d4vndgge",
+        "wellcome:n3uexdnb",
+        "wellcome:bte8787n",
+        "wellcome:hgxwkjq3",
+        "wellcome:v2f3wnyv",
+        "wellcome:ypvk8wcj",
+        "wellcome:yuvfbssj"
+      ],
+      "images": [
+        null,
+        {
+          "key": "wellcome:kgddrcfh",
+          "url": "https://iiif.wellcomecollection.org/image/V0017364/full/1600,/0/default.jpg",
+          "title": "Saint Nicholas. Oil painting.",
+          "credit": "Saint Nicholas. Oil painting. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:mgr5dfkv",
+          "url": "https://iiif.wellcomecollection.org/image/V0009469/full/1600,/0/default.jpg",
+          "title": "The devil examining the head of a boy; three other boys lurk under the devil's wings; frontispiece to a manual on phrenology. Steel engraving by J.D. Nargeot, 1847, after H. Bruyères.",
+          "credit": "The devil examining the head of a boy; three other boys lurk under the devil's wings; frontispiece to a manual on phrenology. Steel engraving by J.D. Nargeot, 1847, after H. Bruyères. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        null,
+        null
+      ],
+      "status": "approved"
     }
   ]
 }
