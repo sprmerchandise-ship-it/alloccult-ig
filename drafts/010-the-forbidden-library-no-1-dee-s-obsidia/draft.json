@@ -1,6 +1,6 @@
 {
   "id": "010-the-forbidden-library-no-1-dee-s-obsidia",
-  "status": "approved",
+  "status": "posted",
   "title": "The Forbidden Library No. 1: Dee's Obsidian Mirror",
   "route": "/ceremonial-magic/enochian-magic",
   "section": "forbidden_library",
@@ -113,5 +113,7 @@
       "approved": true,
       "summary": "The carousel is historically accurate, adheres strictly to the brand voice, uses proper public-domain imagery, and requires no blocking changes."
     }
-  ]
+  ],
+  "media_id": "18013311863778555",
+  "posted_at": 1795656334
 }

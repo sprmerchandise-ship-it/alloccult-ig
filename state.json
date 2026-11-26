@@ -1,5 +1,5 @@
 {
-  "counter": 85,
+  "counter": 86,
   "posted_products": [
     15404881543543,
     15404883411319,
@@ -87,16 +87,17 @@
     "/secret-societies/rosicrucians",
     "/consciousness/near-death-experiences",
     "/grimoires-sacred-texts/classical-grimoires",
-    "/hermeticism-alchemy/alchemy"
+    "/hermeticism-alchemy/alchemy",
+    "/ceremonial-magic/enochian-magic"
   ],
   "recent_sections": [
-    "Section 10",
     "Section 11",
     "Section 13",
     "Section 2",
     "Section 8",
     "Section 9",
     "Section 10",
-    "behind_the_trend"
+    "behind_the_trend",
+    "forbidden_library"
   ]
 }
