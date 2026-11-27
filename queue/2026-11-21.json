@@ -451,7 +451,63 @@
         "historicalwitchcraft",
         "folkmagic",
         "forbiddenknowledge"
-      ]
+      ],
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "The reel is accurate, visually clear, and historically grounded according to the provided sources. No blocking issues found."
+        }
+      ],
+      "reject_images": [
+        "wellcome:r8btg9d8",
+        "wellcome:jdmmb7tq",
+        "wellcome:ftsmdrzq",
+        "wellcome:mjp84b4u",
+        "wellcome:d3v9c2v7",
+        "wellcome:d59ueh8y",
+        "wellcome:ehct97vy",
+        "wellcome:tjs57rsu",
+        "wellcome:pc653383",
+        "wellcome:pgvejxxc",
+        "wellcome:zzrcukqs",
+        "wellcome:dhwzx2fg",
+        "wellcome:bkjdpjvm",
+        "wellcome:pkjq7m98",
+        "wellcome:qa8vrymk",
+        "wellcome:a843bw77"
+      ],
+      "images": [
+        {
+          "key": "wellcome:bj78wxpf",
+          "url": "https://iiif.wellcomecollection.org/image/V0025812ETR/full/1600,/0/default.jpg",
+          "title": "Witchcraft: witches giving babies to the devil. Woodcut, 1720.",
+          "credit": "Witchcraft: witches giving babies to the devil. Woodcut, 1720. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:gxskrd2y",
+          "url": "https://iiif.wellcomecollection.org/image/L0051995/full/1600,/0/default.jpg",
+          "title": "The certainty of the world of spirits. Fully evinced by unquestionable histories of apparitions and witchcrafts, operations, voices, etc. Proving the immortality of souls, the malice and miseries of the devils and the damned, and the blessedness of the justified / Written for the conviction of sadduces & infidels. By Richard Baxter.",
+          "credit": "The certainty of the world of spirits. Fully evinced by unquestionable histories of apparitions and witchcrafts, operations, voices, etc. Proving the immortality of souls, the malice and miseries of the devils and the damned, and the blessedness of the justified / Written for the conviction of sadduces & infidels. By Richard Baxter. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:cfq7rus9",
+          "url": "https://iiif.wellcomecollection.org/image/V0025815/full/1600,/0/default.jpg",
+          "title": "Eleven scenes of witchcraft. Woodcut, 1720.",
+          "credit": "Eleven scenes of witchcraft. Woodcut, 1720. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
+        {
+          "key": "wellcome:qw4fy8rb",
+          "url": "https://iiif.wellcomecollection.org/image/V0050333/full/1600,/0/default.jpg",
+          "title": "W.E. Gladstone as Dr. Faustus making a pact with Mephistopheles in order to satisfy his political ambitions. Lithograph by J.M Rogier, 12 December 1885.",
+          "credit": "W.E. Gladstone as Dr. Faustus making a pact with Mephistopheles in order to satisfy his political ambitions. Lithograph by J.M Rogier, 12 December 1885. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
     }
   ]
 }
