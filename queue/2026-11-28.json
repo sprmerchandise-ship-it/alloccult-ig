@@ -61,7 +61,13 @@
         "esoteric",
         "alloccult"
       ],
-      "review_log": [],
+      "review_log": [
+        {
+          "round": 1,
+          "approved": true,
+          "summary": "All folklore traditions, dates, and historical details for St Andrew's Eve (Andrzejki / Andreasnacht / Romanian folklore) are accurate, visually coherent, and meet brand guidelines."
+        }
+      ],
       "reject_images": [
         "wellcome:rqp79m56",
         "wellcome:vrqbqdhd",
@@ -95,7 +101,13 @@
           "credit": "Saint Andrew. Engraving. — Wellcome Collection (public domain)",
           "source": "wellcome"
         },
-        null,
+        {
+          "key": "wellcome:qr6p83ed",
+          "url": "https://iiif.wellcomecollection.org/image/V0042956EL/full/1600,/0/default.jpg",
+          "title": "Basil (Ocimum basilicum L.): entire flowering plant with separate floral segments. Coloured engraving after F. von Scheidl, 1776.",
+          "credit": "Basil (Ocimum basilicum L.): entire flowering plant with separate floral segments. Coloured engraving after F. von Scheidl, 1776. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        },
         {
           "key": "wellcome:p624c9wm",
           "url": "https://iiif.wellcomecollection.org/image/V0023706/full/1600,/0/default.jpg",
@@ -103,8 +115,15 @@
           "credit": "Shoemakers: machinery used in the making of shoes. Engraving. — Wellcome Collection (public domain)",
           "source": "wellcome"
         },
-        null
-      ]
+        {
+          "key": "wellcome:rpv5bkjw",
+          "url": "https://iiif.wellcomecollection.org/image/V0025881/full/1600,/0/default.jpg",
+          "title": "The witch of Endor with a candle. Engraving by J. Kay, 1805, after A. Elsheimer.",
+          "credit": "The witch of Endor with a candle. Engraving by J. Kay, 1805, after A. Elsheimer. — Wellcome Collection (public domain)",
+          "source": "wellcome"
+        }
+      ],
+      "status": "approved"
     },
     {
       "id": "2026-11-28-3",
